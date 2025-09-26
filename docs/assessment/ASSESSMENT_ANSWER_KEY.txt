@@ -1,0 +1,89 @@
+RUDI ASSESSMENT ANSWER KEY - GOOGLE SHEETS DATA MAPPING
+========================================================
+
+COLUMN H - Q1: Current Usage (current_usage)
+Value | Answer
+------|---------
+0     | I rarely or never use AI tools
+1     | I occasionally use AI tools for specific tasks
+2     | I use AI tools daily in my work
+
+COLUMN I - Q2: Tools Used (tool_familiarity)
+Multiple selections shown as comma-separated list:
+- ChatGPT
+- Claude
+- Gemini/Bard
+- GitHub Copilot
+- Midjourney/DALL-E
+- Other AI tools
+
+COLUMN J - Q3: Learning Interest (learning_interest)
+Value | Answer
+------|---------
+0     | Not interested at this time
+1     | Somewhat interested
+2     | Very interested - ready to start immediately
+
+COLUMN K - Q4: Confidence (confidence)
+Value | Answer
+------|---------
+0     | Not confident - I need significant guidance
+1     | Somewhat confident with support
+2     | Very confident in my abilities
+
+COLUMN L - Q5: Understanding (understanding)
+Value | Answer
+------|---------
+0     | Limited understanding
+1     | Basic understanding
+2     | Strong understanding
+
+COLUMN M - Q6: Verification (verification)
+Text responses:
+- "I always verify AI outputs before using them"
+- "I sometimes check but not consistently"
+- "I generally trust AI outputs without verification"
+- "I'm not using AI-generated content"
+
+COLUMN N - Q7: Concerns (concerns)
+Multiple selections shown as comma-separated list:
+- Data privacy and security
+- Bias in AI outputs
+- Accuracy of information
+- Ethical implications
+- Job displacement
+- Over-reliance on AI
+
+COLUMN O - Q8: Priority (priority)
+Value | Answer
+------|---------
+0     | Low priority
+1     | Medium priority - within 6 months
+2     | High priority - immediate focus
+
+COLUMN P - Q9: Role (role)
+Text field - actual role description entered by user
+
+COLUMN Q - Q10: Org AI Usage (org_ai_usage)
+Value | Answer
+------|---------
+0     | Not using AI tools
+1     | Some teams experimenting
+2     | Widely adopted across organization
+
+SCORING BREAKDOWN
+=================
+Columns C-F contain calculated scores:
+- C: Operational Score (0-100)
+- D: Conceptual Score (0-100)
+- E: Governance Score (0-100)
+- F: Overall Score (0-100)
+- G: Level (Beginner/Intermediate/Advanced)
+
+NOTES
+=====
+- Empty cells mean the question was skipped or not answered
+- Multi-select questions show all selected options as comma-separated text
+- Single-select questions show the numeric value (0, 1, or 2)
+- Text questions show the actual text entered
+- Having concerns (Q7) indicates HIGHER governance awareness (more concerns = higher score)

@@ -1,0 +1,118 @@
+{
+  "lesson_id": "lesson_01",
+  "lesson_number": "01",
+  "lesson_title": "Evolution of Intelligence",
+  "lesson_slug": "evolution-of-intelligence",
+  "lesson_version": "1.0.0",
+  "course_id": "course_01",
+  "lesson_status": "published",
+  
+  "metadata": {
+    "created_date": "2025-01-15",
+    "last_updated": "2025-08-30",
+    "duration_minutes": 90,
+    "difficulty_level": "beginner",
+    "is_optional": false,
+    "is_preview": false,
+    "tags": ["ai_history", "intelligence", "foundations"]
+  },
+  
+  "description": {
+    "short": "Explore the evolution from biological to artificial intelligence",
+    "long": "Comprehensive overview of how intelligence has evolved from biological systems to modern AI, understanding the progression and key milestones",
+    "learning_goals": "Understand the historical context and evolution of intelligence systems"
+  },
+  
+  "learning_objectives": [
+    {
+      "id": "lo_01_001",
+      "objective": "Trace the evolution from biological to artificial intelligence",
+      "bloom_level": "understand"
+    },
+    {
+      "id": "lo_01_002",
+      "objective": "Identify key milestones in AI development",
+      "bloom_level": "remember"
+    },
+    {
+      "id": "lo_01_003",
+      "objective": "Compare different types of intelligence systems",
+      "bloom_level": "analyze"
+    }
+  ],
+  
+  "prerequisites": {
+    "required_lessons": [],
+    "recommended_lessons": ["lesson_00"],
+    "required_concepts": [],
+    "skills_needed": ["basic_computer_literacy"]
+  },
+  
+  "components": {
+    "learning": {
+      "has_content": true,
+      "video": {
+        "present": true,
+        "duration_minutes": 45,
+        "resolution": "1080p",
+        "captions": true
+      },
+      "transcript": {
+        "present": true,
+        "format": "txt",
+        "searchable": true
+      },
+      "slides": {
+        "present": true,
+        "count": 35,
+        "format": "png",
+        "downloadable": true
+      }
+    },
+    "lab": {
+      "has_content": true,
+      "estimated_minutes": 30,
+      "type": "hands_on",
+      "requires_setup": false,
+      "tools_needed": ["browser"],
+      "deliverables": ["completed_exercise"]
+    },
+    "assessments": {
+      "has_content": true,
+      "quiz": {
+        "present": true,
+        "questions": 10,
+        "passing_score": 70,
+        "attempts_allowed": 3,
+        "question_types": ["multiple_choice", "true_false"]
+      }
+    },
+    "resources": {
+      "has_content": true,
+      "materials": [
+        {
+          "type": "reading",
+          "title": "The History of AI",
+          "required": false
+        },
+        {
+          "type": "discussion_questions",
+          "count": 5
+        }
+      ]
+    }
+  },
+  
+  "engagement_tracking": {
+    "track_video_progress": true,
+    "track_quiz_scores": true,
+    "track_lab_completion": true,
+    "track_time_spent": true
+  },
+  
+  "navigation": {
+    "previous_lesson": "lesson_00",
+    "next_lesson": "lesson_02",
+    "course_home": "course_01"
+  }
+}

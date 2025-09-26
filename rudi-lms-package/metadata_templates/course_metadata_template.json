@@ -1,0 +1,166 @@
+{
+  "course_id": "course_01",
+  "course_number": 1,
+  "course_name": "AI Foundations",
+  "course_slug": "ai-foundations",
+  "course_version": "1.0.0",
+  "course_status": "published",
+  "course_type": "core",
+  "track": ["core", "builder", "business"],
+  
+  "metadata": {
+    "created_date": "2025-01-01",
+    "last_updated": "2025-08-30",
+    "author": "RUDI Learning Lab",
+    "language": "en",
+    "duration_hours": 12,
+    "difficulty_level": "beginner",
+    "tags": ["ai", "llm", "foundations", "genai"]
+  },
+  
+  "description": {
+    "short": "Introduction to fundamental concepts of AI and LLMs",
+    "long": "Comprehensive introduction to Artificial Intelligence fundamentals, including the evolution of intelligence, traditional vs generative AI, Large Language Models, their limitations, and responsible AI practices.",
+    "target_audience": [
+      "Working professionals new to AI",
+      "Technical managers overseeing AI projects",
+      "Students entering the AI field"
+    ]
+  },
+  
+  "learning_objectives": [
+    {
+      "id": "lo_01_001",
+      "objective": "Understand the fundamentals of AI and machine learning",
+      "bloom_level": "understand",
+      "assessment_type": "quiz"
+    },
+    {
+      "id": "lo_01_002",
+      "objective": "Differentiate between traditional AI and Generative AI",
+      "bloom_level": "analyze",
+      "assessment_type": "lab"
+    },
+    {
+      "id": "lo_01_003",
+      "objective": "Apply responsible AI practices in real scenarios",
+      "bloom_level": "apply",
+      "assessment_type": "project"
+    }
+  ],
+  
+  "prerequisites": {
+    "required_courses": [],
+    "recommended_courses": [],
+    "required_skills": [
+      "Basic computer literacy",
+      "Familiarity with digital tools"
+    ],
+    "recommended_skills": [
+      "Basic programming concepts",
+      "Data analysis fundamentals"
+    ]
+  },
+  
+  "content_structure": {
+    "total_lessons": 8,
+    "total_labs": 5,
+    "total_assessments": 6,
+    "estimated_hours": {
+      "learning": 8,
+      "labs": 3,
+      "assessments": 1
+    }
+  },
+  
+  "assessment_criteria": {
+    "passing_score": 70,
+    "completion_requirements": {
+      "min_lessons_completed": 7,
+      "min_labs_completed": 3,
+      "min_quiz_score": 70,
+      "final_project_required": false
+    },
+    "certification_eligible": true
+  },
+  
+  "delivery_formats": {
+    "self_paced": true,
+    "instructor_led": true,
+    "hybrid": true,
+    "mobile_compatible": true,
+    "offline_available": false
+  },
+  
+  "resources": {
+    "included_materials": [
+      "Video lectures",
+      "Interactive transcripts",
+      "Slide presentations",
+      "Lab exercises",
+      "Quizzes",
+      "Discussion prompts"
+    ],
+    "external_resources": [
+      {
+        "type": "reading",
+        "title": "Attention is All You Need",
+        "url": "https://arxiv.org/abs/1706.03762",
+        "required": false
+      }
+    ],
+    "support_resources": [
+      "Discussion forum",
+      "Office hours",
+      "Peer review"
+    ]
+  },
+  
+  "lessons": [
+    {
+      "lesson_id": "lesson_00",
+      "lesson_number": "00",
+      "lesson_title": "Course Introduction",
+      "lesson_folder": "Lesson_00_Introduction",
+      "duration_minutes": 30,
+      "is_optional": false,
+      "has_learning": true,
+      "has_lab": false,
+      "has_quiz": true,
+      "has_resources": true
+    },
+    {
+      "lesson_id": "lesson_01",
+      "lesson_number": "01",
+      "lesson_title": "Evolution of Intelligence",
+      "lesson_folder": "Lesson_01_Evolution_of_Intelligence",
+      "duration_minutes": 90,
+      "is_optional": false,
+      "has_learning": true,
+      "has_lab": true,
+      "has_quiz": true,
+      "has_resources": true
+    }
+  ],
+  
+  "dependencies": {
+    "enables_courses": ["course_02", "course_03"],
+    "part_of_tracks": ["core", "builder"],
+    "related_courses": ["course_02", "course_06"]
+  },
+  
+  "corporate_training": {
+    "bulk_license_available": true,
+    "customizable": true,
+    "white_label": true,
+    "min_seats": 5,
+    "volume_pricing": true
+  },
+  
+  "analytics_tracking": {
+    "track_completion": true,
+    "track_engagement": true,
+    "track_assessment_scores": true,
+    "track_time_spent": true
+  }
+}

@@ -1,0 +1,42 @@
+GOOGLE SHEETS SETUP - SIMPLE COPY & PASTE
+==========================================
+
+STEP 1: Copy this entire line (it's comma-separated):
+
+Timestamp,Organization,Operational Score,Conceptual Score,Governance Score,Overall Score,Level,Q1: Current Usage,Q2: Tools Used,Q3: Learning Interest,Q4: Confidence,Q5: Understanding,Q6: Verification,Q7: Concerns,Q8: Priority,Q9: Role,Q10: Org AI Usage
+
+STEP 2: In Google Sheets
+1. Open a new Google Sheet
+2. Click on cell A1
+3. Paste
+4. A popup will appear: "Text to Columns"
+5. Click the "Split text to columns" button (or use Data > Split text to columns)
+6. It will automatically detect commas and create your columns
+
+ALTERNATIVE METHOD (if above doesn't work):
+1. Save the GOOGLE_SHEETS_HEADERS.csv file
+2. In Google Sheets: File > Import
+3. Upload the CSV file
+4. Select "Replace current sheet"
+5. Import
+
+Your columns will be:
+A: Timestamp
+B: Organization
+C: Operational Score
+D: Conceptual Score
+E: Governance Score
+F: Overall Score
+G: Level
+H: Q1: Current Usage
+I: Q2: Tools Used
+J: Q3: Learning Interest
+K: Q4: Confidence
+L: Q5: Understanding
+M: Q6: Verification
+N: Q7: Concerns
+O: Q8: Priority
+P: Q9: Role
+Q: Q10: Org AI Usage
+
+That's it! Your sheet is ready to receive data.

@@ -1,0 +1,180 @@
+erDiagram
+    PROFILES ||--o{ ENTITLEMENTS : has
+    PROFILES ||--o{ VIDEO_SESSIONS : tracks
+    PROFILES ||--o{ VIDEO_COMPLETION : completes
+    PROFILES ||--o{ COURSE_COMPLETIONS : achieves
+    PROFILES ||--o{ ORG_MEMBERS : belongs_to
+    PROFILES ||--o{ ORG_SEATS : claims
+    
+    ORGANIZATIONS ||--|| PROFILES : primary_contact
+    ORGANIZATIONS ||--o{ ORG_MEMBERS : has_members
+    ORGANIZATIONS ||--o{ ORG_LICENSES : purchases
+    
+    ORG_LICENSES ||--o{ ORG_SEATS : allocates
+    ORG_MEMBERS }o--|| ORGANIZATIONS : member_of
+    
+    COURSES ||--o{ VIDEOS : contains
+    COURSES ||--o{ RESOURCES : has_materials
+    COURSES ||--o{ COURSE_COMPLETIONS : completed_by
+    
+    VIDEOS ||--o{ VIDEO_SESSIONS : tracked_by
+    VIDEOS ||--o{ VIDEO_COMPLETION : completed_by
+    VIDEOS ||--o{ RESOURCES : has_materials
+    
+    PRODUCTS ||--o{ ENTITLEMENTS : grants_access
+    WEBHOOK_EVENTS ||--o{ ENTITLEMENTS : creates
+    
+    PROFILES {
+        uuid id PK "FK to auth.users"
+        text full_name
+        text avatar_url
+        text role "user|org_admin|superadmin"
+        timestamptz created_at
+        timestamptz updated_at
+    }
+    
+    ORGANIZATIONS {
+        uuid id PK
+        text name
+        text slug UK "regex ^[a-z0-9-]+$"
+        text type "school|district|nonprofit|corporate|other"
+        text logo_url
+        uuid primary_contact_id FK
+        text billing_email
+        timestamptz created_at
+        timestamptz updated_at
+    }
+    
+    ORG_MEMBERS {
+        uuid user_id PK_FK
+        uuid org_id PK_FK
+        text role "member|org_admin"
+        timestamptz created_at
+    }
+    
+    ORG_LICENSES {
+        uuid id PK
+        uuid org_id FK
+        text access_scope "regex ^(library|course|bundle):[a-z0-9-]+$"
+        text status "active|expired|revoked"
+        timestamptz starts_at
+        timestamptz ends_at
+        text stripe_customer_id
+        timestamptz created_at
+        timestamptz updated_at
+    }
+    
+    ORG_SEATS {
+        uuid id PK
+        uuid org_license_id FK
+        text email UK_with_license
+        uuid user_id FK "NULL until claimed"
+        text access_scope "Must match license"
+        text status "pending|invited|active|revoked"
+        timestamptz invited_at
+        timestamptz claimed_at
+        timestamptz revoked_at
+        timestamptz created_at
+        timestamptz updated_at
+    }
+    
+    COURSES {
+        uuid id PK
+        text title
+        text slug UK "regex ^[a-z0-9-]+$"
+        text description
+        text thumbnail_url
+        integer duration_minutes
+        text access_scope "regex ^(library|course|bundle):[a-z0-9-]+$"
+        integer price_cents "CHECK >= 0"
+        boolean is_published
+        boolean is_featured
+        integer order_index
+        timestamptz created_at
+        timestamptz updated_at
+    }
+    
+    VIDEOS {
+        uuid id PK
+        uuid course_id FK
+        text title
+        text description
+        text video_provider "cloudflare|mux|youtube|vimeo"
+        text provider_asset_id "Provider video ID"
+        integer duration_seconds "CHECK > 0"
+        boolean is_preview
+        boolean is_required
+        integer order_index UK_with_course
+        text transcript_url
+        text captions_vtt_path
+        timestamptz created_at
+        timestamptz updated_at
+    }
+    
+    RESOURCES {
+        uuid id PK
+        uuid course_id FK
+        uuid video_id FK
+        text title
+        text storage_path "Bucket path NOT URL"
+        text file_type "pdf|doc|ppt|xlsx|zip|other"
+        integer file_size_bytes
+        boolean is_public "Default false"
+        timestamptz created_at
+        timestamptz updated_at
+    }
+    
+    ENTITLEMENTS {
+        uuid id PK
+        uuid user_id FK
+        text access_scope UK_with_user "regex ^(library|course|bundle):[a-z0-9-]+$"
+        text source "individual|org_seat|annual_pass|manual"
+        text status "active|expired|revoked"
+        timestamptz starts_at
+        timestamptz expires_at
+        text stripe_subscription_id
+        timestamptz created_at
+        timestamptz updated_at
+    }
+    
+    VIDEO_SESSIONS {
+        uuid id PK
+        uuid user_id FK
+        uuid video_id FK
+        integer max_position_s "CHECK >= 0"
+        timestamptz last_event_at
+        timestamptz created_at
+        timestamptz updated_at
+    }
+    
+    VIDEO_COMPLETION {
+        uuid user_id PK_FK
+        uuid video_id PK_FK
+        timestamptz completed_at
+    }
+    
+    COURSE_COMPLETIONS {
+        uuid id PK
+        uuid user_id FK
+        uuid course_id FK
+        text method "watchtime_only"
+        timestamptz completed_at
+        text certificate_url
+        text certificate_number UK
+    }
+    
+    PRODUCTS {
+        uuid id PK
+        text stripe_product_id UK
+        text access_scope "What it grants"
+        text pricing_type "one_time|subscription"
+        timestamptz created_at
+        timestamptz updated_at
+    }
+    
+    WEBHOOK_EVENTS {
+        text id PK "Stripe event ID"
+        text type
+        jsonb payload
+        timestamptz processed_at
+    }

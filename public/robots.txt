@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Update to your canonical domain when available
+Sitemap: /sitemap.xml
+

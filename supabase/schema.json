@@ -1,0 +1,424 @@
+{
+  "database": "RUDI Learning Platform",
+  "version": "2.0.0",
+  "notes": [
+    "Scopes follow pattern: (library|course|bundle):[a-z0-9-]+",
+    "Seat scope is derived via join: org_seats -> org_licenses.access_scope",
+    "Resources are NEVER served directly; API/RPC issues short-TTL signed URLs",
+    "Video playback requires server-minted short-TTL provider tokens"
+  ],
+  "enums": {
+    "profiles.role": ["user","org_admin","superadmin"],
+    "organizations.type": ["school","district","nonprofit","corporate","other"],
+    "org_members.role": ["member","org_admin"],
+    "org_licenses.status": ["active","expired","revoked"],
+    "videos.video_provider": ["cloudflare","mux","youtube","vimeo"],
+    "resources.file_type": ["pdf","doc","ppt","xlsx","zip","other"],
+    "entitlements.source": ["individual","org_seat","annual_pass","manual"],
+    "entitlements.status": ["active","expired","revoked"],
+    "course_completions.method": ["watchtime_only","watchtime_quiz","manual_override","imported"],
+    "products.pricing_type": ["one_time","subscription"],
+    "webhook_events.type_common": [
+      "checkout.session.completed",
+      "customer.subscription.created",
+      "customer.subscription.updated",
+      "customer.subscription.deleted",
+      "invoice.payment_succeeded",
+      "invoice.payment_failed"
+    ]
+  },
+  "patterns": {
+    "scope_pattern": "^(library|course|bundle):[a-z0-9-]+$",
+    "slug_pattern": "^[a-z0-9-]+$"
+  },
+  "tables": {
+    "profiles": {
+      "description": "Extends auth.users; no email duplication",
+      "columns": {
+        "id": {"type":"uuid","pk":true,"fk":"auth.users.id","onDelete":"CASCADE"},
+        "full_name": {"type":"text","nullable":true},
+        "avatar_url": {"type":"text","nullable":true},
+        "role": {"type":"text","default":"user","check":"role IN ('user','org_admin','superadmin')"},
+        "created_at": {"type":"timestamptz","default":"now()"},
+        "updated_at": {"type":"timestamptz","default":"now()"}
+      }
+    },
+    "organizations": {
+      "description": "Customer orgs",
+      "columns": {
+        "id": {"type":"uuid","pk":true,"default":"gen_random_uuid()"},
+        "name": {"type":"text","nullable":false},
+        "slug": {"type":"text","unique":true,"nullable":false,"check":"slug ~ '^[a-z0-9-]+$' AND char_length(slug) > 0"},
+        "type": {"type":"text","check":"type IN ('school','district','nonprofit','corporate','other')"},
+        "logo_url": {"type":"text","nullable":true},
+        "primary_contact_id": {"type":"uuid","fk":"profiles.id"},
+        "billing_email": {"type":"text","nullable":false},
+        "created_at": {"type":"timestamptz","default":"now()"},
+        "updated_at": {"type":"timestamptz","default":"now()"}
+      },
+      "indexes": [{"name":"idx_orgs_slug","columns":["slug"],"unique":true}]
+    },
+    "org_members": {
+      "description": "User ↔ org membership (for admin/report visibility)",
+      "columns": {
+        "user_id": {"type":"uuid","fk":"profiles.id","onDelete":"CASCADE"},
+        "org_id": {"type":"uuid","fk":"organizations.id","onDelete":"CASCADE"},
+        "role": {"type":"text","default":"member","check":"role IN ('member','org_admin')"},
+        "created_at": {"type":"timestamptz","default":"now()"}
+      },
+      "primaryKey": ["user_id","org_id"]
+    },
+    "org_licenses": {
+      "description": "Org-level purchased access",
+      "columns": {
+        "id": {"type":"uuid","pk":true,"default":"gen_random_uuid()"},
+        "org_id": {"type":"uuid","fk":"organizations.id","onDelete":"CASCADE"},
+        "access_scope": {"type":"text","check":"access_scope ~ '^(library|course|bundle):[a-z0-9-]+$'"},
+        "status": {"type":"text","default":"active","check":"status IN ('active','expired','revoked')"},
+        "starts_at": {"type":"timestamptz","default":"now()"},
+        "ends_at": {"type":"timestamptz","nullable":true},
+        "stripe_customer_id": {"type":"text","nullable":true},
+        "created_at": {"type":"timestamptz","default":"now()"},
+        "updated_at": {"type":"timestamptz","default":"now()"}
+      },
+      "indexes": [{"name":"idx_org_licenses_org_status","columns":["org_id","status"]}]
+    },
+    "org_seats": {
+      "description": "Seats under a license (scope derived via license join)",
+      "columns": {
+        "id": {"type":"uuid","pk":true,"default":"gen_random_uuid()"},
+        "org_license_id": {"type":"uuid","fk":"org_licenses.id","onDelete":"CASCADE"},
+        "email": {"type":"text","nullable":false},
+        "user_id": {"type":"uuid","fk":"profiles.id","onDelete":"SET NULL","nullable":true},
+        "status": {"type":"text","default":"pending","check":"status IN ('pending','invited','active','revoked')"},
+        "invited_at": {"type":"timestamptz","nullable":true},
+        "claimed_at": {"type":"timestamptz","nullable":true},
+        "revoked_at": {"type":"timestamptz","nullable":true},
+        "created_at": {"type":"timestamptz","default":"now()"},
+        "updated_at": {"type":"timestamptz","default":"now()"}
+      },
+      "indexes": [{"name":"idx_org_seats_license_email","columns":["org_license_id","email"],"unique":true}]
+    },
+    "courses": {
+      "description": "Catalog entries",
+      "columns": {
+        "id": {"type":"uuid","pk":true,"default":"gen_random_uuid()"},
+        "title": {"type":"text","nullable":false},
+        "slug": {"type":"text","unique":true,"nullable":false,"check":"slug ~ '^[a-z0-9-]+$' AND char_length(slug) > 0"},
+        "description": {"type":"text","nullable":true},
+        "thumbnail_url": {"type":"text","nullable":true},
+        "duration_minutes": {"type":"integer","nullable":true},
+        "access_scope": {"type":"text","default":"library:all","check":"access_scope ~ '^(library|course|bundle):[a-z0-9-]+$'"},
+        "price_cents": {"type":"integer","nullable":true},
+        "is_published": {"type":"boolean","default":false},
+        "is_featured": {"type":"boolean","default":false},
+        "order_index": {"type":"integer","default":0},
+        "created_at": {"type":"timestamptz","default":"now()"},
+        "updated_at": {"type":"timestamptz","default":"now()"}
+      },
+      "indexes": [{"name":"idx_courses_slug","columns":["slug"]}]
+    },
+    "videos": {
+      "description": "Course lessons",
+      "columns": {
+        "id": {"type":"uuid","pk":true,"default":"gen_random_uuid()"},
+        "course_id": {"type":"uuid","fk":"courses.id","onDelete":"CASCADE"},
+        "title": {"type":"text","nullable":false},
+        "description": {"type":"text","nullable":true},
+        "video_provider": {"type":"text","check":"video_provider IN ('cloudflare','mux','youtube','vimeo')"},
+        "provider_asset_id": {"type":"text","nullable":false},
+        "duration_seconds": {"type":"integer","nullable":false,"check":"duration_seconds > 0"},
+        "is_preview": {"type":"boolean","default":false},
+        "is_required": {"type":"boolean","default":true},
+        "order_index": {"type":"integer","default":0},
+        "transcript_storage_path": {"type":"text","nullable":true},
+        "captions_vtt_path": {"type":"text","nullable":true},
+        "created_at": {"type":"timestamptz","default":"now()"},
+        "updated_at": {"type":"timestamptz","default":"now()"}
+      },
+      "indexes": [
+        {"name":"idx_videos_course_order","columns":["course_id","order_index"],"unique":true},
+        {"name":"idx_videos_course_required","columns":["course_id","is_required","id"]}
+      ]
+    },
+    "resources": {
+      "description": "Supporting files (signed delivery only)",
+      "columns": {
+        "id": {"type":"uuid","pk":true,"default":"gen_random_uuid()"},
+        "course_id": {"type":"uuid","fk":"courses.id","onDelete":"CASCADE","nullable":true},
+        "video_id": {"type":"uuid","fk":"videos.id","onDelete":"CASCADE","nullable":true},
+        "title": {"type":"text","nullable":false},
+        "storage_path": {"type":"text","nullable":false},
+        "file_type": {"type":"text","check":"file_type IN ('pdf','doc','ppt','xlsx','zip','other')"},
+        "file_size_bytes": {"type":"integer","nullable":true},
+        "is_public": {"type":"boolean","default":false},
+        "created_at": {"type":"timestamptz","default":"now()"},
+        "updated_at": {"type":"timestamptz","default":"now()"}
+      },
+      "indexes": [
+        {"name":"idx_resources_course","columns":["course_id"]},
+        {"name":"idx_resources_video","columns":["video_id"]}
+      ]
+    },
+    "entitlements": {
+      "description": "Direct user access by scope",
+      "columns": {
+        "id": {"type":"uuid","pk":true,"default":"gen_random_uuid()"},
+        "user_id": {"type":"uuid","fk":"profiles.id","onDelete":"CASCADE"},
+        "access_scope": {"type":"text","check":"access_scope ~ '^(library|course|bundle):[a-z0-9-]+$'"},
+        "source": {"type":"text","check":"source IN ('individual','org_seat','annual_pass','manual')"},
+        "status": {"type":"text","default":"active","check":"status IN ('active','expired','revoked')"},
+        "starts_at": {"type":"timestamptz","default":"now()"},
+        "expires_at": {"type":"timestamptz","nullable":true},
+        "stripe_subscription_id": {"type":"text","nullable":true},
+        "created_at": {"type":"timestamptz","default":"now()"},
+        "updated_at": {"type":"timestamptz","default":"now()"}
+      },
+      "indexes": [
+        {"name":"idx_entitlements_user_scope","columns":["user_id","access_scope"],"unique":true},
+        {"name":"idx_entitlements_user","columns":["user_id"]},
+        {"name":"idx_entitlements_scope","columns":["access_scope"]}
+      ]
+    },
+    "video_sessions": {
+      "description": "Max watch position per (user, video)",
+      "columns": {
+        "id": {"type":"uuid","pk":true,"default":"gen_random_uuid()"},
+        "user_id": {"type":"uuid","fk":"profiles.id","onDelete":"CASCADE"},
+        "video_id": {"type":"uuid","fk":"videos.id","onDelete":"CASCADE"},
+        "max_position_s": {"type":"integer","default":0,"check":"max_position_s >= 0"},
+        "last_event_at": {"type":"timestamptz","default":"now()"},
+        "created_at": {"type":"timestamptz","default":"now()"},
+        "updated_at": {"type":"timestamptz","default":"now()"}
+      },
+      "indexes": [{"name":"idx_video_sessions_user_video","columns":["user_id","video_id"],"unique":true}]
+    },
+    "video_completion": {
+      "description": "Completed videos (≥90% watchtime)",
+      "columns": {
+        "user_id": {"type":"uuid","fk":"profiles.id","onDelete":"CASCADE"},
+        "video_id": {"type":"uuid","fk":"videos.id","onDelete":"CASCADE"},
+        "completed_at": {"type":"timestamptz","default":"now()"}
+      },
+      "primaryKey": ["user_id","video_id"]
+    },
+    "course_completions": {
+      "description": "Completed courses",
+      "columns": {
+        "id": {"type":"uuid","pk":true,"default":"gen_random_uuid()"},
+        "user_id": {"type":"uuid","fk":"profiles.id","onDelete":"CASCADE"},
+        "course_id": {"type":"uuid","fk":"courses.id","onDelete":"CASCADE"},
+        "method": {"type":"text","default":"watchtime_only","check":"method IN ('watchtime_only','watchtime_quiz','manual_override','imported')"},
+        "completed_at": {"type":"timestamptz","default":"now()"},
+        "certificate_url": {"type":"text","nullable":true},
+        "certificate_number": {"type":"text","nullable":true,"unique":true}
+      },
+      "indexes": [{"name":"idx_course_completions_user_course","columns":["user_id","course_id"],"unique":true}]
+    },
+    "products": {
+      "description": "Stripe product → scope map",
+      "columns": {
+        "id": {"type":"uuid","pk":true,"default":"gen_random_uuid()"},
+        "stripe_product_id": {"type":"text","unique":true},
+        "access_scope": {"type":"text","check":"access_scope ~ '^(library|course|bundle):[a-z0-9-]+$'"},
+        "pricing_type": {"type":"text","check":"pricing_type IN ('one_time','subscription')"},
+        "created_at": {"type":"timestamptz","default":"now()"},
+        "updated_at": {"type":"timestamptz","default":"now()"}
+      }
+    },
+    "webhook_events": {
+      "description": "Stripe webhook idempotency/audit",
+      "columns": {
+        "id": {"type":"text","pk":true},
+        "type": {"type":"text","nullable":false},
+        "payload": {"type":"jsonb","nullable":false},
+        "processed_at": {"type":"timestamptz","default":"now()"}
+      }
+    }
+  },
+  "rls_policies": {
+    "profiles": [
+      "ENABLE RLS",
+      "SELECT: id = auth.uid()",
+      "UPDATE: id = auth.uid()",
+      "SELECT (org_admin): exists org_members(admin=auth.uid(), role='org_admin') ∧ org_members(user=profiles.id, same org)",
+      "Superadmin bypass via service role"
+    ],
+    "organizations": [
+      "ENABLE RLS",
+      "SELECT: member of org via org_members join",
+      "UPDATE: org_admin only"
+    ],
+    "org_members": [
+      "ENABLE RLS",
+      "SELECT: self rows OR org_admin of that org",
+      "INSERT/UPDATE: org_admin of that org"
+    ],
+    "org_licenses": [
+      "ENABLE RLS",
+      "SELECT: org_admin of org_licenses.org_id"
+    ],
+    "org_seats": [
+      "ENABLE RLS",
+      "SELECT: org_admin of parent license's org (join) OR user_id = auth.uid()",
+      "INSERT/UPDATE: org_admin of parent license's org"
+    ],
+    "courses": [
+      "ENABLE RLS",
+      "SELECT: is_published = true",
+      "INSERT/UPDATE: superadmin only"
+    ],
+    "videos": [
+      "ENABLE RLS",
+      "SELECT: parent course is_published = true (metadata for previews)",
+      "INSERT/UPDATE: superadmin only"
+    ],
+    "resources": [
+      "ENABLE RLS",
+      "NO DIRECT SELECT of storage_path (privileges revoked); access only via RPC/API after can_view_scope"
+    ],
+    "entitlements": [
+      "ENABLE RLS",
+      "SELECT: user_id = auth.uid()"
+    ],
+    "video_sessions": [
+      "ENABLE RLS",
+      "SELECT/INSERT/UPDATE: user_id = auth.uid()"
+    ],
+    "video_completion": [
+      "ENABLE RLS",
+      "SELECT: user_id = auth.uid()",
+      "INSERT: via trigger/server"
+    ],
+    "course_completions": [
+      "ENABLE RLS",
+      "SELECT: user_id = auth.uid()",
+      "INSERT: via trigger/server"
+    ],
+    "products": [
+      "ENABLE RLS",
+      "ALL: superadmin/service role only"
+    ],
+    "webhook_events": [
+      "ENABLE RLS",
+      "ALL: service role only (webhook handler)"
+    ]
+  },
+  "functions": {
+    "can_view_scope": {
+      "signature": "can_view_scope(p_user uuid, p_scope text) RETURNS boolean",
+      "security": "SECURITY DEFINER; SET search_path=public",
+      "logic": [
+        "true if exists active entitlements(user_id=p_user, access_scope in (p_scope,'library:all'), not expired)",
+        "OR exists active org_seat(user_id=p_user, status='active') joined to active org_license(access_scope in (p_scope,'library:all'), not ended)"
+      ],
+      "used_by": ["GET /api/playback-token","POST /api/resource-link"]
+    },
+    "get_resource_url": {
+      "signature": "get_resource_url(p_resource uuid) RETURNS text",
+      "security": "SECURITY DEFINER",
+      "logic": [
+        "Lookup resource.storage_path and parent (video/course)",
+        "Resolve scope from parent course",
+        "IF can_view_scope(auth.uid(), scope) THEN return short-TTL signed URL; ELSE raise 'Forbidden'"
+      ],
+      "note": "Alternatively implement in API route using Supabase client to sign"
+    }
+  },
+  "triggers": {
+    "mark_video_complete": {
+      "on": "video_sessions",
+      "timing": "AFTER INSERT OR UPDATE OF max_position_s",
+      "logic": [
+        "Fetch videos.duration_seconds for NEW.video_id",
+        "If NEW.max_position_s >= 0.9 * duration_seconds THEN upsert into video_completion(user_id, video_id)"
+      ]
+    },
+    "mark_course_complete": {
+      "on": "video_completion",
+      "timing": "AFTER INSERT",
+      "logic": [
+        "Resolve course_id from videos.video_id",
+        "If COUNT(required videos) == COUNT(completed required videos for user) THEN upsert into course_completions(user_id, course_id, method='watchtime_only')"
+      ]
+    },
+    "set_updated_at": {
+      "tables": ["profiles","organizations","org_members","org_licenses","org_seats","courses","videos","resources","entitlements","video_sessions","course_completions","products"],
+      "logic": "BEFORE UPDATE set NEW.updated_at = now()"
+    }
+  },
+  "views": {
+    "org_video_progress": {
+      "description": "Read-only view for org admins",
+      "definition": "org_seats -> org_licenses -> (join to) profiles/video_sessions/videos LEFT JOIN video_completion",
+      "rls": "SELECT allowed only if auth.uid() is org_admin of the joined org"
+    },
+    "org_course_completions": {
+      "description": "Read-only view for org admins",
+      "definition": "org_seats -> org_licenses -> (join to) profiles/course_completions/courses",
+      "rls": "SELECT allowed only if auth.uid() is org_admin of the joined org"
+    }
+  },
+  "api_endpoints": {
+    "POST /api/stripe/webhook": {
+      "security": "Verify Stripe signature; use service role",
+      "idempotency": "Insert into webhook_events(id); skip if exists",
+      "flows": [
+        "checkout.session.completed (individual): upsert user by email -> insert entitlements(user_id, access_scope, source='individual')",
+        "checkout.session.completed (org seats): insert org_licenses(org_id, access_scope) + create N org_seats",
+        "subscription.updated/deleted/invoice events: set entitlements/org_licenses status/expires"
+      ]
+    },
+    "GET /api/playback-token": {
+      "query": {"videoId":"uuid"},
+      "flow": [
+        "Lookup videos -> join courses to get access_scope",
+        "If can_view_scope(auth.uid(), scope) -> mint provider token (TTL 5-10m) -> return",
+        "Else 403"
+      ]
+    },
+    "POST /api/resource-link": {
+      "body": {"resourceId":"uuid"},
+      "flow": [
+        "Resolve course/video -> scope",
+        "If can_view_scope(auth.uid(), scope) -> return signed URL (TTL 1-5m)",
+        "Else 403"
+      ]
+    },
+    "POST /api/progress": {
+      "body": {"video_id":"uuid","position_s":"int","duration_s":"int"},
+      "flow": [
+        "Upsert video_sessions (max_position_s = GREATEST(old, position_s))",
+        "Triggers handle video/course completion",
+        "Return computed %"
+      ],
+      "limits": "≤1 update/sec per user"
+    },
+    "POST /api/claim-seat": {
+      "body": {"token":"string"},
+      "flow": [
+        "Verify token → (org_license_id,email)",
+        "UPDATE org_seats SET user_id=auth.uid(), status='active', claimed_at=now() WHERE org_license_id=? AND email=? AND status IN ('pending','invited') AND user_id IS NULL",
+        "Insert entitlement(user_id, access_scope=org_licenses.access_scope, source='org_seat')",
+        "Handle race: 0 rows -> already claimed"
+      ]
+    }
+  },
+  "security": {
+    "principles": [
+      "Never trust client; all access checks server-side",
+      "Short-TTL tokens/URLs; rate limit issuance",
+      "No bucket listing; storage paths never exposed"
+    ],
+    "rate_limits": {
+      "playback_token": "per user/video/hour",
+      "resource_link": "per user/resource/hour",
+      "progress": "1 req/sec/user"
+    },
+    "ttl": {
+      "video_token_minutes": 5,
+      "resource_url_minutes": 1,
+      "seat_claim_token_hours": 24
+    }
+  }
+}

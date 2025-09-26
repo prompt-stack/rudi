@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## RUDI Web
 
-## Getting Started
+Modern Next.js frontend for RUDI with secure defaults and a content pipeline (Cloudflare Stream + Supabase).
 
-First, run the development server:
+### Quick Start
+- Install: `npm ci`
+- Dev server: `npm run dev`
+- Lint: `npm run lint`
+- Typecheck: `npm run typecheck`
+- Build: `npm run build`
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Environment Setup
+Create `.env.local` at project root for frontend runtime variables. Only expose `NEXT_PUBLIC_*` to the browser.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Required (frontend):
+- `NEXT_PUBLIC_SITE_URL` — public site URL (optional, used in links/meta)
+- `NEXT_PUBLIC_CLOUDFLARE_ACCOUNT_ID` — Cloudflare Stream account (optional; used for customer domain embeds)
+- `NEXT_PUBLIC_SUPABASE_URL` — Supabase project URL
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY` — Supabase anon key
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Notes:
+- Secrets (service keys, tokens) must NOT use `NEXT_PUBLIC_` and must not be required by the browser. Keep them in server envs or `.secure/`.
+- `config/.env*` is ignored; use it for local variations and keep only `config/.env.local.example` in git.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Security Defaults
+- Strict headers (HSTS, XFO DENY, no sniffing, referrer policy, permissions policy)
+- CSP allowing only necessary origins: self, Supabase, and Cloudflare Stream
+- Admin/debug database API is disabled in production
 
-## Learn More
+### CI
+GitHub Actions runs lint, typecheck, and build on PRs and pushes to main.
 
-To learn more about Next.js, take a look at the following resources:
+### Content Pipeline (Optional)
+Scripts under `scripts/` and `rudi-lms-package/` handle video and asset upload. Configure via environment variables (no plaintext credentials in repo).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

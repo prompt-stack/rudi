@@ -1,0 +1,57 @@
+graph TD
+    Start([Start Assessment]) --> Q1[Baseline Question:<br/>How would you describe your<br/>current relationship with AI tools?]
+
+    %% Baseline Answer Branches
+    Q1 -->|Never used/barely heard| A1[Answer: No Exposure<br/>Tag: novice]
+    Q1 -->|Tried once or twice| A2[Answer: Pre-Beginner<br/>Tag: explorer]
+    Q1 -->|Use occasionally| A3[Answer: Beginner<br/>Tag: user]
+    Q1 -->|Regularly integrate| A4[Answer: Intermediate<br/>Tag: practitioner]
+    Q1 -->|Design workflows & help others| A5[Answer: Advanced<br/>Tag: leader]
+
+    %% Novice Path
+    A1 --> Q2A[Conceptual Basic:<br/>What do you understand about<br/>how AI generates responses?]
+    Q2A -->|No idea - magic| Q3A[Governance Basic:<br/>What do you know about<br/>using AI safely?]
+    Q2A -->|Searches internet| Q3A
+    Q2A -->|Trained on data| Q4A[Operational Basic:<br/>How would you use AI<br/>to write an email?]
+    Q2A -->|Patterns & bias| Q5A[Operational Intermediate:<br/>How do you approach<br/>complex tasks?]
+
+    %% Explorer Path
+    A2 --> Q2A
+
+    %% User Path
+    A3 --> Q5A[Operational Intermediate:<br/>How do you approach<br/>complex tasks with AI?]
+    Q5A -->|Simple questions| Q6A[Conceptual Intermediate:<br/>What concerns you about<br/>AI limitations?]
+    Q5A -->|Break into steps| Q7A[Governance Intermediate:<br/>How do you handle<br/>sensitive information?]
+    Q5A -->|Structured prompts| Q7A
+    Q5A -->|Chain prompts| Q8A[Conceptual Advanced:<br/>How do you evaluate<br/>AI capabilities?]
+
+    %% Practitioner Path
+    A4 --> Q9A[Operational Advanced:<br/>How do you optimize<br/>AI workflows?]
+    Q9A -->|Use for own tasks| Q10A[Governance Advanced:<br/>How do you approach<br/>AI governance?]
+    Q9A -->|Share practices| Q8A
+    Q9A -->|Design systems| Q10A
+
+    %% Leader Path (Shortest)
+    A5 --> Q10A[Governance Advanced:<br/>How do you approach<br/>AI governance in org?]
+
+    %% Final destinations
+    Q3A -->|Any answer| Q11[Follow-up:<br/>What would help most<br/>in your AI journey?]
+    Q4A -->|Any answer| Q11
+    Q6A -->|Any answer| Summary[Show Results]
+    Q7A -->|Any answer| Summary
+    Q8A -->|Any answer| Summary
+    Q10A -->|Any answer| Summary
+    Q11 -->|Any answer| Summary
+
+    %% Path Summary Box
+    Summary --> Results[Results Page:<br/>- Skill Pattern Profile<br/>- Competency Levels<br/>- Radar Chart<br/>- Resources]
+
+    style Start fill:#e1f5e1
+    style Summary fill:#ffe4e1
+    style Results fill:#fff4e1
+    style Q1 fill:#e1e5ff
+    style A5 fill:#d4edda
+    style A4 fill:#d1ecf1
+    style A3 fill:#fff3cd
+    style A2 fill:#ffeaa7
+    style A1 fill:#f8d7da

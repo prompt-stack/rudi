@@ -1,0 +1,358 @@
+OHIO TECHCRED - BECOMING A TRAINING PROVIDER GUIDE
+===================================================
+Last Updated: January 2025
+
+TABLE OF CONTENTS
+-----------------
+1. Executive Summary
+2. Understanding the TechCred Provider Ecosystem
+3. Key Requirements for Training Providers
+4. Credential Approval Process
+5. How to Get Your Credentials Approved
+6. Operating as a Training Provider
+7. Working with Employers
+8. Important Considerations
+9. Contact Information and Resources
+
+
+1. EXECUTIVE SUMMARY
+---------------------
+The Ohio TechCred program operates with an OPEN PROVIDER MODEL, meaning training providers do NOT need special registration or certification to participate. Instead, the focus is on offering APPROVED CREDENTIALS that meet specific criteria. This guide explains how training organizations can participate in the TechCred program and get their credentials approved.
+
+KEY TAKEAWAY: Any training provider can participate in TechCred as long as they offer credentials that meet the program's requirements or successfully get their credentials added to the approved list.
+
+
+2. UNDERSTANDING THE TECHCRED PROVIDER ECOSYSTEM
+-------------------------------------------------
+
+OPEN PROVIDER SYSTEM:
+• Businesses may identify ANY training provider when applying
+• Businesses are NOT required to use a training provider listed on TechCred's website
+• TechCred does NOT endorse specific training providers
+• The program maintains neutrality regarding training providers
+
+WHAT THIS MEANS FOR PROVIDERS:
+• No special registration process required to become a "TechCred Provider"
+• Focus is on offering eligible credentials, not provider certification
+• Employers have complete freedom to choose providers that meet their needs
+• Competition is based on quality, relevance, and value of training offerings
+
+
+3. KEY REQUIREMENTS FOR TRAINING PROVIDERS
+-------------------------------------------
+
+To participate in TechCred, training providers must offer credentials that meet ALL THREE criteria:
+
+CRITERION 1: INDUSTRY-RECOGNIZED
+• Credential must be recognized and valued by industry
+• Should align with current workforce needs
+• Must have established credibility in the relevant sector
+
+CRITERION 2: TECHNOLOGY-FOCUSED
+• Must demonstrate competencies for technology-utilizing occupations
+• Should rely on STEM-related education and technical skills
+• Must benefit employers dependent on technology development and deployment
+
+TECHNOLOGY-FOCUSED DEFINITION:
+Technology credentials demonstrate the competencies necessary to succeed in an occupation that utilizes technology to develop, build, and deliver products and services. Technology credentials rely on science, technology, engineering and/or math related education, as well as technical skills, to benefit an employer dependent on the development, deployment and investment in new and emerging technology.
+
+ELIGIBLE TECHNOLOGY AREAS:
+• Software Development
+• Advanced Manufacturing
+• Data Analytics
+• Cybersecurity
+• Computer Hardware and Design
+• Military Applications
+• Robotics/Automation
+• Manufacturing Technology
+• Information Technology
+• Construction Technology
+• Smart Transportation
+• Internet of Things (IoT)
+• Healthcare Technology
+• Business Technology
+• Artificial Intelligence & Machine Learning
+• Cloud Computing
+• Digital Marketing
+• Project Management
+
+CRITERION 3: SHORT-TERM
+• Must be completable in LESS THAN 12 months
+• OR fewer than 900 clock hours
+• OR fewer than 30 credit hours
+
+
+4. CREDENTIAL APPROVAL PROCESS
+-------------------------------
+
+APPROVAL AUTHORITY:
+• Credentials are recommended by the Technology Review of Educational Credentials (TECHREC) panel
+• Final approval comes from the Chancellor of the Ohio Department of Higher Education
+• The TECHREC panel consists of industry experts who evaluate credential relevance and value
+
+REVIEW CRITERIA:
+The TECHREC panel evaluates credentials based on:
+• Industry recognition and demand
+• Technology focus and relevance
+• Duration and accessibility
+• Alignment with Ohio workforce needs
+• Quality of training and assessment
+• Employer feedback and industry validation
+
+
+5. HOW TO GET YOUR CREDENTIALS APPROVED
+----------------------------------------
+
+STEP 1: EVALUATE YOUR CREDENTIALS
+Before applying, ensure your credentials:
+• Meet all three eligibility criteria
+• Align with Ohio's workforce development priorities
+• Have documented industry recognition
+• Include clear learning outcomes and assessments
+
+STEP 2: SUBMISSION PROCESS
+There are two pathways for credential approval:
+
+PATHWAY A: EMPLOYER-INITIATED
+• Employers can request credentials be added during their TechCred application
+• Employers provide credential description and justification
+• This is often the easiest path for new credentials
+
+PATHWAY B: PROVIDER-INITIATED
+• Training providers can submit credentials for consideration
+• Contact techcred@development.ohio.gov for submission procedures
+• Provide comprehensive documentation about the credential
+
+STEP 3: REQUIRED DOCUMENTATION
+When submitting a credential for approval, include:
+• Credential name and description
+• Issuing organization details
+• Duration and delivery method
+• Learning objectives and competencies covered
+• Assessment methods
+• Industry recognition evidence
+• Technology category alignment
+• Cost structure
+• Success rates and employment outcomes (if available)
+
+STEP 4: REVIEW TIMELINE
+• Reviews typically occur during regular TECHREC panel meetings
+• Processing time varies based on submission volume
+• Approved credentials are added to the eligible list on the TechCred website
+
+
+6. OPERATING AS A TRAINING PROVIDER
+------------------------------------
+
+MARKETING YOUR TECHCRED-ELIGIBLE PROGRAMS:
+
+DO:
+• Clearly identify which of your programs are TechCred-eligible
+• Provide transparent pricing for TechCred-eligible credentials
+• Offer flexible scheduling to accommodate working professionals
+• Maintain accurate records for employer reimbursement requests
+• Provide certificates/credentials promptly upon completion
+
+DON'T:
+• Claim to be an "official" or "endorsed" TechCred provider
+• Misrepresent non-eligible programs as TechCred-eligible
+• Charge different rates for TechCred vs. non-TechCred students
+
+DELIVERY OPTIONS:
+Training may be delivered through:
+• In-person instruction
+• Online learning
+• Hybrid models
+• Self-paced programs
+• Cohort-based learning
+
+DOCUMENTATION FOR EMPLOYERS:
+Providers should supply employers with:
+• Itemized invoices clearly identifying credential costs
+• Completion certificates or certifications
+• Attendance records if required
+• Progress reports
+• Any additional documentation needed for reimbursement
+
+
+7. WORKING WITH EMPLOYERS
+--------------------------
+
+PARTNERSHIP BEST PRACTICES:
+
+BEFORE TRAINING:
+• Help employers understand which credentials are TechCred-eligible
+• Assist with credential selection based on workforce needs
+• Provide clear timelines and scheduling options
+• Explain your assessment and certification process
+• Offer customization options while maintaining credential integrity
+
+DURING TRAINING:
+• Maintain regular communication with employer contacts
+• Provide progress updates
+• Address any performance concerns promptly
+• Accommodate employee work schedules when possible
+• Track attendance and participation
+
+AFTER TRAINING:
+• Issue credentials promptly (within 1-2 weeks of completion)
+• Provide all documentation needed for reimbursement
+• Offer post-training support or resources
+• Gather feedback for continuous improvement
+• Maintain records for potential audits
+
+REIMBURSEMENT SUPPORT:
+Help employers with reimbursement by providing:
+• Clear, itemized invoices
+• Proof of credential completion
+• Payment documentation requirements
+• Timely responses to documentation requests
+• Support during the 6-week reimbursement window
+
+
+8. IMPORTANT CONSIDERATIONS
+----------------------------
+
+COMPLIANCE AND QUALITY:
+
+MAINTAIN CREDENTIAL INTEGRITY:
+• Don't lower standards for TechCred participants
+• Ensure consistent quality across all delivery methods
+• Keep credentials current with industry needs
+• Regular review and update of curriculum
+
+PRICING TRANSPARENCY:
+• Clearly communicate all costs upfront
+• Separate credential costs from additional services
+• Provide itemized billing for reimbursement purposes
+• Maintain consistent pricing policies
+
+RECORD KEEPING:
+• Maintain detailed records for all TechCred participants
+• Keep documentation for at least 3 years
+• Be prepared for potential program audits
+• Track completion rates and outcomes
+
+CONTINUOUS IMPROVEMENT:
+• Regularly update credentials to reflect industry changes
+• Seek employer feedback on program effectiveness
+• Monitor job placement and advancement rates
+• Stay informed about technology trends and workforce needs
+
+COMPETITIVE ADVANTAGES:
+To succeed in the TechCred ecosystem:
+• Offer high-quality, relevant training
+• Provide excellent customer service to employers
+• Maintain competitive pricing
+• Offer flexible scheduling and delivery options
+• Build strong industry partnerships
+• Track and communicate ROI for employers
+
+
+9. CONTACT INFORMATION AND RESOURCES
+-------------------------------------
+
+PRIMARY CONTACTS:
+
+Ohio Department of Development (TechCred Program)
+Email: techcred@development.ohio.gov
+Website: techcred.ohio.gov
+
+Ohio Department of Higher Education
+(For credential approval questions)
+Website: highered.ohio.gov
+
+ADDITIONAL RESOURCES:
+
+Official TechCred Portal:
+https://techcred.ohio.gov/
+
+Application Portal (for employers):
+https://techcred.ohio.gov/apply
+
+Payee Registration (required for reimbursements):
+https://ohiopays.ohio.gov
+
+FREQUENTLY ASKED QUESTIONS FOR PROVIDERS:
+
+Q: Do I need a license or certification to be a TechCred training provider?
+A: No, there is no special registration or certification process. You simply need to offer credentials that meet TechCred requirements.
+
+Q: Can I charge different prices for TechCred vs. regular students?
+A: You should maintain consistent pricing. The TechCred program reimburses employers, not providers directly.
+
+Q: How long does credential approval take?
+A: Timeline varies, but typically several weeks to a few months depending on TECHREC panel meeting schedules.
+
+Q: Can online-only providers participate?
+A: Yes, training can be delivered online, in-person, or through hybrid models.
+
+Q: What if my credential is similar to one already approved?
+A: Similar credentials from different providers can both be approved if they meet all requirements.
+
+Q: Can I offer customized training for specific employers?
+A: Yes, as long as the credential itself maintains its integrity and meets TechCred requirements.
+
+Q: Do I need to be located in Ohio?
+A: No, out-of-state providers can participate as long as they serve Ohio employers and employees.
+
+Q: How do I get added to the TechCred website's provider list?
+A: Contact techcred@development.ohio.gov to inquire about website listing procedures.
+
+Q: Can I offer multiple credentials?
+A: Yes, providers can offer as many TechCred-eligible credentials as they wish.
+
+Q: What happens if my credential loses approval?
+A: Credentials may be reviewed periodically. Stay current with industry needs to maintain eligibility.
+
+
+KEY SUCCESS FACTORS FOR TRAINING PROVIDERS:
+--------------------------------------------
+
+1. CREDENTIAL QUALITY
+   • Ensure strong industry recognition
+   • Maintain rigorous standards
+   • Regular updates to stay current
+   • Clear learning outcomes
+
+2. EMPLOYER RELATIONSHIPS
+   • Responsive communication
+   • Flexible scheduling
+   • Customization capabilities
+   • Strong customer service
+
+3. ADMINISTRATIVE EXCELLENCE
+   • Accurate documentation
+   • Timely credential issuance
+   • Clear invoicing
+   • Efficient processes
+
+4. MARKET POSITIONING
+   • Competitive pricing
+   • Clear value proposition
+   • Strong outcomes data
+   • Industry partnerships
+
+5. CONTINUOUS IMPROVEMENT
+   • Regular program evaluation
+   • Employer feedback integration
+   • Technology updates
+   • Innovation in delivery
+
+
+CONCLUSION
+----------
+The Ohio TechCred program offers significant opportunities for training providers to serve Ohio's workforce development needs. With its open provider model, the program emphasizes credential quality and employer choice rather than provider registration. Success in this ecosystem comes from offering high-quality, relevant, technology-focused credentials that meet employer needs and program requirements.
+
+Training providers interested in participating should focus on:
+• Ensuring their credentials meet all three eligibility criteria
+• Building strong relationships with Ohio employers
+• Maintaining excellent documentation and administrative processes
+• Continuously improving their offerings based on industry needs
+
+For the most current information, always consult the official TechCred website at techcred.ohio.gov or contact the program directly at techcred@development.ohio.gov.
+
+================================================================================
+END OF DOCUMENT
+This guide compiled from official Ohio TechCred sources and provider information.
+Last verified: January 2025

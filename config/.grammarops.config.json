@@ -1,0 +1,90 @@
+{
+  "version": "2.0.0",
+  "project": {
+    "name": "rudi-web",
+    "type": "fullstack",
+    "language": "typescript"
+  },
+  "frameworks": {
+    "auto_detect": true,
+    "frontend": "nextjs",
+    "styling": "tailwind",
+    "backend": "nextjs-api",
+    "database": "prisma",
+    "testing": "jest"
+  },
+  "paths": {
+    "frontend": "./src",
+    "components": "./src/components",
+    "services": "./src/services",
+    "api": "./src/app/api",
+    "tests": "./tests",
+    "exclude": [
+      "node_modules",
+      ".git",
+      ".next",
+      "dist",
+      "build",
+      "coverage",
+      "grammar-ops"
+    ]
+  },
+  "rules": {
+    "typescript": {
+      "components": {
+        "style": "PascalCase",
+        "location": "src/components/{layer}/",
+        "metadata": true
+      },
+      "hooks": {
+        "prefix": "use",
+        "style": "camelCase"
+      },
+      "services": {
+        "style": "PascalCase",
+        "suffix": "Service"
+      },
+      "interfaces": {
+        "style": "PascalCase",
+        "prefix": "none"
+      },
+      "types": {
+        "style": "PascalCase"
+      }
+    },
+    "database": {
+      "tables": {
+        "style": "plural_snake_case"
+      },
+      "columns": {
+        "style": "snake_case"
+      },
+      "models": {
+        "style": "PascalCase"
+      }
+    },
+    "api": {
+      "routes": {
+        "style": "kebab-case"
+      },
+      "methods": {
+        "style": "camelCase",
+        "verbs": ["get", "create", "update", "delete", "list", "find"]
+      }
+    },
+    "css": {
+      "methodology": "utility-first",
+      "custom_classes": "BEM"
+    }
+  },
+  "metadata": {
+    "add_to_new_files": true,
+    "template": "standard",
+    "required_fields": ["purpose", "layer", "dependencies"]
+  },
+  "enforcement": {
+    "level": "warning",
+    "new_files_only": false,
+    "pre_commit": true
+  }
+}

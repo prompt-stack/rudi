@@ -23,5 +23,5 @@
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "grammar-ops/**/*", "archived/**/*", "rudi-lms-package/**/*", "src/lib/assessment/adaptive-engine.ts", "src/lib/assessment/test-adaptive-flow.ts"]
 }

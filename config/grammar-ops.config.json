@@ -1,0 +1,47 @@
+{
+  "version": "2.0.0",
+  "project": {
+    "name": "rudi-web",
+    "type": "frontend",
+    "language": "typescript"
+  },
+  "frameworks": {
+    "auto_detect": true,
+    "frontend": "nextjs",
+    "testing": "jest"
+  },
+  "paths": {
+    "components": "./src/frontend/components",
+    "pages": "./src/app",
+    "styles": "./src/app",
+    "tests": "./__tests__",
+    "exclude": ["node_modules", ".git", ".next", "dist", "build"]
+  },
+  "rules": {
+    "typescript": {
+      "interfaces": {
+        "style": "PascalCase",
+        "prefix": "none"
+      },
+      "types": {
+        "style": "PascalCase"
+      },
+      "enums": {
+        "style": "PascalCase"
+      }
+    },
+    "css": {
+      "methodology": "BEM",
+      "case_style": "kebab-case"
+    }
+  },
+  "metadata": {
+    "add_to_new_files": true,
+    "template": "standard",
+    "required_fields": ["layer", "dependencies", "purpose", "status"]
+  },
+  "enforcement": {
+    "level": "warning",
+    "new_files_only": false
+  }
+}

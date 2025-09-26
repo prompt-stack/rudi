@@ -32,6 +32,13 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+.config/.env*
+!.config/.env.example
+.secure/
+
+# env files in config (avoid accidental commits)
+config/.env*
+!config/.env.local.example
 
 # vercel
 .vercel
@@ -39,3 +46,19 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+/src/generated/prisma
+
+# Test/dev artifacts
+*.png
+*.jpg
+*.jpeg
+*.gif
+.DS_Store
+
+# Archives
+.archive/
+archived/
+
+# Temp
+temp/

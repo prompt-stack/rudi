@@ -1,0 +1,334 @@
+OHIO TECHCRED PROGRAM - COMPREHENSIVE INFORMATION GUIDE
+========================================================
+Last Updated: January 2025
+
+TABLE OF CONTENTS
+-----------------
+1. Program Overview
+2. 2025 Application Periods
+3. Eligibility Requirements
+4. Application Process
+5. Funding and Reimbursement
+6. Eligible Credentials
+7. Training Providers
+8. Important Changes and Updates
+9. Contact Information
+
+
+1. PROGRAM OVERVIEW
+-------------------
+Ohio's TechCred Program is an innovative workforce development initiative that helps Ohio employers upskill their workforce by providing reimbursement for technology-focused training credentials. The program gives businesses training funds to upskill current and future employees to help them remain competitive in today's rapidly changing technological landscape.
+
+Key Features:
+• Reimburses employers for industry-recognized, technology-focused credentials
+• Designed to strengthen Ohio's workforce and business competitiveness
+• Open to businesses of all sizes and industries
+• Currently in its 24th round of applications
+• Six enrollment periods per year
+
+
+2. 2025 APPLICATION PERIODS
+----------------------------
+The program offers multiple application windows throughout 2025:
+
+• January 2-31, 2025
+• March 3-31, 2025
+• May 1-30, 2025 (closes at 3:00 p.m.)
+• July 1-31, 2025
+• September 2-30, 2025 (closes at 3:00 p.m.)
+• November 3 - December 1, 2025
+
+Note: Applications typically close at 3:00 p.m. on the last day of the period.
+
+
+3. ELIGIBILITY REQUIREMENTS
+----------------------------
+
+EMPLOYER REQUIREMENTS:
+• Any Ohio-registered employer that employs Ohio resident W-2 employees
+• Businesses of all sizes (from 1 employee to large corporations)
+• All industries are eligible and encouraged to apply
+• Must have a valid Ohio business registration
+• Must be able to create a TechCred account and obtain a Supplier ID number with the State of Ohio
+
+EMPLOYEE REQUIREMENTS:
+• Must be Ohio residents with a verifiable Ohio address
+• Must be W-2 employees at the time of reimbursement request
+• Independent contractors or 1099 employees are NOT eligible
+• Can be current employees or prospective employees
+• Employees can earn multiple credentials each application period
+
+CREDENTIAL REQUIREMENTS:
+Credentials must meet ALL three criteria:
+1. Must be industry-recognized
+2. Must be technology-focused
+3. Must be short-term (completable in less than 12 months OR fewer than 900 clock hours OR fewer than 30 credit hours)
+
+
+4. APPLICATION PROCESS
+----------------------
+
+STEP-BY-STEP APPLICATION GUIDE:
+
+Step 1: Preparation
+• Identify technical skills gaps in your workforce
+• Determine which employees need training
+• Research eligible credentials that meet your needs
+
+Step 2: Choose Training Provider
+• Select an approved training provider
+• Note: You are NOT required to use a provider listed on TechCred's website
+• Choose the provider that best meets your business needs
+• You can request unlisted credentials be added when applying
+
+Step 3: Create Account
+• Go to techcred.ohio.gov
+• Create a TechCred account
+• Apply for a Supplier ID number with the State of Ohio
+
+Step 4: Submit Application
+• Access the online TechCred portal
+• Complete the application (takes only a few minutes)
+• Include: employer details, training provider information, credential information
+• List the NUMBER of employees who will earn each credential (no need to identify specific individuals)
+
+Step 5: Await Approval
+• Applications are reviewed based on:
+  - Relevance of the training
+  - Industry impact
+  - Cost-effectiveness
+• Successful applicants receive notification
+
+Step 6: Enroll and Train
+• Training may start on or after the first day of the month immediately following the application period
+• Enroll employees in selected programs
+• Ensure training is completed within 12 months from award date
+
+Step 7: Submit for Reimbursement
+• File reimbursement request within 6 weeks of credential completion
+• Include TechCred Employment Verification form for each employee
+• Provide proof of credential completion
+• Identify specific employees who earned credentials (at reimbursement stage)
+
+Step 8: Receive Reimbursement
+• Processing typically occurs within 90 days of submission
+• Funds are deposited directly to employer
+
+
+5. FUNDING AND REIMBURSEMENT
+-----------------------------
+
+REIMBURSEMENT AMOUNTS:
+• Up to $2,000 per credential per employee
+• Maximum $30,000 per employer per funding period
+• Annual maximum: $180,000 per employer
+
+REIMBURSEMENT PROCESS:
+• Submit request within 6 weeks of course completion
+• Include all required documentation
+• Processing time: typically within 90 days
+• Direct deposit to employer account
+
+REQUIRED DOCUMENTATION:
+• TechCred Employment Verification form for each employee
+• Proof of credential completion
+• Employee identification (at reimbursement stage only)
+• Verification of Ohio residency for employees
+
+REPORTING REQUIREMENTS:
+• Status reports required 6 months from agreement effective date
+• Continue every 6 months thereafter
+
+
+6. ELIGIBLE CREDENTIALS
+------------------------
+
+CREDENTIAL CATEGORIES:
+• Information Technology (IT)
+• Cybersecurity
+• Data Analytics
+• Software Development
+• Cloud Computing
+• Artificial Intelligence & Machine Learning
+• Manufacturing Technology
+• Digital Marketing
+• Project Management
+• Business Analysis
+• Quality Assurance
+• Supply Chain Management
+• WordPress Development
+• SEO and Social Media Marketing
+• Microsoft 365 and related certifications
+• SOLIDWORKS and CAD programs
+
+SPECIFIC EXAMPLES OF ELIGIBLE CREDENTIALS:
+• CompTIA certifications (A+, Network+, Security+, etc.)
+• Microsoft certifications
+• AWS Cloud certifications
+• Google Analytics
+• Cisco certifications
+• PMI Project Management certifications
+• Six Sigma certifications
+• Programming language certifications
+• Database management certifications
+
+Note: If a desired credential is not listed, you can request it be added during the application process.
+
+
+7. TRAINING PROVIDERS
+---------------------
+
+APPROVED TRAINING PROVIDERS INCLUDE:
+
+Ohio State ATI
+• Multiple courses and certificate programs qualify
+• Focus on agricultural and technical training
+
+ERC (Employee Resource Center)
+• Credentialed training programs
+• Manufacturing and technical skills focus
+
+MAX Technical Training
+• AI and Microsoft 365 Copilot courses
+• Wide range of technology training
+
+Tri-C (Cuyahoga Community College)
+• Manufacturing talent pool enhancement
+• Technical skills development
+
+Emily Journey & Associates
+• WordPress development
+• SEO training
+• Social media marketing
+
+TechSolve
+• Tooling U-SME courses
+• Manufacturing and technical training
+
+Cincinnati State
+• Various TechCred eligible programs
+• Technical and workforce development
+
+ONLC Training Centers
+• IT certifications
+• Online and in-person options
+
+Ashland University
+• For-credit academic certificates
+• Non-credit workforce development offerings
+
+Vantage Career Center
+• Technical training programs
+• Career-focused credentials
+
+Stark State College
+• Technology-focused programs
+• Workforce development initiatives
+
+Miami University
+• Professional development programs
+• Technology credentials
+
+Hamilton County ESC
+• Educational service center programs
+• Professional development
+
+IMPORTANT NOTES:
+• Employers are NOT limited to these providers
+• Can choose any provider that meets program requirements
+• Can request addition of new providers/credentials
+
+
+8. IMPORTANT CHANGES AND UPDATES
+---------------------------------
+
+RECENT PROGRAM UPDATES:
+
+No Individual Identification Required (Application Stage):
+• Employers no longer need to identify specific individuals in applications
+• Simply list the NUMBER of employees who will earn each credential
+• Specific employee identification only required at reimbursement
+
+Simplified Grant Agreements:
+• Grant agreements now incorporated into online application portal
+• No longer separate documents
+
+Multiple Credentials:
+• Employees can now earn multiple credentials each application period
+• Increases flexibility for comprehensive skill development
+
+Streamlined Process:
+• Application takes only a few minutes to complete
+• Faster processing times
+• Direct deposit reimbursements
+
+
+9. CONTACT INFORMATION
+-----------------------
+
+PRIMARY CONTACT:
+Email: techcred@development.ohio.gov
+Website: techcred.ohio.gov
+
+ADDITIONAL RESOURCES:
+• Application Portal: techcred.ohio.gov/apply
+• Eligible Credentials List: Available on main website
+• Training Provider Directory: Available on main website
+
+SUPPORT SERVICES:
+• Technical support for portal issues
+• Assistance with application process
+• Credential eligibility questions
+• Reimbursement inquiries
+
+KEY TIPS FOR SUCCESS:
+1. Apply early in the application window
+2. Ensure all employee information is accurate
+3. Choose credentials aligned with business needs
+4. Submit reimbursement requests promptly (within 6 weeks)
+5. Maintain documentation for all training
+6. Consider partnering with established training providers
+7. Plan for employee time away from work for training
+8. Track ROI on training investments
+9. Use multiple application periods if needed
+10. Leverage the full $30,000 per period when possible
+
+
+FREQUENTLY ASKED QUESTIONS
+---------------------------
+
+Q: Can small businesses with just one employee apply?
+A: Yes, businesses with as few as one employee are eligible.
+
+Q: Are remote employees eligible?
+A: Yes, as long as they are Ohio residents with verifiable Ohio addresses and W-2 employees.
+
+Q: Can we use out-of-state training providers?
+A: Yes, as long as the credentials meet program requirements and employees are Ohio residents.
+
+Q: How quickly are reimbursements processed?
+A: Typically within 90 days of submission with complete documentation.
+
+Q: Can employees start training before approval?
+A: No, training should start on or after the first day of the month following the application period.
+
+Q: Is there a limit on how many times we can apply?
+A: No, businesses can apply in all six annual application periods, up to $180,000 annually.
+
+Q: What happens if an employee leaves before completing training?
+A: Only completed credentials are eligible for reimbursement. The employer would not receive reimbursement for incomplete training.
+
+Q: Can we combine TechCred with other funding sources?
+A: Check with techcred@development.ohio.gov for specific situations regarding funding combinations.
+
+
+CONCLUSION
+----------
+The Ohio TechCred Program represents a significant opportunity for Ohio businesses to invest in their workforce development with substantial state support. By taking advantage of this program, employers can enhance their competitiveness, improve employee retention, and build a more skilled workforce prepared for the challenges of modern technology-driven business environments.
+
+For the most current information and updates, always refer to the official TechCred website at techcred.ohio.gov or contact the program directly at techcred@development.ohio.gov.
+
+================================================================================
+END OF DOCUMENT
+This information compiled from official Ohio TechCred sources and partner organizations.
+Last verified: January 2025
