@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUDI TechCred - Program Verification</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .artboard {
+            width: 16in;
+            height: 9in;
+            background: white;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            padding: 1.25in;
+        }
+
+        .accent-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #1e3a8a 0%, rgba(30, 58, 138, 0) 100%);
+        }
+
+        .header {
+            margin-bottom: 0.5in;
+        }
+
+        .title {
+            font-size: 2.75rem;
+            font-weight: 300;
+            color: #18181b;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 0.1in;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: #52525b;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5in;
+        }
+
+        .section-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 0.2in;
+            padding-bottom: 0.08in;
+            border-bottom: 2px solid #1e3a8a;
+        }
+
+        .info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.12in;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: start;
+            gap: 0.12in;
+        }
+
+        .check-icon {
+            width: 20px;
+            height: 20px;
+            color: #16a34a;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .info-text {
+            font-size: 0.875rem;
+            color: #18181b;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        .provider-box {
+            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+            border: 1px solid #d1d5db;
+            border-radius: 12px;
+            padding: 0.3in;
+            margin-bottom: 0.25in;
+        }
+
+        .provider-name {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 0.1in;
+        }
+
+        .provider-detail {
+            font-size: 0.875rem;
+            color: #52525b;
+            line-height: 1.6;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0.5in;
+            left: 1.25in;
+            font-size: 0.75rem;
+            color: #71717a;
+            font-weight: 400;
+        }
+
+        .decoration {
+            position: absolute;
+            bottom: 0.5in;
+            right: 1.25in;
+            width: 2in;
+            height: 2in;
+            background: radial-gradient(circle at center, rgba(30, 58, 138, 0.02) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        @page {
+            size: 16in 9in;
+            margin: 0;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .artboard {
+                width: 100%;
+                height: 100%;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="artboard">
+        <div class="accent-line"></div>
+        <div class="decoration"></div>
+
+        <div class="header">
+            <h1 class="title">Program Verification & Support</h1>
+            <p class="subtitle">Complete documentation and dedicated assistance for TechCred reimbursement</p>
+        </div>
+
+        <div class="content-grid">
+            <div>
+                <div class="provider-box">
+                    <div class="provider-name">Training Provider</div>
+                    <div class="provider-detail">Hoff Digital LLC / RUDI</div>
+                    <div class="provider-detail">Website: rudi.app</div>
+                    <div class="provider-detail">Contact: techcred@rudi.app</div>
+                </div>
+
+                <div class="section-title">Documentation Provided</div>
+                <div class="info-list">
+                    <div class="info-item">
+                        <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="info-text">Certificates with unique IDs</span>
+                    </div>
+                    <div class="info-item">
+                        <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="info-text">Detailed itemized invoices</span>
+                    </div>
+                    <div class="info-item">
+                        <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="info-text">Attendance verification</span>
+                    </div>
+                    <div class="info-item">
+                        <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="info-text">Competency assessments</span>
+                    </div>
+                    <div class="info-item">
+                        <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="info-text">Implementation portfolios</span>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="section-title">Ongoing Support</div>
+                <div class="info-list">
+                    <div class="info-item">
+                        <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="info-text">Dedicated TechCred coordinator</span>
+                    </div>
+                    <div class="info-item">
+                        <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="info-text">Application assistance</span>
+                    </div>
+                    <div class="info-item">
+                        <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="info-text">Reimbursement guidance</span>
+                    </div>
+                    <div class="info-item">
+                        <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="info-text">Quarterly curriculum updates</span>
+                    </div>
+                </div>
+
+                <div class="section-title" style="margin-top: 0.35in;">Assessment Method</div>
+                <div class="info-list">
+                    <div class="info-item">
+                        <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="info-text">Pre-training baseline assessment</span>
+                    </div>
+                    <div class="info-item">
+                        <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="info-text">Module completion checks</span>
+                    </div>
+                    <div class="info-item">
+                        <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="info-text">Practical application exercises</span>
+                    </div>
+                    <div class="info-item">
+                        <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="info-text">Post-training assessment</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer">RUDI: Responsible Use of Digital Intelligence</div>
+    </div>
+</body>
+</html>

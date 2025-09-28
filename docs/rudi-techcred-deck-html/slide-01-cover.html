@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUDI TechCred - Cover</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #fafbff 0%, #f8fafc 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .artboard {
+            width: 16in;
+            height: 9in;
+            background: linear-gradient(135deg, #fafbff 0%, #f8fafc 100%);
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 1.5in;
+        }
+
+        /* Subtle accent line */
+        .accent-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #1e3a8a 0%, rgba(30, 58, 138, 0) 100%);
+        }
+
+        /* Logo */
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.5in;
+        }
+
+        /* Main title */
+        .title-group {
+            margin-bottom: 0.5in;
+        }
+
+        .title-main {
+            font-size: 4rem;
+            font-weight: 200;
+            color: #18181b;
+            letter-spacing: -0.03em;
+            line-height: 1;
+            margin-bottom: 0.15in;
+        }
+
+        .title-emphasis {
+            font-size: 4rem;
+            font-weight: 600;
+            color: #1e3a8a;
+            letter-spacing: -0.03em;
+            line-height: 1;
+        }
+
+        /* Subtitle */
+        .subtitle {
+            font-size: 1.25rem;
+            font-weight: 400;
+            color: #52525b;
+            letter-spacing: -0.01em;
+            margin-bottom: 1in;
+        }
+
+        /* Certificate list - minimal */
+        .certificates {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2in;
+        }
+
+        .certificate-item {
+            font-size: 1.125rem;
+            font-weight: 500;
+            color: #18181b;
+            position: relative;
+            padding-left: 0.3in;
+        }
+
+        .certificate-item::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 24px;
+            background: #1e3a8a;
+            border-radius: 2px;
+        }
+
+        /* Footer info */
+        .footer {
+            position: absolute;
+            bottom: 1in;
+            left: 1.5in;
+            font-size: 0.875rem;
+            color: #71717a;
+            font-weight: 400;
+        }
+
+        /* Subtle decorative element */
+        .decoration {
+            position: absolute;
+            bottom: 1in;
+            right: 1.5in;
+            width: 3in;
+            height: 3in;
+            background: radial-gradient(circle at center, rgba(30, 58, 138, 0.03) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        @page {
+            size: 16in 9in;
+            margin: 0;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .artboard {
+                width: 100%;
+                height: 100%;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="artboard">
+        <div class="accent-line"></div>
+        <div class="decoration"></div>
+
+        <div class="logo">RUDI</div>
+
+        <div class="title-group">
+            <div class="title-main">Applied GenAI</div>
+            <div class="title-emphasis">Program</div>
+        </div>
+
+        <div class="subtitle">Technical Documentation for TechCred</div>
+
+        <div class="certificates">
+            <div class="certificate-item">AI Literacy</div>
+            <div class="certificate-item">Applied Generative AI</div>
+            <div class="certificate-item">AI Leadership</div>
+        </div>
+
+        <div class="footer">RUDI: Responsible Use of Digital Intelligence</div>
+    </div>
+</body>
+</html>

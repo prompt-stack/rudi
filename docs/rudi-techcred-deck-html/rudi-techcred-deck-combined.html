@@ -1,0 +1,2620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUDI TechCred Deck - Combined Export</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base reset and body styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #fafafa;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        /* Common artboard base styles */
+        .artboard {
+            width: 16in;
+            height: 9in;
+            padding: 1.25in;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            page-break-after: always;
+            page-break-inside: avoid;
+            flex-shrink: 0;
+        }
+
+        /* Accent line for all slides */
+        .accent-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #1e3a8a 0%, rgba(30, 58, 138, 0) 100%);
+        }
+
+        /* Footer for all slides */
+        .footer {
+            position: absolute;
+            bottom: 0.5in;
+            left: 1.25in;
+            font-size: 0.75rem;
+            color: #71717a;
+            font-weight: 400;
+        }
+
+        /* Decoration for all slides */
+        .decoration {
+            position: absolute;
+            bottom: 0.5in;
+            right: 1.25in;
+            width: 2in;
+            height: 2in;
+            background: radial-gradient(circle at center, rgba(30, 58, 138, 0.02) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        /* Component-specific styles from all slides */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 20%, #ffffff 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .artboard {
+            width: 16in;
+            height: 9in;
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 20%, #ffffff 100%);
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            padding: 1.25in;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .accent-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #1e3a8a 0%, rgba(30, 58, 138, 0) 100%);
+        }
+        .content-center {
+            text-align: center;
+            max-width: 8in;
+            margin: 0 auto;
+        }
+        .title {
+            font-size: 3.5rem;
+            font-weight: 200;
+            color: #18181b;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 0.3in;
+        }
+        .title-emphasis {
+            font-weight: 500;
+            color: #1e3a8a;
+        }
+        .subtitle {
+            font-size: 1.25rem;
+            color: #52525b;
+            margin-bottom: 0.6in;
+            line-height: 1.5;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.4in;
+            margin-bottom: 0.6in;
+        }
+        .contact-item {
+            background: #fafafa;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 0.35in;
+            text-align: center;
+        }
+        .contact-icon {
+            width: 32px;
+            height: 32px;
+            color: #1e3a8a;
+            margin: 0 auto 0.15in;
+        }
+        .contact-label {
+            font-size: 0.75rem;
+            color: #71717a;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.08in;
+        }
+        .contact-value {
+            font-size: 1.25rem;
+            color: #18181b;
+            font-weight: 500;
+        }
+        .provider-info {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border: 1px solid #93c5fd;
+            border-radius: 12px;
+            padding: 0.3in;
+            text-align: center;
+        }
+        .provider-label {
+            font-size: 0.875rem;
+            color: #1e40af;
+            font-weight: 600;
+            margin-bottom: 0.12in;
+        }
+        .provider-name {
+            font-size: 1.125rem;
+            color: #1e3a8a;
+            font-weight: 600;
+        }
+        .footer {
+            position: absolute;
+            bottom: 0.5in;
+            left: 1.25in;
+            font-size: 0.75rem;
+            color: #71717a;
+            font-weight: 400;
+        }
+        .decoration {
+            position: absolute;
+            bottom: 0.5in;
+            right: 1.25in;
+            width: 2in;
+            height: 2in;
+            background: radial-gradient(circle at center, rgba(30, 58, 138, 0.02) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+            size: 16in 9in;
+            margin: 0;
+        }
+                background: white;
+                padding: 0;
+            }
+            .artboard {
+                width: 100%;
+                height: 100%;
+                box-shadow: none;
+            }
+        }
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .artboard {
+            width: 16in;
+            height: 9in;
+            background: white;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            padding: 1.25in;
+        }
+        .accent-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #1e3a8a 0%, rgba(30, 58, 138, 0) 100%);
+        }
+        .header {
+            margin-bottom: 0.6in;
+        }
+        .level-badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #1e3a8a;
+            background: #eff6ff;
+            padding: 0.06in 0.15in;
+            border-radius: 6px;
+            margin-bottom: 0.15in;
+            letter-spacing: 0.05em;
+        }
+        .title {
+            font-size: 2.75rem;
+            font-weight: 300;
+            color: #18181b;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 0.1in;
+        }
+        .certificate-name {
+            font-size: 1.125rem;
+            font-weight: 500;
+            color: #52525b;
+            margin-bottom: 0.4in;
+        }
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 0.8in;
+        }
+        .meta-info {
+            display: flex;
+            gap: 0.4in;
+            margin-bottom: 0.4in;
+        }
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.1in;
+            font-size: 0.875rem;
+            color: #18181b;
+            font-weight: 500;
+        }
+        .meta-icon {
+            width: 18px;
+            height: 18px;
+            color: #71717a;
+        }
+        .section-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #18181b;
+            margin-bottom: 0.25in;
+            letter-spacing: -0.01em;
+        }
+        .outcomes-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.15in;
+        }
+        .outcome-item {
+            display: flex;
+            align-items: start;
+            gap: 0.12in;
+            font-size: 0.9375rem;
+            color: #52525b;
+            line-height: 1.6;
+        }
+        .check-icon {
+            width: 20px;
+            height: 20px;
+            color: #1e3a8a;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4in;
+        }
+        .info-box {
+            background: #fafafa;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 0.35in;
+        }
+        .info-box-title {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #18181b;
+            margin-bottom: 0.15in;
+        }
+        .info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.08in;
+        }
+        .info-item {
+            font-size: 0.8125rem;
+            color: #52525b;
+            line-height: 1.5;
+            padding-left: 0.15in;
+            position: relative;
+        }
+        .info-item::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #1e3a8a;
+        }
+        .pricing-box {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border: 1px solid #bfdbfe;
+            border-radius: 12px;
+            padding: 0.3in;
+            text-align: center;
+        }
+        .pricing-label {
+            font-size: 0.75rem;
+            color: #1e40af;
+            font-weight: 600;
+            margin-bottom: 0.08in;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .price {
+            font-size: 2rem;
+            font-weight: 300;
+            color: #1e3a8a;
+        }
+        .footer {
+            position: absolute;
+            bottom: 0.5in;
+            left: 1.25in;
+            font-size: 0.75rem;
+            color: #71717a;
+            font-weight: 400;
+        }
+        .decoration {
+            position: absolute;
+            bottom: 0.5in;
+            right: 1.25in;
+            width: 2in;
+            height: 2in;
+            background: radial-gradient(circle at center, rgba(30, 58, 138, 0.02) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+            size: 16in 9in;
+            margin: 0;
+        }
+                background: white;
+                padding: 0;
+            }
+            .artboard {
+                width: 100%;
+                height: 100%;
+                box-shadow: none;
+            }
+        }
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .artboard {
+            width: 16in;
+            height: 9in;
+            background: white;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            padding: 1.25in;
+        }
+        .accent-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #1e3a8a 0%, rgba(30, 58, 138, 0) 100%);
+        }
+        .header {
+            margin-bottom: 0.6in;
+        }
+        .title {
+            font-size: 2.75rem;
+            font-weight: 300;
+            color: #18181b;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1.3fr 1fr;
+            gap: 0.7in;
+        }
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 0.3in;
+            padding-bottom: 0.1in;
+            border-bottom: 2px solid #1e3a8a;
+        }
+        .platforms-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.15in;
+            margin-bottom: 0.25in;
+        }
+        .platform-item {
+            background: #fafafa;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 0.2in;
+            font-size: 0.875rem;
+            color: #18181b;
+            font-weight: 500;
+        }
+        .note {
+            font-size: 0.8125rem;
+            color: #52525b;
+            font-style: italic;
+            margin-top: 0.15in;
+        }
+        .cs-concepts {
+            display: flex;
+            flex-direction: column;
+            gap: 0.12in;
+        }
+        .concept-item {
+            background: #fafafa;
+            border-left: 3px solid #1e3a8a;
+            padding: 0.15in 0.2in;
+            font-size: 0.875rem;
+            color: #18181b;
+            font-weight: 500;
+        }
+        .footer {
+            position: absolute;
+            bottom: 0.5in;
+            left: 1.25in;
+            font-size: 0.75rem;
+            color: #71717a;
+            font-weight: 400;
+        }
+        .decoration {
+            position: absolute;
+            bottom: 0.5in;
+            right: 1.25in;
+            width: 2in;
+            height: 2in;
+            background: radial-gradient(circle at center, rgba(30, 58, 138, 0.02) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+            size: 16in 9in;
+            margin: 0;
+        }
+                background: white;
+                padding: 0;
+            }
+            .artboard {
+                width: 100%;
+                height: 100%;
+                box-shadow: none;
+            }
+        }
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .artboard {
+            width: 16in;
+            height: 9in;
+            background: white;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            padding: 1.25in;
+        }
+        .accent-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #1e3a8a 0%, rgba(30, 58, 138, 0) 100%);
+        }
+        .header {
+            margin-bottom: 0.6in;
+        }
+        .title {
+            font-size: 3rem;
+            font-weight: 300;
+            color: #18181b;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.6in;
+        }
+        .section {
+            display: flex;
+            flex-direction: column;
+        }
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 0.3in;
+            padding-bottom: 0.1in;
+            border-bottom: 2px solid #1e3a8a;
+        }
+        .item-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2in;
+        }
+        .item {
+            font-size: 0.9375rem;
+            color: #18181b;
+            line-height: 1.6;
+            padding-left: 0.2in;
+            position: relative;
+        }
+        .item::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0.08in;
+            width: 4px;
+            height: 4px;
+            background: #1e3a8a;
+            border-radius: 50%;
+        }
+        .footer {
+            position: absolute;
+            bottom: 0.5in;
+            left: 1.25in;
+            font-size: 0.75rem;
+            color: #71717a;
+            font-weight: 400;
+        }
+        .decoration {
+            position: absolute;
+            bottom: 0.5in;
+            right: 1.25in;
+            width: 2in;
+            height: 2in;
+            background: radial-gradient(circle at center, rgba(30, 58, 138, 0.02) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+            size: 16in 9in;
+            margin: 0;
+        }
+                background: white;
+                padding: 0;
+            }
+            .artboard {
+                width: 100%;
+                height: 100%;
+                box-shadow: none;
+            }
+        }
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #fafbff 0%, #f8fafc 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .artboard {
+            width: 16in;
+            height: 9in;
+            background: linear-gradient(135deg, #fafbff 0%, #f8fafc 100%);
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 1.5in;
+        }
+        .accent-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #1e3a8a 0%, rgba(30, 58, 138, 0) 100%);
+        }
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.5in;
+        }
+        .title-group {
+            margin-bottom: 0.5in;
+        }
+        .title-main {
+            font-size: 4rem;
+            font-weight: 200;
+            color: #18181b;
+            letter-spacing: -0.03em;
+            line-height: 1;
+            margin-bottom: 0.15in;
+        }
+        .title-emphasis {
+            font-size: 4rem;
+            font-weight: 600;
+            color: #1e3a8a;
+            letter-spacing: -0.03em;
+            line-height: 1;
+        }
+        .subtitle {
+            font-size: 1.25rem;
+            font-weight: 400;
+            color: #52525b;
+            letter-spacing: -0.01em;
+            margin-bottom: 1in;
+        }
+        .certificates {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2in;
+        }
+        .certificate-item {
+            font-size: 1.125rem;
+            font-weight: 500;
+            color: #18181b;
+            position: relative;
+            padding-left: 0.3in;
+        }
+        .certificate-item::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 24px;
+            background: #1e3a8a;
+            border-radius: 2px;
+        }
+        .footer {
+            position: absolute;
+            bottom: 1in;
+            left: 1.5in;
+            font-size: 0.875rem;
+            color: #71717a;
+            font-weight: 400;
+        }
+        .decoration {
+            position: absolute;
+            bottom: 1in;
+            right: 1.5in;
+            width: 3in;
+            height: 3in;
+            background: radial-gradient(circle at center, rgba(30, 58, 138, 0.03) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+            size: 16in 9in;
+            margin: 0;
+        }
+                background: white;
+                padding: 0;
+            }
+            .artboard {
+                width: 100%;
+                height: 100%;
+                box-shadow: none;
+            }
+        }
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f8fafc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .artboard {
+            width: 16in;
+            height: 9in;
+            background: #f8fafc;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            padding: 1.25in;
+        }
+        .accent-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #1e3a8a 0%, rgba(30, 58, 138, 0) 100%);
+        }
+        .header {
+            margin-bottom: 0.6in;
+        }
+        .title {
+            font-size: 2.75rem;
+            font-weight: 300;
+            color: #18181b;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+        .reasons-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.4in;
+        }
+        .reason-item {
+            display: flex;
+            align-items: start;
+            gap: 0.2in;
+        }
+        .check-icon {
+            width: 24px;
+            height: 24px;
+            color: #16a34a;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .reason-content h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #18181b;
+            margin-bottom: 0.08in;
+        }
+        .reason-content p {
+            font-size: 0.875rem;
+            color: #52525b;
+            line-height: 1.6;
+        }
+        .footer {
+            position: absolute;
+            bottom: 0.5in;
+            left: 1.25in;
+            font-size: 0.75rem;
+            color: #71717a;
+            font-weight: 400;
+        }
+        .decoration {
+            position: absolute;
+            bottom: 0.5in;
+            right: 1.25in;
+            width: 2in;
+            height: 2in;
+            background: radial-gradient(circle at center, rgba(30, 58, 138, 0.02) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+            size: 16in 9in;
+            margin: 0;
+        }
+                background: white;
+                padding: 0;
+            }
+            .artboard {
+                width: 100%;
+                height: 100%;
+                box-shadow: none;
+            }
+        }
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #fafbff 0%, #ffffff 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .artboard {
+            width: 16in;
+            height: 9in;
+            background: linear-gradient(135deg, #fafbff 0%, #ffffff 100%);
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            padding: 1.25in;
+        }
+        .accent-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #1e3a8a 0%, rgba(30, 58, 138, 0) 100%);
+        }
+        .header {
+            margin-bottom: 0.5in;
+        }
+        .title {
+            font-size: 2.75rem;
+            font-weight: 300;
+            color: #18181b;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 0.1in;
+        }
+        .subtitle {
+            font-size: 1rem;
+            color: #52525b;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.4in;
+            margin-bottom: 0.5in;
+        }
+        .stat-card {
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 200;
+            color: #1e3a8a;
+            line-height: 1;
+            margin-bottom: 0.1in;
+        }
+        .stat-label {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #18181b;
+            margin-bottom: 0.05in;
+        }
+        .stat-desc {
+            font-size: 0.75rem;
+            color: #52525b;
+        }
+        .frameworks-section {
+            background: #fafafa;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 0.4in;
+        }
+        .frameworks-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #18181b;
+            margin-bottom: 0.25in;
+        }
+        .frameworks-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.2in;
+        }
+        .framework-item {
+            display: flex;
+            align-items: center;
+            gap: 0.12in;
+            font-size: 0.875rem;
+            color: #18181b;
+            font-weight: 500;
+        }
+        .check-icon {
+            width: 20px;
+            height: 20px;
+            color: #16a34a;
+            flex-shrink: 0;
+        }
+        .footer {
+            position: absolute;
+            bottom: 0.5in;
+            left: 1.25in;
+            font-size: 0.75rem;
+            color: #71717a;
+            font-weight: 400;
+        }
+        .decoration {
+            position: absolute;
+            bottom: 0.5in;
+            right: 1.25in;
+            width: 2in;
+            height: 2in;
+            background: radial-gradient(circle at center, rgba(30, 58, 138, 0.02) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+            size: 16in 9in;
+            margin: 0;
+        }
+                background: white;
+                padding: 0;
+            }
+            .artboard {
+                width: 100%;
+                height: 100%;
+                box-shadow: none;
+            }
+        }
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .artboard {
+            width: 16in;
+            height: 9in;
+            background: white;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            padding: 1.25in;
+        }
+        .accent-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #1e3a8a 0%, rgba(30, 58, 138, 0) 100%);
+        }
+        .header {
+            margin-bottom: 0.5in;
+        }
+        .level-badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #1e3a8a;
+            background: #eff6ff;
+            padding: 0.06in 0.15in;
+            border-radius: 6px;
+            margin-bottom: 0.15in;
+            letter-spacing: 0.05em;
+        }
+        .title {
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: #18181b;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 0.1in;
+        }
+        .certificate-name {
+            font-size: 1.125rem;
+            font-weight: 500;
+            color: #52525b;
+            margin-bottom: 0.3in;
+        }
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.6in;
+        }
+        .meta-info {
+            display: flex;
+            gap: 0.4in;
+            margin-bottom: 0.3in;
+        }
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.1in;
+            font-size: 0.875rem;
+            color: #18181b;
+            font-weight: 500;
+        }
+        .meta-icon {
+            width: 18px;
+            height: 18px;
+            color: #71717a;
+        }
+        .section-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #18181b;
+            margin-bottom: 0.18in;
+            letter-spacing: -0.01em;
+        }
+        .module-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.08in;
+        }
+        .module-item {
+            font-size: 0.8125rem;
+            color: #52525b;
+            line-height: 1.5;
+            padding-left: 0.15in;
+            position: relative;
+        }
+        .module-item::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #1e3a8a;
+        }
+        .highlight-box {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border: 1px solid #3b82f6;
+            border-radius: 8px;
+            padding: 0.18in;
+            margin-top: 0.25in;
+        }
+        .highlight-title {
+            font-size: 0.8125rem;
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 0.06in;
+        }
+        .highlight-text {
+            font-size: 0.75rem;
+            color: #1e40af;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+        .pricing-box {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            border: 1px solid #16a34a;
+            border-radius: 12px;
+            padding: 0.25in;
+            text-align: center;
+            margin-top: 0.25in;
+        }
+        .pricing-label {
+            font-size: 0.75rem;
+            color: #15803d;
+            font-weight: 600;
+            margin-bottom: 0.08in;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .price {
+            font-size: 2rem;
+            font-weight: 300;
+            color: #16a34a;
+        }
+        .price-note {
+            font-size: 0.6875rem;
+            color: #15803d;
+            margin-top: 0.05in;
+        }
+        .footer {
+            position: absolute;
+            bottom: 0.5in;
+            left: 1.25in;
+            font-size: 0.75rem;
+            color: #71717a;
+            font-weight: 400;
+        }
+        .decoration {
+            position: absolute;
+            bottom: 0.5in;
+            right: 1.25in;
+            width: 2in;
+            height: 2in;
+            background: radial-gradient(circle at center, rgba(30, 58, 138, 0.02) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+            size: 16in 9in;
+            margin: 0;
+        }
+                background: white;
+                padding: 0;
+            }
+            .artboard {
+                width: 100%;
+                height: 100%;
+                box-shadow: none;
+            }
+        }
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .artboard {
+            width: 16in;
+            height: 9in;
+            background: white;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            padding: 1.25in;
+        }
+        .accent-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #1e3a8a 0%, rgba(30, 58, 138, 0) 100%);
+        }
+        .header {
+            margin-bottom: 0.5in;
+        }
+        .level-badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #1e3a8a;
+            background: #eff6ff;
+            padding: 0.06in 0.15in;
+            border-radius: 6px;
+            margin-bottom: 0.15in;
+            letter-spacing: 0.05em;
+        }
+        .title {
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: #18181b;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 0.1in;
+        }
+        .certificate-name {
+            font-size: 1.125rem;
+            font-weight: 500;
+            color: #52525b;
+            margin-bottom: 0.3in;
+        }
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 0.7in;
+        }
+        .meta-info {
+            display: flex;
+            gap: 0.4in;
+            margin-bottom: 0.3in;
+        }
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.1in;
+            font-size: 0.875rem;
+            color: #18181b;
+            font-weight: 500;
+        }
+        .meta-icon {
+            width: 18px;
+            height: 18px;
+            color: #71717a;
+        }
+        .section-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #18181b;
+            margin-bottom: 0.2in;
+            letter-spacing: -0.01em;
+        }
+        .module-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.1in;
+            margin-bottom: 0.25in;
+        }
+        .module-item {
+            font-size: 0.875rem;
+            color: #52525b;
+            line-height: 1.5;
+            padding-left: 0.15in;
+            position: relative;
+        }
+        .module-item::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #1e3a8a;
+        }
+        .highlight-box {
+            background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+            border: 1px solid #fbbf24;
+            border-radius: 8px;
+            padding: 0.2in;
+        }
+        .highlight-title {
+            font-size: 0.8125rem;
+            font-weight: 600;
+            color: #92400e;
+            margin-bottom: 0.08in;
+        }
+        .highlight-text {
+            font-size: 0.75rem;
+            color: #78350f;
+            line-height: 1.5;
+        }
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3in;
+        }
+        .info-box {
+            background: #fafafa;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 0.3in;
+        }
+        .info-box-title {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #18181b;
+            margin-bottom: 0.12in;
+        }
+        .info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.06in;
+        }
+        .info-item {
+            font-size: 0.75rem;
+            color: #52525b;
+            line-height: 1.4;
+            padding-left: 0.12in;
+            position: relative;
+        }
+        .info-item::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #1e3a8a;
+        }
+        .pricing-box {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border: 1px solid #bfdbfe;
+            border-radius: 12px;
+            padding: 0.25in;
+            text-align: center;
+        }
+        .pricing-label {
+            font-size: 0.75rem;
+            color: #1e40af;
+            font-weight: 600;
+            margin-bottom: 0.08in;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .price {
+            font-size: 2rem;
+            font-weight: 300;
+            color: #1e3a8a;
+        }
+        .footer {
+            position: absolute;
+            bottom: 0.5in;
+            left: 1.25in;
+            font-size: 0.75rem;
+            color: #71717a;
+            font-weight: 400;
+        }
+        .decoration {
+            position: absolute;
+            bottom: 0.5in;
+            right: 1.25in;
+            width: 2in;
+            height: 2in;
+            background: radial-gradient(circle at center, rgba(30, 58, 138, 0.02) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+            size: 16in 9in;
+            margin: 0;
+        }
+                background: white;
+                padding: 0;
+            }
+            .artboard {
+                width: 100%;
+                height: 100%;
+                box-shadow: none;
+            }
+        }
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .artboard {
+            width: 16in;
+            height: 9in;
+            background: white;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            padding: 1.25in;
+        }
+        .accent-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #1e3a8a 0%, rgba(30, 58, 138, 0) 100%);
+        }
+        .header {
+            margin-bottom: 0.5in;
+        }
+        .title {
+            font-size: 2.75rem;
+            font-weight: 300;
+            color: #18181b;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 0.1in;
+        }
+        .subtitle {
+            font-size: 1rem;
+            color: #52525b;
+        }
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5in;
+        }
+        .section-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 0.2in;
+            padding-bottom: 0.08in;
+            border-bottom: 2px solid #1e3a8a;
+        }
+        .info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.12in;
+        }
+        .info-item {
+            display: flex;
+            align-items: start;
+            gap: 0.12in;
+        }
+        .check-icon {
+            width: 20px;
+            height: 20px;
+            color: #16a34a;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .info-text {
+            font-size: 0.875rem;
+            color: #18181b;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+        .provider-box {
+            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+            border: 1px solid #d1d5db;
+            border-radius: 12px;
+            padding: 0.3in;
+            margin-bottom: 0.25in;
+        }
+        .provider-name {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 0.1in;
+        }
+        .provider-detail {
+            font-size: 0.875rem;
+            color: #52525b;
+            line-height: 1.6;
+        }
+        .footer {
+            position: absolute;
+            bottom: 0.5in;
+            left: 1.25in;
+            font-size: 0.75rem;
+            color: #71717a;
+            font-weight: 400;
+        }
+        .decoration {
+            position: absolute;
+            bottom: 0.5in;
+            right: 1.25in;
+            width: 2in;
+            height: 2in;
+            background: radial-gradient(circle at center, rgba(30, 58, 138, 0.02) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+            size: 16in 9in;
+            margin: 0;
+        }
+                background: white;
+                padding: 0;
+            }
+            .artboard {
+                width: 100%;
+                height: 100%;
+                box-shadow: none;
+            }
+        }
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f8fafc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .artboard {
+            width: 16in;
+            height: 9in;
+            background: #f8fafc;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            padding: 1.25in;
+        }
+        .accent-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #1e3a8a 0%, rgba(30, 58, 138, 0) 100%);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 0.75in;
+        }
+        .title {
+            font-size: 3.5rem;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+            margin-bottom: 0.2in;
+        }
+        .title-normal {
+            color: #18181b;
+        }
+        .title-emphasis {
+            color: #2563eb;
+            font-weight: 400;
+        }
+        .subtitle {
+            font-size: 1.125rem;
+            color: #52525b;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+        .dimensions-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.6in;
+            max-width: 12in;
+            margin: 0 auto;
+        }
+        .dimension-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 0.6in;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .icon-circle {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0.4in;
+        }
+        .icon-circle.navy {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+        }
+        .icon-circle.green {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+        }
+        .icon {
+            width: 36px;
+            height: 36px;
+        }
+        .icon-navy {
+            stroke: #1e3a8a;
+        }
+        .icon-green {
+            stroke: #16a34a;
+        }
+        .dimension-title {
+            font-size: 1.375rem;
+            font-weight: 600;
+            color: #18181b;
+            margin-bottom: 0.15in;
+        }
+        .dimension-desc {
+            font-size: 0.9375rem;
+            color: #52525b;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+        .footer {
+            position: absolute;
+            bottom: 0.5in;
+            left: 1.25in;
+            font-size: 0.75rem;
+            color: #71717a;
+            font-weight: 400;
+        }
+        .decoration {
+            position: absolute;
+            bottom: 0.5in;
+            right: 1.25in;
+            width: 2in;
+            height: 2in;
+            background: radial-gradient(circle at center, rgba(30, 58, 138, 0.02) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+            size: 16in 9in;
+            margin: 0;
+        }
+                background: white;
+                padding: 0;
+            }
+            .artboard {
+                width: 100%;
+                height: 100%;
+                box-shadow: none;
+            }
+        }
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .artboard {
+            width: 16in;
+            height: 9in;
+            background: white;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            padding: 1.25in;
+        }
+        .accent-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #1e3a8a 0%, rgba(30, 58, 138, 0) 100%);
+        }
+        .header {
+            margin-bottom: 0.35in;
+        }
+        .title {
+            font-size: 2.75rem;
+            font-weight: 300;
+            color: #18181b;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 0.08in;
+        }
+        .subtitle {
+            font-size: 1.125rem;
+            color: #52525b;
+        }
+        .matrix-table {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .table-header {
+            display: grid;
+            grid-template-columns: 1.2in 1fr 1fr;
+            background: #f9fafb;
+            border-bottom: 2px solid #e5e7eb;
+        }
+        .header-cell {
+            padding: 0.25in;
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #1e3a8a;
+            text-align: center;
+        }
+        .header-cell:first-child {
+            text-align: left;
+        }
+        .table-row {
+            display: grid;
+            grid-template-columns: 1.2in 1fr 1fr;
+            border-bottom: 1px solid #e5e7eb;
+            min-height: 0.8in;
+        }
+        .table-row:last-child {
+            border-bottom: none;
+        }
+        .level-label {
+            padding: 0.25in 0.2in;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #18181b;
+            border-left: 5px solid;
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+        .table-row:nth-child(1) .level-label { border-left-color: #ef4444; background: #fef2f2; }
+        .table-row:nth-child(2) .level-label { border-left-color: #f97316; background: #fff7ed; }
+        .table-row:nth-child(3) .level-label { border-left-color: #eab308; background: #fefce8; }
+        .table-row:nth-child(4) .level-label { border-left-color: #84cc16; background: #f7fee7; }
+        .table-row:nth-child(5) .level-label { border-left-color: #22c55e; background: #f0fdf4; }
+        .cell-content {
+            padding: 0.25in 0.2in;
+            font-size: 0.875rem;
+            color: #52525b;
+            line-height: 1.6;
+            display: flex;
+            align-items: center;
+        }
+        .footer {
+            position: absolute;
+            bottom: 0.5in;
+            left: 1.25in;
+            font-size: 0.75rem;
+            color: #71717a;
+            font-weight: 400;
+        }
+        .decoration {
+            position: absolute;
+            bottom: 0.5in;
+            right: 1.25in;
+            width: 2in;
+            height: 2in;
+            background: radial-gradient(circle at center, rgba(30, 58, 138, 0.02) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+            size: 16in 9in;
+            margin: 0;
+        }
+                background: white;
+                padding: 0;
+            }
+            .artboard {
+                width: 100%;
+                height: 100%;
+                box-shadow: none;
+            }
+        }
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f8fafc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .artboard {
+            width: 16in;
+            height: 9in;
+            background: #f8fafc;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            padding: 1.25in;
+        }
+        .accent-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #1e3a8a 0%, rgba(30, 58, 138, 0) 100%);
+        }
+        .header {
+            margin-bottom: 0.5in;
+        }
+        .title {
+            font-size: 2.75rem;
+            font-weight: 300;
+            color: #18181b;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 0.1in;
+        }
+        .subtitle {
+            font-size: 1rem;
+            color: #52525b;
+        }
+        .process-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.4in;
+        }
+        .process-card {
+            background: #fafafa;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 0.35in;
+        }
+        .step-number {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border: 2px solid #1e3a8a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.875rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 0.15in;
+        }
+        .step-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #18181b;
+            margin-bottom: 0.15in;
+        }
+        .step-items {
+            display: flex;
+            flex-direction: column;
+            gap: 0.06in;
+        }
+        .step-item {
+            font-size: 0.8125rem;
+            color: #52525b;
+            line-height: 1.5;
+            padding-left: 0.15in;
+            position: relative;
+        }
+        .step-item::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #1e3a8a;
+        }
+        .footer {
+            position: absolute;
+            bottom: 0.5in;
+            left: 1.25in;
+            font-size: 0.75rem;
+            color: #71717a;
+            font-weight: 400;
+        }
+        .decoration {
+            position: absolute;
+            bottom: 0.5in;
+            right: 1.25in;
+            width: 2in;
+            height: 2in;
+            background: radial-gradient(circle at center, rgba(30, 58, 138, 0.02) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+            size: 16in 9in;
+            margin: 0;
+        }
+                background: white;
+                padding: 0;
+            }
+            .artboard {
+                width: 100%;
+                height: 100%;
+                box-shadow: none;
+            }
+        }
+
+        @page {
+            size: 16in 9in;
+            margin: 0;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+                display: block;
+            }
+            .artboard {
+                width: 16in;
+                height: 9in;
+                padding: 1.25in;
+                box-shadow: none;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Slide 01 -->
+    <div class="artboard">
+<div class="accent-line"></div>
+<div class="decoration"></div>
+<div class="logo">RUDI</div>
+<div class="title-group">
+<div class="title-main">Applied GenAI</div>
+<div class="title-emphasis">Program</div>
+</div>
+<div class="subtitle">Technical Documentation for TechCred</div>
+<div class="certificates">
+<div class="certificate-item">AI Literacy</div>
+<div class="certificate-item">Applied Generative AI</div>
+<div class="certificate-item">AI Leadership</div>
+</div>
+<div class="footer">RUDI: Responsible Use of Digital Intelligence</div>
+</div>
+
+    <!-- Slide 02 -->
+    <div class="artboard">
+<div class="accent-line"></div>
+<div class="decoration"></div>
+<div class="header">
+<h1 class="title">Executive Summary</h1>
+</div>
+<div class="content-grid">
+<div class="section">
+<div class="section-title">Program Overview</div>
+<div class="item-list">
+<div class="item">50+ hours of developed curriculum</div>
+<div class="item">Modular, customizable delivery</div>
+<div class="item">3 progressive certificates (8/12/20 hours)</div>
+<div class="item">Technology focus: Generative AI applications</div>
+<div class="item">Framework: RUDI (Responsible Use of Digital Intelligence)</div>
+</div>
+</div>
+<div class="section">
+<div class="section-title">Unique Differentiators</div>
+<div class="item-list">
+<div class="item">CS Fundamentals integrated for non-technical users</div>
+<div class="item">30-competency assessment matrix</div>
+<div class="item">Industry-specific customization via pre-training survey</div>
+<div class="item">Three-dimensional learning model</div>
+</div>
+</div>
+</div>
+<div class="footer">RUDI: Responsible Use of Digital Intelligence</div>
+</div>
+
+    <!-- Slide 03 -->
+    <div class="artboard">
+<div class="accent-line"></div>
+<div class="decoration"></div>
+<div class="header">
+<h1 class="title">Why RUDI is TechCred Eligible</h1>
+</div>
+<div class="reasons-grid">
+<div class="reason-item">
+<svg class="check-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<div class="reason-content">
+<h3>Technology-Focused</h3>
+<p>Generative AI and prompt engineering are exactly the skills Ohio wants to develop</p>
+</div>
+</div>
+<div class="reason-item">
+<svg class="check-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<div class="reason-content">
+<h3>Industry-Recognized</h3>
+<p>Our RUDI Framework is used by organizations across Ohio for responsible AI adoption, with 10,000+ collective practitioner hours</p>
+</div>
+</div>
+<div class="reason-item">
+<svg class="check-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<div class="reason-content">
+<h3>Short-Term Completion</h3>
+<p>All programs complete in 8-20 hours, well within the 12-month requirement</p>
+</div>
+</div>
+<div class="reason-item">
+<svg class="check-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<div class="reason-content">
+<h3>Practical Application</h3>
+<p>Hands-on training with immediate workplace application, not just theory</p>
+</div>
+</div>
+<div class="reason-item">
+<svg class="check-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<div class="reason-content">
+<h3>Measurable Competencies</h3>
+<p>30-point assessment matrix with clear progression from No Exposure to Advanced</p>
+</div>
+</div>
+<div class="reason-item">
+<svg class="check-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<div class="reason-content">
+<h3>Standards Alignment</h3>
+<p>Aligned with NIST AI Risk Management Framework, ISO/IEC 23053, and IEEE Ethics Guidelines</p>
+</div>
+</div>
+</div>
+<div class="footer">RUDI: Responsible Use of Digital Intelligence</div>
+</div>
+
+    <!-- Slide 04 -->
+    <div class="artboard">
+<div class="accent-line"></div>
+<div class="decoration"></div>
+<div class="header">
+<h1 class="title">
+<span class="title-normal">Three Core </span><span class="title-emphasis">Dimensions</span>
+</h1>
+<p class="subtitle">RUDI addresses AI literacy across three interconnected competency dimensions</p>
+</div>
+<div class="dimensions-grid">
+<!-- Conceptual -->
+<div class="dimension-card">
+<div class="icon-circle navy">
+<svg class="icon icon-navy" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<h3 class="dimension-title">Conceptual</h3>
+<p class="dimension-desc">Understanding AI fundamentals, architectures, capabilities, limitations, and societal impact</p>
+</div>
+<!-- Operational -->
+<div class="dimension-card">
+<div class="icon-circle green">
+<svg class="icon icon-green" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M4 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM14 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 16a1 1 0 011-1h4a1 1 0 011 1v3a1 1 0 01-1 1H5a1 1 0 01-1-1v-3zM14 16a1 1 0 011-1h4a1 1 0 011 1v3a1 1 0 01-1 1h-4a1 1 0 01-1-1v-3z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<h3 class="dimension-title">Operational</h3>
+<p class="dimension-desc">Practical skills for using AI tools, prompt engineering, and workflow integration</p>
+</div>
+<!-- Governance -->
+<div class="dimension-card">
+<div class="icon-circle navy">
+<svg class="icon icon-navy" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<h3 class="dimension-title">Governance</h3>
+<p class="dimension-desc">Risk management, ethical guidelines, compliance, and responsible AI deployment</p>
+</div>
+</div>
+<div class="footer">RUDI: Responsible Use of Digital Intelligence</div>
+</div>
+
+    <!-- Slide 05 -->
+    <div class="artboard">
+<div class="accent-line"></div>
+<div class="decoration"></div>
+<div class="header">
+<h1 class="title">Measurable Competencies</h1>
+<p class="subtitle">30-Point Competency Matrix: Conceptual Dimension Example</p>
+</div>
+<div class="matrix-table">
+<div class="table-header">
+<div class="header-cell">Level</div>
+<div class="header-cell">Non-Technical User</div>
+<div class="header-cell">Technical User</div>
+</div>
+<div class="table-row">
+<div class="level-label">No Exposure</div>
+<div class="cell-content">Has never heard of generative AI</div>
+<div class="cell-content">Has no awareness of AI/ML technologies</div>
+</div>
+<div class="table-row">
+<div class="level-label">Pre-Beginner</div>
+<div class="cell-content">Has heard the term "AI," maybe ChatGPT, but cannot explain it</div>
+<div class="cell-content">Knows AI exists but confuses it with automation; no exposure to models</div>
+</div>
+<div class="table-row">
+<div class="level-label">Beginner</div>
+<div class="cell-content">Can describe AI as "a tool that generates text/images"</div>
+<div class="cell-content">Knows AI involves training data and models; aware of major providers</div>
+</div>
+<div class="table-row">
+<div class="level-label">Intermediate</div>
+<div class="cell-content">Understands basics: training data, bias, why outputs vary</div>
+<div class="cell-content">Understands parameters, embeddings, fine-tuning; can explain architectures</div>
+</div>
+<div class="table-row">
+<div class="level-label">Advanced</div>
+<div class="cell-content">Can critically discuss AI's role in society, ethics, and limitations</div>
+<div class="cell-content">Can explain trade-offs in model design, architectures, and evaluation metrics</div>
+</div>
+</div>
+<div class="footer">RUDI: Responsible Use of Digital Intelligence</div>
+</div>
+
+    <!-- Slide 06 -->
+    <div class="artboard">
+<div class="accent-line"></div>
+<div class="decoration"></div>
+<div class="header">
+<h1 class="title">Technology Components</h1>
+</div>
+<div class="content-grid">
+<div>
+<div class="section-title">Generative AI Platforms &amp; Tools</div>
+<div class="platforms-grid">
+<div class="platform-item">OpenAI GPT-5</div>
+<div class="platform-item">Anthropic Claude 4</div>
+<div class="platform-item">Microsoft Copilot Suite</div>
+<div class="platform-item">Google Gemini &amp; AI Studio</div>
+<div class="platform-item">Perplexity</div>
+<div class="platform-item">Mid-Journey</div>
+<div class="platform-item">11 Labs</div>
+<div class="platform-item">AI Playgrounds</div>
+</div>
+<div class="note">
+                    Covering: Large Language Models, Diffusion Models, and the full Generative AI suite
+                </div>
+</div>
+<div>
+<div class="section-title">Computer Science for Non-CS</div>
+<div class="cs-concepts">
+<div class="concept-item">APIs &amp; Integration</div>
+<div class="concept-item">Data Structures &amp; Types</div>
+<div class="concept-item">Frontend vs Backend</div>
+<div class="concept-item">Database Fundamentals</div>
+<div class="concept-item">Workflow Automation</div>
+<div class="concept-item">Language of Computer Science</div>
+</div>
+</div>
+</div>
+<div class="footer">RUDI: Responsible Use of Digital Intelligence</div>
+</div>
+
+    <!-- Slide 07 -->
+    <div class="artboard">
+<div class="accent-line"></div>
+<div class="decoration"></div>
+<div class="header">
+<div class="level-badge">LEVEL 1</div>
+<h1 class="title">AI Literacy Certificate</h1>
+<p class="certificate-name">RUDI Professional Development Certificate in AI Literacy</p>
+</div>
+<div class="content-grid">
+<div>
+<div class="meta-info">
+<div class="meta-item">
+<svg class="meta-icon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="10"></circle>
+<path d="M12 6v6l4 2" stroke-linecap="round"></path>
+</svg>
+<span>8 Hours</span>
+</div>
+<div class="meta-item">
+<svg class="meta-icon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>All Employees</span>
+</div>
+</div>
+<div class="section-title">Learning Outcomes</div>
+<div class="outcomes-list">
+<div class="outcome-item">
+<svg class="check-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Understand AI capabilities and limitations</span>
+</div>
+<div class="outcome-item">
+<svg class="check-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Apply basic prompt engineering techniques</span>
+</div>
+<div class="outcome-item">
+<svg class="check-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Implement responsible use habits</span>
+</div>
+<div class="outcome-item">
+<svg class="check-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Create personal AI use policy</span>
+</div>
+<div class="outcome-item">
+<svg class="check-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Identify appropriate use cases</span>
+</div>
+</div>
+</div>
+<div class="sidebar">
+<div class="info-box">
+<div class="info-box-title">Core Modules</div>
+<div class="info-list">
+<div class="info-item">RUDI Framework Introduction</div>
+<div class="info-item">AI Foundations &amp; Evolution</div>
+<div class="info-item">Large Language Model Basics</div>
+<div class="info-item">Prompt Engineering Fundamentals</div>
+<div class="info-item">Responsible AI Practices</div>
+</div>
+</div>
+<div class="pricing-box">
+<div class="pricing-label">TechCred Eligible</div>
+<div class="price">$1,295</div>
+</div>
+</div>
+</div>
+<div class="footer">RUDI: Responsible Use of Digital Intelligence</div>
+</div>
+
+    <!-- Slide 08 -->
+    <div class="artboard">
+<div class="accent-line"></div>
+<div class="decoration"></div>
+<div class="header">
+<div class="level-badge">LEVEL 2</div>
+<h1 class="title">Applied GenAI Certificate</h1>
+<p class="certificate-name">RUDI Professional Development Certificate in Applied Generative AI</p>
+</div>
+<div class="content-grid">
+<div>
+<div class="meta-info">
+<div class="meta-item">
+<svg class="meta-icon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="10"></circle>
+<path d="M12 6v6l4 2" stroke-linecap="round"></path>
+</svg>
+<span>12 Hours</span>
+</div>
+<div class="meta-item">
+<svg class="meta-icon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Intermediate Level</span>
+</div>
+</div>
+<div class="section-title">Builds on AI Literacy plus:</div>
+<div class="module-list">
+<div class="module-item">Advanced Prompt Engineering Patterns</div>
+<div class="module-item">CS Fundamentals for Non-Technical Users</div>
+<div class="module-item">APIs and Webhooks</div>
+<div class="module-item">Data Structures</div>
+<div class="module-item">System Architecture Basics</div>
+<div class="module-item">Custom AI Assistants (GPTs, Claude Projects)</div>
+<div class="module-item">Workflow Automation</div>
+</div>
+<div class="highlight-box">
+<div class="highlight-title">Choose 2 Business Modules:</div>
+<div class="highlight-text">
+                        AI-Powered Research &amp; Analysis • Marketing &amp; Design Automation •
+                        Financial Analysis with AI • Sales Workflow Enhancement •
+                        Rapid Prototyping • Grant Writing Workflows
+                    </div>
+</div>
+</div>
+<div class="sidebar">
+<div class="info-box">
+<div class="info-box-title">Learning Outcomes</div>
+<div class="info-list">
+<div class="info-item">Advanced prompt engineering techniques</div>
+<div class="info-item">Workflow automation with AI</div>
+<div class="info-item">Department-specific applications</div>
+<div class="info-item">Performance measurement skills</div>
+<div class="info-item">Working departmental AI implementation</div>
+</div>
+</div>
+<div class="pricing-box">
+<div class="pricing-label">TechCred Eligible</div>
+<div class="price">$1,595</div>
+</div>
+</div>
+</div>
+<div class="footer">RUDI: Responsible Use of Digital Intelligence</div>
+</div>
+
+    <!-- Slide 09 -->
+    <div class="artboard">
+<div class="accent-line"></div>
+<div class="decoration"></div>
+<div class="header">
+<div class="level-badge">LEVEL 3</div>
+<h1 class="title">AI Integration Leader Certificate</h1>
+<p class="certificate-name">RUDI Professional Development Certificate in AI Leadership</p>
+</div>
+<div class="content-grid">
+<div>
+<div class="meta-info">
+<div class="meta-item">
+<svg class="meta-icon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="10"></circle>
+<path d="M12 6v6l4 2" stroke-linecap="round"></path>
+</svg>
+<span>20 Hours</span>
+</div>
+<div class="meta-item">
+<svg class="meta-icon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Leaders &amp; Decision-Makers</span>
+</div>
+</div>
+<div class="section-title">Complete Pathway Includes:</div>
+<div class="module-list">
+<div class="module-item">All AI Literacy content</div>
+<div class="module-item">All Applied GenAI content</div>
+<div class="module-item">Strategic AI Planning</div>
+<div class="module-item">Build vs Buy Evaluation</div>
+<div class="module-item">Governance Frameworks</div>
+<div class="module-item">Risk Management</div>
+<div class="module-item">Team Enablement</div>
+<div class="module-item">Change Management</div>
+</div>
+<div class="highlight-box">
+<div class="highlight-title">Outcome:</div>
+<div class="highlight-text">
+                        Complete AI implementation strategy for your organization
+                    </div>
+</div>
+</div>
+<div>
+<div class="section-title">Leadership Competencies:</div>
+<div class="module-list">
+<div class="module-item">Strategic AI implementation planning</div>
+<div class="module-item">Governance &amp; risk management</div>
+<div class="module-item">ROI measurement frameworks</div>
+<div class="module-item">Team training &amp; change management</div>
+<div class="module-item">Vendor evaluation &amp; selection</div>
+<div class="module-item">Policy development &amp; compliance</div>
+</div>
+<div class="pricing-box">
+<div class="pricing-label">TechCred Eligible</div>
+<div class="price">$1,895</div>
+<div class="price-note">Full reimbursement available</div>
+</div>
+</div>
+</div>
+<div class="footer">RUDI: Responsible Use of Digital Intelligence</div>
+</div>
+
+    <!-- Slide 10 -->
+    <div class="artboard">
+<div class="accent-line"></div>
+<div class="decoration"></div>
+<div class="header">
+<h1 class="title">Organization-Specific Delivery</h1>
+<p class="subtitle">Customized training aligned with your industry and goals</p>
+</div>
+<div class="process-grid">
+<div class="process-card">
+<div class="step-number">1</div>
+<div class="step-title">Pre-Training Survey</div>
+<div class="step-items">
+<div class="step-item">Current AI usage assessment</div>
+<div class="step-item">Skill gap analysis</div>
+<div class="step-item">Department-specific needs</div>
+<div class="step-item">Industry requirements</div>
+</div>
+</div>
+<div class="process-card">
+<div class="step-number">2</div>
+<div class="step-title">Curriculum Customization</div>
+<div class="step-items">
+<div class="step-item">Select relevant business modules</div>
+<div class="step-item">Adjust technical depth</div>
+<div class="step-item">Include industry examples</div>
+<div class="step-item">Align with company tools</div>
+</div>
+</div>
+<div class="process-card">
+<div class="step-number">3</div>
+<div class="step-title">Delivery Options</div>
+<div class="step-items">
+<div class="step-item">Online (synchronous/asynchronous)</div>
+<div class="step-item">Hybrid learning paths</div>
+<div class="step-item">On-site intensive workshops</div>
+</div>
+</div>
+<div class="process-card">
+<div class="step-number">4</div>
+<div class="step-title">Post-Training Support</div>
+<div class="step-items">
+<div class="step-item">30-day implementation support</div>
+<div class="step-item">Resource library access</div>
+<div class="step-item">Quarterly curriculum updates</div>
+<div class="step-item">Ongoing consultation</div>
+</div>
+</div>
+</div>
+<div class="footer">RUDI: Responsible Use of Digital Intelligence</div>
+</div>
+
+    <!-- Slide 11 -->
+    <div class="artboard">
+<div class="accent-line"></div>
+<div class="decoration"></div>
+<div class="header">
+<h1 class="title">Program Verification &amp; Support</h1>
+<p class="subtitle">Complete documentation and dedicated assistance for TechCred reimbursement</p>
+</div>
+<div class="content-grid">
+<div>
+<div class="provider-box">
+<div class="provider-name">Training Provider</div>
+<div class="provider-detail">Hoff Digital LLC / RUDI</div>
+<div class="provider-detail">Website: rudi.app</div>
+<div class="provider-detail">Contact: techcred@rudi.app</div>
+</div>
+<div class="section-title">Documentation Provided</div>
+<div class="info-list">
+<div class="info-item">
+<svg class="check-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="info-text">Certificates with unique IDs</span>
+</div>
+<div class="info-item">
+<svg class="check-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="info-text">Detailed itemized invoices</span>
+</div>
+<div class="info-item">
+<svg class="check-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="info-text">Attendance verification</span>
+</div>
+<div class="info-item">
+<svg class="check-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="info-text">Competency assessments</span>
+</div>
+<div class="info-item">
+<svg class="check-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="info-text">Implementation portfolios</span>
+</div>
+</div>
+</div>
+<div>
+<div class="section-title">Ongoing Support</div>
+<div class="info-list">
+<div class="info-item">
+<svg class="check-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="info-text">Dedicated TechCred coordinator</span>
+</div>
+<div class="info-item">
+<svg class="check-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="info-text">Application assistance</span>
+</div>
+<div class="info-item">
+<svg class="check-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="info-text">Reimbursement guidance</span>
+</div>
+<div class="info-item">
+<svg class="check-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="info-text">Quarterly curriculum updates</span>
+</div>
+</div>
+<div class="section-title" style="margin-top: 0.35in;">Assessment Method</div>
+<div class="info-list">
+<div class="info-item">
+<svg class="check-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="info-text">Pre-training baseline assessment</span>
+</div>
+<div class="info-item">
+<svg class="check-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="info-text">Module completion checks</span>
+</div>
+<div class="info-item">
+<svg class="check-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="info-text">Practical application exercises</span>
+</div>
+<div class="info-item">
+<svg class="check-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="info-text">Post-training assessment</span>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">RUDI: Responsible Use of Digital Intelligence</div>
+</div>
+
+    <!-- Slide 12 -->
+    <div class="artboard">
+<div class="accent-line"></div>
+<div class="decoration"></div>
+<div class="header">
+<h1 class="title">Research &amp; Evidence</h1>
+<p class="subtitle">RUDI framework built on solid research and field testing</p>
+</div>
+<div class="stats-grid">
+<div class="stat-card">
+<div class="stat-number">100s</div>
+<div class="stat-label">Professionals</div>
+<div class="stat-desc">Surveyed</div>
+</div>
+<div class="stat-card">
+<div class="stat-number">7,000+</div>
+<div class="stat-label">Usage Hours</div>
+<div class="stat-desc">on GenAI Tools</div>
+</div>
+<div class="stat-card">
+<div class="stat-number">8+</div>
+<div class="stat-label">Industries</div>
+<div class="stat-desc">Represented</div>
+</div>
+<div class="stat-card">
+<div class="stat-number">3</div>
+<div class="stat-label">Years</div>
+<div class="stat-desc">Development</div>
+</div>
+</div>
+<div class="frameworks-section">
+<div class="frameworks-title">Alignment with National Standards &amp; Ohio Priorities</div>
+<div class="frameworks-grid">
+<div class="framework-item">
+<svg class="check-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>NIST AI Risk Management Framework</span>
+</div>
+<div class="framework-item">
+<svg class="check-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>ISO/IEC 23053 AI Standards</span>
+</div>
+<div class="framework-item">
+<svg class="check-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>IEEE Ethics Guidelines</span>
+</div>
+<div class="framework-item">
+<svg class="check-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>MIT Sloan Research Foundation</span>
+</div>
+<div class="framework-item">
+<svg class="check-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Constitutional AI Framework</span>
+</div>
+<div class="framework-item">
+<svg class="check-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Ethical AI Development Standards</span>
+</div>
+</div>
+</div>
+<div class="footer">RUDI: Responsible Use of Digital Intelligence</div>
+</div>
+
+    <!-- Slide 13 -->
+    <div class="artboard">
+<div class="accent-line"></div>
+<div class="decoration"></div>
+<div class="content-center">
+<h1 class="title">
+                Ready to Get <span class="title-emphasis">Started?</span>
+</h1>
+<p class="subtitle">
+                Contact us for TechCred documentation and application support
+            </p>
+<div class="contact-grid">
+<div class="contact-item">
+<svg class="contact-icon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<div class="contact-label">Email</div>
+<div class="contact-value">techcred@rudi.app</div>
+</div>
+<div class="contact-item">
+<svg class="contact-icon" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<div class="contact-label">Website</div>
+<div class="contact-value">rudi.app</div>
+</div>
+</div>
+<div class="provider-info">
+<div class="provider-label">Training Provider</div>
+<div class="provider-name">Hoff Digital LLC / RUDI</div>
+</div>
+</div>
+<div class="footer">RUDI: Responsible Use of Digital Intelligence</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUDI TechCred - AI Literacy Certificate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .artboard {
+            width: 16in;
+            height: 9in;
+            background: white;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            padding: 1.25in;
+        }
+
+        .accent-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #1e3a8a 0%, rgba(30, 58, 138, 0) 100%);
+        }
+
+        .header {
+            margin-bottom: 0.6in;
+        }
+
+        .level-badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #1e3a8a;
+            background: #eff6ff;
+            padding: 0.06in 0.15in;
+            border-radius: 6px;
+            margin-bottom: 0.15in;
+            letter-spacing: 0.05em;
+        }
+
+        .title {
+            font-size: 2.75rem;
+            font-weight: 300;
+            color: #18181b;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 0.1in;
+        }
+
+        .certificate-name {
+            font-size: 1.125rem;
+            font-weight: 500;
+            color: #52525b;
+            margin-bottom: 0.4in;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 0.8in;
+        }
+
+        .meta-info {
+            display: flex;
+            gap: 0.4in;
+            margin-bottom: 0.4in;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.1in;
+            font-size: 0.875rem;
+            color: #18181b;
+            font-weight: 500;
+        }
+
+        .meta-icon {
+            width: 18px;
+            height: 18px;
+            color: #71717a;
+        }
+
+        .section-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #18181b;
+            margin-bottom: 0.25in;
+            letter-spacing: -0.01em;
+        }
+
+        .outcomes-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.15in;
+        }
+
+        .outcome-item {
+            display: flex;
+            align-items: start;
+            gap: 0.12in;
+            font-size: 0.9375rem;
+            color: #52525b;
+            line-height: 1.6;
+        }
+
+        .check-icon {
+            width: 20px;
+            height: 20px;
+            color: #1e3a8a;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4in;
+        }
+
+        .info-box {
+            background: #fafafa;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 0.35in;
+        }
+
+        .info-box-title {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #18181b;
+            margin-bottom: 0.15in;
+        }
+
+        .info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.08in;
+        }
+
+        .info-item {
+            font-size: 0.8125rem;
+            color: #52525b;
+            line-height: 1.5;
+            padding-left: 0.15in;
+            position: relative;
+        }
+
+        .info-item::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #1e3a8a;
+        }
+
+        .pricing-box {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border: 1px solid #bfdbfe;
+            border-radius: 12px;
+            padding: 0.3in;
+            text-align: center;
+        }
+
+        .pricing-label {
+            font-size: 0.75rem;
+            color: #1e40af;
+            font-weight: 600;
+            margin-bottom: 0.08in;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .price {
+            font-size: 2rem;
+            font-weight: 300;
+            color: #1e3a8a;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0.5in;
+            left: 1.25in;
+            font-size: 0.75rem;
+            color: #71717a;
+            font-weight: 400;
+        }
+
+        .decoration {
+            position: absolute;
+            bottom: 0.5in;
+            right: 1.25in;
+            width: 2in;
+            height: 2in;
+            background: radial-gradient(circle at center, rgba(30, 58, 138, 0.02) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        @page {
+            size: 16in 9in;
+            margin: 0;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .artboard {
+                width: 100%;
+                height: 100%;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="artboard">
+        <div class="accent-line"></div>
+        <div class="decoration"></div>
+
+        <div class="header">
+            <div class="level-badge">LEVEL 1</div>
+            <h1 class="title">AI Literacy Certificate</h1>
+            <p class="certificate-name">RUDI Professional Development Certificate in AI Literacy</p>
+        </div>
+
+        <div class="content-grid">
+            <div>
+                <div class="meta-info">
+                    <div class="meta-item">
+                        <svg class="meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2" stroke-linecap="round"/>
+                        </svg>
+                        <span>8 Hours</span>
+                    </div>
+                    <div class="meta-item">
+                        <svg class="meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>All Employees</span>
+                    </div>
+                </div>
+
+                <div class="section-title">Learning Outcomes</div>
+                <div class="outcomes-list">
+                    <div class="outcome-item">
+                        <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Understand AI capabilities and limitations</span>
+                    </div>
+                    <div class="outcome-item">
+                        <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Apply basic prompt engineering techniques</span>
+                    </div>
+                    <div class="outcome-item">
+                        <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Implement responsible use habits</span>
+                    </div>
+                    <div class="outcome-item">
+                        <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Create personal AI use policy</span>
+                    </div>
+                    <div class="outcome-item">
+                        <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                            <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Identify appropriate use cases</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="info-box">
+                    <div class="info-box-title">Core Modules</div>
+                    <div class="info-list">
+                        <div class="info-item">RUDI Framework Introduction</div>
+                        <div class="info-item">AI Foundations & Evolution</div>
+                        <div class="info-item">Large Language Model Basics</div>
+                        <div class="info-item">Prompt Engineering Fundamentals</div>
+                        <div class="info-item">Responsible AI Practices</div>
+                    </div>
+                </div>
+
+                <div class="pricing-box">
+                    <div class="pricing-label">TechCred Eligible</div>
+                    <div class="price">$1,295</div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer">RUDI: Responsible Use of Digital Intelligence</div>
+    </div>
+</body>
+</html>

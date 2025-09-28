@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUDI TechCred - Technology Components</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .artboard {
+            width: 16in;
+            height: 9in;
+            background: white;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            padding: 1.25in;
+        }
+
+        .accent-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #1e3a8a 0%, rgba(30, 58, 138, 0) 100%);
+        }
+
+        .header {
+            margin-bottom: 0.6in;
+        }
+
+        .title {
+            font-size: 2.75rem;
+            font-weight: 300;
+            color: #18181b;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1.3fr 1fr;
+            gap: 0.7in;
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 0.3in;
+            padding-bottom: 0.1in;
+            border-bottom: 2px solid #1e3a8a;
+        }
+
+        .platforms-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.15in;
+            margin-bottom: 0.25in;
+        }
+
+        .platform-item {
+            background: #fafafa;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 0.2in;
+            font-size: 0.875rem;
+            color: #18181b;
+            font-weight: 500;
+        }
+
+        .note {
+            font-size: 0.8125rem;
+            color: #52525b;
+            font-style: italic;
+            margin-top: 0.15in;
+        }
+
+        .cs-concepts {
+            display: flex;
+            flex-direction: column;
+            gap: 0.12in;
+        }
+
+        .concept-item {
+            background: #fafafa;
+            border-left: 3px solid #1e3a8a;
+            padding: 0.15in 0.2in;
+            font-size: 0.875rem;
+            color: #18181b;
+            font-weight: 500;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0.5in;
+            left: 1.25in;
+            font-size: 0.75rem;
+            color: #71717a;
+            font-weight: 400;
+        }
+
+        .decoration {
+            position: absolute;
+            bottom: 0.5in;
+            right: 1.25in;
+            width: 2in;
+            height: 2in;
+            background: radial-gradient(circle at center, rgba(30, 58, 138, 0.02) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        @page {
+            size: 16in 9in;
+            margin: 0;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .artboard {
+                width: 100%;
+                height: 100%;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="artboard">
+        <div class="accent-line"></div>
+        <div class="decoration"></div>
+
+        <div class="header">
+            <h1 class="title">Technology Components</h1>
+        </div>
+
+        <div class="content-grid">
+            <div>
+                <div class="section-title">Generative AI Platforms & Tools</div>
+                <div class="platforms-grid">
+                    <div class="platform-item">OpenAI GPT-5</div>
+                    <div class="platform-item">Anthropic Claude 4</div>
+                    <div class="platform-item">Microsoft Copilot Suite</div>
+                    <div class="platform-item">Google Gemini & AI Studio</div>
+                    <div class="platform-item">Perplexity</div>
+                    <div class="platform-item">Mid-Journey</div>
+                    <div class="platform-item">11 Labs</div>
+                    <div class="platform-item">AI Playgrounds</div>
+                </div>
+                <div class="note">
+                    Covering: Large Language Models, Diffusion Models, and the full Generative AI suite
+                </div>
+            </div>
+
+            <div>
+                <div class="section-title">Computer Science for Non-CS</div>
+                <div class="cs-concepts">
+                    <div class="concept-item">APIs & Integration</div>
+                    <div class="concept-item">Data Structures & Types</div>
+                    <div class="concept-item">Frontend vs Backend</div>
+                    <div class="concept-item">Database Fundamentals</div>
+                    <div class="concept-item">Workflow Automation</div>
+                    <div class="concept-item">Language of Computer Science</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">RUDI: Responsible Use of Digital Intelligence</div>
+    </div>
+</body>
+</html>
