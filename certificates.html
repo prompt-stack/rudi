@@ -3,12 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Certifications - RUDI</title>
-    <meta name="description" content="Professional AI certifications in 8-20 hours. Three stackable levels with industry recognition and verified credentials.">
+    <title>AI Certifications - RUDI | 3 Levels, 8-20 Hours</title>
+    <meta name="description" content="Three stackable AI certificates. Entry to leadership levels. 8-20 hours total. Ohio TechCred eligible for $2,000 reimbursement.">
+    <meta name="keywords" content="AI certification programs, AI literacy certificate, applied AI practitioner, AI leadership training, stackable credentials, Ohio TechCred eligible">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="AI Certifications - 3 Progressive Levels">
+    <meta property="og:description" content="Professional AI certifications from foundation to leadership. 8-20 hours. TechCred eligible.">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="AI Certifications - RUDI">
+    <meta name="twitter:description" content="3 stackable AI certificates. 8-20 hours. TechCred eligible.">
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .cert-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            border: 1px solid rgba(0,0,0,0.05);
+            margin-bottom: 6rem;
+            transition: all 0.3s ease;
+        }
+        .cert-card:hover {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
+        }
+        .cert-level {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--teal);
+            margin-bottom: 1rem;
+        }
+        .cert-hours {
+            font-size: 3rem;
+            font-weight: 200;
+            color: var(--navy-900);
+            line-height: 1;
+        }
+        .cert-features {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+        .cert-features li {
+            padding: 0.5rem 0;
+            font-size: 0.9rem;
+            color: var(--gray-600);
+        }
+        .minimal-section {
+            padding: 8rem 0;
+        }
+    </style>
 </head>
 <body>
     <nav class="nav-header">
@@ -19,6 +72,7 @@
                 </a>
             </div>
             <ul class="nav-links">
+                <li><a href="courses.html">Courses</a></li>
                 <li><a href="certificates.html">Certifications</a></li>
                 <li><a href="framework.html">Framework</a></li>
                 <li><a href="ohio.html">Ohio</a></li>
@@ -29,6 +83,7 @@
         </div>
         <div class="mobile-menu">
             <a href="index.html">Home</a>
+            <a href="courses.html">Courses</a>
             <a href="certificates.html">Certifications</a>
             <a href="framework.html">Framework</a>
             <a href="ohio.html">Ohio</a>
@@ -37,470 +92,263 @@
         </div>
     </nav>
 
-    <section style="background: white; padding: 10rem 0;">
+    <!-- Hero with Image -->
+    <section style="padding: 8rem 0 6rem; background: white;">
         <div class="container">
-            <div class="responsive-2col" style="display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center;">
-                <div class="scroll-reveal">
-                    <div style="color: var(--gray-600); font-size: 0.875rem; font-weight: 500; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 1px;">
-                        Professional Credentials
-                    </div>
-                    <h1 style="margin-bottom: 2rem;">Generative AI Certifications</h1>
-                    <p style="font-size: 1.25rem; color: var(--gray-600); line-height: 1.8; margin-bottom: 3rem;">
-                        Industry-recognized certificates in responsible generative AI. Stackable credentials that grow with your expertise.
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; max-width: 1100px; margin: 0 auto;">
+                <div>
+                    <h1 style="font-size: 3rem; font-weight: 300; margin-bottom: 1.5rem; line-height: 1.2;">
+                        AI Certifications
+                    </h1>
+                    <p style="font-size: 1.125rem; color: var(--gray-600); font-weight: 300; line-height: 1.6; margin-bottom: 2rem;">
+                        Three progressive levels. Build expertise from foundation to leadership.
                     </p>
-                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                        <a href="#level1" class="btn btn-primary">View Certifications</a>
-                        <a href="contact.html" class="btn btn-secondary">Get Started</a>
-                    </div>
+                    <a href="#levels" class="btn btn-primary">View Levels</a>
                 </div>
-                <div class="scroll-reveal">
-                    <img src="images/image.png" alt="Professionals working with AI technology" style="width: 100%; height: auto; border-radius: 8px;">
+                <div>
+                    <img src="images/ai-certification-levels.png" alt="Progressive AI certification levels from 8 to 20 hours" style="width: 100%; height: auto; border-radius: 8px;">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Level 1 -->
-    <section class="section-padding">
+    <!-- Certificates Overview -->
+    <section id="levels" style="padding: 6rem 0; background: var(--navy-50);">
         <div class="container">
-            <div style="max-width: 1100px; margin: 0 auto;">
-                <div class="responsive-2col" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;">
-                    <div class="scroll-reveal">
-                        <div style="color: var(--accent); font-size: 0.875rem; font-weight: 600; margin-bottom: 1rem; text-transform: uppercase;">Level 1</div>
-                        <h2 class="mb-6">AI Literacy Certificate</h2>
-                        <p style="font-size: 1.125rem; color: var(--gray-600); margin-bottom: 2rem;">
-                            Foundation in responsible AI
-                        </p>
 
-                        <div style="display: flex; gap: 3rem; margin-bottom: 3rem; font-size: 0.9rem; color: var(--gray-600);">
-                            <div><strong style="color: var(--navy-900); font-size: 1.5rem; display: block;">8 Hours</strong>Duration</div>
-                            <div><strong style="color: var(--navy-900); font-size: 1.5rem; display: block;">Entry</strong>Level</div>
-                        </div>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; max-width: 1000px; margin: 0 auto;">
 
-                        <h3 style="font-size: 1.25rem; margin-bottom: 1.5rem;">What You'll Learn</h3>
-                        <ul style="list-style: none; padding: 0; margin-bottom: 3rem;">
-                            <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--navy-50); display: flex; gap: 1rem;">
-                                <i class="fas fa-check" style="color: var(--accent); margin-top: 0.25rem;"></i>
-                                <span>AI fundamentals & terminology</span>
-                            </li>
-                            <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--navy-50); display: flex; gap: 1rem;">
-                                <i class="fas fa-check" style="color: var(--accent); margin-top: 0.25rem;"></i>
-                                <span>Basic prompt engineering techniques</span>
-                            </li>
-                            <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--navy-50); display: flex; gap: 1rem;">
-                                <i class="fas fa-check" style="color: var(--accent); margin-top: 0.25rem;"></i>
-                                <span>Ethics & responsible use principles</span>
-                            </li>
-                            <li style="padding: 0.75rem 0; display: flex; gap: 1rem;">
-                                <i class="fas fa-check" style="color: var(--accent); margin-top: 0.25rem;"></i>
-                                <span>Hands-on experience with AI tools</span>
-                            </li>
-                        </ul>
-
-                        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                            <a href="contact.html" class="btn btn-primary">Enroll Now</a>
-                            <a href="#level1-syllabus" class="btn btn-secondary">View Syllabus</a>
-                        </div>
-                    </div>
-
-                    <div class="card scroll-reveal">
-                        <h3 style="font-size: 1.1rem; margin-bottom: 1.5rem;">Certificate Includes</h3>
-                        <ul style="list-style: none; padding: 0; color: var(--gray-600); font-size: 0.95rem;">
-                            <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--navy-50);">
-                                <i class="fas fa-award" style="color: var(--accent); margin-right: 0.75rem;"></i>
-                                Digital certificate with unique ID
-                            </li>
-                            <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--navy-50);">
-                                <i class="fas fa-linkedin" style="color: var(--accent); margin-right: 0.75rem;"></i>
-                                LinkedIn badge
-                            </li>
-                            <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--navy-50);">
-                                <i class="fas fa-book" style="color: var(--accent); margin-right: 0.75rem;"></i>
-                                RUDI Framework fundamentals
-                            </li>
-                            <li style="padding: 0.75rem 0;">
-                                <i class="fas fa-calendar-check" style="color: var(--accent); margin-right: 0.75rem;"></i>
-                                1 year credential validity
-                            </li>
-                        </ul>
-                    </div>
+                <!-- Level 1 -->
+                <div style="text-align: center;">
+                    <div class="cert-hours">8</div>
+                    <p style="font-size: 0.875rem; color: var(--gray-600); margin-top: 0.5rem;">hours</p>
+                    <h3 style="font-size: 1rem; margin: 1rem 0 0.5rem; font-weight: 500;">AI Literacy</h3>
+                    <p style="font-size: 0.875rem; color: var(--gray-600);">Foundation</p>
                 </div>
+
+                <!-- Level 2 -->
+                <div style="text-align: center;">
+                    <div style="position: relative;">
+                        <span style="position: absolute; top: -20px; left: 50%; transform: translateX(-50%); background: var(--teal); color: white; padding: 3px 10px; border-radius: 12px; font-size: 0.65rem; font-weight: 600; text-transform: uppercase;">Popular</span>
+                        <div class="cert-hours" style="color: var(--teal);">12</div>
+                    </div>
+                    <p style="font-size: 0.875rem; color: var(--gray-600); margin-top: 0.5rem;">hours</p>
+                    <h3 style="font-size: 1rem; margin: 1rem 0 0.5rem; font-weight: 500;">Applied AI</h3>
+                    <p style="font-size: 0.875rem; color: var(--gray-600);">Practitioner</p>
+                </div>
+
+                <!-- Level 3 -->
+                <div style="text-align: center;">
+                    <div class="cert-hours">20</div>
+                    <p style="font-size: 0.875rem; color: var(--gray-600); margin-top: 0.5rem;">hours</p>
+                    <h3 style="font-size: 1rem; margin: 1rem 0 0.5rem; font-weight: 500;">AI Leader</h3>
+                    <p style="font-size: 0.875rem; color: var(--gray-600);">Strategic</p>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Level 2 -->
-    <section class="section-padding bg-gray">
+    <!-- Certificate Details -->
+    <section class="minimal-section">
         <div class="container">
-            <div style="max-width: 1100px; margin: 0 auto;">
-                <div class="responsive-2col" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;">
-                    <div class="scroll-reveal">
-                        <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: var(--accent); color: white; padding: 0.25rem 0.75rem; border-radius: 50px; font-size: 0.75rem; font-weight: 600; margin-bottom: 1rem;">MOST POPULAR</div>
-                        <div style="color: var(--accent); font-size: 0.875rem; font-weight: 600; margin-bottom: 1rem; text-transform: uppercase;">Level 2</div>
-                        <h2 class="mb-6">Applied AI Practitioner</h2>
-                        <p style="font-size: 1.125rem; color: var(--gray-600); margin-bottom: 2rem;">
-                            Workplace AI implementation
-                        </p>
+            <div style="max-width: 800px; margin: 0 auto;">
 
-                        <div style="display: flex; gap: 3rem; margin-bottom: 3rem; font-size: 0.9rem; color: var(--gray-600);">
-                            <div><strong style="color: var(--navy-900); font-size: 1.5rem; display: block;">12 Hours</strong>Duration</div>
-                            <div><strong style="color: var(--navy-900); font-size: 1.5rem; display: block;">Intermediate</strong>Level</div>
-                        </div>
+                <!-- Level 1 -->
+                <div class="cert-card">
+                    <span class="cert-level">Level 1 • 8 Hours</span>
+                    <h2 style="font-size: 2rem; font-weight: 400; margin-bottom: 1rem;">AI Literacy Certificate</h2>
+                    <p style="color: var(--gray-600); margin-bottom: 2rem;">Foundation in responsible AI for all professionals</p>
 
-                        <h3 style="font-size: 1.25rem; margin-bottom: 1.5rem;">What You'll Learn</h3>
-                        <ul style="list-style: none; padding: 0; margin-bottom: 3rem;">
-                            <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--navy-50); display: flex; gap: 1rem;">
-                                <i class="fas fa-check" style="color: var(--accent); margin-top: 0.25rem;"></i>
-                                <span>Advanced prompt engineering</span>
-                            </li>
-                            <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--navy-50); display: flex; gap: 1rem;">
-                                <i class="fas fa-check" style="color: var(--accent); margin-top: 0.25rem;"></i>
-                                <span>Workflow automation with AI</span>
-                            </li>
-                            <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--navy-50); display: flex; gap: 1rem;">
-                                <i class="fas fa-check" style="color: var(--accent); margin-top: 0.25rem;"></i>
-                                <span>Department-specific applications</span>
-                            </li>
-                            <li style="padding: 0.75rem 0; display: flex; gap: 1rem;">
-                                <i class="fas fa-check" style="color: var(--accent); margin-top: 0.25rem;"></i>
-                                <span>Performance measurement skills</span>
-                            </li>
-                        </ul>
+                    <ul class="cert-features">
+                        <li>→ AI fundamentals & terminology</li>
+                        <li>→ Basic prompt engineering</li>
+                        <li>→ Ethics & responsible use</li>
+                        <li>→ Hands-on tool practice</li>
+                    </ul>
 
-                        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                            <a href="contact.html" class="btn btn-primary">Enroll Now</a>
-                            <a href="#level2-syllabus" class="btn btn-secondary">View Syllabus</a>
-                        </div>
-                    </div>
-
-                    <div class="card scroll-reveal">
-                        <h3 style="font-size: 1.1rem; margin-bottom: 1.5rem;">Certificate Includes</h3>
-                        <ul style="list-style: none; padding: 0; color: var(--gray-600); font-size: 0.95rem;">
-                            <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--navy-50);">
-                                <i class="fas fa-award" style="color: var(--accent); margin-right: 0.75rem;"></i>
-                                Professional certificate
-                            </li>
-                            <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--navy-50);">
-                                <i class="fas fa-project-diagram" style="color: var(--accent); margin-right: 0.75rem;"></i>
-                                Portfolio project
-                            </li>
-                            <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--navy-50);">
-                                <i class="fas fa-book-open" style="color: var(--accent); margin-right: 0.75rem;"></i>
-                                RUDI Applied Framework
-                            </li>
-                            <li style="padding: 0.75rem 0;">
-                                <i class="fas fa-calendar-check" style="color: var(--accent); margin-right: 0.75rem;"></i>
-                                2 years credential validity
-                            </li>
-                        </ul>
+                    <div style="padding-top: 2rem; border-top: 1px solid var(--navy-50);">
+                        <a href="contact.html" class="btn btn-primary" style="margin-right: 1rem;">Enroll Now</a>
+                        <a href="#level1-syllabus" class="btn btn-secondary">Syllabus</a>
                     </div>
                 </div>
+
+                <!-- Level 2 -->
+                <div class="cert-card" style="border: 1px solid var(--teal); position: relative;">
+                    <span style="position: absolute; top: -12px; right: 2rem; background: var(--teal); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">MOST POPULAR</span>
+                    <span class="cert-level">Level 2 • 12 Hours</span>
+                    <h2 style="font-size: 2rem; font-weight: 400; margin-bottom: 1rem;">Applied AI Practitioner</h2>
+                    <p style="color: var(--gray-600); margin-bottom: 2rem;">Workplace AI implementation skills</p>
+
+                    <ul class="cert-features">
+                        <li>→ Advanced prompting techniques</li>
+                        <li>→ Workflow automation</li>
+                        <li>→ Department applications</li>
+                        <li>→ Performance measurement</li>
+                    </ul>
+
+                    <div style="padding-top: 2rem; border-top: 1px solid var(--navy-50);">
+                        <a href="contact.html" class="btn btn-primary" style="margin-right: 1rem;">Enroll Now</a>
+                        <a href="#level2-syllabus" class="btn btn-secondary">Syllabus</a>
+                    </div>
+                </div>
+
+                <!-- Level 3 -->
+                <div class="cert-card">
+                    <span class="cert-level">Level 3 • 20 Hours</span>
+                    <h2 style="font-size: 2rem; font-weight: 400; margin-bottom: 1rem;">AI Integration Leader</h2>
+                    <p style="color: var(--gray-600); margin-bottom: 2rem;">Strategic AI leadership & governance</p>
+
+                    <ul class="cert-features">
+                        <li>→ Strategic implementation</li>
+                        <li>→ Governance & risk management</li>
+                        <li>→ ROI frameworks</li>
+                        <li>→ Change management</li>
+                    </ul>
+
+                    <div style="padding-top: 2rem; border-top: 1px solid var(--navy-50);">
+                        <a href="contact.html" class="btn btn-primary" style="margin-right: 1rem;">Enroll Now</a>
+                        <a href="#level3-syllabus" class="btn btn-secondary">Syllabus</a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Level 3 -->
-    <section class="section-padding">
+    <!-- Comparison Table -->
+    <section style="padding: 6rem 0; background: var(--navy-50);">
         <div class="container">
-            <div style="max-width: 1100px; margin: 0 auto;">
-                <div class="responsive-2col" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;">
-                    <div class="scroll-reveal">
-                        <div style="color: var(--accent); font-size: 0.875rem; font-weight: 600; margin-bottom: 1rem; text-transform: uppercase;">Level 3</div>
-                        <h2 class="mb-6">AI Integration Leader</h2>
-                        <p style="font-size: 1.125rem; color: var(--gray-600); margin-bottom: 2rem;">
-                            Strategic AI leadership
-                        </p>
-
-                        <div style="display: flex; gap: 3rem; margin-bottom: 3rem; font-size: 0.9rem; color: var(--gray-600);">
-                            <div><strong style="color: var(--navy-900); font-size: 1.5rem; display: block;">20 Hours</strong>Duration</div>
-                            <div><strong style="color: var(--navy-900); font-size: 1.5rem; display: block;">Leadership</strong>Level</div>
-                        </div>
-
-                        <h3 style="font-size: 1.25rem; margin-bottom: 1.5rem;">What You'll Learn</h3>
-                        <ul style="list-style: none; padding: 0; margin-bottom: 3rem;">
-                            <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--navy-50); display: flex; gap: 1rem;">
-                                <i class="fas fa-check" style="color: var(--accent); margin-top: 0.25rem;"></i>
-                                <span>Strategic AI implementation planning</span>
-                            </li>
-                            <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--navy-50); display: flex; gap: 1rem;">
-                                <i class="fas fa-check" style="color: var(--accent); margin-top: 0.25rem;"></i>
-                                <span>Governance & risk management</span>
-                            </li>
-                            <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--navy-50); display: flex; gap: 1rem;">
-                                <i class="fas fa-check" style="color: var(--accent); margin-top: 0.25rem;"></i>
-                                <span>ROI measurement frameworks</span>
-                            </li>
-                            <li style="padding: 0.75rem 0; display: flex; gap: 1rem;">
-                                <i class="fas fa-check" style="color: var(--accent); margin-top: 0.25rem;"></i>
-                                <span>Team training & change management</span>
-                            </li>
-                        </ul>
-
-                        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                            <a href="contact.html" class="btn btn-primary">Enroll Now</a>
-                            <a href="#level3-syllabus" class="btn btn-secondary">View Syllabus</a>
-                        </div>
-                    </div>
-
-                    <div class="card scroll-reveal">
-                        <h3 style="font-size: 1.1rem; margin-bottom: 1.5rem;">Certificate Includes</h3>
-                        <ul style="list-style: none; padding: 0; color: var(--gray-600); font-size: 0.95rem;">
-                            <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--navy-50);">
-                                <i class="fas fa-award" style="color: var(--accent); margin-right: 0.75rem;"></i>
-                                Executive certificate
-                            </li>
-                            <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--navy-50);">
-                                <i class="fas fa-graduation-cap" style="color: var(--accent); margin-right: 0.75rem;"></i>
-                                Capstone project
-                            </li>
-                            <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--navy-50);">
-                                <i class="fas fa-book-reader" style="color: var(--accent); margin-right: 0.75rem;"></i>
-                                Full RUDI Framework certification
-                            </li>
-                            <li style="padding: 0.75rem 0;">
-                                <i class="fas fa-calendar-check" style="color: var(--accent); margin-right: 0.75rem;"></i>
-                                3 years credential validity
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Syllabi -->
-    <section id="level1-syllabus" class="section-padding bg-gray">
-        <div class="container">
-            <div style="max-width: 1000px; margin: 0 auto;">
-                <div class="section-header">
-                    <span class="section-badge">Level 1 Syllabus</span>
-                    <h2>AI Literacy Certificate Curriculum</h2>
-                </div>
-
-                <div class="card">
-                    <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; margin-bottom: 3rem;">
-                        <div>
-                            <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Course Details</h3>
-                            <div style="display: flex; flex-direction: column; gap: 1rem; font-size: 0.95rem;">
-                                <div><strong>Duration:</strong> 8 hours</div>
-                                <div><strong>Format:</strong> Self-paced</div>
-                                <div><strong>Level:</strong> Entry-level</div>
-                                <div><strong>Prerequisites:</strong> None</div>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Learning Outcomes</h3>
-                            <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.5rem;">
-                                <li style="display: flex; gap: 0.75rem;"><i class="fas fa-check" style="color: var(--accent);"></i><span>Define generative AI and explain how it works</span></li>
-                                <li style="display: flex; gap: 0.75rem;"><i class="fas fa-check" style="color: var(--accent);"></i><span>Write effective prompts using basic techniques</span></li>
-                                <li style="display: flex; gap: 0.75rem;"><i class="fas fa-check" style="color: var(--accent);"></i><span>Identify ethical considerations and bias risks</span></li>
-                                <li style="display: flex; gap: 0.75rem;"><i class="fas fa-check" style="color: var(--accent);"></i><span>Apply responsible AI practices in workplace tasks</span></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <h3 style="font-size: 1.1rem; margin-bottom: 1.5rem;">Course Modules</h3>
-                    <div style="display: flex; flex-direction: column; gap: 1rem;">
-                        <div style="padding: 1.5rem; background: var(--navy-50); border-radius: 8px;">
-                            <h4 style="margin-bottom: 0.75rem;">Module 1: AI Fundamentals (2 hrs)</h4>
-                            <p style="font-size: 0.9rem; color: var(--gray-600);">Introduction to generative AI, how models work, and common applications in business</p>
-                        </div>
-                        <div style="padding: 1.5rem; background: var(--navy-50); border-radius: 8px;">
-                            <h4 style="margin-bottom: 0.75rem;">Module 2: Prompt Engineering Basics (2 hrs)</h4>
-                            <p style="font-size: 0.9rem; color: var(--gray-600);">Writing clear prompts, iterating on outputs, and basic prompt patterns</p>
-                        </div>
-                        <div style="padding: 1.5rem; background: var(--navy-50); border-radius: 8px;">
-                            <h4 style="margin-bottom: 0.75rem;">Module 3: Ethics & Responsible Use (2 hrs)</h4>
-                            <p style="font-size: 0.9rem; color: var(--gray-600);">Understanding bias, privacy concerns, and ethical AI implementation</p>
-                        </div>
-                        <div style="padding: 1.5rem; background: var(--navy-50); border-radius: 8px;">
-                            <h4 style="margin-bottom: 0.75rem;">Module 4: Hands-On Practice (2 hrs)</h4>
-                            <p style="font-size: 0.9rem; color: var(--gray-600);">Practical exercises with AI tools and real-world workplace scenarios</p>
-                        </div>
-                    </div>
-
-                    <div style="text-align: center; margin-top: 3rem;">
-                        <a href="contact.html" class="btn btn-primary">Request Full Syllabus</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="level2-syllabus" class="section-padding">
-        <div class="container">
-            <div style="max-width: 1000px; margin: 0 auto;">
-                <div class="section-header">
-                    <span class="section-badge">Level 2 Syllabus</span>
-                    <h2>Applied AI Practitioner Curriculum</h2>
-                </div>
-
-                <div class="card">
-                    <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; margin-bottom: 3rem;">
-                        <div>
-                            <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Course Details</h3>
-                            <div style="display: flex; flex-direction: column; gap: 1rem; font-size: 0.95rem;">
-                                <div><strong>Duration:</strong> 12 hours</div>
-                                <div><strong>Format:</strong> Self-paced</div>
-                                <div><strong>Level:</strong> Intermediate</div>
-                                <div><strong>Prerequisites:</strong> Level 1 or equivalent</div>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Learning Outcomes</h3>
-                            <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.5rem;">
-                                <li style="display: flex; gap: 0.75rem;"><i class="fas fa-check" style="color: var(--accent);"></i><span>Design complex prompts using advanced techniques</span></li>
-                                <li style="display: flex; gap: 0.75rem;"><i class="fas fa-check" style="color: var(--accent);"></i><span>Build AI-enhanced workflows for business processes</span></li>
-                                <li style="display: flex; gap: 0.75rem;"><i class="fas fa-check" style="color: var(--accent);"></i><span>Measure and improve AI performance</span></li>
-                                <li style="display: flex; gap: 0.75rem;"><i class="fas fa-check" style="color: var(--accent);"></i><span>Apply AI to department-specific challenges</span></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <h3 style="font-size: 1.1rem; margin-bottom: 1.5rem;">Course Modules</h3>
-                    <div style="display: flex; flex-direction: column; gap: 1rem;">
-                        <div style="padding: 1.5rem; background: var(--navy-50); border-radius: 8px;">
-                            <h4 style="margin-bottom: 0.75rem;">Module 1: Advanced Prompting (3 hrs)</h4>
-                            <p style="font-size: 0.9rem; color: var(--gray-600);">Chain-of-thought, few-shot learning, and complex prompt architectures</p>
-                        </div>
-                        <div style="padding: 1.5rem; background: var(--navy-50); border-radius: 8px;">
-                            <h4 style="margin-bottom: 0.75rem;">Module 2: Workflow Automation (3 hrs)</h4>
-                            <p style="font-size: 0.9rem; color: var(--gray-600);">Integrating AI into existing processes and building automated workflows</p>
-                        </div>
-                        <div style="padding: 1.5rem; background: var(--navy-50); border-radius: 8px;">
-                            <h4 style="margin-bottom: 0.75rem;">Module 3: Department Applications (3 hrs)</h4>
-                            <p style="font-size: 0.9rem; color: var(--gray-600);">AI use cases for HR, Marketing, Sales, Operations, and Finance</p>
-                        </div>
-                        <div style="padding: 1.5rem; background: var(--navy-50); border-radius: 8px;">
-                            <h4 style="margin-bottom: 0.75rem;">Module 4: Performance Measurement (3 hrs)</h4>
-                            <p style="font-size: 0.9rem; color: var(--gray-600);">Tracking ROI, quality metrics, and continuous improvement</p>
-                        </div>
-                    </div>
-
-                    <div style="text-align: center; margin-top: 3rem;">
-                        <a href="contact.html" class="btn btn-primary">Request Full Syllabus</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="level3-syllabus" class="section-padding bg-gray">
-        <div class="container">
-            <div style="max-width: 1000px; margin: 0 auto;">
-                <div class="section-header">
-                    <span class="section-badge">Level 3 Syllabus</span>
-                    <h2>AI Integration Leader Curriculum</h2>
-                </div>
-
-                <div class="card">
-                    <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; margin-bottom: 3rem;">
-                        <div>
-                            <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Course Details</h3>
-                            <div style="display: flex; flex-direction: column; gap: 1rem; font-size: 0.95rem;">
-                                <div><strong>Duration:</strong> 20 hours</div>
-                                <div><strong>Format:</strong> Self-paced + live sessions</div>
-                                <div><strong>Level:</strong> Advanced/Leadership</div>
-                                <div><strong>Prerequisites:</strong> Level 2 or equivalent</div>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Learning Outcomes</h3>
-                            <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.5rem;">
-                                <li style="display: flex; gap: 0.75rem;"><i class="fas fa-check" style="color: var(--accent);"></i><span>Develop organization-wide AI strategy</span></li>
-                                <li style="display: flex; gap: 0.75rem;"><i class="fas fa-check" style="color: var(--accent);"></i><span>Build governance frameworks and policies</span></li>
-                                <li style="display: flex; gap: 0.75rem;"><i class="fas fa-check" style="color: var(--accent);"></i><span>Calculate and communicate ROI</span></li>
-                                <li style="display: flex; gap: 0.75rem;"><i class="fas fa-check" style="color: var(--accent);"></i><span>Lead organizational change and team training</span></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <h3 style="font-size: 1.1rem; margin-bottom: 1.5rem;">Course Modules</h3>
-                    <div style="display: flex; flex-direction: column; gap: 1rem;">
-                        <div style="padding: 1.5rem; background: var(--navy-50); border-radius: 8px;">
-                            <h4 style="margin-bottom: 0.75rem;">Module 1: Strategic Planning (5 hrs)</h4>
-                            <p style="font-size: 0.9rem; color: var(--gray-600);">AI maturity assessment, roadmap development, and resource planning</p>
-                        </div>
-                        <div style="padding: 1.5rem; background: var(--navy-50); border-radius: 8px;">
-                            <h4 style="margin-bottom: 0.75rem;">Module 2: Governance & Risk (5 hrs)</h4>
-                            <p style="font-size: 0.9rem; color: var(--gray-600);">Policy frameworks, compliance, security, and ethical guidelines</p>
-                        </div>
-                        <div style="padding: 1.5rem; background: var(--navy-50); border-radius: 8px;">
-                            <h4 style="margin-bottom: 0.75rem;">Module 3: ROI & Business Value (5 hrs)</h4>
-                            <p style="font-size: 0.9rem; color: var(--gray-600);">Financial modeling, success metrics, and executive communication</p>
-                        </div>
-                        <div style="padding: 1.5rem; background: var(--navy-50); border-radius: 8px;">
-                            <h4 style="margin-bottom: 0.75rem;">Module 4: Change Management (5 hrs)</h4>
-                            <p style="font-size: 0.9rem; color: var(--gray-600);">Training programs, adoption strategies, and organizational culture</p>
-                        </div>
-                    </div>
-
-                    <div style="text-align: center; margin-top: 3rem;">
-                        <a href="contact.html" class="btn btn-primary">Request Full Syllabus</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sample Certificate -->
-    <section class="section-padding">
-        <div class="container">
-            <div class="section-header scroll-reveal">
-                <h2>Your Professional Certificate</h2>
-                <p class="text-secondary" style="font-size: 1.125rem;">Verified credentials with unique ID and QR code validation</p>
-            </div>
-
             <div style="max-width: 900px; margin: 0 auto;">
-                <div class="card scroll-reveal" style="padding: 3rem; background: white;">
-                    <div style="border: 8px solid var(--navy-900); padding: 3rem; position: relative;">
-                        <div style="position: absolute; top: 20px; right: 20px; width: 60px; height: 60px; border: 3px solid var(--navy-900); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-stamp" style="color: var(--navy-900); font-size: 1.5rem;"></i>
-                        </div>
+                <h2 style="text-align: center; font-size: 1.75rem; font-weight: 400; margin-bottom: 3rem;">Compare Certificates</h2>
 
-                        <div style="text-align: center; margin-bottom: 2rem;">
-                            <h3 style="font-weight: 300; letter-spacing: 3px; font-size: 0.9rem; color: var(--navy-700); margin-bottom: 1rem;">RUDI</h3>
-                            <p style="font-size: 0.85rem; color: var(--gray-600);">Responsible Use of Digital Intelligence</p>
-                        </div>
+                <div style="background: white; border-radius: 8px; padding: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <thead>
+                            <tr style="border-bottom: 1px solid var(--navy-50);">
+                                <th style="text-align: left; padding: 1rem 0; font-weight: 500; font-size: 0.875rem; color: var(--gray-600);"></th>
+                                <th style="text-align: center; padding: 1rem; font-weight: 500;">Level 1</th>
+                                <th style="text-align: center; padding: 1rem; font-weight: 500; color: var(--teal);">Level 2</th>
+                                <th style="text-align: center; padding: 1rem; font-weight: 500;">Level 3</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid var(--navy-50);">
+                                <td style="padding: 1rem 0; font-size: 0.875rem; color: var(--gray-600);">Duration</td>
+                                <td style="text-align: center; padding: 1rem;">8 hrs</td>
+                                <td style="text-align: center; padding: 1rem;">12 hrs</td>
+                                <td style="text-align: center; padding: 1rem;">20 hrs</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--navy-50);">
+                                <td style="padding: 1rem 0; font-size: 0.875rem; color: var(--gray-600);">Target</td>
+                                <td style="text-align: center; padding: 1rem; font-size: 0.875rem;">All staff</td>
+                                <td style="text-align: center; padding: 1rem; font-size: 0.875rem;">Practitioners</td>
+                                <td style="text-align: center; padding: 1rem; font-size: 0.875rem;">Leaders</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--navy-50);">
+                                <td style="padding: 1rem 0; font-size: 0.875rem; color: var(--gray-600);">Validity</td>
+                                <td style="text-align: center; padding: 1rem; font-size: 0.875rem;">1 year</td>
+                                <td style="text-align: center; padding: 1rem; font-size: 0.875rem;">2 years</td>
+                                <td style="text-align: center; padding: 1rem; font-size: 0.875rem;">3 years</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 1rem 0; font-size: 0.875rem; color: var(--gray-600);">TechCred</td>
+                                <td style="text-align: center; padding: 1rem;"><i class="fas fa-check" style="color: var(--teal);"></i></td>
+                                <td style="text-align: center; padding: 1rem;"><i class="fas fa-check" style="color: var(--teal);"></i></td>
+                                <td style="text-align: center; padding: 1rem;"><i class="fas fa-check" style="color: var(--teal);"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                        <h2 style="text-align: center; font-size: 1.75rem; font-weight: 300; letter-spacing: 2px; margin: 2rem 0;">CERTIFICATE OF COMPLETION</h2>
-
-                        <div style="text-align: center; margin: 3rem 0;">
-                            <p style="font-size: 0.9rem; color: var(--gray-600); margin-bottom: 0.5rem;">This certifies that</p>
-                            <div style="border-bottom: 2px solid var(--navy-900); padding: 1rem 3rem; margin: 0 auto; max-width: 400px;">
-                                <p style="font-size: 1.5rem; font-style: italic; color: var(--navy-900);">[Your Name]</p>
-                            </div>
-                        </div>
-
-                        <p style="text-align: center; line-height: 1.8; color: var(--gray-600); margin: 2rem 0;">
-                            has successfully completed the <strong>AI Integration Leader</strong> certification,<br />
-                            demonstrating proficiency in responsible AI implementation and strategic leadership.
-                        </p>
-
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin: 3rem 0; text-align: center; font-size: 0.85rem;">
-                            <div>
-                                <div style="border-top: 2px solid var(--navy-900); padding-top: 0.5rem; margin: 0 auto; max-width: 200px;">
-                                    <p style="font-weight: 600; margin-bottom: 0.25rem;">Brandon Z. Hoff</p>
-                                    <p style="color: var(--gray-600); font-size: 0.8rem;">Global Director of Applied AI</p>
-                                </div>
-                            </div>
-                            <div>
-                                <div style="border-top: 2px solid var(--navy-900); padding-top: 0.5rem; margin: 0 auto; max-width: 200px;">
-                                    <p style="font-weight: 600; margin-bottom: 0.25rem;">Date</p>
-                                    <p style="color: var(--gray-600); font-size: 0.8rem;">Upon Completion</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--navy-100); font-size: 0.75rem; color: var(--gray-600);">
-                            <p>Certificate ID: RUD-2025-XXXX | Verify at rudi.app/verify</p>
-                        </div>
+    <!-- Syllabus Sections -->
+    <section id="level1-syllabus" style="padding: 6rem 0; background: white;">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <h2 style="font-size: 1.75rem; font-weight: 400; margin-bottom: 3rem;">Level 1 Syllabus: AI Literacy Certificate</h2>
+                <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 3rem;">
+                    <div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Course Details</h3>
+                        <p style="font-size: 0.9rem; color: var(--gray-600);"><strong>Duration:</strong> 8 hours</p>
+                        <p style="font-size: 0.9rem; color: var(--gray-600);"><strong>Format:</strong> Self-paced</p>
+                        <p style="font-size: 0.9rem; color: var(--gray-600);"><strong>Prerequisites:</strong> None</p>
+                    </div>
+                    <div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Curriculum</h3>
+                        <ul style="font-size: 0.9rem; color: var(--gray-600); line-height: 1.8;">
+                            <li>Unit 1: AI Foundations (2 hrs)</li>
+                            <li>Unit 2: Large Language Models (2 hrs)</li>
+                            <li>Unit 3: Prompt Engineering Basics (2 hrs)</li>
+                            <li>Unit 4: Responsible AI & Ethics (2 hrs)</li>
+                        </ul>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="text-center" style="margin-top: 3rem;">
-                    <a href="contact.html" class="btn btn-primary">Get Certified</a>
+    <section id="level2-syllabus" style="padding: 6rem 0; background: var(--navy-50);">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <h2 style="font-size: 1.75rem; font-weight: 400; margin-bottom: 3rem;">Level 2 Syllabus: Applied AI Practitioner</h2>
+                <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 3rem;">
+                    <div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Course Details</h3>
+                        <p style="font-size: 0.9rem; color: var(--gray-600);"><strong>Duration:</strong> 12 hours</p>
+                        <p style="font-size: 0.9rem; color: var(--gray-600);"><strong>Format:</strong> Self-paced</p>
+                        <p style="font-size: 0.9rem; color: var(--gray-600);"><strong>Prerequisites:</strong> Level 1</p>
+                    </div>
+                    <div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Curriculum</h3>
+                        <ul style="font-size: 0.9rem; color: var(--gray-600); line-height: 1.8;">
+                            <li>Level 1: All 8 hours included</li>
+                            <li>Unit 5: Advanced Prompting (1 hr)</li>
+                            <li>Unit 6: Workflow Automation (1 hr)</li>
+                            <li>Unit 7: Department Applications (1 hr)</li>
+                            <li>Unit 8: Performance Measurement (1 hr)</li>
+                        </ul>
+                    </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="level3-syllabus" style="padding: 6rem 0; background: white;">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <h2 style="font-size: 1.75rem; font-weight: 400; margin-bottom: 3rem;">Level 3 Syllabus: AI Integration Leader</h2>
+                <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 3rem;">
+                    <div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Course Details</h3>
+                        <p style="font-size: 0.9rem; color: var(--gray-600);"><strong>Duration:</strong> 20 hours</p>
+                        <p style="font-size: 0.9rem; color: var(--gray-600);"><strong>Format:</strong> Cohort-based</p>
+                        <p style="font-size: 0.9rem; color: var(--gray-600);"><strong>Prerequisites:</strong> Level 2</p>
+                    </div>
+                    <div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Curriculum</h3>
+                        <ul style="font-size: 0.9rem; color: var(--gray-600); line-height: 1.8;">
+                            <li>Level 2: All 12 hours included</li>
+                            <li>Unit 9: Strategic AI Planning (2 hrs)</li>
+                            <li>Unit 10: Governance & Risk (2 hrs)</li>
+                            <li>Unit 11: ROI Frameworks (2 hrs)</li>
+                            <li>Unit 12: Change Management (2 hrs)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="padding: 8rem 0; background: var(--navy-50);">
+        <div class="container">
+            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <h2 style="font-size: 2rem; font-weight: 400; margin-bottom: 1rem;">Start Your AI Journey</h2>
+                <p style="color: var(--gray-600); margin-bottom: 2rem;">Join thousands of professionals getting AI certified</p>
+                <a href="contact.html" class="btn btn-primary">Get Started</a>
             </div>
         </div>
     </section>
@@ -513,10 +361,10 @@
                     <p>Responsible Use of Digital Intelligence. Professional AI certifications for modern professionals.</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Certifications</h4>
+                    <h4>Training &amp; Certifications</h4>
+                    <a href="courses.html">Course Catalog</a>
                     <a href="certificates.html">View All Certificates</a>
                     <a href="framework.html">30-Point Framework</a>
-                    <a href="assessment.html">Assessment</a>
                 </div>
                 <div class="footer-section">
                     <h4>Resources</h4>

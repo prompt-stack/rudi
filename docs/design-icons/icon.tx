@@ -1,0 +1,317 @@
+<svg fill="url(#pictogram-color-gradient-180-blue-to-purple-bb1676b1-a31a-4d53-bf1c-41e8e60794d3)" slot="media" class="cognos--analytics pictogram-color-gradient-180-blue-to-purple cds--pictogram-item__pictogram" data-autoid="c4d--pictogram-item__pictogram" focusable="false" viewBox="0 0 80 80" height="80" width="80" role="img">
+        <use href="#cognos--analytics" height="80" width="80"></use>
+        <defs>
+            <linearGradient id="pictogram-color-gradient-180-blue-to-purple-bb1676b1-a31a-4d53-bf1c-41e8e60794d3" gradientTransform="rotate(90)">
+                <stop offset="0%" stop-color="#0f62fe"></stop>
+                <stop offset="100%" stop-color="#8a3ffc"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-gradient-180-blue-dark-to-light-bb1676b1-a31a-4d53-bf1c-41e8e60794d3" gradientTransform="rotate(90)">
+                <stop offset="0%" stop-color="#0f62fe"></stop>
+                <stop offset="100%" stop-color="#78a9ff"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-gradient-180-blue-to-teal-bb1676b1-a31a-4d53-bf1c-41e8e60794d3" gradientTransform="rotate(90)">
+                <stop offset="0%" stop-color="#0f62fe"></stop>
+                <stop offset="100%" stop-color="#08bdba"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-gradient-180-blue-to-magenta-bb1676b1-a31a-4d53-bf1c-41e8e60794d3" gradientTransform="rotate(90)">
+                <stop offset="0%" stop-color="#0f62fe"></stop>
+                <stop offset="100%" stop-color="#ff7eb6"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-gradient-180-red-to-purple-bb1676b1-a31a-4d53-bf1c-41e8e60794d3" gradientTransform="rotate(90)">
+                <stop offset="0%" stop-color="#fa4d56"></stop>
+                <stop offset="100%" stop-color="#a56eff"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-blue-80-bb1676b1-a31a-4d53-bf1c-41e8e60794d3">
+                <stop stop-color="#002d9c"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-blue-80-bb1676b1-a31a-4d53-bf1c-41e8e60794d3">
+                <stop stop-color="#002d9c"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-blue-60-bb1676b1-a31a-4d53-bf1c-41e8e60794d3">
+                <stop stop-color="#0f62fe"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-cyan-50-bb1676b1-a31a-4d53-bf1c-41e8e60794d3">
+                <stop stop-color="#1192E8"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-purple-60-bb1676b1-a31a-4d53-bf1c-41e8e60794d3">
+                <stop stop-color="#8A3FFC"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-green-50-bb1676b1-a31a-4d53-bf1c-41e8e60794d3">
+                <stop stop-color="#24a148"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-teal-50-bb1676b1-a31a-4d53-bf1c-41e8e60794d3">
+                <stop stop-color="#009d9a"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-magenta-50-bb1676b1-a31a-4d53-bf1c-41e8e60794d3">
+                <stop stop-color="#EE5396"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-red-60-bb1676b1-a31a-4d53-bf1c-41e8e60794d3">
+                <stop stop-color="#DA1E28"></stop>
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <svg fill="url(#pictogram-color-gradient-180-blue-to-purple-96bbe070-d568-4fa2-8d64-a6a810ba5194)" slot="media" class="trust pictogram-color-gradient-180-blue-to-purple cds--pictogram-item__pictogram" data-autoid="c4d--pictogram-item__pictogram" focusable="false" viewBox="0 0 80 80" height="80" width="80" role="img">
+        <use href="#trust" height="80" width="80"></use>
+        <defs>
+            <linearGradient id="pictogram-color-gradient-180-blue-to-purple-96bbe070-d568-4fa2-8d64-a6a810ba5194" gradientTransform="rotate(90)">
+                <stop offset="0%" stop-color="#0f62fe"></stop>
+                <stop offset="100%" stop-color="#8a3ffc"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-gradient-180-blue-dark-to-light-96bbe070-d568-4fa2-8d64-a6a810ba5194" gradientTransform="rotate(90)">
+                <stop offset="0%" stop-color="#0f62fe"></stop>
+                <stop offset="100%" stop-color="#78a9ff"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-gradient-180-blue-to-teal-96bbe070-d568-4fa2-8d64-a6a810ba5194" gradientTransform="rotate(90)">
+                <stop offset="0%" stop-color="#0f62fe"></stop>
+                <stop offset="100%" stop-color="#08bdba"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-gradient-180-blue-to-magenta-96bbe070-d568-4fa2-8d64-a6a810ba5194" gradientTransform="rotate(90)">
+                <stop offset="0%" stop-color="#0f62fe"></stop>
+                <stop offset="100%" stop-color="#ff7eb6"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-gradient-180-red-to-purple-96bbe070-d568-4fa2-8d64-a6a810ba5194" gradientTransform="rotate(90)">
+                <stop offset="0%" stop-color="#fa4d56"></stop>
+                <stop offset="100%" stop-color="#a56eff"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-blue-80-96bbe070-d568-4fa2-8d64-a6a810ba5194">
+                <stop stop-color="#002d9c"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-blue-80-96bbe070-d568-4fa2-8d64-a6a810ba5194">
+                <stop stop-color="#002d9c"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-blue-60-96bbe070-d568-4fa2-8d64-a6a810ba5194">
+                <stop stop-color="#0f62fe"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-cyan-50-96bbe070-d568-4fa2-8d64-a6a810ba5194">
+                <stop stop-color="#1192E8"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-purple-60-96bbe070-d568-4fa2-8d64-a6a810ba5194">
+                <stop stop-color="#8A3FFC"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-green-50-96bbe070-d568-4fa2-8d64-a6a810ba5194">
+                <stop stop-color="#24a148"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-teal-50-96bbe070-d568-4fa2-8d64-a6a810ba5194">
+                <stop stop-color="#009d9a"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-magenta-50-96bbe070-d568-4fa2-8d64-a6a810ba5194">
+                <stop stop-color="#EE5396"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-red-60-96bbe070-d568-4fa2-8d64-a6a810ba5194">
+                <stop stop-color="#DA1E28"></stop>
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <svg fill="url(#pictogram-color-gradient-180-blue-to-purple-97334644-3cd8-487a-9b77-36303016c072)" slot="media" class="analyzes--data pictogram-color-gradient-180-blue-to-purple cds--pictogram-item__pictogram" data-autoid="c4d--pictogram-item__pictogram" focusable="false" viewBox="0 0 80 80" height="80" width="80" role="img">
+        <use href="#analyzes--data" height="80" width="80"></use>
+        <defs>
+            <linearGradient id="pictogram-color-gradient-180-blue-to-purple-97334644-3cd8-487a-9b77-36303016c072" gradientTransform="rotate(90)">
+                <stop offset="0%" stop-color="#0f62fe"></stop>
+                <stop offset="100%" stop-color="#8a3ffc"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-gradient-180-blue-dark-to-light-97334644-3cd8-487a-9b77-36303016c072" gradientTransform="rotate(90)">
+                <stop offset="0%" stop-color="#0f62fe"></stop>
+                <stop offset="100%" stop-color="#78a9ff"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-gradient-180-blue-to-teal-97334644-3cd8-487a-9b77-36303016c072" gradientTransform="rotate(90)">
+                <stop offset="0%" stop-color="#0f62fe"></stop>
+                <stop offset="100%" stop-color="#08bdba"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-gradient-180-blue-to-magenta-97334644-3cd8-487a-9b77-36303016c072" gradientTransform="rotate(90)">
+                <stop offset="0%" stop-color="#0f62fe"></stop>
+                <stop offset="100%" stop-color="#ff7eb6"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-gradient-180-red-to-purple-97334644-3cd8-487a-9b77-36303016c072" gradientTransform="rotate(90)">
+                <stop offset="0%" stop-color="#fa4d56"></stop>
+                <stop offset="100%" stop-color="#a56eff"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-blue-80-97334644-3cd8-487a-9b77-36303016c072">
+                <stop stop-color="#002d9c"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-blue-80-97334644-3cd8-487a-9b77-36303016c072">
+                <stop stop-color="#002d9c"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-blue-60-97334644-3cd8-487a-9b77-36303016c072">
+                <stop stop-color="#0f62fe"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-cyan-50-97334644-3cd8-487a-9b77-36303016c072">
+                <stop stop-color="#1192E8"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-purple-60-97334644-3cd8-487a-9b77-36303016c072">
+                <stop stop-color="#8A3FFC"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-green-50-97334644-3cd8-487a-9b77-36303016c072">
+                <stop stop-color="#24a148"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-teal-50-97334644-3cd8-487a-9b77-36303016c072">
+                <stop stop-color="#009d9a"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-magenta-50-97334644-3cd8-487a-9b77-36303016c072">
+                <stop stop-color="#EE5396"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-red-60-97334644-3cd8-487a-9b77-36303016c072">
+                <stop stop-color="#DA1E28"></stop>
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <svg fill="url(#pictogram-color-gradient-180-blue-to-purple-49a05eb3-092e-459d-a7eb-98d34cc1e357)" slot="media" class="network pictogram-color-gradient-180-blue-to-purple cds--pictogram-item__pictogram" data-autoid="c4d--pictogram-item__pictogram" focusable="false" viewBox="0 0 80 80" height="80" width="80" role="img">
+        <use href="#network" height="80" width="80"></use>
+        <defs>
+            <linearGradient id="pictogram-color-gradient-180-blue-to-purple-49a05eb3-092e-459d-a7eb-98d34cc1e357" gradientTransform="rotate(90)">
+                <stop offset="0%" stop-color="#0f62fe"></stop>
+                <stop offset="100%" stop-color="#8a3ffc"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-gradient-180-blue-dark-to-light-49a05eb3-092e-459d-a7eb-98d34cc1e357" gradientTransform="rotate(90)">
+                <stop offset="0%" stop-color="#0f62fe"></stop>
+                <stop offset="100%" stop-color="#78a9ff"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-gradient-180-blue-to-teal-49a05eb3-092e-459d-a7eb-98d34cc1e357" gradientTransform="rotate(90)">
+                <stop offset="0%" stop-color="#0f62fe"></stop>
+                <stop offset="100%" stop-color="#08bdba"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-gradient-180-blue-to-magenta-49a05eb3-092e-459d-a7eb-98d34cc1e357" gradientTransform="rotate(90)">
+                <stop offset="0%" stop-color="#0f62fe"></stop>
+                <stop offset="100%" stop-color="#ff7eb6"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-gradient-180-red-to-purple-49a05eb3-092e-459d-a7eb-98d34cc1e357" gradientTransform="rotate(90)">
+                <stop offset="0%" stop-color="#fa4d56"></stop>
+                <stop offset="100%" stop-color="#a56eff"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-blue-80-49a05eb3-092e-459d-a7eb-98d34cc1e357">
+                <stop stop-color="#002d9c"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-blue-80-49a05eb3-092e-459d-a7eb-98d34cc1e357">
+                <stop stop-color="#002d9c"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-blue-60-49a05eb3-092e-459d-a7eb-98d34cc1e357">
+                <stop stop-color="#0f62fe"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-cyan-50-49a05eb3-092e-459d-a7eb-98d34cc1e357">
+                <stop stop-color="#1192E8"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-purple-60-49a05eb3-092e-459d-a7eb-98d34cc1e357">
+                <stop stop-color="#8A3FFC"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-green-50-49a05eb3-092e-459d-a7eb-98d34cc1e357">
+                <stop stop-color="#24a148"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-teal-50-49a05eb3-092e-459d-a7eb-98d34cc1e357">
+                <stop stop-color="#009d9a"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-magenta-50-49a05eb3-092e-459d-a7eb-98d34cc1e357">
+                <stop stop-color="#EE5396"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-red-60-49a05eb3-092e-459d-a7eb-98d34cc1e357">
+                <stop stop-color="#DA1E28"></stop>
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <svg fill="url(#pictogram-color-gradient-180-blue-to-purple-191bbdc9-07f8-4c37-b851-69cf5ab06cbc)" slot="media" class="build-and-deploy-pipeline pictogram-color-gradient-180-blue-to-purple cds--pictogram-item__pictogram" data-autoid="c4d--pictogram-item__pictogram" focusable="false" viewBox="0 0 80 80" height="80" width="80" role="img">
+        <use href="#build-and-deploy-pipeline" height="80" width="80"></use>
+        <defs>
+            <linearGradient id="pictogram-color-gradient-180-blue-to-purple-191bbdc9-07f8-4c37-b851-69cf5ab06cbc" gradientTransform="rotate(90)">
+                <stop offset="0%" stop-color="#0f62fe"></stop>
+                <stop offset="100%" stop-color="#8a3ffc"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-gradient-180-blue-dark-to-light-191bbdc9-07f8-4c37-b851-69cf5ab06cbc" gradientTransform="rotate(90)">
+                <stop offset="0%" stop-color="#0f62fe"></stop>
+                <stop offset="100%" stop-color="#78a9ff"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-gradient-180-blue-to-teal-191bbdc9-07f8-4c37-b851-69cf5ab06cbc" gradientTransform="rotate(90)">
+                <stop offset="0%" stop-color="#0f62fe"></stop>
+                <stop offset="100%" stop-color="#08bdba"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-gradient-180-blue-to-magenta-191bbdc9-07f8-4c37-b851-69cf5ab06cbc" gradientTransform="rotate(90)">
+                <stop offset="0%" stop-color="#0f62fe"></stop>
+                <stop offset="100%" stop-color="#ff7eb6"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-gradient-180-red-to-purple-191bbdc9-07f8-4c37-b851-69cf5ab06cbc" gradientTransform="rotate(90)">
+                <stop offset="0%" stop-color="#fa4d56"></stop>
+                <stop offset="100%" stop-color="#a56eff"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-blue-80-191bbdc9-07f8-4c37-b851-69cf5ab06cbc">
+                <stop stop-color="#002d9c"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-blue-80-191bbdc9-07f8-4c37-b851-69cf5ab06cbc">
+                <stop stop-color="#002d9c"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-blue-60-191bbdc9-07f8-4c37-b851-69cf5ab06cbc">
+                <stop stop-color="#0f62fe"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-cyan-50-191bbdc9-07f8-4c37-b851-69cf5ab06cbc">
+                <stop stop-color="#1192E8"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-purple-60-191bbdc9-07f8-4c37-b851-69cf5ab06cbc">
+                <stop stop-color="#8A3FFC"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-green-50-191bbdc9-07f8-4c37-b851-69cf5ab06cbc">
+                <stop stop-color="#24a148"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-teal-50-191bbdc9-07f8-4c37-b851-69cf5ab06cbc">
+                <stop stop-color="#009d9a"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-magenta-50-191bbdc9-07f8-4c37-b851-69cf5ab06cbc">
+                <stop stop-color="#EE5396"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-red-60-191bbdc9-07f8-4c37-b851-69cf5ab06cbc">
+                <stop stop-color="#DA1E28"></stop>
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <svg fill="url(#pictogram-color-gradient-180-blue-to-purple-bb68313f-37f2-4146-93b0-2d453ea153aa)" slot="media" class="build pictogram-color-gradient-180-blue-to-purple cds--pictogram-item__pictogram" data-autoid="c4d--pictogram-item__pictogram" focusable="false" viewBox="0 0 80 80" height="80" width="80" role="img">
+        <use href="#build" height="80" width="80"></use>
+        <defs>
+            <linearGradient id="pictogram-color-gradient-180-blue-to-purple-bb68313f-37f2-4146-93b0-2d453ea153aa" gradientTransform="rotate(90)">
+                <stop offset="0%" stop-color="#0f62fe"></stop>
+                <stop offset="100%" stop-color="#8a3ffc"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-gradient-180-blue-dark-to-light-bb68313f-37f2-4146-93b0-2d453ea153aa" gradientTransform="rotate(90)">
+                <stop offset="0%" stop-color="#0f62fe"></stop>
+                <stop offset="100%" stop-color="#78a9ff"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-gradient-180-blue-to-teal-bb68313f-37f2-4146-93b0-2d453ea153aa" gradientTransform="rotate(90)">
+                <stop offset="0%" stop-color="#0f62fe"></stop>
+                <stop offset="100%" stop-color="#08bdba"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-gradient-180-blue-to-magenta-bb68313f-37f2-4146-93b0-2d453ea153aa" gradientTransform="rotate(90)">
+                <stop offset="0%" stop-color="#0f62fe"></stop>
+                <stop offset="100%" stop-color="#ff7eb6"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-gradient-180-red-to-purple-bb68313f-37f2-4146-93b0-2d453ea153aa" gradientTransform="rotate(90)">
+                <stop offset="0%" stop-color="#fa4d56"></stop>
+                <stop offset="100%" stop-color="#a56eff"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-blue-80-bb68313f-37f2-4146-93b0-2d453ea153aa">
+                <stop stop-color="#002d9c"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-blue-80-bb68313f-37f2-4146-93b0-2d453ea153aa">
+                <stop stop-color="#002d9c"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-blue-60-bb68313f-37f2-4146-93b0-2d453ea153aa">
+                <stop stop-color="#0f62fe"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-cyan-50-bb68313f-37f2-4146-93b0-2d453ea153aa">
+                <stop stop-color="#1192E8"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-purple-60-bb68313f-37f2-4146-93b0-2d453ea153aa">
+                <stop stop-color="#8A3FFC"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-green-50-bb68313f-37f2-4146-93b0-2d453ea153aa">
+                <stop stop-color="#24a148"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-teal-50-bb68313f-37f2-4146-93b0-2d453ea153aa">
+                <stop stop-color="#009d9a"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-magenta-50-bb68313f-37f2-4146-93b0-2d453ea153aa">
+                <stop stop-color="#EE5396"></stop>
+            </linearGradient>
+            <linearGradient id="pictogram-color-red-60-bb68313f-37f2-4146-93b0-2d453ea153aa">
+                <stop stop-color="#DA1E28"></stop>
+            </linearGradient>
+        </defs>
+    </svg>
