@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator | RUDI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .qr-generator-section {
+            padding: 4rem 0;
+        }
+
+        .qr-card {
+            background: white;
+            border-radius: 12px;
+            padding: 3rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .input-group {
+            margin-bottom: 2rem;
+        }
+
+        .input-group label {
+            display: block;
+            font-weight: 600;
+            color: var(--navy-900);
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 2px solid var(--navy-100);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.2s;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: var(--teal);
+            box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.1);
+        }
+
+        .qr-display-area {
+            background: var(--navy-50);
+            border-radius: 12px;
+            padding: 3rem;
+            text-align: center;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        .qr-placeholder {
+            color: var(--gray-400);
+            font-size: 0.95rem;
+        }
+
+        #qrcode {
+            display: none;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+        }
+
+        #qrcode.show {
+            display: inline-block;
+            animation: scaleIn 0.3s ease-out;
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        #qrcode canvas {
+            display: block;
+            border-radius: 8px;
+        }
+
+        .success-message {
+            display: none;
+            background: #ecfdf5;
+            border: 1px solid #10b981;
+            color: #065f46;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .success-message.show {
+            display: flex;
+        }
+
+        .success-message i {
+            color: #10b981;
+        }
+
+        .loading {
+            display: none;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--navy-700);
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .loading.show {
+            display: flex;
+        }
+
+        .spinner {
+            width: 20px;
+            height: 20px;
+            border: 3px solid var(--navy-100);
+            border-top-color: var(--teal);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .info-box {
+            background: var(--navy-50);
+            border-left: 4px solid var(--teal);
+            padding: 1.25rem 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+
+        .info-box p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: var(--navy-700);
+            line-height: 1.7;
+        }
+
+        .info-box strong {
+            color: var(--navy-900);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        #downloadBtn {
+            display: none;
+        }
+
+        #downloadBtn.show {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div id="site-header"></div>
+
+    <section class="section-padding bg-gray">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge"><i class="fas fa-qrcode"></i> Tools</span>
+                <h1>QR Code Generator</h1>
+                <p style="max-width: 700px; margin: 0 auto; font-size: 1.125rem; color: var(--gray-600);">
+                    Generate QR codes for certificate verification and credential sharing
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="qr-generator-section">
+        <div class="container">
+            <div class="qr-card">
+                <div class="input-group">
+                    <label for="url">
+                        <i class="fas fa-link"></i> Verification URL
+                    </label>
+                    <input
+                        type="text"
+                        id="url"
+                        value="https://rudi-web.vercel.app/"
+                        placeholder="https://rudi-web.vercel.app/verify?c=abc123"
+                    >
+                </div>
+
+                <div class="btn-group">
+                    <button class="btn btn-primary" onclick="generate()">
+                        <i class="fas fa-qrcode"></i> Generate QR Code
+                    </button>
+                    <button class="btn btn-secondary" id="downloadBtn" onclick="downloadQR()">
+                        <i class="fas fa-download"></i> Download PNG
+                    </button>
+                </div>
+
+                <div class="loading" id="loading">
+                    <div class="spinner"></div>
+                    <span>Generating QR code...</span>
+                </div>
+
+                <div class="qr-display-area">
+                    <div class="qr-placeholder" id="placeholder">
+                        <i class="fas fa-qrcode" style="font-size: 4rem; color: var(--navy-100); margin-bottom: 1rem;"></i>
+                        <p>Enter a URL and click "Generate QR Code" to begin</p>
+                    </div>
+                    <div id="qrcode"></div>
+                </div>
+
+                <div class="success-message" id="successMessage">
+                    <i class="fas fa-check-circle"></i>
+                    <span>QR code generated successfully!</span>
+                </div>
+
+                <div class="info-box">
+                    <strong><i class="fas fa-info-circle"></i> Usage Tips</strong>
+                    <p>
+                        <strong>For certificates:</strong> Use <code>https://rudi-web.vercel.app/verify?c={cert_id}</code><br>
+                        Replace <code>{cert_id}</code> with your unique certificate identifier<br>
+                        <strong>QR code size:</strong> 256×256px (ideal for print and digital certificates)
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="site-footer"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+
+    <script>
+        let qrcodeElement = null;
+
+        function generate() {
+            const url = document.getElementById('url').value.trim();
+
+            if (!url) {
+                alert('Please enter a URL');
+                return;
+            }
+
+            // Show loading state
+            document.getElementById('loading').classList.add('show');
+            document.getElementById('successMessage').classList.remove('show');
+            document.getElementById('downloadBtn').classList.remove('show');
+
+            // Hide placeholder and existing QR
+            const placeholder = document.getElementById('placeholder');
+            const qrcodeContainer = document.getElementById('qrcode');
+            placeholder.style.display = 'none';
+            qrcodeContainer.classList.remove('show');
+
+            // Clear previous QR code
+            qrcodeContainer.innerHTML = '';
+
+            // Small delay for loading animation
+            setTimeout(() => {
+                try {
+                    // Generate new QR code
+                    qrcodeElement = new QRCode(qrcodeContainer, {
+                        text: url,
+                        width: 256,
+                        height: 256,
+                        colorDark: "#0f172a",
+                        colorLight: "#ffffff",
+                        correctLevel: QRCode.CorrectLevel.H
+                    });
+
+                    // Hide loading, show success
+                    document.getElementById('loading').classList.remove('show');
+                    qrcodeContainer.classList.add('show');
+                    document.getElementById('successMessage').classList.add('show');
+                    document.getElementById('downloadBtn').classList.add('show');
+
+                    // Auto-hide success message after 3 seconds
+                    setTimeout(() => {
+                        document.getElementById('successMessage').classList.remove('show');
+                    }, 3000);
+
+                } catch (error) {
+                    console.error('Error generating QR code:', error);
+                    document.getElementById('loading').classList.remove('show');
+                    placeholder.style.display = 'block';
+                    placeholder.innerHTML = '<i class="fas fa-exclamation-triangle" style="font-size: 3rem; color: #dc2626; margin-bottom: 1rem;"></i><p style="color: #dc2626;">Error generating QR code. Please try again.</p>';
+                }
+            }, 400);
+        }
+
+        function downloadQR() {
+            const canvas = document.querySelector('#qrcode canvas');
+            if (!canvas) {
+                alert('Please generate a QR code first!');
+                return;
+            }
+
+            const link = document.createElement('a');
+            const url = document.getElementById('url').value;
+            const filename = url.includes('verify?c=')
+                ? `rudi-qr-${url.split('verify?c=')[1].substring(0, 8)}.png`
+                : 'rudi-qr-code.png';
+
+            link.download = filename;
+            link.href = canvas.toDataURL();
+            link.click();
+
+            // Visual feedback
+            const btn = document.getElementById('downloadBtn');
+            const originalHTML = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-check"></i> Downloaded!';
+            btn.style.background = '#10b981';
+            btn.style.borderColor = '#10b981';
+
+            setTimeout(() => {
+                btn.innerHTML = originalHTML;
+                btn.style.background = '';
+                btn.style.borderColor = '';
+            }, 2000);
+        }
+
+        // Generate on page load
+        window.onload = function() {
+            generate();
+        };
+    </script>
+</body>
+</html>

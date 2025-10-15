@@ -1,0 +1,98 @@
+Interactive Course
+Understanding ChatGPT
+BasicSkill Level
+Updated: Sep 2025
+1 hr
+8 videos
+27 Exercises
+380K+
+1700 XP
+What you'll learn
+Define ChatGPT, generative AI, and large language models, and distinguish them from traditional chatbots.
+
+Recognize ChatGPT’s strengths, limitations, and key use cases in business workflows.
+
+Identify effective prompt-writing strategies and assess their impact on response accuracy.
+
+Differentiate ownership and privacy considerations under OpenAI’s terms of use.
+
+Evaluate advancements in generative AI and their implications for industries and business adoption.
+
+Description
+Get ready to take your workflows and business processes to the next level with the groundbreaking conversational language model, ChatGPT! In this course, you'll dive headfirst into the exciting world of generative artificial intelligence (AI) and discover how to wield ChatGPT like a pro. From text summarization, explaining complex concepts, drafting engaging marketing content, and generating and explaining code, you'll learn about the most common applications of ChatGPT. Plus, you’ll be equipped with a framework to evaluate new use cases and determine if ChatGPT is the right solution for your needs. Finally, you'll explore the legal and ethical considerations that come with implementing ChatGPT in various situations. Don't miss out on this opportunity to unlock the full potential of ChatGPT and revolutionize the way you work!
+
+
+The videos contain live transcripts, which can be accessed by clicking "Show transcript" at the bottom left of the videos.
+
+
+The course glossary can be found on the right in the resources section.
+
+
+To obtain CPE credits you need to complete the course and reach a score of 70% on the qualified assessment. You can navigate to the assessment by clicking on the CPE credits callout on the right.
+
+
+1
+Interacting with ChatGPT
+Available
+
+0%
+Learn how to interact with ChatGPT effectively to produce high-quality content. In this chapter, you'll learn about ChatGPT's capabilities and limitations, and how to write prompts that maximize the quality of the generated content.
+What is ChatGPT?
+50 XP
+What can ChatGPT do?
+50 XP
+Breaking down an interaction
+100 XP
+ChatGPT and business
+50 XP
+Limitations of ChatGPT
+50 XP
+The creation of ChatGPT
+50 XP
+Knowing your limits
+100 XP
+Breaking down a use case
+50 XP
+Writing effective prompts
+50 XP
+Prompt best practices
+100 XP
+Engineering a prompt
+50 XP
+2
+Adopting ChatGPT
+Locked
+
+0%
+Due to the wide range of potential applications of ChatGPT and its ease of use, one of its major challenges is deciding when to use it. In this chapter, you'll learn about common use cases of ChatGPT to begin streamlining your own workflows. You'll understand how to evaluate a use case as a suitable application and consider the legal and ethical implications. Finally, you'll learn about the key factors that will decide the future of generative AI models like ChatGPT.
+Enabling people to use ChatGPT
+50 XP
+Augmenting workflows
+50 XP
+Matching roles with common use cases
+100 XP
+Generating marketing copy
+50 XP
+Identifying use cases for ChatGPT
+50 XP
+Establishing the framework
+100 XP
+Validating a use case
+50 XP
+Ownership and privacy
+50 XP
+OpenAI's Terms of Use
+50 XP
+Classifying concerns
+100 XP
+Applying legal and ethical considerations
+50 XP
+Advancements in generative AI
+50 XP
+Scaling the AI revolution!
+100 XP
+More specialized models
+50 XP
+The "generation" generation
+50 XP
+Congratulations!

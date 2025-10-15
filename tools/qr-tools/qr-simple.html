@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUDI QR Code Generator</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 500px;
+            width: 100%;
+            padding: 40px;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .input-group {
+            margin-bottom: 24px;
+        }
+
+        label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px 16px;
+            font-size: 14px;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            transition: all 0.2s;
+            font-family: 'Inter', sans-serif;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #1e3a8a;
+            box-shadow: 0 0 0 4px rgba(30, 58, 138, 0.1);
+        }
+
+        .btn-primary {
+            width: 100%;
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            color: white;
+            padding: 14px 24px;
+            border: none;
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(30, 58, 138, 0.4);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+
+        .qr-display {
+            margin: 32px 0;
+            text-align: center;
+            min-height: 280px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .qr-placeholder {
+            width: 256px;
+            height: 256px;
+            border: 3px dashed #d1d5db;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #9ca3af;
+            font-size: 14px;
+            font-weight: 500;
+            background: #f9fafb;
+        }
+
+        #qrcode {
+            display: inline-block;
+            padding: 16px;
+            background: white;
+            border-radius: 16px;
+            border: 3px solid #1e3a8a;
+            box-shadow: 0 8px 24px rgba(30, 58, 138, 0.2);
+            opacity: 0;
+            transform: scale(0.9);
+            transition: all 0.3s ease-out;
+        }
+
+        #qrcode.show {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        #qrcode canvas {
+            display: block;
+            border-radius: 8px;
+        }
+
+        .success-message {
+            display: none;
+            align-items: center;
+            gap: 8px;
+            background: #ecfdf5;
+            border: 2px solid #10b981;
+            color: #065f46;
+            padding: 12px 16px;
+            border-radius: 12px;
+            margin-top: 16px;
+            font-size: 14px;
+            font-weight: 600;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        .success-message.show {
+            display: flex;
+        }
+
+        .success-icon {
+            width: 20px;
+            height: 20px;
+            background: #10b981;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+        }
+
+        .btn-secondary {
+            width: 100%;
+            background: white;
+            color: #1e3a8a;
+            padding: 14px 24px;
+            border: 2px solid #1e3a8a;
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-top: 12px;
+            display: none;
+        }
+
+        .btn-secondary.show {
+            display: block;
+        }
+
+        .btn-secondary:hover {
+            background: #1e3a8a;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .info-box {
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 12px;
+            padding: 16px;
+            margin-top: 24px;
+            font-size: 13px;
+            color: #1e3a8a;
+            line-height: 1.6;
+        }
+
+        .info-box strong {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+
+        .loading {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            color: #1e3a8a;
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 16px;
+        }
+
+        .loading.show {
+            display: flex;
+        }
+
+        .spinner {
+            width: 20px;
+            height: 20px;
+            border: 3px solid #e5e7eb;
+            border-top-color: #1e3a8a;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 RUDI QR Code Generator</h1>
+            <p class="subtitle">Generate QR codes for certificate verification</p>
+        </div>
+
+        <div class="input-group">
+            <label for="url">Verification URL</label>
+            <input
+                type="text"
+                id="url"
+                value="https://rudi-web.vercel.app/"
+                placeholder="https://rudi-web.vercel.app/verify?c=abc123"
+            >
+        </div>
+
+        <button class="btn-primary" onclick="generate()">Generate QR Code</button>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <span>Generating QR code...</span>
+        </div>
+
+        <div class="qr-display">
+            <div class="qr-placeholder" id="placeholder">
+                Click "Generate QR Code" to start
+            </div>
+            <div id="qrcode"></div>
+        </div>
+
+        <div class="success-message" id="successMessage">
+            <div class="success-icon">✓</div>
+            <span>QR code generated successfully!</span>
+        </div>
+
+        <button class="btn-secondary" id="downloadBtn" onclick="downloadQR()">
+            📥 Download as PNG
+        </button>
+
+        <div class="info-box">
+            <strong>💡 Usage Tips:</strong>
+            • For certificates, use: <code>https://rudi-web.vercel.app/verify?c={cert_id}</code><br>
+            • Replace <code>{cert_id}</code> with your unique certificate ID<br>
+            • QR code size: 256×256px (perfect for certificates)
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <script>
+        let qrcodeElement = null;
+
+        function generate() {
+            const url = document.getElementById('url').value.trim();
+
+            if (!url) {
+                alert('Please enter a URL');
+                return;
+            }
+
+            // Show loading state
+            document.getElementById('loading').classList.add('show');
+            document.getElementById('successMessage').classList.remove('show');
+            document.getElementById('downloadBtn').classList.remove('show');
+
+            // Hide placeholder and existing QR
+            const placeholder = document.getElementById('placeholder');
+            const qrcodeContainer = document.getElementById('qrcode');
+            placeholder.style.display = 'none';
+            qrcodeContainer.classList.remove('show');
+
+            // Clear previous QR code
+            qrcodeContainer.innerHTML = '';
+
+            // Small delay for loading animation
+            setTimeout(() => {
+                try {
+                    // Generate new QR code
+                    qrcodeElement = new QRCode(qrcodeContainer, {
+                        text: url,
+                        width: 256,
+                        height: 256,
+                        colorDark: "#1a1a1a",
+                        colorLight: "#ffffff",
+                        correctLevel: QRCode.CorrectLevel.H
+                    });
+
+                    // Hide loading, show success
+                    document.getElementById('loading').classList.remove('show');
+                    qrcodeContainer.classList.add('show');
+                    document.getElementById('successMessage').classList.add('show');
+                    document.getElementById('downloadBtn').classList.add('show');
+
+                    // Auto-hide success message after 3 seconds
+                    setTimeout(() => {
+                        document.getElementById('successMessage').classList.remove('show');
+                    }, 3000);
+
+                } catch (error) {
+                    console.error('Error generating QR code:', error);
+                    document.getElementById('loading').classList.remove('show');
+                    placeholder.style.display = 'flex';
+                    placeholder.textContent = 'Error generating QR code. Please try again.';
+                    placeholder.style.color = '#dc2626';
+                }
+            }, 500);
+        }
+
+        function downloadQR() {
+            const canvas = document.querySelector('#qrcode canvas');
+            if (!canvas) {
+                alert('Please generate a QR code first!');
+                return;
+            }
+
+            const link = document.createElement('a');
+            const url = document.getElementById('url').value;
+            const filename = url.includes('verify?c=')
+                ? `rudi-qr-${url.split('verify?c=')[1].substring(0, 8)}.png`
+                : 'rudi-qr-code.png';
+
+            link.download = filename;
+            link.href = canvas.toDataURL();
+            link.click();
+
+            // Visual feedback
+            const btn = document.getElementById('downloadBtn');
+            const originalText = btn.textContent;
+            btn.textContent = '✓ Downloaded!';
+            btn.style.background = '#10b981';
+            btn.style.color = 'white';
+            btn.style.borderColor = '#10b981';
+
+            setTimeout(() => {
+                btn.textContent = originalText;
+                btn.style.background = 'white';
+                btn.style.color = '#1e3a8a';
+                btn.style.borderColor = '#1e3a8a';
+            }, 2000);
+        }
+
+        // Generate on page load
+        window.onload = function() {
+            generate();
+        };
+    </script>
+</body>
+</html>

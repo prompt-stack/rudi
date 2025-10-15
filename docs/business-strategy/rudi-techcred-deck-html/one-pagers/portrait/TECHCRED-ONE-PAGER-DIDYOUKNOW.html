@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechCred Opportunity - One Page Overview</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .page {
+            width: 8.5in;
+            height: 11in;
+            background: white;
+            padding: 0.5in 0.6in;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 0.2in;
+            padding-bottom: 0.12in;
+            border-bottom: 3px solid #1e3a8a;
+        }
+
+        .main-title {
+            font-size: 32px;
+            font-weight: 800;
+            color: #1e3a8a;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: #52525b;
+            font-weight: 500;
+        }
+
+        .opportunity-box {
+            background: white;
+            border: 2px solid #1e3a8a;
+            border-radius: 8px;
+            padding: 0.2in;
+            margin-bottom: 0.18in;
+            text-align: center;
+        }
+
+        .opportunity-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 0.12in;
+        }
+
+        .opportunity-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.15in;
+        }
+
+        .opportunity-item {
+            background: #f8fafc;
+            border-radius: 6px;
+            padding: 0.12in;
+        }
+
+        .opp-number {
+            font-size: 28px;
+            font-weight: 800;
+            color: #1e3a8a;
+            margin-bottom: 4px;
+        }
+
+        .opp-label {
+            font-size: 10px;
+            color: #52525b;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .section {
+            margin-bottom: 0.15in;
+        }
+
+        .section-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 0.08in;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .number-badge {
+            width: 22px;
+            height: 22px;
+            background: #1e3a8a;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.2in;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.1in;
+        }
+
+        .step-card {
+            background: #fafafa;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            padding: 0.12in;
+            text-align: center;
+        }
+
+        .step-number {
+            font-size: 18px;
+            font-weight: 800;
+            color: #1e3a8a;
+            margin-bottom: 4px;
+        }
+
+        .step-title {
+            font-size: 9px;
+            font-weight: 700;
+            color: #18181b;
+            margin-bottom: 4px;
+        }
+
+        .step-detail {
+            font-size: 7.5px;
+            color: #52525b;
+            line-height: 1.3;
+        }
+
+        .content-box {
+            background: #fafafa;
+            border-radius: 6px;
+            padding: 0.12in;
+        }
+
+        .box-title {
+            font-size: 10px;
+            font-weight: 700;
+            color: #18181b;
+            margin-bottom: 6px;
+        }
+
+        .box-list {
+            font-size: 9px;
+            color: #52525b;
+            line-height: 1.6;
+        }
+
+        .box-list li {
+            margin-bottom: 3px;
+        }
+
+        .timeline-bar {
+            background: #f8fafc;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            padding: 0.08in 0.12in;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.2in;
+        }
+
+        .timeline-item {
+            text-align: center;
+            flex: 1;
+        }
+
+        .timeline-month {
+            font-size: 11px;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 2px;
+        }
+
+        .timeline-dates {
+            font-size: 7.5px;
+            color: #52525b;
+        }
+
+        .warning-box {
+            background: #fffbeb;
+            border: 1px solid #d97706;
+            border-radius: 6px;
+            padding: 0.08in;
+            text-align: center;
+            margin-bottom: 0.15in;
+        }
+
+        .warning-text {
+            font-size: 9px;
+            color: #78350f;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            color: white;
+            border-radius: 8px;
+            padding: 0.15in;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .cta-details {
+            font-size: 10px;
+            margin-bottom: 8px;
+        }
+
+        .cta-contact {
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0.4in;
+            left: 0.6in;
+            right: 0.6in;
+            text-align: center;
+            font-size: 8px;
+            color: #999;
+            padding-top: 0.1in;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        @page {
+            size: 8.5in 11in;
+            margin: 0;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .page {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="header">
+            <div class="main-title">Ohio TechCred: State-Funded AI Training</div>
+            <div class="subtitle">Up to $180,000 Per Year in Reimbursed Workforce Development</div>
+        </div>
+
+        <div class="opportunity-box">
+            <div class="opportunity-title">The Opportunity</div>
+            <div class="opportunity-grid">
+                <div class="opportunity-item">
+                    <div class="opp-number">$2,000</div>
+                    <div class="opp-label">Per Employee<br>Per Credential</div>
+                </div>
+                <div class="opportunity-item">
+                    <div class="opp-number">$30,000</div>
+                    <div class="opp-label">Per Employer<br>Per Window</div>
+                </div>
+                <div class="opportunity-item">
+                    <div class="opp-number">$180,000</div>
+                    <div class="opp-label">Maximum<br>Per Year</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">
+                <div class="number-badge">1</div>
+                Next Application Window
+            </div>
+            <div class="timeline-bar" style="justify-content: center;">
+                <div class="timeline-item" style="flex: none; padding: 0.12in 0.3in; background: #fafafa; border-radius: 8px;">
+                    <div class="timeline-month" style="font-size: 14px;">November 3 - December 1, 2025</div>
+                    <div class="timeline-dates" style="font-size: 8.5px; margin-top: 4px;">Apply at TechCred.Ohio.Gov • Approval in ~60 days</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">
+                <div class="number-badge">2</div>
+                How It Works (4 Steps)
+            </div>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <div class="step-title">Apply</div>
+                    <div class="step-detail">At TechCred.Ohio.Gov (Nov 3-Dec 1). RUDI provides training provider info.</div>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <div class="step-title">Approval</div>
+                    <div class="step-detail">State reviews applications and notifies approved employers (~60 days)</div>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <div class="step-title">Train</div>
+                    <div class="step-detail">Schedule RUDI training after approval. Complete within 12 months.</div>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">04</div>
+                    <div class="step-title">Reimburse</div>
+                    <div class="step-detail">Submit docs within 6 weeks. RUDI provides invoices & certificate.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="warning-box">
+            <div class="warning-text">
+                ⚠️ CRITICAL: Reimbursement must be submitted within 6 weeks of credential completion. RUDI sends reminders and provides all required documentation immediately.
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">
+                <div class="number-badge">3</div>
+                TechCred-Eligible AI Credentials
+            </div>
+            <div class="content-box" style="margin-bottom: 0.15in;">
+                <div class="box-list" style="display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;">
+                    <span style="background: #f8fafc; padding: 4px 10px; border-radius: 4px; font-size: 9px; font-weight: 600;">Foundations in Responsible AI</span>
+                    <span style="background: #f8fafc; padding: 4px 10px; border-radius: 4px; font-size: 9px; font-weight: 600;">Applied Generative AI</span>
+                    <span style="background: #f8fafc; padding: 4px 10px; border-radius: 4px; font-size: 9px; font-weight: 600;">AI for Business</span>
+                    <span style="background: #f8fafc; padding: 4px 10px; border-radius: 4px; font-size: 9px; font-weight: 600;">AI for Leadership</span>
+                    <span style="background: #f8fafc; padding: 4px 10px; border-radius: 4px; font-size: 9px; font-weight: 600;">AI for Education</span>
+                    <span style="background: #f8fafc; padding: 4px 10px; border-radius: 4px; font-size: 9px; font-weight: 600;">Tool-Specific Training</span>
+                    <span style="background: #1e3a8a; padding: 4px 10px; border-radius: 4px; font-size: 9px; font-weight: 700; color: white;">52 TechCred AI Credentials</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">
+                <div class="number-badge">4</div>
+                Credentialing Partner
+            </div>
+            <div style="text-align: center; background: #fafafa; border: 2px solid #1e3a8a; border-radius: 8px; padding: 0.15in; margin-bottom: 0.15in;">
+                <div style="font-size: 12px; font-weight: 700; color: #1e3a8a; margin-bottom: 4px;">Responsible Use of Digital Intelligence (RUDI)</div>
+                <div style="font-size: 9px; color: #52525b; font-weight: 600;">TechCred-Eligible Training Provider</div>
+            </div>
+            <div class="content-grid">
+                <div class="content-box">
+                    <div class="box-title">What Makes RUDI Different</div>
+                    <ul class="box-list">
+                        <li>Focus on responsible use & application</li>
+                        <li>Less theory, more hands-on practice</li>
+                        <li>TechCred assistance & deadline reminders</li>
+                        <li>Flexible delivery options</li>
+                    </ul>
+                </div>
+                <div class="content-box">
+                    <div class="box-title">Real-World Example</div>
+                    <div class="box-list">
+                        <strong>School/Nonprofit (15 employees):</strong><br>
+                        Cost: $1,800/person = $27,000<br>
+                        TechCred reimburses: $27,000<br>
+                        <strong>Your net cost: $0</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-box">
+            <div class="cta-title">Ready to Get Started?</div>
+            <div class="cta-details">
+                Application Window: November 3 - December 1, 2025<br>
+                Contact us to discuss which credentials fit your workforce needs
+            </div>
+            <div class="cta-contact">
+                📧 wshoecraft@didyouknowpublishing.com  •  📞 513.834.5349
+            </div>
+        </div>
+
+        <div class="footer">
+            Responsible Use of Digital Intelligence (RUDI) • TechCred-Eligible Training Provider
+        </div>
+    </div>
+</body>
+</html>

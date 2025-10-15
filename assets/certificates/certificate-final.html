@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUDI Certificate of Completion</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: #f5f5f5;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .certificate {
+            width: 11in;
+            height: 8.5in;
+            background: #ffffff;
+            padding: 55px 75px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            position: relative;
+            border: 3px solid #1a1a1a;
+        }
+
+        /* DRAFT watermark */
+        .draft-watermark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            font-size: 180px;
+            font-weight: 900;
+            color: rgba(220, 38, 38, 0.08);
+            text-transform: uppercase;
+            letter-spacing: 20px;
+            z-index: 10;
+            pointer-events: none;
+            user-select: none;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .certificate::after {
+            content: '';
+            position: absolute;
+            top: -150px;
+            left: -150px;
+            width: 900px;
+            height: 900px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='30' fill='none' stroke='rgba(30,58,138,0.02)' stroke-width='1'/%3E%3Ccircle cx='100' cy='100' r='50' fill='none' stroke='rgba(30,58,138,0.02)' stroke-width='1'/%3E%3Ccircle cx='100' cy='100' r='70' fill='none' stroke='rgba(30,58,138,0.02)' stroke-width='1'/%3E%3Ccircle cx='100' cy='100' r='3' fill='rgba(30,58,138,0.04)'/%3E%3Cg%3E%3Cline x1='100' y1='100' x2='130' y2='100' stroke='rgba(30,58,138,0.03)' stroke-width='1.5'/%3E%3Ccircle cx='130' cy='100' r='4' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='85' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='85' r='3' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='115' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='115' r='3' fill='rgba(30,58,138,0.03)'/%3E%3C/g%3E%3Cg transform='rotate(60 100 100)'%3E%3Cline x1='100' y1='100' x2='130' y2='100' stroke='rgba(30,58,138,0.03)' stroke-width='1.5'/%3E%3Ccircle cx='130' cy='100' r='4' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='85' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='85' r='3' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='115' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='115' r='3' fill='rgba(30,58,138,0.03)'/%3E%3C/g%3E%3Cg transform='rotate(120 100 100)'%3E%3Cline x1='100' y1='100' x2='130' y2='100' stroke='rgba(30,58,138,0.03)' stroke-width='1.5'/%3E%3Ccircle cx='130' cy='100' r='4' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='85' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='85' r='3' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='115' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='115' r='3' fill='rgba(30,58,138,0.03)'/%3E%3C/g%3E%3Cg transform='rotate(180 100 100)'%3E%3Cline x1='100' y1='100' x2='130' y2='100' stroke='rgba(30,58,138,0.03)' stroke-width='1.5'/%3E%3Ccircle cx='130' cy='100' r='4' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='85' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='85' r='3' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='115' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='115' r='3' fill='rgba(30,58,138,0.03)'/%3E%3C/g%3E%3Cg transform='rotate(240 100 100)'%3E%3Cline x1='100' y1='100' x2='130' y2='100' stroke='rgba(30,58,138,0.03)' stroke-width='1.5'/%3E%3Ccircle cx='130' cy='100' r='4' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='85' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='85' r='3' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='115' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='115' r='3' fill='rgba(30,58,138,0.03)'/%3E%3C/g%3E%3Cg transform='rotate(300 100 100)'%3E%3Cline x1='100' y1='100' x2='130' y2='100' stroke='rgba(30,58,138,0.03)' stroke-width='1.5'/%3E%3Ccircle cx='130' cy='100' r='4' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='85' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='85' r='3' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='115' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='115' r='3' fill='rgba(30,58,138,0.03)'/%3E%3C/g%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            pointer-events: none;
+            z-index: 0;
+            user-select: none;
+            opacity: 0.8;
+        }
+
+        /* Decorative border */
+        .certificate::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 1.5px solid #1e3a8a;
+            pointer-events: none;
+        }
+
+        .certificate-inner {
+            position: relative;
+            z-index: 1;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .org-name {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: #1a1a1a;
+            margin-bottom: 5px;
+        }
+
+        .org-full-name {
+            font-size: 9px;
+            color: #666;
+            font-weight: 500;
+            letter-spacing: 1.2px;
+            margin-bottom: 28px;
+        }
+
+        .certificate-title {
+            font-family: 'Crimson Pro', serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 5px;
+            letter-spacing: -0.5px;
+        }
+
+        .certifies-text {
+            font-size: 11px;
+            color: #666;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        /* Body */
+        .body {
+            text-align: center;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: -15px;
+            margin-bottom: 10px;
+        }
+
+        .recipient-name {
+            font-family: 'Crimson Pro', serif;
+            font-size: 58px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #1a1a1a;
+            min-width: 500px;
+            letter-spacing: -0.5px;
+        }
+
+        .completion-text {
+            font-size: 12px;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+
+        .course-name {
+            font-family: 'Crimson Pro', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 6px;
+            letter-spacing: -0.3px;
+        }
+
+        .course-subtitle {
+            font-size: 14px;
+            color: #1e3a8a;
+            font-weight: 700;
+            margin-bottom: 18px;
+            letter-spacing: 0.3px;
+        }
+
+        .course-description {
+            font-size: 9.5px;
+            color: #555;
+            max-width: 720px;
+            margin: 0 auto 16px;
+            line-height: 1.75;
+            font-weight: 400;
+        }
+
+        .course-details {
+            font-size: 11px;
+            color: #1a1a1a;
+            font-weight: 700;
+            margin-bottom: 5px;
+            letter-spacing: 0.3px;
+        }
+
+        .partnership {
+            font-size: 8px;
+            color: #999;
+            margin-top: 10px;
+            font-style: italic;
+            line-height: 1.4;
+            max-width: 650px;
+        }
+
+        /* Footer with signatures */
+        .footer {
+            margin-top: auto;
+            padding-top: 20px;
+        }
+
+        .signatures {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            margin-bottom: 16px;
+        }
+
+        .signature-block {
+            text-align: center;
+        }
+
+        .signature-space {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 2px solid #1a1a1a;
+            margin-bottom: 8px;
+        }
+
+        .signature-script {
+            font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
+            font-size: 28px;
+            color: #1a1a1a;
+            font-weight: normal;
+            font-style: italic;
+        }
+
+        .signature-script.brandon {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 32px;
+            letter-spacing: 1px;
+            font-style: italic;
+        }
+
+        .signature-script.william {
+            font-family: 'Snell Roundhand', 'Apple Chancery', 'Lucida Handwriting', cursive;
+            font-size: 30px;
+            font-style: italic;
+            letter-spacing: 0.5px;
+            font-weight: 300;
+        }
+
+        .signature-name {
+            font-weight: 700;
+            font-size: 12px;
+            color: #1a1a1a;
+            margin-bottom: 3px;
+            letter-spacing: 0.2px;
+        }
+
+        .signature-title {
+            font-size: 9px;
+            color: #666;
+            font-weight: 500;
+        }
+
+        /* Metadata footer */
+        .metadata {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-top: 18px;
+            padding-top: 12px;
+            border-top: 1px solid #ddd;
+        }
+
+        .cert-info {
+            flex: 1;
+        }
+
+        .cert-id {
+            font-size: 7.5px;
+            color: #999;
+            font-family: 'Courier New', monospace;
+            margin-bottom: 3px;
+            letter-spacing: 0.2px;
+        }
+
+        .verify-url {
+            font-size: 7.5px;
+            color: #999;
+            margin-bottom: 2px;
+        }
+
+        .right-badges {
+            display: flex;
+            align-items: flex-end;
+            gap: 12px;
+        }
+
+        /* QR Code */
+        #qrcode {
+            width: 70px;
+            height: 70px;
+            background: white;
+            border: 2px solid #1e3a8a;
+            padding: 4px;
+        }
+
+        #qrcode canvas {
+            width: 100% !important;
+            height: 100% !important;
+            display: block;
+        }
+
+
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .certificate {
+                box-shadow: none;
+                page-break-after: always;
+            }
+        }
+
+        /* Responsive for preview */
+        @media screen and (max-width: 1200px) {
+            .certificate {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 11/8.5;
+                padding: 5%;
+            }
+
+            .certificate-title {
+                font-size: 5vw;
+            }
+
+            .recipient-name {
+                font-size: 5.5vw;
+                min-width: auto;
+            }
+
+            .course-name {
+                font-size: 3.2vw;
+            }
+
+            .seal {
+                width: 70px;
+                height: 70px;
+            }
+
+            #qrcode {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="certificate">
+        <div class="draft-watermark">DRAFT</div>
+        <div class="certificate-inner">
+            <!-- Header -->
+            <div class="header">
+                <div class="org-name">RUDI</div>
+                <div class="org-full-name">Institute for the Responsible Use of Digital Intelligence</div>
+                <div class="certificate-title">Certificate of Completion</div>
+                <div class="certifies-text">This Certifies That</div>
+            </div>
+
+            <!-- Body -->
+            <div class="body">
+                <div class="recipient-name" id="recipientName">Julie Stone</div>
+                <div class="completion-text">has successfully completed</div>
+
+                <div class="course-name">Responsible AI Literacy</div>
+                <div class="course-subtitle">Foundation & Application • 3 Contact Hours</div>
+
+                <div class="course-description">
+                    A comprehensive course covering: Governance frameworks for responsible AI use •
+                    Evolution of intelligence (natural → artificial → generative) •
+                    Major AI ecosystems (OpenAI, Anthropic, Google, Meta) •
+                    Traditional vs. Generative AI paradigms •
+                    Modalities of generative AI (text, image, video, audio) •
+                    Large Language Model fundamentals •
+                    Prompt design for non-technical users •
+                    Hands-on overview of generative AI tools
+                </div>
+
+                <div class="course-details">3 Contact Hours  |  0.3 CEU Equivalent</div>
+
+                <div class="partnership">
+                    Co-presented by the Institute for the Responsible Use of Digital Intelligence (RUDI)
+                    and Did You Know Publishing, Inc.<br>
+                    CEU credit (0.3) administered by Ohio Head Start Association for qualifying participants.
+                </div>
+            </div>
+
+            <!-- Footer with Signatures -->
+            <div class="footer">
+                <div class="signatures">
+                    <div class="signature-block">
+                        <div class="signature-space">
+                            <div class="signature-script brandon">Brandon Z. Hoff</div>
+                        </div>
+                        <div class="signature-name">Brandon Z. Hoff</div>
+                        <div class="signature-title">Founder, RUDI</div>
+                    </div>
+
+                    <div class="signature-block">
+                        <div class="signature-space">
+                            <div class="signature-script william">William Shoecraft</div>
+                        </div>
+                        <div class="signature-name">William Shoecraft</div>
+                        <div class="signature-title">CEO, Did You Know Publishing, Inc.</div>
+                    </div>
+                </div>
+
+                <!-- Metadata -->
+                <div class="metadata">
+                    <div class="cert-info">
+                        <div class="cert-id">Certificate ID: <span id="certId">5b0a4a12-921c-4b83-a1f9-743b9a8e52b5</span></div>
+                        <div class="verify-url">Verify: <span id="verifyUrlText">https://rudi.ai/verify?c=5b0a4a12-921c-4b83-a1f9-743b9a8e52b5</span></div>
+                        <div class="verify-url">Issued: <span id="issueDate">October 9, 2025</span></div>
+                    </div>
+
+                    <div class="right-badges">
+                        <!-- QR Code Image -->
+                        <div style="width: 75px; height: 75px; border: 2px solid #1e3a8a; padding: 4px; background: white; border-radius: 4px;">
+                            <img id="qrImage" src="" alt="QR Code" style="width: 100%; height: 100%; display: block;">
+                        </div>
+
+                        <!-- RUDI Seal -->
+                        <svg width="85" height="85" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Outer Circle -->
+                            <circle cx="100" cy="100" r="95" fill="none" stroke="#1e3a8a" stroke-width="3"/>
+
+                            <!-- RUDI Text -->
+                            <text x="100" y="75" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="700" fill="#1e3a8a" letter-spacing="2">RUDI</text>
+
+                            <!-- EST -->
+                            <text x="100" y="92" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="8" font-weight="500" fill="#475569">EST. 2023</text>
+
+                            <!-- Divider Line -->
+                            <line x1="45" y1="100" x2="155" y2="100" stroke="#1e3a8a" stroke-width="1.5"/>
+
+                            <!-- Verified Text -->
+                            <text x="100" y="120" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#1e3a8a">VERIFIED</text>
+
+                            <!-- Certificate Text -->
+                            <text x="100" y="135" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#1e3a8a">CERTIFICATE</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Certificate data (in production, this would be dynamically populated)
+        const certData = {
+            name: 'Julie Stone',
+            certId: '5b0a4a12-921c-4b83-a1f9-743b9a8e52b5',
+            issueDate: 'October 9, 2025',
+            // Path to pre-generated QR code image
+            qrImagePath: 'images/rudi-qr-code.png'
+        };
+
+        // Generate verify URL
+        const verifyUrl = `https://rudi.ai/verify?c=${certData.certId}`;
+
+        // Set QR code image
+        document.getElementById('qrImage').src = certData.qrImagePath;
+
+        // Update dynamic fields (for template system)
+        document.getElementById('recipientName').textContent = certData.name;
+        document.getElementById('certId').textContent = certData.certId;
+        document.getElementById('verifyUrlText').textContent = verifyUrl;
+        document.getElementById('issueDate').textContent = certData.issueDate;
+    </script>
+</body>
+</html>

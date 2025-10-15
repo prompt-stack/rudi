@@ -1,0 +1,116 @@
+Interactive Course
+Understanding Machine Learning
+BasicSkill Level
+Updated: Feb 2025
+2 hr
+12 videos
+36 Exercises
+250K+
+2350 XP
+What you'll learn
+Define machine learning and recognize its relationship to artificial intelligence and data science.
+
+Differentiate between supervised, unsupervised, and deep learning approaches and identify use cases for each.
+
+Identify the steps of the machine learning workflow, including feature engineering, training, testing, and tuning.
+
+Recognize model evaluation techniques such as confusion matrices and assess trade-offs between accuracy, precision, and recall.
+
+Evaluate the benefits and limitations of machine learning, including issues of explainability, bias, and data quality.
+
+Description
+What's behind the machine learning hype? In this non-technical course, you’ll learn everything you’ve been too afraid to ask about machine learning. There’s no coding required. Hands-on exercises will help you get past the jargon and learn how this exciting technology powers everything from self-driving cars to your personal Amazon shopping suggestions.
+
+
+How does machine learning work, when can you use it, and what is the difference between AI and machine learning? They’re all covered. Gain skills in this hugely in-demand and influential field, and discover why machine learning is for everyone!
+
+
+1
+What is Machine Learning?
+Available
+
+0%
+In this chapter, we'll define machine learning and its relation to data science and artificial intelligence. Then, we'll unpack important machine learning jargon and end with the machine learning workflow for building models.
+What is machine learning?
+50 XP
+Generating movie recommendations
+50 XP
+AI, data science, and machine learning walk into a bar...
+50 XP
+What's true about machine learning?
+100 XP
+Machine learning concepts
+50 XP
+Machine learning lingo
+100 XP
+Supervised vs unsupervised
+50 XP
+Machine learning workflow
+50 XP
+Steps for building a model
+100 XP
+A true step
+50 XP
+2
+Machine Learning Models
+Locked
+
+0%
+Now that you know the basics of machine learning, let's dive a little bit deeper. At the end of this chapter, you will know the different types of machine learning, as well as how to evaluate and improve your models.
+Supervised learning
+50 XP
+Warm up
+50 XP
+Regressing with class
+100 XP
+Unsupervised learning
+50 XP
+We don't need no supervision
+100 XP
+Gotta cluster 'em all!
+50 XP
+Evaluating performance
+50 XP
+True or false?
+100 XP
+Land of confusion
+50 XP
+Improving performance
+50 XP
+It's a long way to the top
+100 XP
+Explore hyperparameter tuning
+50 XP
+3
+Deep Learning
+Locked
+
+0%
+In this chapter, we'll unpack deep learning beginning with neural networks. Next, we'll take a closer look at two common use-cases for deep learning: computer vision and natural language processing. We'll wrap up the course discussing the limits and dangers of machine learning.
+Deep learning
+50 XP
+What is deep learning?
+100 XP
+Should I use deep learning?
+50 XP
+Computer vision
+50 XP
+Image data
+50 XP
+The process
+100 XP
+Natural Language Processing
+50 XP
+Sentiment analysis
+50 XP
+Classifying machine learning tasks
+100 XP
+Bag of words
+50 XP
+Limits of machine learning
+50 XP
+To black box or not to black box?
+100 XP
+Spotting bias in machine learning
+50 XP
+Congratulations!

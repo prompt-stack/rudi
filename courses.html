@@ -96,152 +96,115 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <nav class="nav-header">
-        <div class="container nav-container">
-            <div class="logo">
-                <a href="index.html">
-                    <h2 style="margin: 0; color: white; font-weight: 600;">RUDI</h2>
-                </a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="certificates.html">Certifications</a></li>
-                <li><a href="framework.html">Framework</a></li>
-                <li><a href="ohio.html">Ohio</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="resources.html">Resources</a></li>
-            </ul>
-            <a href="contact.html" class="nav-cta">Get Started</a>
-            <button class="mobile-menu-toggle"><i class="fas fa-bars"></i></button>
-        </div>
-        <div class="mobile-menu">
-            <a href="index.html">Home</a>
-            <a href="courses.html">Courses</a>
-            <a href="certificates.html">Certifications</a>
-            <a href="framework.html">Framework</a>
-            <a href="ohio.html">Ohio</a></li>
-                <li><a href="research.html">Research</a>
-            <a href="resources.html">Resources</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </nav>
+    <div id="site-header"></div>
 
     <!-- Hero Section -->
-    <section style="background: white; padding: 10rem 0;">
+    <section style="background: white; padding: 8rem 0 6rem;">
         <div class="container">
-            <div class="responsive-2col" style="display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; max-width: 1100px; margin: 0 auto;">
                 <div>
-                    <div style="color: var(--gray-600); font-size: 0.875rem; font-weight: 500; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 1px;">
-                        Course Catalog
-                    </div>
-                    <h1 style="margin-bottom: 2rem;">Flexible AI Training Programs</h1>
-                    <p style="font-size: 1.25rem; color: var(--gray-600); line-height: 1.8; margin-bottom: 3rem;">
-                        From 2-hour skill builders to comprehensive 40-hour programs. Standard certifications or custom training designed for your needs.
+                    <h1 style="font-size: 3rem; font-weight: 300; margin-bottom: 1.5rem; line-height: 1.2;">
+                        AI Training Catalog
+                    </h1>
+                    <p style="font-size: 1.125rem; color: var(--gray-600); font-weight: 300; line-height: 1.6; margin-bottom: 2rem;">
+                        Flexible programs from 2-hour workshops to 40-hour comprehensive training. Standard certifications or custom enterprise solutions.
                     </p>
-                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                        <a href="#certification-path" class="btn btn-primary">View Programs</a>
-                        <a href="contact.html" class="btn btn-secondary">Build Custom Training</a>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem;">
+                        <a href="#programs" class="btn btn-primary">View Programs</a>
+                        <a href="#custom" class="btn btn-secondary">Custom Training</a>
+                    </div>
+                    <div style="display: flex; gap: 2rem; flex-wrap: wrap; font-size: 0.875rem; color: var(--gray-600);">
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-check-circle" style="color: var(--teal);"></i>
+                            <span>Stackable Credentials</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-check-circle" style="color: var(--teal);"></i>
+                            <span>TechCred Eligible</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-check-circle" style="color: var(--teal);"></i>
+                            <span>Flexible Delivery</span>
+                        </div>
                     </div>
                 </div>
-                <div style="position: relative;">
-                    <img src="images/abstract-circular-flow.png" alt="Continuous Learning Journey" style="width: 100%; height: auto; border-radius: 12px; margin-bottom: 2rem;">
-                    <div class="card" style="background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border: 2px solid var(--accent);">
-                        <h3 style="margin-bottom: 1.5rem; color: var(--navy-900);">Training Options</h3>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--navy-100);">
-                                <i class="fas fa-certificate" style="color: var(--accent); margin-right: 0.75rem;"></i>
-                                Standard Certifications (8-20 hrs)
-                            </li>
-                            <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--navy-100);">
-                                <i class="fas fa-users-cog" style="color: var(--accent); margin-right: 0.75rem;"></i>
-                                Enterprise Custom Programs
-                            </li>
-                            <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--navy-100);">
-                                <i class="fas fa-rocket" style="color: var(--accent); margin-right: 0.75rem;"></i>
-                                Skill Builders (2 hrs each)
-                            </li>
-                            <li style="padding: 0.75rem 0;">
-                                <i class="fas fa-building" style="color: var(--accent); margin-right: 0.75rem;"></i>
-                                Department-Specific Tracks
-                            </li>
-                        </ul>
-                    </div>
+                <div>
+                    <img src="images/abstract-circular-flow.png" alt="Continuous Learning Journey" style="width: 100%; height: auto; border-radius: 8px;">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Certification Path Visual -->
-    <section id="certification-path" style="padding: 8rem 0; background: var(--navy-50);">
+    <section id="programs" style="padding: 6rem 0; background: var(--navy-50);">
         <div class="container">
-            <div class="section-header" style="margin-bottom: 5rem; text-align: center;">
-                <h2 style="font-size: 2rem; font-weight: 400; margin-bottom: 1rem;">Stackable Certification Program</h2>
-                <p class="text-secondary" style="font-size: 1rem; font-weight: 300;">Build expertise progressively with our cumulative certification model</p>
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <h2 style="font-size: 2.25rem; font-weight: 300; margin-bottom: 1rem; color: var(--navy-900);">Stackable Certification Program</h2>
+                <p style="color: var(--gray-600); font-size: 1.125rem; font-weight: 300;">Build expertise progressively with our cumulative certification model</p>
             </div>
 
             <!-- Visual Progression -->
             <div style="max-width: 900px; margin: 0 auto 5rem;">
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; position: relative;">
-                    <!-- Connection Lines -->
-                    <div style="position: absolute; top: 50%; left: 33.33%; width: 33.33%; height: 3px; background: linear-gradient(90deg, var(--accent), var(--accent)); z-index: 1;"></div>
-                    <div style="position: absolute; top: 50%; left: 66.66%; width: 33.33%; height: 3px; background: linear-gradient(90deg, var(--accent), var(--accent)); z-index: 1;"></div>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; position: relative;">
+                    <!-- Connection Line -->
+                    <div style="position: absolute; top: 60px; left: 20%; width: 60%; height: 2px; background: linear-gradient(90deg, var(--teal), var(--accent)); z-index: 1;"></div>
 
                     <!-- Level 1 -->
                     <div style="text-align: center; position: relative; z-index: 2;">
-                        <div style="background: white; border: 2px solid var(--accent); width: 100px; height: 100px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                        <div style="background: white; border: 3px solid var(--navy-100); width: 120px; height: 120px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: all 0.3s ease;">
                             <div>
-                                <div style="font-size: 2rem; font-weight: 300; color: var(--navy-900);">8</div>
-                                <div style="font-size: 0.7rem; color: var(--gray-600); font-weight: 500;">HOURS</div>
+                                <div style="font-size: 2.5rem; font-weight: 200; color: var(--navy-900); line-height: 1;">8</div>
+                                <div style="font-size: 0.65rem; color: var(--gray-600); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-top: 0.25rem;">HOURS</div>
                             </div>
                         </div>
-                        <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Level 1: AI Literacy</h3>
-                        <p style="font-size: 0.9rem; color: var(--gray-600);">Foundation Certificate</p>
+                        <h3 style="font-size: 1rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--navy-900);">Level 1: AI Literacy</h3>
+                        <p style="font-size: 0.875rem; color: var(--gray-600); font-weight: 300;">Foundation Certificate</p>
                     </div>
 
                     <!-- Level 2 -->
                     <div style="text-align: center; position: relative; z-index: 2;">
-                        <div style="background: white; border: 2px solid var(--accent); width: 100px; height: 100px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                        <div style="background: white; border: 3px solid var(--teal); width: 120px; height: 120px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: all 0.3s ease;">
                             <div>
-                                <div style="font-size: 2rem; font-weight: 300; color: var(--navy-900);">12</div>
-                                <div style="font-size: 0.7rem; color: var(--gray-600); font-weight: 500;">HOURS</div>
+                                <div style="font-size: 2.5rem; font-weight: 200; color: var(--navy-900); line-height: 1;">12</div>
+                                <div style="font-size: 0.65rem; color: var(--gray-600); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-top: 0.25rem;">HOURS</div>
                             </div>
                         </div>
-                        <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Level 2: Applied AI</h3>
-                        <p style="font-size: 0.9rem; color: var(--gray-600);">Level 1 + 4 hrs Applied</p>
+                        <h3 style="font-size: 1rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--navy-900);">Level 2: Applied AI</h3>
+                        <p style="font-size: 0.875rem; color: var(--gray-600); font-weight: 300;">Level 1 + 4 hrs Applied</p>
                     </div>
 
                     <!-- Level 3 -->
                     <div style="text-align: center; position: relative; z-index: 2;">
-                        <div style="background: var(--accent); border: 2px solid var(--accent); width: 100px; height: 100px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                        <div style="background: var(--navy-900); border: 3px solid var(--navy-900); width: 120px; height: 120px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; box-shadow: 0 8px 20px rgba(15, 23, 42, 0.25); transition: all 0.3s ease;">
                             <div>
-                                <div style="font-size: 2rem; font-weight: 300; color: white;">20</div>
-                                <div style="font-size: 0.7rem; color: white; font-weight: 500;">HOURS</div>
+                                <div style="font-size: 2.5rem; font-weight: 200; color: white; line-height: 1;">20</div>
+                                <div style="font-size: 0.65rem; color: white; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-top: 0.25rem;">HOURS</div>
                             </div>
                         </div>
-                        <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Level 3: AI Leader</h3>
-                        <p style="font-size: 0.9rem; color: var(--gray-600);">Level 2 + 8 hrs Leadership</p>
+                        <h3 style="font-size: 1rem; margin-bottom: 0.5rem; font-weight: 600; color: var(--navy-900);">Level 3: AI Leader</h3>
+                        <p style="font-size: 0.875rem; color: var(--gray-600); font-weight: 300;">Level 2 + 8 hrs Leadership</p>
                     </div>
                 </div>
             </div>
 
             <!-- How It Works -->
-            <div class="card" style="max-width: 900px; margin: 0 auto;">
-                <h3 style="margin-bottom: 1.5rem;">How Stackable Certificates Work</h3>
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;" class="responsive-3col">
-                    <div>
-                        <div style="color: var(--accent); font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem;">1</div>
-                        <h4 style="font-size: 1rem; margin-bottom: 0.5rem;">Start Anywhere</h4>
-                        <p style="font-size: 0.9rem; color: var(--gray-600);">Enter at the level that matches your current expertise</p>
+            <div class="card" style="max-width: 1000px; margin: 0 auto; background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                <h3 style="margin-bottom: 2.5rem; text-align: center; font-size: 1.5rem; font-weight: 300; color: var(--navy-900);">How Stackable Certificates Work</h3>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem;" class="responsive-3col">
+                    <div style="text-align: center;">
+                        <div style="width: 56px; height: 56px; background: var(--navy-50); border: 2px solid var(--navy-100); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: var(--teal); font-size: 1.5rem; font-weight: 600;">1</div>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 0.75rem; font-weight: 500; color: var(--navy-900);">Start Anywhere</h4>
+                        <p style="font-size: 0.875rem; color: var(--gray-600); line-height: 1.5;">Enter at the level that matches your current expertise</p>
                     </div>
-                    <div>
-                        <div style="color: var(--accent); font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem;">2</div>
-                        <h4 style="font-size: 1rem; margin-bottom: 0.5rem;">Build Upon Learning</h4>
-                        <p style="font-size: 0.9rem; color: var(--gray-600);">Each level includes all previous content plus new modules</p>
+                    <div style="text-align: center;">
+                        <div style="width: 56px; height: 56px; background: var(--navy-50); border: 2px solid var(--navy-100); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: var(--teal); font-size: 1.5rem; font-weight: 600;">2</div>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 0.75rem; font-weight: 500; color: var(--navy-900);">Build Upon Learning</h4>
+                        <p style="font-size: 0.875rem; color: var(--gray-600); line-height: 1.5;">Each level includes all previous content plus new modules</p>
                     </div>
-                    <div>
-                        <div style="color: var(--accent); font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem;">3</div>
-                        <h4 style="font-size: 1rem; margin-bottom: 0.5rem;">Earn Multiple Certificates</h4>
-                        <p style="font-size: 0.9rem; color: var(--gray-600);">Receive separate credentials for each level completed</p>
+                    <div style="text-align: center;">
+                        <div style="width: 56px; height: 56px; background: var(--navy-50); border: 2px solid var(--navy-100); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: var(--teal); font-size: 1.5rem; font-weight: 600;">3</div>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 0.75rem; font-weight: 500; color: var(--navy-900);">Earn Multiple Certificates</h4>
+                        <p style="font-size: 0.875rem; color: var(--gray-600); line-height: 1.5;">Receive separate credentials for each level completed</p>
                     </div>
                 </div>
             </div>
@@ -249,95 +212,108 @@
     </section>
 
     <!-- Course Modules -->
-    <section class="section-padding">
+    <section style="padding: 6rem 0; background: white;">
         <div class="container">
-            <div class="section-header">
-                <span class="section-badge">Curriculum</span>
-                <h2>Core & Elective Modules</h2>
-                <p class="text-secondary" style="font-size: 1.125rem;">Mix and match modules to create custom programs</p>
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <h2 style="font-size: 2.25rem; font-weight: 300; margin-bottom: 1rem; color: var(--navy-900);">Core & Elective Modules</h2>
+                <p style="color: var(--gray-600); font-size: 1.125rem; font-weight: 300;">Mix and match modules to create custom programs</p>
             </div>
 
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; max-width: 1100px; margin: 0 auto;" class="responsive-2col">
-                <!-- Core Modules -->
-                <div>
-                    <h3 style="margin-bottom: 1.5rem; color: var(--navy-900);">
-                        <i class="fas fa-lock" style="color: var(--accent); margin-right: 0.5rem;"></i>
-                        Core Foundation (8 hrs)
-                    </h3>
-                    <div class="card">
-                        <h4 style="font-size: 1rem; margin-bottom: 1rem;">AI Literacy Certificate Modules</h4>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--navy-50); font-size: 0.9rem;">
-                                <strong>Unit 1:</strong> AI Foundations (2 hrs)
-                            </li>
-                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--navy-50); font-size: 0.9rem;">
-                                <strong>Unit 2:</strong> Large Language Models (2 hrs)
-                            </li>
-                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--navy-50); font-size: 0.9rem;">
-                                <strong>Unit 3:</strong> Prompt Engineering (2 hrs)
-                            </li>
-                            <li style="padding: 0.5rem 0; font-size: 0.9rem;">
-                                <strong>Unit 4:</strong> Responsible AI (2 hrs)
-                            </li>
-                        </ul>
+            <style>
+                @media (max-width: 1024px) {
+                    .modules-grid {
+                        grid-template-columns: 1fr 1fr !important;
+                    }
+                }
+                @media (max-width: 768px) {
+                    .modules-grid {
+                        grid-template-columns: 1fr !important;
+                    }
+                }
+            </style>
+
+            <div class="modules-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 1200px; margin: 0 auto;">
+                <!-- Core Foundation Card -->
+                <div class="card" style="background: white; padding: 2rem; border-radius: 12px; border: 1px solid var(--navy-100); height: 100%;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem;">
+                        <i class="fas fa-lock" style="color: var(--teal); font-size: 1.25rem;"></i>
+                        <h3 style="font-size: 1.1rem; font-weight: 600; color: var(--navy-900); margin: 0;">Core Foundation (8 hrs)</h3>
                     </div>
+                    <h4 style="font-size: 0.875rem; margin-bottom: 1rem; color: var(--gray-600); font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px;">AI Literacy Certificate Modules</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--navy-50); font-size: 0.875rem; color: var(--navy-800);">
+                            <strong style="color: var(--navy-900);">Unit 1:</strong> AI Foundations (2 hrs)
+                        </li>
+                        <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--navy-50); font-size: 0.875rem; color: var(--navy-800);">
+                            <strong style="color: var(--navy-900);">Unit 2:</strong> Large Language Models (2 hrs)
+                        </li>
+                        <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--navy-50); font-size: 0.875rem; color: var(--navy-800);">
+                            <strong style="color: var(--navy-900);">Unit 3:</strong> Prompt Engineering (2 hrs)
+                        </li>
+                        <li style="padding: 0.75rem 0; font-size: 0.875rem; color: var(--navy-800);">
+                            <strong style="color: var(--navy-900);">Unit 4:</strong> Responsible AI (2 hrs)
+                        </li>
+                    </ul>
                 </div>
 
-                <!-- Elective Modules -->
-                <div>
-                    <h3 style="margin-bottom: 1.5rem; color: var(--navy-900);">
-                        <i class="fas fa-puzzle-piece" style="color: var(--accent); margin-right: 0.5rem;"></i>
-                        Elective Modules
-                    </h3>
-                    <div class="card" style="margin-bottom: 1.5rem;">
-                        <h4 style="font-size: 1rem; margin-bottom: 1rem;">Applied & Advanced (2-4 hrs each)</h4>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--navy-50); font-size: 0.9rem;">
-                                Advanced Prompt Patterns
-                            </li>
-                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--navy-50); font-size: 0.9rem;">
-                                Business Applications
-                            </li>
-                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--navy-50); font-size: 0.9rem;">
-                                Department-Specific Use Cases
-                            </li>
-                            <li style="padding: 0.5rem 0; font-size: 0.9rem;">
-                                CS Fundamentals for AI
-                            </li>
-                        </ul>
+                <!-- Applied & Advanced Card -->
+                <div class="card" style="background: white; padding: 2rem; border-radius: 12px; border: 1px solid var(--navy-100); height: 100%;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem;">
+                        <i class="fas fa-puzzle-piece" style="color: var(--teal); font-size: 1.25rem;"></i>
+                        <h3 style="font-size: 1.1rem; font-weight: 600; color: var(--navy-900); margin: 0;">Elective Modules</h3>
                     </div>
-                    <div class="card">
-                        <h4 style="font-size: 1rem; margin-bottom: 1rem;">Leadership & Strategy (4-8 hrs)</h4>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--navy-50); font-size: 0.9rem;">
-                                AI Strategy & Governance
-                            </li>
-                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--navy-50); font-size: 0.9rem;">
-                                ROI & Performance Metrics
-                            </li>
-                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--navy-50); font-size: 0.9rem;">
-                                Change Management
-                            </li>
-                            <li style="padding: 0.5rem 0; font-size: 0.9rem;">
-                                Team Training & Adoption
-                            </li>
-                        </ul>
+                    <h4 style="font-size: 0.875rem; margin-bottom: 1rem; color: var(--gray-600); font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px;">Applied & Advanced (2-4 hrs each)</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--navy-50); font-size: 0.875rem; color: var(--navy-800);">
+                            Advanced Prompt Patterns
+                        </li>
+                        <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--navy-50); font-size: 0.875rem; color: var(--navy-800);">
+                            Business Applications
+                        </li>
+                        <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--navy-50); font-size: 0.875rem; color: var(--navy-800);">
+                            Department-Specific Use Cases
+                        </li>
+                        <li style="padding: 0.75rem 0; font-size: 0.875rem; color: var(--navy-800);">
+                            CS Fundamentals for AI
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Leadership & Strategy Card -->
+                <div class="card" style="background: white; padding: 2rem; border-radius: 12px; border: 1px solid var(--navy-100); height: 100%;">
+                    <div style="margin-bottom: 1.5rem;">
+                        <div style="width: 40px; height: 2px; background: var(--teal); margin-bottom: 1rem;"></div>
                     </div>
+                    <h4 style="font-size: 0.875rem; margin-bottom: 1rem; color: var(--gray-600); font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px;">Leadership & Strategy (4-8 hrs)</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--navy-50); font-size: 0.875rem; color: var(--navy-800);">
+                            AI Strategy & Governance
+                        </li>
+                        <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--navy-50); font-size: 0.875rem; color: var(--navy-800);">
+                            ROI & Performance Metrics
+                        </li>
+                        <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--navy-50); font-size: 0.875rem; color: var(--navy-800);">
+                            Change Management
+                        </li>
+                        <li style="padding: 0.75rem 0; font-size: 0.875rem; color: var(--navy-800);">
+                            Team Training & Adoption
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Skill Builders -->
-    <section class="section-padding bg-gray">
+    <section style="padding: 6rem 0; background: var(--navy-50);">
         <div class="container">
-            <div class="section-header">
-                <span class="section-badge">Micro-Learning</span>
-                <h2>2-Hour Skill Builders</h2>
-                <p class="text-secondary" style="font-size: 1.125rem;">Quick, focused training for specific skills</p>
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <span style="display: inline-block; background: var(--accent); color: white; padding: 0.25rem 1rem; border-radius: 50px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 1rem;">Micro-Learning</span>
+                <h2 style="font-size: 1.75rem; font-weight: 400; margin-bottom: 1rem;">2-Hour Skill Builders</h2>
+                <p style="color: var(--gray-600);">Quick, focused training for specific skills</p>
             </div>
 
-            <div class="feature-grid">
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; max-width: 1100px; margin: 0 auto;">
                 <div class="card">
                     <div class="feature-icon" style="background: var(--navy-50); color: var(--accent);">
                         <i class="fas fa-robot"></i>
@@ -391,12 +367,12 @@
     </section>
 
     <!-- Department Tracks -->
-    <section class="section-padding">
+    <section style="padding: 6rem 0; background: white;">
         <div class="container">
-            <div class="section-header">
-                <span class="section-badge">Specialized</span>
-                <h2>Department-Specific Tracks</h2>
-                <p class="text-secondary" style="font-size: 1.125rem;">Tailored AI training for different business functions</p>
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <span style="display: inline-block; background: var(--accent); color: white; padding: 0.25rem 1rem; border-radius: 50px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 1rem;">Specialized</span>
+                <h2 style="font-size: 1.75rem; font-weight: 400; margin-bottom: 1rem;">Department-Specific Tracks</h2>
+                <p style="color: var(--gray-600);">Tailored AI training for different business functions</p>
             </div>
 
             <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; max-width: 900px; margin: 0 auto;" class="responsive-2col">
@@ -456,16 +432,15 @@
     </section>
 
     <!-- Enterprise Solutions -->
-    <section class="section-padding bg-gray">
+    <section style="padding: 6rem 0; background: var(--navy-50);">
         <div class="container">
-            <div class="section-header">
-                <span class="section-badge">Enterprise</span>
-                <h2>Custom Corporate Training</h2>
-                <p class="text-secondary" style="font-size: 1.125rem;">Tailored programs for your organization's needs</p>
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h2 style="font-size: 1.75rem; font-weight: 400; margin-bottom: 1rem;">Custom Corporate Training</h2>
+                <p style="color: var(--gray-600);">Tailored programs for your organization's needs</p>
             </div>
 
             <div style="max-width: 1100px; margin: 0 auto;">
-                <div class="responsive-2col" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
                     <div>
                         <h3 style="margin-bottom: 1.5rem;">Build Your Perfect Program</h3>
                         <p style="color: var(--gray-600); margin-bottom: 2rem;">
@@ -495,25 +470,26 @@
                         <h3 style="color: white; margin-bottom: 1.5rem;">Enterprise Benefits</h3>
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
                             <div>
-                                <div style="font-size: 2rem; font-weight: 700; color: var(--accent);">100%</div>
-                                <p style="font-size: 0.9rem;">Customizable Content</p>
+                                <div style="font-size: 2rem; font-weight: 700; color: var(--teal);">100%</div>
+                                <p style="font-size: 0.9rem; color: #e2e8f0;">Customizable Content</p>
                             </div>
                             <div>
-                                <div style="font-size: 2rem; font-weight: 700; color: var(--accent);">$2K</div>
-                                <p style="font-size: 0.9rem;">TechCred Per Employee</p>
+                                <div style="font-size: 2rem; font-weight: 700; color: var(--teal);">$2K*</div>
+                                <p style="font-size: 0.9rem; color: #e2e8f0;">TechCred Per Employee</p>
                             </div>
                             <div>
-                                <div style="font-size: 2rem; font-weight: 700; color: var(--accent);">1-100+</div>
-                                <p style="font-size: 0.9rem;">Scalable Cohorts</p>
+                                <div style="font-size: 2rem; font-weight: 700; color: var(--teal);">1-100+</div>
+                                <p style="font-size: 0.9rem; color: #e2e8f0;">Scalable Cohorts</p>
                             </div>
                             <div>
-                                <div style="font-size: 2rem; font-weight: 700; color: var(--accent);">24/7</div>
-                                <p style="font-size: 0.9rem;">Self-Paced Option</p>
+                                <div style="font-size: 2rem; font-weight: 700; color: var(--teal);">24/7</div>
+                                <p style="font-size: 0.9rem; color: #e2e8f0;">Self-Paced Option</p>
                             </div>
                         </div>
                         <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2);">
                             <a href="contact.html" class="btn" style="background: white; color: var(--navy-900); width: 100%; text-align: center;">Schedule Enterprise Consultation</a>
                         </div>
+                        <p style="font-size: 0.75rem; color: #94a3b8; margin-top: 1rem; text-align: center;">* Ohio employers only</p>
                     </div>
                 </div>
             </div>
@@ -521,14 +497,14 @@
     </section>
 
     <!-- Pricing Options -->
-    <section class="section-padding">
+    <section style="padding: 6rem 0; background: white;">
         <div class="container">
-            <div class="section-header">
-                <h2>Training Delivery Options</h2>
-                <p class="text-secondary" style="font-size: 1.125rem;">Choose the format that works best for your team</p>
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h2 style="font-size: 1.75rem; font-weight: 400; margin-bottom: 1rem;">Training Delivery Options</h2>
+                <p style="color: var(--gray-600);">Choose the format that works best for your team</p>
             </div>
 
-            <div class="feature-grid">
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; max-width: 1100px; margin: 0 auto;">
                 <div class="card">
                     <h3 style="font-size: 1.2rem; margin-bottom: 1rem;">Self-Paced Online</h3>
                     <p style="color: var(--gray-600); margin-bottom: 1.5rem;">Learn at your own speed with 24/7 access to materials</p>
@@ -573,7 +549,7 @@
     </section>
 
     <!-- Ohio TechCred -->
-    <section class="section-padding bg-gray">
+    <section style="padding: 6rem 0; background: var(--navy-50);">
         <div class="container">
             <div style="max-width: 900px; margin: 0 auto;">
                 <div class="card" style="border: 2px solid var(--accent);">
@@ -607,10 +583,10 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="section-padding">
+    <section style="padding: 6rem 0; background: white;">
         <div class="container">
             <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-                <h2 class="mb-6">Ready to Start Training?</h2>
+                <h2 style="font-size: 1.75rem; font-weight: 400; margin-bottom: 1rem;">Ready to Start Training?</h2>
                 <p style="font-size: 1.125rem; color: var(--gray-600); margin-bottom: 3rem;">
                     Choose a standard certification or build a custom program for your team
                 </p>
@@ -622,37 +598,10 @@
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <h4>RUDI</h4>
-                    <p>Responsible Use of Digital Intelligence. Professional AI certifications for modern professionals.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Training &amp; Certifications</h4>
-                    <a href="courses.html">Course Catalog</a>
-                    <a href="certificates.html">View All Certificates</a>
-                    <a href="framework.html">30-Point Framework</a>
-                </div>
-                <div class="footer-section">
-                    <h4>Resources</h4>
-                    <a href="research.html">Research</a>
-                    <a href="resources.html">Downloads</a>
-                    <a href="ohio.html">Ohio TechCred</a>
-                </div>
-                <div class="footer-section">
-                    <h4>Get Started</h4>
-                    <a href="contact.html">Contact Us</a>
-                    <a href="certificates.html">Enroll Now</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 RUDI. Responsible Use of Digital Intelligence.</p>
-            </div>
-        </div>
-    </footer>
+    <div id="site-footer"></div>
 
     <script src="js/main.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
 </body>
 </html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUDI TechCred - Training Delivery Formats</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .artboard {
+            width: 16in;
+            height: 9in;
+            background: white;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            padding: 1.25in;
+        }
+
+        .accent-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #1e3a8a 0%, rgba(30, 58, 138, 0) 100%);
+        }
+
+        .header {
+            margin-bottom: 0.6in;
+        }
+
+        .title {
+            font-size: 2.75rem;
+            font-weight: 300;
+            color: #18181b;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5in;
+        }
+
+        .section-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 0.25in;
+            padding-bottom: 0.08in;
+            border-bottom: 2px solid #1e3a8a;
+        }
+
+        .format-card {
+            background: #fafafa;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 0.2in;
+            margin-bottom: 0.18in;
+        }
+
+        .format-title {
+            font-size: 0.9375rem;
+            font-weight: 600;
+            color: #18181b;
+            margin-bottom: 0.08in;
+        }
+
+        .format-details {
+            display: flex;
+            flex-direction: column;
+            gap: 0.04in;
+        }
+
+        .detail-item {
+            font-size: 0.75rem;
+            color: #52525b;
+            line-height: 1.3;
+        }
+
+        .detail-item strong {
+            color: #18181b;
+            font-weight: 600;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border: 1px solid #93c5fd;
+            border-radius: 10px;
+            padding: 0.25in;
+            margin-top: 0.2in;
+        }
+
+        .highlight-text {
+            font-size: 0.875rem;
+            color: #1e40af;
+            font-weight: 500;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0.5in;
+            left: 1.25in;
+            font-size: 0.75rem;
+            color: #71717a;
+            font-weight: 400;
+        }
+
+        .decoration {
+            position: absolute;
+            bottom: 0.5in;
+            right: 1.25in;
+            width: 2in;
+            height: 2in;
+            background: radial-gradient(circle at center, rgba(30, 58, 138, 0.02) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        @page {
+            size: 16in 9in;
+            margin: 0;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .artboard {
+                width: 100%;
+                height: 100%;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="artboard">
+        <div class="accent-line"></div>
+        <div class="decoration"></div>
+
+        <div class="header">
+            <h1 class="title">Flexible Training Delivery</h1>
+        </div>
+
+        <div class="content-grid">
+            <div>
+                <div class="section-title">Session Formats</div>
+
+                <div class="format-card">
+                    <div class="format-title">3-Hour Standard Workshop</div>
+                    <div class="format-details">
+                        <div class="detail-item"><strong>Duration:</strong> Single 3-hour session or 2×1.5-hour sessions</div>
+                        <div class="detail-item"><strong>Ideal for:</strong> Core AI literacy & practical skills</div>
+                        <div class="detail-item"><strong>Best retention:</strong> Most effective learning duration</div>
+                    </div>
+                </div>
+
+                <div class="format-card">
+                    <div class="format-title">6-Hour Comprehensive</div>
+                    <div class="format-details">
+                        <div class="detail-item"><strong>Duration:</strong> Two 3-hour sessions (consecutive weeks)</div>
+                        <div class="detail-item"><strong>Ideal for:</strong> Certificate programs & deep skills</div>
+                        <div class="detail-item"><strong>Includes:</strong> Assessment + practice + application</div>
+                    </div>
+                </div>
+
+                <div class="format-card">
+                    <div class="format-title">Professional Development Days</div>
+                    <div class="format-details">
+                        <div class="detail-item"><strong>Duration:</strong> Half-day (3-4 hours)</div>
+                        <div class="detail-item"><strong>Ideal for:</strong> Schools & education teams</div>
+                        <div class="detail-item"><strong>Timing:</strong> Perfect for June/PD schedules</div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="section-title">Delivery Options</div>
+
+                <div class="format-card">
+                    <div class="format-title">In-Person</div>
+                    <div class="format-details">
+                        <div class="detail-item">• Live demonstrations & hands-on practice</div>
+                        <div class="detail-item">• Peer collaboration & networking</div>
+                        <div class="detail-item">• Immediate Q&A with instructor</div>
+                    </div>
+                </div>
+
+                <div class="format-card">
+                    <div class="format-title">Virtual (Live)</div>
+                    <div class="format-details">
+                        <div class="detail-item">• Eliminates travel costs & mileage</div>
+                        <div class="detail-item">• Breakout rooms for group work</div>
+                        <div class="detail-item">• Recording available for review</div>
+                    </div>
+                </div>
+
+                <div class="format-card">
+                    <div class="format-title">Hybrid</div>
+                    <div class="format-details">
+                        <div class="detail-item">• Online assessment + in-person workshop</div>
+                        <div class="detail-item">• Pre-work reduces session time</div>
+                        <div class="detail-item">• Virtual follow-up sessions</div>
+                    </div>
+                </div>
+
+                <div class="highlight-box">
+                    <div class="highlight-text">
+                        All formats are TechCred-eligible and include complete documentation package
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">RUDI: Responsible Use of Digital Intelligence</div>
+    </div>
+</body>
+</html>

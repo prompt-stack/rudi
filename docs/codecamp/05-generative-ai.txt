@@ -1,0 +1,142 @@
+Interactive Course
+Generative AI Concepts
+BasicSkill Level
+Updated: Sep 2025
+2 hr
+14 videos
+43 Exercises
+74,125
+2750 XP
+What you'll learn
+Define generative AI and recognize its applications across industries.
+
+Differentiate between generative and discriminative models, including GANs, transformers, and RLHF.
+
+Identify biases in generative AI models and assess strategies for bias detection and mitigation.
+
+Recognize ethical and legal considerations, including copyright, privacy, and ownership issues.
+
+Evaluate emerging trends, challenges, and opportunities in adopting generative AI responsibly.
+
+Description
+Artificial Intelligence (AI) is reshaping our world like never before. Generative AI is a type of AI that can create new content from text, images, and more. In this no-coding course, you'll learn about the exciting concepts in this emerging field and how to prepare for a future where AI becomes widely adopted. You'll start by comprehending how these models create content, where they fit into the machine learning landscape, and how they are developed. Given the power of generative AI, you will also consider how laws and ethics play with these models, learning how to avoid bias and use generative AI responsibly. Finally, you’ll look at the future of generative AI and how we can leverage and collaborate effectively with these tools. After this course, you, too, will be able to unlock the creative capabilities of generative AI. Let's go!
+
+
+The videos contain live transcripts, which can be accessed by clicking "Show transcript" at the bottom left of the videos.
+
+
+The course glossary can be found on the right in the resources section.
+
+
+To obtain CPE credits you need to complete the course and reach a score of 70% on the qualified assessment. You can navigate to the assessment by clicking on the CPE credits callout on the right.
+
+
+1
+Introduction to Generative AI
+Available
+
+0%
+Familiarize yourself with the concept of generative AI and its ability to create content is introduced, along with its real-world applications and limitations. You'll delve into the differences between traditional machine learning models, generative AI, and artificial general intelligence (AGI), and explore the key factors driving the development of generative AI.
+What is generative AI?
+50 XP
+Getting to know generative AI
+50 XP
+Working with a generative AI model
+100 XP
+Applications of generative AI
+50 XP
+Generative AI in the machine learning landscape
+50 XP
+Picking the right tool for the job
+100 XP
+Differentiating generative AI from traditional ML
+50 XP
+More dogs and GANs
+50 XP
+The evolution of generative AI
+50 XP
+Driving the field forward
+50 XP
+Transformers
+50 XP
+Generative AI breakthroughs
+100 XP
+2
+Developing Generative AI Models
+Locked
+
+0%
+In this chapter, we cover the essential steps in creating generative AI models: research and design, data collection, model training, and evaluation. We examine the significance of diverse datasets and advanced training techniques, as well as various evaluation methods, while discussing their strengths and limitations.
+Model design and data collection
+50 XP
+Research and design
+100 XP
+A dataset windfall?
+50 XP
+Model training
+50 XP
+Factors impacting model training
+50 XP
+Techniques for developing specialized models
+100 XP
+Model evaluation
+50 XP
+PixAIr animation
+100 XP
+Helping Intellibrand evaluate
+50 XP
+3
+Using AI Models and Generated Content Responsibly
+Locked
+
+0%
+This chapter focuses on the responsible use of generative AI. We discuss the challenges and strategies to mitigate social bias, intellectual property and privacy issues, and ethical considerations to prevent misuse. We conclude by exploring the immense potential and risks of Artificial Generative Intelligence (AGI), along with the approaches to control its outcomes.
+Evaluating and mitigating social bias
+50 XP
+Sources of bias
+50 XP
+Detecting and mitigating bias
+100 XP
+Copyright and ownership
+50 XP
+Legal and privacy considerations
+50 XP
+Identifying IP ownership claims
+50 XP
+Responsible generative AI applications
+50 XP
+Usage principles
+50 XP
+Implementing responsible AI practices
+100 XP
+Artificial general intelligence (AGI)
+50 XP
+AGI characteristics
+50 XP
+AGI outcomes
+100 XP
+4
+Getting Ready for the Age of Generative AI
+Locked
+
+0%
+Chapter 4 examines the potential, impact, and integration of generative AI into human workflows. It discusses key contributors to AI development, from universities to companies, and explores societal adaptations to AI. It delves into AI's implications for productivity, job dynamics, education, media, entertainment, scientific advancements, and ethical considerations.
+Bringing new AI into old workflows
+50 XP
+Leveraging generative AI for data science
+100 XP
+Designing a new marketing campaign
+100 XP
+Progress in generative AI
+50 XP
+To open source or not to open source
+50 XP
+Super Duper GANs
+100 XP
+Preparing for a future of generative AI
+50 XP
+Generative AI in education
+50 XP
+The value of skills in an AI world
+50 XP
+You made it!

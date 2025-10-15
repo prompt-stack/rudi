@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUDI Certificate Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Crimson+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .controls {
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            margin-top: 0;
+            color: #1e3a8a;
+        }
+
+        .input-group {
+            margin-bottom: 1rem;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #1a1a1a;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        textarea {
+            min-height: 120px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+        }
+
+        button {
+            background: #1e3a8a;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-right: 0.5rem;
+        }
+
+        button:hover {
+            background: #1e40af;
+        }
+
+        button.secondary {
+            background: #14b8a6;
+        }
+
+        button.secondary:hover {
+            background: #0d9488;
+        }
+
+        .example {
+            background: #eff6ff;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .example code {
+            background: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+
+        #certificateFrame {
+            display: none;
+            width: 100%;
+            height: 800px;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            margin-top: 2rem;
+        }
+
+        #certificateFrame.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="controls">
+        <h1>🎓 RUDI Certificate Generator</h1>
+        <p style="color: #666; margin-bottom: 2rem;">Generate individual or batch certificates from JSON data</p>
+
+        <div class="input-group">
+            <label>Certificate Data (JSON)</label>
+            <textarea id="jsonData">[
+  {
+    "name": "Julie Stone",
+    "certId": "5b0a4a12-921c-4b83-a1f9-743b9a8e52b5",
+    "issueDate": "October 9, 2025",
+    "qrImagePath": "images/rudi-qr-code.png"
+  },
+  {
+    "name": "John Smith",
+    "certId": "7c3d5e23-a31d-5c94-b2g0-854c0b9f63c6",
+    "issueDate": "October 9, 2025",
+    "qrImagePath": "images/rudi-qr-code.png"
+  }
+]</textarea>
+        </div>
+
+        <div style="margin-bottom: 1.5rem;">
+            <button onclick="generateSingle()">Preview First Certificate</button>
+            <button class="secondary" onclick="generateAll()">Generate All PDFs</button>
+        </div>
+
+        <div class="example">
+            <strong>💡 How to use:</strong><br>
+            1. Edit the JSON data above with participant names and certificate IDs<br>
+            2. Click <code>Preview First Certificate</code> to see a preview below<br>
+            3. Click <code>Generate All PDFs</code> to download all certificates as PDFs<br>
+            <br>
+            <strong>Note:</strong> You can paste data from a CSV → JSON converter or Google Sheets export
+        </div>
+    </div>
+
+    <iframe id="certificateFrame"></iframe>
+
+    <script>
+        let certificateData = [];
+
+        function generateSingle() {
+            try {
+                certificateData = JSON.parse(document.getElementById('jsonData').value);
+
+                if (!Array.isArray(certificateData) || certificateData.length === 0) {
+                    alert('Please enter valid JSON array with at least one certificate');
+                    return;
+                }
+
+                // Load the first certificate
+                loadCertificate(certificateData[0]);
+                document.getElementById('certificateFrame').classList.add('show');
+
+            } catch (error) {
+                alert('Invalid JSON format. Please check your data.\n\n' + error.message);
+            }
+        }
+
+        function loadCertificate(data) {
+            const iframe = document.getElementById('certificateFrame');
+
+            // Read the certificate template and inject data
+            fetch('certificate-final.html')
+                .then(response => response.text())
+                .then(html => {
+                    // Replace the certData in the script
+                    const updatedHtml = html.replace(
+                        /const certData = {[\s\S]*?};/,
+                        `const certData = ${JSON.stringify(data, null, 12)};`
+                    );
+
+                    // Write to iframe
+                    iframe.srcdoc = updatedHtml;
+                })
+                .catch(error => {
+                    alert('Error loading certificate template: ' + error.message);
+                });
+        }
+
+        function generateAll() {
+            try {
+                certificateData = JSON.parse(document.getElementById('jsonData').value);
+
+                if (!Array.isArray(certificateData) || certificateData.length === 0) {
+                    alert('Please enter valid JSON array with at least one certificate');
+                    return;
+                }
+
+                alert(`🚀 Batch generation starting...\n\nThis will generate ${certificateData.length} certificates.\n\nNote: For actual PDF generation, you'll need to integrate with a service like Puppeteer or use browser print-to-PDF for each certificate.`);
+
+                // For now, just show them one by one
+                // In production, you'd use a service like Puppeteer, jsPDF, or html2pdf
+                let index = 0;
+
+                function showNext() {
+                    if (index < certificateData.length) {
+                        loadCertificate(certificateData[index]);
+                        document.getElementById('certificateFrame').classList.add('show');
+
+                        setTimeout(() => {
+                            // In production, trigger PDF download here
+                            console.log(`Would generate PDF for: ${certificateData[index].name}`);
+                            index++;
+                            showNext();
+                        }, 1000);
+                    } else {
+                        alert('✅ Batch generation complete!\n\nIn production mode, all PDFs would be downloaded.');
+                    }
+                }
+
+                showNext();
+
+            } catch (error) {
+                alert('Invalid JSON format. Please check your data.\n\n' + error.message);
+            }
+        }
+
+        // Load example on page load
+        window.onload = function() {
+            // Optionally auto-preview the first one
+            // generateSingle();
+        };
+    </script>
+</body>
+</html>

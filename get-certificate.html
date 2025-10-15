@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claim Your RUDI Certificate | Responsible AI Literacy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .hero-section {
+            background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-800) 100%);
+            padding: 4rem 0 6rem;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .hero-section p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .certificate-preview {
+            margin: -4rem auto 4rem;
+            max-width: 900px;
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+        }
+
+        .certificate-preview img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            border: 2px solid var(--navy-100);
+        }
+
+        .cert-mini-preview {
+            border: 3px solid var(--navy-900);
+            border-radius: 12px;
+            padding: 2rem;
+            background: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cert-mini-preview::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            right: 8px;
+            bottom: 8px;
+            border: 1.5px solid var(--navy-900);
+            border-radius: 8px;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .cert-mini-preview::after {
+            content: '';
+            position: absolute;
+            top: -100px;
+            left: -100px;
+            width: 500px;
+            height: 500px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='30' fill='none' stroke='rgba(30,58,138,0.02)' stroke-width='1'/%3E%3Ccircle cx='100' cy='100' r='50' fill='none' stroke='rgba(30,58,138,0.02)' stroke-width='1'/%3E%3Ccircle cx='100' cy='100' r='70' fill='none' stroke='rgba(30,58,138,0.02)' stroke-width='1'/%3E%3Ccircle cx='100' cy='100' r='3' fill='rgba(30,58,138,0.04)'/%3E%3Cg%3E%3Cline x1='100' y1='100' x2='130' y2='100' stroke='rgba(30,58,138,0.03)' stroke-width='1.5'/%3E%3Ccircle cx='130' cy='100' r='4' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='85' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='85' r='3' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='115' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='115' r='3' fill='rgba(30,58,138,0.03)'/%3E%3C/g%3E%3Cg transform='rotate(60 100 100)'%3E%3Cline x1='100' y1='100' x2='130' y2='100' stroke='rgba(30,58,138,0.03)' stroke-width='1.5'/%3E%3Ccircle cx='130' cy='100' r='4' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='85' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='85' r='3' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='115' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='115' r='3' fill='rgba(30,58,138,0.03)'/%3E%3C/g%3E%3Cg transform='rotate(120 100 100)'%3E%3Cline x1='100' y1='100' x2='130' y2='100' stroke='rgba(30,58,138,0.03)' stroke-width='1.5'/%3E%3Ccircle cx='130' cy='100' r='4' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='85' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='85' r='3' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='115' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='115' r='3' fill='rgba(30,58,138,0.03)'/%3E%3C/g%3E%3Cg transform='rotate(180 100 100)'%3E%3Cline x1='100' y1='100' x2='130' y2='100' stroke='rgba(30,58,138,0.03)' stroke-width='1.5'/%3E%3Ccircle cx='130' cy='100' r='4' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='85' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='85' r='3' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='115' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='115' r='3' fill='rgba(30,58,138,0.03)'/%3E%3C/g%3E%3Cg transform='rotate(240 100 100)'%3E%3Cline x1='100' y1='100' x2='130' y2='100' stroke='rgba(30,58,138,0.03)' stroke-width='1.5'/%3E%3Ccircle cx='130' cy='100' r='4' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='85' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='85' r='3' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='115' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='115' r='3' fill='rgba(30,58,138,0.03)'/%3E%3C/g%3E%3Cg transform='rotate(300 100 100)'%3E%3Cline x1='100' y1='100' x2='130' y2='100' stroke='rgba(30,58,138,0.03)' stroke-width='1.5'/%3E%3Ccircle cx='130' cy='100' r='4' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='85' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='85' r='3' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='115' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='115' r='3' fill='rgba(30,58,138,0.03)'/%3E%3C/g%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.8;
+        }
+
+        .form-section {
+            max-width: 600px;
+            margin: 0 auto 4rem;
+        }
+
+        .form-card {
+            background: white;
+            border-radius: 12px;
+            padding: 3rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            color: var(--navy-900);
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 2px solid var(--navy-100);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.2s;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--teal);
+            box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.1);
+        }
+
+        .info-banner {
+            background: var(--navy-50);
+            border-left: 4px solid var(--teal);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .info-banner h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            color: var(--navy-900);
+        }
+
+        .info-banner ul {
+            margin: 0;
+            padding-left: 1.5rem;
+        }
+
+        .info-banner li {
+            margin-bottom: 0.5rem;
+            color: var(--navy-700);
+        }
+
+        .success-message {
+            display: none;
+            background: #ecfdf5;
+            border: 2px solid #10b981;
+            color: #065f46;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
+        .success-message i {
+            font-size: 3rem;
+            color: #10b981;
+            margin-bottom: 1rem;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .benefit-card {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .benefit-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--teal);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="site-header"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <span class="section-badge" style="background: rgba(255,255,255,0.2); color: white;">
+                <i class="fas fa-certificate"></i> Certificate Available
+            </span>
+            <h1>Claim Your Certificate of Completion</h1>
+            <p>Thank you for participating in the RUDI Responsible AI Literacy training. Your official certificate is ready!</p>
+        </div>
+    </section>
+
+    <!-- Certificate Preview -->
+    <div class="container">
+        <div class="certificate-preview">
+            <div class="cert-mini-preview">
+                <div style="text-align: center; padding: 1.5rem; position: relative; z-index: 2;">
+                    <div style="font-size: 0.75rem; font-weight: 600; letter-spacing: 2px; color: var(--navy-900); margin-bottom: 0.25rem;">RUDI</div>
+                    <div style="font-size: 0.65rem; color: #666; margin-bottom: 1rem;">Institute for the Responsible Use of Digital Intelligence</div>
+
+                    <h2 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Certificate of Completion</h2>
+                    <div style="font-size: 0.7rem; color: #666; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem;">This Certifies That</div>
+
+                    <div style="font-size: 2rem; font-family: 'Crimson Pro', serif; font-weight: 600; border-bottom: 2px solid #1a1a1a; padding-bottom: 0.5rem; margin: 0 auto 1rem; max-width: 400px;">Your Name Here</div>
+
+                    <div style="font-size: 0.75rem; margin-bottom: 0.75rem;">has successfully completed</div>
+
+                    <h3 style="font-size: 1.25rem; margin-bottom: 0.25rem;">Responsible AI Literacy</h3>
+                    <div style="font-size: 0.85rem; color: #1e3a8a; font-weight: 700; margin-bottom: 1rem;">Foundation & Application • 3 Contact Hours</div>
+
+                    <p style="font-size: 0.65rem; color: #555; line-height: 1.6; margin-bottom: 0.75rem; max-width: 500px; margin-left: auto; margin-right: auto;">
+                        A comprehensive course covering: Governance frameworks for responsible AI use •
+                        Evolution of intelligence • Major AI ecosystems • Traditional vs. Generative AI •
+                        Modalities of generative AI • Large Language Model fundamentals •
+                        Prompt design for non-technical users • Hands-on overview of generative AI tools
+                    </p>
+
+                    <div style="font-size: 0.7rem; font-weight: 700; margin-bottom: 0.5rem;">3 Contact Hours  |  0.3 CEU Equivalent</div>
+
+                    <div style="font-size: 0.6rem; color: #999; font-style: italic; margin-bottom: 1.5rem;">
+                        Co-presented by RUDI and Did You Know Publishing, Inc.<br>
+                        CEU administered by Ohio Head Start Association
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 1rem;">
+                        <div>
+                            <div style="height: 40px; border-bottom: 2px solid #1a1a1a; display: flex; align-items: center; justify-content: center; margin-bottom: 0.5rem;">
+                                <div style="font-family: 'Brush Script MT', cursive; font-size: 1.5rem; font-style: italic; letter-spacing: 0.5px;">Brandon Z. Hoff</div>
+                            </div>
+                            <div style="font-size: 0.75rem; font-weight: 700;">Brandon Z. Hoff</div>
+                            <div style="font-size: 0.65rem; color: #666;">Founder, RUDI</div>
+                        </div>
+                        <div>
+                            <div style="height: 40px; border-bottom: 2px solid #1a1a1a; display: flex; align-items: center; justify-content: center; margin-bottom: 0.5rem;">
+                                <div style="font-family: 'Snell Roundhand', 'Apple Chancery', 'Lucida Handwriting', cursive; font-size: 1.4rem; font-style: italic; font-weight: 300; letter-spacing: 0.3px;">William Shoecraft</div>
+                            </div>
+                            <div style="font-size: 0.75rem; font-weight: 700;">William Shoecraft</div>
+                            <div style="font-size: 0.65rem; color: #666;">CEO, Did You Know Publishing, Inc.</div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 1rem; border-top: 1px solid #ddd;">
+                        <div style="font-size: 0.55rem; color: #999; text-align: left;">
+                            Certificate ID: abc123...<br>
+                            Issued: October 8, 2025
+                        </div>
+                        <div style="display: flex; gap: 0.5rem; align-items: center;">
+                            <div style="width: 40px; height: 40px;">
+                                <img src="images/rudi-qr-code.png" alt="QR Code" style="width: 100%; height: 100%; display: block;">
+                            </div>
+                            <svg width="45" height="45" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="100" cy="100" r="95" fill="none" stroke="#1e3a8a" stroke-width="3"/>
+                                <text x="100" y="75" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="700" fill="#1e3a8a" letter-spacing="2">RUDI</text>
+                                <text x="100" y="92" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="8" font-weight="500" fill="#475569">EST. 2023</text>
+                                <line x1="45" y1="100" x2="155" y2="100" stroke="#1e3a8a" stroke-width="1.5"/>
+                                <text x="100" y="120" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#1e3a8a">VERIFIED</text>
+                                <text x="100" y="135" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#1e3a8a">CERTIFICATE</text>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="form-section">
+                <div class="form-card" id="optinForm">
+                    <h2 class="mb-4" style="text-align: center;">Request Your Certificate</h2>
+                    <p style="text-align: center; color: var(--gray-600); margin-bottom: 2rem;">
+                        Enter your information below to receive your personalized certificate
+                    </p>
+
+                    <form id="certificateForm" onsubmit="submitForm(event)">
+                        <div class="form-group">
+                            <label for="fullName">
+                                <i class="fas fa-user"></i> Full Name (as it should appear on certificate)
+                            </label>
+                            <input type="text" id="fullName" name="fullName" required placeholder="e.g., Julie Stone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">
+                                <i class="fas fa-envelope"></i> Email Address
+                            </label>
+                            <input type="email" id="email" name="email" required placeholder="you@example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="trainingDate">
+                                <i class="fas fa-calendar"></i> Training Date
+                            </label>
+                            <input type="date" id="trainingDate" name="trainingDate" value="2025-10-08" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+                            <i class="fas fa-certificate"></i> Get My Certificate
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Success Message -->
+                <div class="success-message" id="successMessage">
+                    <i class="fas fa-check-circle"></i>
+                    <h3 style="margin-bottom: 0.5rem;">Certificate Request Received!</h3>
+                    <p style="margin: 0;">Your personalized certificate will be emailed to you within 24-48 hours.</p>
+                </div>
+            </div>
+
+            <!-- Info Banner -->
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="info-banner">
+                    <h3><i class="fas fa-star"></i> What's Included</h3>
+                    <ul>
+                        <li><strong>Official RUDI Certificate:</strong> Recognized credential for professional development</li>
+                        <li><strong>3 Contact Hours (0.3 CEU equivalent):</strong> Documented learning time</li>
+                        <li><strong>Verifiable Credential:</strong> Each certificate includes a unique QR code for instant verification</li>
+                        <li><strong>Digital & Print Ready:</strong> High-resolution PDF suitable for framing or digital portfolios</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Benefits Grid -->
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Professional Development</h3>
+                    <p style="color: var(--gray-600); font-size: 0.95rem;">Add to your resume, LinkedIn profile, or professional portfolio</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">TechCred Eligible</h3>
+                    <p style="color: var(--gray-600); font-size: 0.95rem;">This training can be submitted for Ohio TechCred reimbursement</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Organizational Training</h3>
+                    <p style="color: var(--gray-600); font-size: 0.95rem;">Interested in training your team? <a href="contact.html">Contact us</a> for group rates</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="site-footer"></div>
+
+    <script src="js/main.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+
+    <script>
+        function submitForm(e) {
+            e.preventDefault();
+
+            const formData = {
+                name: document.getElementById('fullName').value,
+                email: document.getElementById('email').value,
+                trainingDate: document.getElementById('trainingDate').value,
+                course: 'RUDI Responsible AI Literacy',
+                hours: 3,
+                level: 'Foundation & Application'
+            };
+
+            // Here you would send this to your backend/Google Sheets
+            console.log('Certificate request:', formData);
+
+            // Show success message
+            document.getElementById('optinForm').style.display = 'none';
+            document.getElementById('successMessage').classList.add('show');
+
+            // Scroll to success message
+            document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    </script>
+</body>
+</html>

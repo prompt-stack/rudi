@@ -1,35 +1,110 @@
-## RUDI Web
+# RUDI AI - Website
 
-Modern Next.js frontend for RUDI with secure defaults and a content pipeline (Cloudflare Stream + Supabase).
+Professional AI certification and training platform. Static HTML website for RUDI AI - Responsible Use of Digital Intelligence.
 
-### Quick Start
-- Install: `npm ci`
-- Dev server: `npm run dev`
-- Lint: `npm run lint`
-- Typecheck: `npm run typecheck`
-- Build: `npm run build`
+## Overview
 
-### Environment Setup
-Create `.env.local` at project root for frontend runtime variables. Only expose `NEXT_PUBLIC_*` to the browser.
+RUDI AI provides TechCred-eligible AI certifications across three levels:
+- **Level 1: AI Literacy** - Foundation concepts and applications
+- **Level 2: Applied AI** - Hands-on practice with real tools
+- **Level 3: AI Assistants, Agents & Workflows** - Advanced implementation
 
-Required (frontend):
-- `NEXT_PUBLIC_SITE_URL` — public site URL (optional, used in links/meta)
-- `NEXT_PUBLIC_CLOUDFLARE_ACCOUNT_ID` — Cloudflare Stream account (optional; used for customer domain embeds)
-- `NEXT_PUBLIC_SUPABASE_URL` — Supabase project URL
-- `NEXT_PUBLIC_SUPABASE_ANON_KEY` — Supabase anon key
+## Project Structure
 
-Notes:
-- Secrets (service keys, tokens) must NOT use `NEXT_PUBLIC_` and must not be required by the browser. Keep them in server envs or `.secure/`.
-- `config/.env*` is ignored; use it for local variations and keep only `config/.env.local.example` in git.
+```
+rudi-web/
+├── index.html              # Landing page
+├── certificates.html       # Certificate overview
+├── certificates-business.html
+├── certificates-education.html
+├── contact.html
+├── courses.html
+├── framework.html
+├── get-certificate.html
+├── ohio.html              # Ohio TechCred information
+├── research.html
+├── resources.html
+├── css/                   # Stylesheets
+├── js/                    # JavaScript modules
+├── images/                # Site images
+├── assets/                # Certificates and other assets
+├── tools/                 # Development tools
+│   ├── certificate-tools/
+│   └── qr-tools/
+└── docs/                  # Documentation
+    ├── assessment/        # Assessment and testing docs
+    ├── business-strategy/ # Business plans and strategies
+    ├── codecamp/          # Course content
+    ├── design/            # Design assets and specs
+    ├── planning/          # Project planning docs
+    ├── project-docs/      # Technical documentation
+    └── setup/             # Setup guides
+```
 
-### Security Defaults
-- Strict headers (HSTS, XFO DENY, no sniffing, referrer policy, permissions policy)
-- CSP allowing only necessary origins: self, Supabase, and Cloudflare Stream
-- Admin/debug database API is disabled in production
+## Quick Start
 
-### CI
-GitHub Actions runs lint, typecheck, and build on PRs and pushes to main.
+This is a static HTML website. No build process required.
 
-### Content Pipeline (Optional)
-Scripts under `scripts/` and `rudi-lms-package/` handle video and asset upload. Configure via environment variables (no plaintext credentials in repo).
+### Local Development
 
+Simply open `index.html` in a web browser, or use a local server:
+
+```bash
+# Using Python 3
+python3 -m http.server 8000
+
+# Using Python 2
+python -m SimpleHTTPServer 8000
+
+# Using Node.js http-server
+npx http-server -p 8000
+```
+
+Then visit `http://localhost:8000`
+
+## Deployment
+
+Deployed on Vercel. The site is static HTML/CSS/JS with no build step.
+
+### Deploy to Vercel
+
+```bash
+vercel
+```
+
+Or push to the connected GitHub repository for automatic deployment.
+
+## Features
+
+- Professional AI certification programs
+- Ohio TechCred partnership information
+- Two certification paths: Business and Education
+- Certificate verification system
+- Contact forms and inquiry handling
+- Responsive design
+
+## Documentation
+
+See `/docs` directory for:
+- Assessment strategy and question banks
+- Business strategy and launch plans
+- Course content and syllabi
+- Design specifications
+- Project documentation
+- Setup instructions
+
+## Environment
+
+No environment variables required for the static site.
+
+Sensitive credentials (if any) are stored in `.secure/` (gitignored).
+
+## License
+
+MIT
+
+## Contact
+
+RUDI AI - Responsible Use of Digital Intelligence
+- Website: https://rudi.ai
+- Ohio Partnership: https://upskill-ohio.vercel.app

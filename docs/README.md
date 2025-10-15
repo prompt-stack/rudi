@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# RUDI AI - Documentation
 
-## Getting Started
+This directory contains project documentation, planning materials, and reference content organized by category.
 
-First, run the development server:
+## Directory Structure
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### `/assessment/`
+Assessment design, question banks, and testing strategy:
+- Question bank analysis
+- Assessment coverage audits
+- Scoring explanations
+- Framework-assessment integration plans
+- Visual diagrams and flowcharts
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### `/business-strategy/`
+Business planning, partnerships, and program materials:
+- Ohio TechCred information and guides
+- Launch strategies
+- Certificate and course structure
+- RUDI organizational materials
+- Credential catalogs
+- TechCred deck materials
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### `/codecamp/`
+Course content and educational materials:
+- Individual topic modules (understanding AI, ChatGPT, machine learning, etc.)
+- Learning resources
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### `/design/`
+Design specifications and visual assets:
+- Design improvement summaries
+- Icon options and recommendations
+- Image recommendations
+- Design inspiration
 
-## Learn More
+### `/planning/`
+Strategic planning and site architecture:
+- Launch readiness
+- SEO and site structure
+- TechCred eligibility assessments
 
-To learn more about Next.js, take a look at the following resources:
+### `/project-docs/`
+Technical project documentation:
+- Project structure documentation
+- Product requirements (PRD)
+- Tech stack rationale
+- Course integration plans
+- Grammar ops alignment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### `/setup/`
+Setup guides and configuration:
+- Cloudflare setup
+- Google Sheets integration
+- General setup instructions
+- Modern stack setup (for archived Next.js version)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### `/archive/`
+Archived documentation from previous iterations:
+- Old planning documents
+- Previous notes
+- Retired documentation
 
-## Deploy on Vercel
+## Key Documents
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **ORGANIZATION-UPDATE-2025-10-14.md** - Recent project reorganization summary
+- **about-rudi.txt** - General information about RUDI AI
+- **ai-resources.txt/.csv** - Curated AI resource lists
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Note on Archived Next.js Version
+
+The `.archive/nextjs-version-2025-09-28/` directory in the project root contains the previous Next.js implementation. The project is now a static HTML site. Some documentation in `/setup/` may reference the old architecture.
+
+## Updates
+
+Documentation is actively maintained. See `ORGANIZATION-UPDATE-2025-10-14.md` for the latest structural changes.

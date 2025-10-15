@@ -1,0 +1,110 @@
+Free AI Courses List
+(Click to download list of free online AI courses PDF. If you are on mobile, please rotate your phone to view list)
+
+Online AI Course	Provider	Level	Prerequisites	Specialization	Duration
+Elements of AI	University of Helsinki & MinnaLearn	Beginner (Non-Technical)	None	AI Fundamentals & Building AI	6 weeks (5-10 hours/week)
+AI for Everyone	DeepLearning.AI / Andrew Ng (Coursera)	Beginner	None	AI Literacy, Ethics, Business Strategy	6hrs
+Introduction to Generative AI	Google Cloud Skills Boost	Beginner	None	Generative AI: Basics, principles, prompt design, prompt tuning and multimodal AI	8 hrs (Google skill badge)
+Machine Learning Crash Course	Google for Developers	Beginner–Intermediate	None	ML with TensorFlow	15 hours
+Introduction to AI	IBM (Coursera)	Beginner	None	AI concepts, ML, DL, LLMs, NLP, computer vision, ethics	10 hours
+Building AI Chatbots Without Programming	IBM (Coursera)	Beginner	None	Designing and deploying AI chatbots using IBM watsonx Assistant	14 hours
+Google AI Essentials Specialization	Google (Coursera)	Beginner	None	AI fundamentals for productivity & ethics	4 hours
+CS50’s Introduction to Artificial Intelligence with Python	Harvard (OpenCourseWare)	Intermediate	
+CS50x or at least one year of ex/ience with Python	Python-based AI	Seven weeks (10 – 30 hrs/week)
+Introduction to Deep Learning (MIT 6.S191)	MIT (OpenCourseWare and IAP bootcamp)	Advanced	None	Deep Learning, NLP, Computer Vision	20hrs
+Artificial Intelligence	MIT OpenCourseWare			AI reasoning, search, constraints, architecture, neural nets	24hrs
+Practical Deep Learning for Coders v5	fast.ai	Advanced	Coding ex/ience	Deep learning for CV, NLP, tabular data, deployment	~13.5hrs + optional part 2 (~30hrs)
+ChatGPT Prompt Engineering for Developers	DeepLearning.AI + OpenAI	Intermediate	None	Prompt Engineering for LLMs	1.5hrs
+Generative AI for Everyone	DeepLearning.AI	Beginner	None	Generative AI tools, prompt engineering, ethics	4hrs
+IBM SkillsBuild AI Modules	IBM	Beginner	None	AI foundations and applications	10 hours
+AI for All: From Basics to GenAI Practice	NVIDIA Online Academy	Beginner	None	AI basics, GenAI	2.5 hrs
+Building RAG Agents with LLMs	NVIDIA Online Academy	Technical – Intermediate	Intermediate Python ex/ience, Introductory deep learning knowledge(PyTorch and transfer learning)	Generative AI/LLM	8 hrs
+Generative AI Explained	NVIDIA Online Academy		None	Generative AI/LLM	2hrs
+An Even Easier Introduction to CUDA	NVIDIA Online Academy	Introductory	Writing, compiling and running C or C++ code	Accelerated Computing	1hr
+TensorFlow 2.0 Complete Course – Python Neural Networks for Beginners Tutorial	freeCodecamp	Introductory	Python programming	TensorFlow 2.0 and Python neural networks	7hrs
+Generative AI Full Course – Gemini Pro, OpenAI, Llama, Langchain, Pinecone, Vector Databases & More	freeCodecamp	Beginner	None	Generative AI tools, prompt engineering, ethics	30+ hrs
+Intro to Artificial Intelligence	Stanford University (Udacity)	Intermediate	None	AI fundamentals, AI applications	16 weeks (6 hours a week)
+AIoT Foundations	Udacity (in collaboration with Bosch)	Intermediate	Baseline knowledge of AI and IoT concepts	AI + Internet of Things	2 months (6-10hrs/week)
+AI Fundamentals	Microsoft (Udacity)	Beginner	Familiarity with high-level AI conceptsBasic understanding of cloud concepts (Azure, ML workflows)	AI workflow for Azure	16 hrs
+Introduction to Machine Learning with Azure	Microsoft (Udacity)	Beginner–Intermediate	None	ML fundamentals + Azure tooling	22 hours
+Intro to Machine Learning	Udacity	Intermediate	Python, basic statistics & linear algebra	Supervised & unsupervised learning with Python	65hrs total
+Machine Learning Interview Preparation	Udacity	Intermediate–Advanced	ML fundamentals, programming skill	ML interview prep: algorithms, problem-solving, mock interviews	4hrs
+AWS Machine Learning Foundations	AWS (Udacity)	Beginner–Intermediate	None (basic Python helpful)	ML fundamentals using AWS (SageMaker, DeepRacer, etc.)	11hrs
+Data Science Interview Preparation	Udacity	Intermediate	Python, SQL, statistics, ML basics	Python & SQL practice, ML questions, behavior insights, mock interview	6hrs
+Intro to Data Analysis	Udacity	Intermediate	Basic Python	Data cleaning, exploration, visualization with Python	20hrs
+Agentic AI and AI Agents: A Primer for Leaders	Vanderbilt University (Coursera)	Beginner	None	Differentiating AI agents vs automation; building simple custom GPTs; practical decision frameworks	5hrs
+Data Analysis with R	Udacity	Beginner–Intermediate	None	Exploratory Data Analysis + visualization using R	23hrs
+Data Structures & Algorithms Interview Prep	Udacity	Intermediate–Advanced	Programming experience and basic Data Structures and Algorithms knowledge	Practical interview problems and review	2hrs
+Secure and Private AI	Udacity (in partnership with Facebook AI)	Advanced	ML/DL knowledge, PyTorch, and Python	Federated Learning, Differential Privacy, Encrypted ML	120hrs (8hrs)
+Sample-based Learning Methods	University of Alberta	Intermediate	Python, basic math (linear algebra, probability, and calculus), familiarity with Reinforcement learning concepts	Reinforcement learning	22hours
+Ethics of AI	University of Helsinki	Beginner	None	AI ethics, transparency and accountability	–
+AI Technology for Marketing Optimization	Davidson College and Galileo University (edX)	Beginner to Intermediate (designed for marketing professionals)	None	AI for marketing. Applications of predictive analytics, real-time optimization, natural language processing (NLP), and neural networks.	3 weeks, 3-5 hours a week
+The Future of Work: Preparing for Disruption	World Bank Group (edX)	Beginner	None	How A.I., automation, advanced technologies and new businesses are changing the world.	5 weeks, 3-5 hours a week
+Machine Learning I Building Large Language Models (LLMs)	Stanford University Online	Beginner-Intermediate	None	Building a ChatGPT-like model, covering both pretraining (language modeling) and post-training (SFT/RLHF)	~2hrs
+Language Modeling from Scratch	Stanford University Online	Beginner-Intermediate	None	AI modelling, LLM	~1hr
+Overview of Transformers	Stanford University Online	Beginner-Intermediate	None	History of NLP, Transformers and how they work, and their impact	~1hr
+On the Biology of a Large Language Model	Stanford University Online (Josh Batson of Anthropic)	Beginner-Intermediate	None	NLP, The physics of LLMs: shedding light on AI hallucination, planning, reasoning, (un)faithfulness, and emergent capabilities	~1hr
+Generative AI for Healthcare (Part 1): Demystifying Large Language Models	Stanford University Online	Beginner-Intermediate	None	Introduces healthcare professionals to large language models (LLMs) like ChatGPT	~1hr
+Become an AI-Powered People Manager	LinkedIn Learning	Beginner	None	Generative AI for management. AI for business	~1hr
+Everyday AI concepts	LinkedIn Learning	Beginner	None	Key AI concepts for business	~1hr
+Introduction to Artificial Intelligence	LinkedIn Learning	Beginner	None	Human-AI collaboration and engaging with AI systems effectively	2hrs
+AI Fluency: Framework & Foundations	Anthropic	Beginner	None	Learn to collaborate with AI systems effectively, efficiently, ethically, and safely	3-4hrs
+Prompt Evaluation	Anthropic (GitHub)	Advanced	None	Workflow implementation with the Anthropic API	–
+Real-world Prompting	Anthropic (GitHub)	Advanced	Experienced developers, prompt engineering basics	Prompt engineering	–
+Prompt Engineering Interactive Tutorial	Anthropic (GitHub)	Advanced	Experienced developers, prompt engineering basics	Prompt engineering	–
+Artificial Intelligence for Beginners	Microsoft	Beginners	None	TensorFlow and PyTorch, AI ethics, Neural networks, Neural architecture, Genetic algorithms, and multi-agent systems	12 weeks
+Introduction to AI for Business Users	Microsoft Learn	Beginners	None	AI in Power BI & Power Platform for business insights and automation	2hrs
+Machine Learning for Beginners	Microsoft (GitHub)	Beginners	None	Classic ML: regression, classification, clustering, NLP, time-series, RL	12 weeks
+Data Science for Beginners	Microsoft (GitHub)	Beginners	Basic computer skills; editor or notebook familiarity	Python data manipulation, visualization, data science lifecycle, generative AI module	10 weeks
+Generative AI for Beginners (Version 3)	Microsoft (GitHub)	Beginners	Basic coding skills + GitHub account; optional cloud/API setup	21 lessons on gen-AI: LLMs, prompt engineering, app building, agents, open-source, fine-tuning, UX, security	Self-paced
+AI Agents for Beginners	Microsoft (GitHub)	Beginners	Python 3.12+, GitHub account; Azure optional	Agentic AI: design patterns, tool use, RAG, multi-agent, productio	Self-paced
+Model Context Protocol (MCP) for Beginners	Microsoft (GitHub)	Beginner	Basic knowledge of C#, Java, or PythonUnderstanding of client-server model and APIs(Optional) Familiarity with machine learning concepts	Learn MCP with Hands-on Code Examples in C#, Java, JavaScript, Python, and TypeScript	Self-paced
+Microsoft Azure AI Fundamentals: Computer Vision	Microsoft Learn	Beginner	Basic ability to navigate the Azure portal,Prior exposure to cloud concepts and client-server apps is helpful	Computer Vision, Facial Recognition, OCR via Azure Cognitive Services	2hrs
+Deep Learning (An MIT Press book)	Ian Goodfellow and Yoshua Bengio and Aaron Courville	Advanced	Applied Maths	Machine learning basics, Deep learning research	–
+Sora Tutorials	OpenAI	Beginner	Access to Sora (via ChatGPT Plus/Pro)	AI video creation & editing: storyboard, recut, remix, blend, loop	1–3 min per tutorial
+Introduction to ChatGPT Edu: Your AI-Powered Academic Companion	OpenAI	Beginner	None	Deploying and adapting ChatGPT Edu campus-wide; teaching, tutoring, admin; productivity	~1 hour
+Intro to AI for K-12 Educators	OpenAI	Beginner	None	Foundational AI literacy for teaching & classroom use	~1 hour
+Organization and Automation: Managing Time and Tasks with AI	OpenAI	Beginner	None	AI-driven time and task management; custom GPTs and agentic automation	~18 mins
+Intro to OpenAI API	codecademy	Beginner	None	Intro to OpenAI GPT API: endpoints, prompts, controlling output	<1hr
+Learn How to Use AI for Coding	codecademy	Beginner	None (Basic programming knowledge is helpful)	Prompt-based coding assistance and AI-driven development pipelines	~1 hour
+Generative AI on AWS: Creating Intelligent Chatbots	codecademy	intermediate	Prior familiarity with cloud services, Some understanding of AI concepts and Python or other scripting	Context-aware conversations, sentiment analysis, and integration with high-security standards.	1hr
+Using OpenAI APIs: Accessing OpenAI APIs from Python	codecademy	Beginner	None	How to integrate OpenAI’s chat and completions APIs using Python and cURL	2hrs
+Intro to AI Transformers	codecademy	Intermediate	Hugging Face, PyTorch, and neural networks	Transformer fundamentals; GPT‑2 text generation; BERT sentiment analysis	2hrs
+Applied AI: Building NLP Apps with Hugging Face Transformers	LinkedIn Learning	Intermediate	General ML and deep learning understanding, Knowledge of NLP concepts, Proficiency in Python, Jupyter Notebooks, and frameworks.	Building NLP apps: QA, summarization, generation, model fine-tuning, deployment	~1hr
+AI Text Summarisation with Hugging Face	LinkedIn Learning	Advanced	Solid understanding of AI/ML fundamentals, Comfortable with Python programming	Full-text summarization: extractive & abstractive, model pipelines, fine-tuning	2hrs
+AI: MLOps Tools: MLflow and Hugging Face	edX	Beginner	Basic familiarity with machine learning concepts and Python programming. This AI course is part of a professional certificate series	MLflow, Hugging Face, foundational instruction on CI/CD, containerization	4 weeks (3–6 h/week)
+Open Source Models with Hugging Face	DeepLearning.ai	Beginner	None	Building multimodal AI apps using open-source models + deployment	2hrs
+Hugging Face MCP course	Hugging Face	Intermediate	Basic understanding of AI and LLM concepts.Familiarity with software development principles and API concepts.Experience with Python or TypeScript	Model Context Protocol: theory, SDK use, integrations, project-based	5 weeks(~5hrs/week)
+Prompt Engineering for Everyone	Code Signal	Beginner	None	Introduction to Prompt Engineering., Text modification (summarization, tone/style preservation), Advanced strategies (chain-of-thought, system prompts, iterative prompting)	5hrs
+Introduction to Robotics	Stanford University	Intermediate	Solid understanding of linear algebra and matrix operations. Familiarity with dynamics, algorithmic thinking, and basic engineering/math principles .	Spatial descriptions, Forward & inverse kinematics, Jacobians and robot dynamics, Motion planning and trajectory generation, Control strategies, Manipulator design fundamentals	19hrs
+Artificial Intelligence for Robotics	Stanford University (Udacity)	Intermediate	Programming experience, preferably in Python, Math proficiency, especially linear algebra, probability, and Bayes’ theorem .	Probabilistic inference / localization, Search & planning algorithms, Tracking & PID control, Simultaneous Localization and Mapping (SLAM)	8 weeks (~6 hours per week)
+Robotics Foundations I – Robot Modeling	University of Napoli Federico (edX)	Intermediate	Linear algebra, Calculus, Physics, Python programming	Coordinate transformations, Forward/inverse kinematics, Jacobians, Trajectory planning	8 weeks
+Introduction To Robotics	MIT OpenCourseWare	Intermediate	Foundational mech­anical engineering knowledge	Robot mechanisms & kinematics, Dynamics of multi-body systems, Motion planning & control, Sensors, actuators, embedded systems, and simulation	1hr
+Free_AI_Courses_ListDownload
+How to Choose the Right Free AI Course Based on Your Learning Goals
+If you’re a complete beginner, start with the introduction to AI courses. They cover AI foundations, basic concepts, and the history of AI. When you become confident in your AI skills, you can move to the intermediate courses, depending on your interest.
+If you want a career in AI engineering, choose an AI course that aligns with the AI career you want to specialize in. These can include MLOps, AIoT, MLEngineering, etc.
+If you need certification for job applications, start with the free AI courses that can help you obtain your certification. Then, use the free AI interview preparation course to get ready for interviews.
+If you’re transitioning from another tech role to AI, after assessing your current skills and transferable skills for an AI role, map an AI career path. Then, choose a course that covers your skill gaps and start from there.
+Tips for Getting the Most Out of These Free AI Courses
+Create an AI project portfolio.
+Use GitHub for documentation.
+Join AI communities (like Hugging Face, Kaggle, Reddit AI groups).
+Combine theory with projects (e.g., AI + real-life application).
+Subscribe to AI newsletters for news on the latest advancements in artificial intelligence.
+Conclusion
+Advancements in computing and more data availability for training AI is only going to make AI better. Even with the mantra of “AI is not going to take people’s jobs”, AI is already taking away jobs.
+
+An individual who becomes AI-efficient is well-adapted to work in today’s world. Learning AI gives you a significant edge, whether you’re starting a new career or trying to stay relevant in your current role.
+
+FAQ: Free AI Courses Online
+What are the best platforms for free AI courses?
+A: YouTube, Coursera, edX, Udacity, Microsoft, Anthropic, and MIT OpenCourseWare offer free AI courses.
+Can I get a certificate for free AI courses?
+Many online learning platforms with free AI courses offer an “audit” option that allows you to learn for free, but you must pay for a certificate. Some platforms provide full certification at no cost through scholarships.
+How long does it take to learn AI?
+For beginners, it takes 3–6 months to understand core AI concepts. Advanced skills may take 12+ months, depending on your learning pace.
+Do I need a coding background to learn AI? No, you don’t if you are learning as an enthusiast, but you need to have programming experience to learn AI for a career or get a job as an AI engineer.
+Which AI course is best for a non-technical person? Beginner AI courses, such as DeepLearning.ai’s Introduction to AI course, offer a basic understanding of AI without being overly technical. They also cover a range of AI concepts and applications, providing a well-rounded, basic education.
+Can I get a job after taking an online AI course? Yes. If the course is certified, and you share your experience after taking the course with evidence of having learnt well online.
+Are free AI courses enough to start a career? Maybe. Depends on which courses you take and what you build with the knowledge you gain from them. Taking these courses will allow you to test the waters to see if you are a good fit for an AI engineering career. They will also guide you in building AI projects, providing hands-on experience that you can add to your resume. However, some employers might require industry-recognised certifications.

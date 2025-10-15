@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>QR Code via API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .qr-container {
+            margin: 20px auto;
+            border: 2px solid #1e3a8a;
+            padding: 20px;
+            display: inline-block;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            margin: 10px 0;
+        }
+        button {
+            background: #1e3a8a;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            margin: 5px;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+        .method {
+            background: #f0f0f0;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>QR Code Generator (Multiple Methods)</h1>
+
+    <input
+        type="text"
+        id="url"
+        value="https://rudi-web.vercel.app/"
+        placeholder="Enter URL"
+    >
+
+    <button onclick="generateAPI()">Generate QR (API Method)</button>
+    <button onclick="generateGoogle()">Generate QR (Google Charts)</button>
+
+    <div class="qr-container">
+        <img id="qrImage" alt="QR Code will appear here">
+    </div>
+
+    <button onclick="downloadQR()">Download QR Code</button>
+
+    <div class="method">
+        <h3>Methods Used:</h3>
+        <p><strong>Method 1 (API.qrserver.com):</strong> Free QR code API</p>
+        <p><strong>Method 2 (Google Charts):</strong> Google's QR code service</p>
+        <p>Both generate actual QR code images without JavaScript libraries!</p>
+    </div>
+
+    <script>
+        function generateAPI() {
+            const url = encodeURIComponent(document.getElementById('url').value);
+            const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${url}`;
+            document.getElementById('qrImage').src = qrUrl;
+        }
+
+        function generateGoogle() {
+            const url = encodeURIComponent(document.getElementById('url').value);
+            const qrUrl = `https://chart.googleapis.com/chart?cht=qr&chs=300x300&chl=${url}`;
+            document.getElementById('qrImage').src = qrUrl;
+        }
+
+        function downloadQR() {
+            const img = document.getElementById('qrImage');
+            if (!img.src) {
+                alert('Please generate a QR code first!');
+                return;
+            }
+
+            const link = document.createElement('a');
+            link.href = img.src;
+            link.download = 'rudi-qr-code.png';
+            link.click();
+        }
+
+        // Generate on page load
+        window.onload = function() {
+            generateAPI();
+        };
+    </script>
+</body>
+</html>

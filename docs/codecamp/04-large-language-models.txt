@@ -1,0 +1,136 @@
+Interactive Course
+Large Language Models (LLMs) Concepts
+BasicSkill Level
+Updated: Aug 2024
+2 hr
+15 videos
+50 Exercises
+70,940
+3300 XP
+Description
+In this course, you’ll journey through the world of Large Language Models (LLMs) and discover how they are reshaping the AI landscape. You’ll see how they revolutionize businesses and everyday life with real-world examples and learn about their building block. As you progress, you’ll gain insights into the training methodologies too. Finally, you’ll tackle the critical ethical and environmental considerations for LLMs and see what the future of LLMs could look like. By the end of this course, you'll have a comprehensive understanding of LLMs, their capabilities, applications, and challenges.
+
+
+1
+Introduction to Large Language Models (LLM)
+Available
+
+0%
+The AI landscape is evolving rapidly, and Large Language Models (LLMs) are at the forefront of this evolution. This chapter examines how LLMs are advancing the development of human-like artificial intelligence and transforming industries through their numerous applications. You will explore the challenges and complexity associated with language modeling.
+The rise of LLMs in the AI landscape
+50 XP
+Definition of an LLM
+50 XP
+LLMs in the AI landscape
+100 XP
+AI vs. LLM applications
+100 XP
+Real-world applications
+50 XP
+Business applications
+50 XP
+Multimodal applications
+100 XP
+Automate data-driven tasks
+50 XP
+Challenges of language modeling
+50 XP
+What can a language model do?
+50 XP
+Single vs. multi-task learning
+100 XP
+2
+Building Blocks of LLMs
+Locked
+
+0%
+This chapter emphasizes the novelty of LLMs and their emergent capabilities while outlining various NLP techniques for data preparation. You will learn the challenges of training LLMs and how fine-tuning can effectively address them. You will also understand how N-shot learning techniques enable efficient adaptation of pre-trained models when faced with limited labeled data.
+Novelty of LLMs
+50 XP
+Problem solving with LLMs
+50 XP
+Traditional models vs. LLMs
+100 XP
+Generalized overview of NLP
+50 XP
+Data preparation
+50 XP
+Text preprocessing and representation
+100 XP
+Word embeddings over bag-of-words
+50 XP
+Fine-tuning
+50 XP
+Challenges in building LLMs
+50 XP
+Adapt a pre-trained model
+50 XP
+Pre-trained or fine-tuned?
+100 XP
+Learning techniques
+50 XP
+Fine-tune a model
+50 XP
+N-shot learning
+100 XP
+3
+Training Methodology and Techniques
+Locked
+
+0%
+In this chapter, you will learn about the fundamental building blocks of training an LLM, such as pre-training techniques. You'll also gain an intuitive understanding of complex concepts like transformer architecture, including the attention mechanism. The chapter discusses an advanced fine-tuning technique and summarizes the training process to complete an LLM.
+Building blocks to train LLMs
+50 XP
+Masked language
+50 XP
+Predict the next word
+50 XP
+Building from scratch
+100 XP
+Introducing the transformer
+50 XP
+Relationships between distant words
+50 XP
+Transformer components
+100 XP
+Attention mechanisms
+50 XP
+Focus of multi-head attention
+50 XP
+Self vs. multi-head attention
+100 XP
+Advanced fine-tuning
+50 XP
+End-to-end training
+100 XP
+Training, tuning & feedback
+50 XP
+Building an LLM
+50 XP
+4
+Concerns and Considerations
+Locked
+
+0%
+In this chapter, we delve into the key considerations when training LLMs, such as large data availability, data quality, accurate labeling, and the implications of biased data. You will also examine various LLM risks like data privacy, ethical concerns, and environmental impact. Lastly, the chapter concludes by discussing emerging research areas and the evolving landscape of LLMs.
+Data concerns and considerations
+50 XP
+Is your model fair?
+50 XP
+Un-biased and relevant
+100 XP
+Customer service of a bank
+50 XP
+Ethical and environmental concerns
+50 XP
+Responsible use
+50 XP
+Ethics and environment
+100 XP
+Where are LLMs heading?
+50 XP
+Creativity vs. efficiency
+100 XP
+Analyzing literary works
+100 XP
+Time to wrap-up

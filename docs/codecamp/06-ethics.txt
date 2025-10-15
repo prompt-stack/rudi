@@ -1,0 +1,113 @@
+Interactive Course
+AI Ethics
+BasicSkill Level
+Updated: Jul 2025
+1 hr
+11 videos
+30 Exercises
+53,255
+1900 XP
+What you'll learn
+Define data and AI ethics, and explain their importance in real-world applications.
+
+Differentiate ethical principles from laws, regulations, and societal norms in the context of data use.
+
+Identify ethical risks and responsibilities across the entire data lifecycle.
+
+Apply principles of transparency, consent, and ownership to support ethical AI practices.
+
+Evaluate ethical implications of data sharing, bias, and AI impact on society and sustainability.
+
+Description
+This introductory course on AI ethics provides a comprehensive overview of ethical considerations in the fast-paced domain of artificial intelligence. The course spans industry, policy-making, academia, and society at large, covering principles of AI ethics, strategies to foster fair and equitable AI systems, approaches to minimize biases, and methods to address key issues and establish user trust.
+
+
+Throughout the course, you will learn about the core principles of ethical AI and expand your understanding of common challenges and opportunities in the field of AI ethics. Through hands-on exercises, you will build your skills to craft ethical AI by design. Begin Learning today!
+
+
+The videos contain live transcripts you can reveal by clicking "Show transcript" at the bottom left of the videos.
+
+
+The course glossary, promotional material and detailed learning objectives can be found on the right in the resources section.
+
+
+To obtain CPE credits you need to complete the course and reach a score of 70% on the qualified assessment. You can navigate to the assessment by clicking on the CPE credits callout on the right.
+
+
+1
+Approaching AI Ethics
+Available
+
+0%
+Understand the foundations of AI Ethics and observe some of the challenges of the ethical use of AI.
+AI ethics: What's the buzz?
+50 XP
+Guiding principle
+50 XP
+What's covered by AI ethics?
+100 XP
+Digging deeper: AI ethics principles
+50 XP
+Identifying actions
+100 XP
+AI principles unfolded
+50 XP
+AI ethics: where's the line?
+50 XP
+Striking a balance
+50 XP
+CineLlama Navigator
+100 XP
+2
+Below the Surface: AI Ethics
+Locked
+
+0%
+Unpack the core principles of AI Ethics and discover a promising technique, explainable AI (XAI), that can integrate these principles into many AI systems.
+Unpacking the blackbox: Transparency
+50 XP
+Transparent AI system
+50 XP
+Transparency best practices
+100 XP
+AI fairness: not just a dream
+50 XP
+Tackling fairness issue
+50 XP
+Can we make things right?
+100 XP
+Safeguarding AI: Accountability
+50 XP
+Accountability common misconceptions
+50 XP
+Who's responsible?
+100 XP
+Explainable AI
+50 XP
+How would you apply XAI?
+50 XP
+The perfect match
+100 XP
+3
+The Way Forward: AI Ethics
+Locked
+
+0%
+Discover the value ethical frameworks present to organizations of all sizes and prepare yourself to tackle tomorow's ethical challenges with AI ethics by design.
+Summaries Ethical frameworks
+50 XP
+Framing success
+50 XP
+When a plan comes together
+50 XP
+The value of ethical AI
+50 XP
+A proactive approach
+50 XP
+Identify the stakeholders
+100 XP
+The future of AI ethics
+50 XP
+All part of the plan
+50 XP
+Honing ethics by design

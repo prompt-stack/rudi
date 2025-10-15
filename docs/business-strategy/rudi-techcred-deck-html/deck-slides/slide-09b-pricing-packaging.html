@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUDI TechCred - Pricing & Packaging</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .artboard {
+            width: 16in;
+            height: 9in;
+            background: white;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            padding: 1.25in;
+        }
+
+        .accent-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #1e3a8a 0%, rgba(30, 58, 138, 0) 100%);
+        }
+
+        .header {
+            margin-bottom: 0.4in;
+        }
+
+        .title {
+            font-size: 2.75rem;
+            font-weight: 300;
+            color: #18181b;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.25in;
+            margin-bottom: 0.4in;
+        }
+
+        .pricing-card {
+            background: #fafafa;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 0.3in;
+            text-align: center;
+        }
+
+        .pricing-card.featured {
+            border-color: #1e3a8a;
+            background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+        }
+
+        .tier-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #1e3a8a;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.08in;
+        }
+
+        .tier-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #18181b;
+            margin-bottom: 0.12in;
+        }
+
+        .price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 0.06in;
+        }
+
+        .price-detail {
+            font-size: 0.75rem;
+            color: #52525b;
+            margin-bottom: 0.15in;
+        }
+
+        .tier-desc {
+            font-size: 0.8125rem;
+            color: #52525b;
+            line-height: 1.4;
+        }
+
+        .maximize-box {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border: 2px solid #1e3a8a;
+            border-radius: 12px;
+            padding: 0.35in;
+            text-align: center;
+        }
+
+        .maximize-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 0.12in;
+        }
+
+        .maximize-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.15in;
+            margin-top: 0.15in;
+        }
+
+        .maximize-item {
+            background: white;
+            border-radius: 8px;
+            padding: 0.15in;
+        }
+
+        .maximize-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 0.04in;
+        }
+
+        .maximize-label {
+            font-size: 0.75rem;
+            color: #52525b;
+            font-weight: 500;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0.5in;
+            left: 1.25in;
+            font-size: 0.75rem;
+            color: #71717a;
+            font-weight: 400;
+        }
+
+        .decoration {
+            position: absolute;
+            bottom: 0.5in;
+            right: 1.25in;
+            width: 2in;
+            height: 2in;
+            background: radial-gradient(circle at center, rgba(30, 58, 138, 0.02) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        @page {
+            size: 16in 9in;
+            margin: 0;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .artboard {
+                width: 100%;
+                height: 100%;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="artboard">
+        <div class="accent-line"></div>
+        <div class="decoration"></div>
+
+        <div class="header">
+            <h1 class="title">Flexible Pricing & TechCred Reimbursement</h1>
+        </div>
+
+        <div style="text-align: center; margin-bottom: 0.4in; font-size: 1rem; color: #52525b; line-height: 1.6;">
+            Pricing is customized based on cohort size, delivery format, and organizational needs.<br>
+            All programs are designed to qualify for maximum TechCred reimbursement.
+        </div>
+
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div class="tier-label">Foundation</div>
+                <div class="tier-name">AI Literacy</div>
+                <div class="price">Level 1</div>
+                <div class="tier-desc">Core concepts, basic applications,<br>assessment & certification</div>
+            </div>
+
+            <div class="pricing-card featured">
+                <div class="tier-label">Intermediate</div>
+                <div class="tier-name">Applied AI</div>
+                <div class="price">Level 2</div>
+                <div class="tier-desc">Hands-on practice, real tools,<br>workflow implementation</div>
+            </div>
+
+            <div class="pricing-card">
+                <div class="tier-label">Advanced</div>
+                <div class="tier-name">AI Assistants, Agents & Workflows</div>
+                <div class="price">Level 3</div>
+                <div class="tier-desc">Custom AI systems, automation,<br>organizational integration</div>
+            </div>
+        </div>
+
+        <div class="maximize-box">
+            <div class="maximize-title">Maximize Your TechCred Reimbursement</div>
+
+            <div class="maximize-grid">
+                <div class="maximize-item">
+                    <div class="maximize-number">$2,000</div>
+                    <div class="maximize-label">Per Employee<br>Per Credential</div>
+                </div>
+
+                <div class="maximize-item">
+                    <div class="maximize-number">$30,000</div>
+                    <div class="maximize-label">Per Employer<br>Per Application</div>
+                </div>
+
+                <div class="maximize-item">
+                    <div class="maximize-number">$180,000</div>
+                    <div class="maximize-label">Maximum<br>Per Year</div>
+                </div>
+            </div>
+
+            <div style="margin-top: 0.25in; font-size: 0.875rem; color: #1e40af; font-weight: 500;">
+                Separate applications = Multiple reimbursements per employee<br>
+                Next confirmed window: November 3 - December 1, 2025
+            </div>
+        </div>
+
+        <div class="footer">RUDI: Responsible Use of Digital Intelligence</div>
+    </div>
+</body>
+</html>

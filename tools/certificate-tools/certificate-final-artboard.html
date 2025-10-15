@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUDI Certificate - 11x8.5</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: #f5f5f5;
+        }
+
+        /* 11x8.5 Artboard Configuration (Landscape Letter) */
+        .artboard {
+            width: 11in;
+            height: 8.5in;
+            overflow: hidden;
+            padding: 0.5in;
+            position: relative;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            page-break-after: always;
+            page-break-inside: avoid;
+        }
+
+        .artboards-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        @page {
+            size: 11in 8.5in;
+            margin: 0;
+        }
+
+        @media print {
+            body { background: white; }
+            .artboards-container { padding: 0; gap: 0; }
+            .artboard {
+                width: 100%;
+                height: 100%;
+                box-shadow: none;
+                page-break-after: always;
+                margin: 0;
+            }
+        }
+
+        .certificate {
+            width: 100%;
+            height: 100%;
+            background: #ffffff;
+            position: relative;
+            border: 3px solid #1a1a1a;
+            padding: 0.55in 0.75in;
+        }
+
+        .certificate::after {
+            content: '';
+            position: absolute;
+            top: -150px;
+            left: -150px;
+            width: 900px;
+            height: 900px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='30' fill='none' stroke='rgba(30,58,138,0.02)' stroke-width='1'/%3E%3Ccircle cx='100' cy='100' r='50' fill='none' stroke='rgba(30,58,138,0.02)' stroke-width='1'/%3E%3Ccircle cx='100' cy='100' r='70' fill='none' stroke='rgba(30,58,138,0.02)' stroke-width='1'/%3E%3Ccircle cx='100' cy='100' r='3' fill='rgba(30,58,138,0.04)'/%3E%3Cg%3E%3Cline x1='100' y1='100' x2='130' y2='100' stroke='rgba(30,58,138,0.03)' stroke-width='1.5'/%3E%3Ccircle cx='130' cy='100' r='4' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='85' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='85' r='3' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='115' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='115' r='3' fill='rgba(30,58,138,0.03)'/%3E%3C/g%3E%3Cg transform='rotate(60 100 100)'%3E%3Cline x1='100' y1='100' x2='130' y2='100' stroke='rgba(30,58,138,0.03)' stroke-width='1.5'/%3E%3Ccircle cx='130' cy='100' r='4' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='85' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='85' r='3' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='115' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='115' r='3' fill='rgba(30,58,138,0.03)'/%3E%3C/g%3E%3Cg transform='rotate(120 100 100)'%3E%3Cline x1='100' y1='100' x2='130' y2='100' stroke='rgba(30,58,138,0.03)' stroke-width='1.5'/%3E%3Ccircle cx='130' cy='100' r='4' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='85' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='85' r='3' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='115' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='115' r='3' fill='rgba(30,58,138,0.03)'/%3E%3C/g%3E%3Cg transform='rotate(180 100 100)'%3E%3Cline x1='100' y1='100' x2='130' y2='100' stroke='rgba(30,58,138,0.03)' stroke-width='1.5'/%3E%3Ccircle cx='130' cy='100' r='4' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='85' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='85' r='3' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='115' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='115' r='3' fill='rgba(30,58,138,0.03)'/%3E%3C/g%3E%3Cg transform='rotate(240 100 100)'%3E%3Cline x1='100' y1='100' x2='130' y2='100' stroke='rgba(30,58,138,0.03)' stroke-width='1.5'/%3E%3Ccircle cx='130' cy='100' r='4' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='85' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='85' r='3' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='115' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='115' r='3' fill='rgba(30,58,138,0.03)'/%3E%3C/g%3E%3Cg transform='rotate(300 100 100)'%3E%3Cline x1='100' y1='100' x2='130' y2='100' stroke='rgba(30,58,138,0.03)' stroke-width='1.5'/%3E%3Ccircle cx='130' cy='100' r='4' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='85' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='85' r='3' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='115' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='115' r='3' fill='rgba(30,58,138,0.03)'/%3E%3C/g%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            pointer-events: none;
+            z-index: 0;
+            user-select: none;
+            opacity: 0.8;
+        }
+
+        /* Decorative border */
+        .certificate::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 1.5px solid #1e3a8a;
+            pointer-events: none;
+        }
+
+        .certificate-inner {
+            position: relative;
+            z-index: 1;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .org-name {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: #1a1a1a;
+            margin-bottom: 5px;
+        }
+
+        .org-full-name {
+            font-size: 9px;
+            color: #666;
+            font-weight: 500;
+            letter-spacing: 1.2px;
+            margin-bottom: 20px;
+        }
+
+        .certificate-title {
+            font-family: 'Crimson Pro', serif;
+            font-size: 44px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 4px;
+            letter-spacing: -0.5px;
+        }
+
+        .certifies-text {
+            font-size: 11px;
+            color: #666;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        /* Body */
+        .body {
+            text-align: center;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: -10px;
+            margin-bottom: 0px;
+        }
+
+        .recipient-name {
+            font-family: 'Crimson Pro', serif;
+            font-size: 54px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #1a1a1a;
+            min-width: 500px;
+            letter-spacing: -0.5px;
+        }
+
+        .completion-text {
+            font-size: 12px;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .course-name {
+            font-family: 'Crimson Pro', serif;
+            font-size: 30px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 5px;
+            letter-spacing: -0.3px;
+        }
+
+        .course-subtitle {
+            font-size: 13px;
+            color: #1e3a8a;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: 0.3px;
+        }
+
+        .course-description {
+            font-size: 9px;
+            color: #555;
+            max-width: 720px;
+            margin: 0 auto 10px;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        .course-details {
+            font-size: 10.5px;
+            color: #1a1a1a;
+            font-weight: 700;
+            margin-bottom: 4px;
+            letter-spacing: 0.3px;
+        }
+
+        .partnership {
+            font-size: 7.5px;
+            color: #999;
+            margin-top: 6px;
+            font-style: italic;
+            line-height: 1.35;
+            max-width: 650px;
+        }
+
+        /* Footer with signatures */
+        .footer {
+            margin-top: auto;
+            padding-top: 12px;
+        }
+
+        .signatures {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            margin-bottom: 10px;
+        }
+
+        .signature-block {
+            text-align: center;
+        }
+
+        .signature-space {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 2px solid #1a1a1a;
+            margin-bottom: 6px;
+        }
+
+        .signature-script {
+            font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
+            font-size: 28px;
+            color: #1a1a1a;
+            font-weight: normal;
+            font-style: italic;
+        }
+
+        .signature-script.brandon {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 30px;
+            letter-spacing: 1px;
+            font-style: italic;
+        }
+
+        .signature-script.william {
+            font-family: 'Snell Roundhand', 'Apple Chancery', 'Lucida Handwriting', cursive;
+            font-size: 28px;
+            font-style: italic;
+            letter-spacing: 0.5px;
+            font-weight: 300;
+        }
+
+        .signature-name {
+            font-weight: 700;
+            font-size: 11px;
+            color: #1a1a1a;
+            margin-bottom: 2px;
+            letter-spacing: 0.2px;
+        }
+
+        .signature-title {
+            font-size: 9px;
+            color: #666;
+            font-weight: 500;
+        }
+
+        /* Metadata footer */
+        .metadata {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-top: 10px;
+            padding-top: 8px;
+            border-top: 1px solid #ddd;
+        }
+
+        .cert-info {
+            flex: 1;
+        }
+
+        .cert-id {
+            font-size: 7.5px;
+            color: #999;
+            font-family: 'Courier New', monospace;
+            margin-bottom: 2px;
+            letter-spacing: 0.2px;
+        }
+
+        .verify-url {
+            font-size: 7.5px;
+            color: #999;
+            margin-bottom: 2px;
+        }
+
+        .right-badges {
+            display: flex;
+            align-items: flex-end;
+            gap: 10px;
+        }
+
+        /* Crisp QR code rendering */
+        .right-badges img {
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+            image-rendering: pixelated;
+        }
+    </style>
+</head>
+<body>
+    <div class="artboards-container">
+        <div class="artboard">
+            <div class="certificate">
+                <div class="certificate-inner">
+                    <!-- Header -->
+                    <div class="header">
+                        <div class="org-name">RUDI</div>
+                        <div class="org-full-name">Institute for the Responsible Use of Digital Intelligence</div>
+                        <div class="certificate-title">Certificate of Completion</div>
+                        <div class="certifies-text">This Certifies That</div>
+                    </div>
+
+                    <!-- Body -->
+                    <div class="body">
+                        <div class="recipient-name">Julie Stone</div>
+                        <div class="completion-text">has successfully completed</div>
+
+                        <div class="course-name">Responsible AI Literacy</div>
+                        <div class="course-subtitle">Foundation & Application • 3 Contact Hours</div>
+
+                        <div class="course-description">
+                            A comprehensive course covering: Governance frameworks for responsible AI use •
+                            Evolution of intelligence (natural → artificial → generative) •
+                            Major AI ecosystems (OpenAI, Anthropic, Google, Meta) •
+                            Traditional vs. Generative AI paradigms •
+                            Modalities of generative AI (text, image, video, audio) •
+                            Large Language Model fundamentals •
+                            Prompt design for non-technical users •
+                            Hands-on overview of generative AI tools
+                        </div>
+
+                        <div class="course-details">3 Contact Hours  |  0.3 CEU Equivalent</div>
+
+                        <div class="partnership">
+                            Co-presented by the Institute for the Responsible Use of Digital Intelligence (RUDI)
+                            and Did You Know Publishing, Inc.<br>
+                            CEU credit (0.3) administered by Ohio Head Start Association for qualifying participants.
+                        </div>
+                    </div>
+
+                    <!-- Footer with Signatures -->
+                    <div class="footer">
+                        <div class="signatures">
+                            <div class="signature-block">
+                                <div class="signature-space">
+                                    <div class="signature-script brandon">Brandon Z. Hoff</div>
+                                </div>
+                                <div class="signature-name">Brandon Z. Hoff</div>
+                                <div class="signature-title">Founder, RUDI</div>
+                            </div>
+
+                            <div class="signature-block">
+                                <div class="signature-space">
+                                    <div class="signature-script william">William Shoecraft</div>
+                                </div>
+                                <div class="signature-name">William Shoecraft</div>
+                                <div class="signature-title">CEO, Did You Know Publishing, Inc.</div>
+                            </div>
+                        </div>
+
+                        <!-- Metadata -->
+                        <div class="metadata">
+                            <div class="cert-info">
+                                <div class="cert-id">Certificate ID: 5b0a4a12-921c-4b83-a1f9-743b9a8e52b5</div>
+                                <div class="verify-url">Verify: https://rudi.ai/verify?c=5b0a4a12-921c-4b83-a1f9-743b9a8e52b5</div>
+                                <div class="verify-url">Issued: October 9, 2025</div>
+                            </div>
+
+                            <div class="right-badges">
+                                <!-- QR Code -->
+                                <div style="width: 70px; height: 70px; border: 2px solid #1e3a8a; padding: 4px; background: white; border-radius: 4px;">
+                                    <img src="data:image/png;base64,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" alt="QR Code" style="width: 100%; height: 100%; display: block;">
+                                </div>
+
+                                <!-- RUDI Seal -->
+                                <svg width="85" height="85" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="100" cy="100" r="95" fill="none" stroke="#1e3a8a" stroke-width="3"/>
+                                    <text x="100" y="75" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="700" fill="#1e3a8a" letter-spacing="2">RUDI</text>
+                                    <text x="100" y="92" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="8" font-weight="500" fill="#475569">EST. 2023</text>
+                                    <line x1="45" y1="100" x2="155" y2="100" stroke="#1e3a8a" stroke-width="1.5"/>
+                                    <text x="100" y="120" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#1e3a8a">VERIFIED</text>
+                                    <text x="100" y="135" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#1e3a8a">CERTIFICATE</text>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

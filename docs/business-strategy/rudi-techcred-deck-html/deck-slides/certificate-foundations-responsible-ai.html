@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUDI Certificate - Foundations in Responsible AI</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: #f5f5f5;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .certificate {
+            width: 11in;
+            height: 8.5in;
+            background: #ffffff;
+            padding: 55px 75px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            position: relative;
+            border: 3px solid #1a1a1a;
+        }
+
+        .certificate::after {
+            content: '';
+            position: absolute;
+            top: -150px;
+            left: -150px;
+            width: 900px;
+            height: 900px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='30' fill='none' stroke='rgba(30,58,138,0.02)' stroke-width='1'/%3E%3Ccircle cx='100' cy='100' r='50' fill='none' stroke='rgba(30,58,138,0.02)' stroke-width='1'/%3E%3Ccircle cx='100' cy='100' r='70' fill='none' stroke='rgba(30,58,138,0.02)' stroke-width='1'/%3E%3Ccircle cx='100' cy='100' r='3' fill='rgba(30,58,138,0.04)'/%3E%3Cg%3E%3Cline x1='100' y1='100' x2='130' y2='100' stroke='rgba(30,58,138,0.03)' stroke-width='1.5'/%3E%3Ccircle cx='130' cy='100' r='4' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='85' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='85' r='3' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='115' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='115' r='3' fill='rgba(30,58,138,0.03)'/%3E%3C/g%3E%3Cg transform='rotate(60 100 100)'%3E%3Cline x1='100' y1='100' x2='130' y2='100' stroke='rgba(30,58,138,0.03)' stroke-width='1.5'/%3E%3Ccircle cx='130' cy='100' r='4' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='85' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='85' r='3' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='115' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='115' r='3' fill='rgba(30,58,138,0.03)'/%3E%3C/g%3E%3Cg transform='rotate(120 100 100)'%3E%3Cline x1='100' y1='100' x2='130' y2='100' stroke='rgba(30,58,138,0.03)' stroke-width='1.5'/%3E%3Ccircle cx='130' cy='100' r='4' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='85' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='85' r='3' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='115' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='115' r='3' fill='rgba(30,58,138,0.03)'/%3E%3C/g%3E%3Cg transform='rotate(180 100 100)'%3E%3Cline x1='100' y1='100' x2='130' y2='100' stroke='rgba(30,58,138,0.03)' stroke-width='1.5'/%3E%3Ccircle cx='130' cy='100' r='4' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='85' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='85' r='3' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='115' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='115' r='3' fill='rgba(30,58,138,0.03)'/%3E%3C/g%3E%3Cg transform='rotate(240 100 100)'%3E%3Cline x1='100' y1='100' x2='130' y2='100' stroke='rgba(30,58,138,0.03)' stroke-width='1.5'/%3E%3Ccircle cx='130' cy='100' r='4' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='85' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='85' r='3' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='115' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='115' r='3' fill='rgba(30,58,138,0.03)'/%3E%3C/g%3E%3Cg transform='rotate(300 100 100)'%3E%3Cline x1='100' y1='100' x2='130' y2='100' stroke='rgba(30,58,138,0.03)' stroke-width='1.5'/%3E%3Ccircle cx='130' cy='100' r='4' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='85' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='85' r='3' fill='rgba(30,58,138,0.03)'/%3E%3Cline x1='130' y1='100' x2='145' y2='115' stroke='rgba(30,58,138,0.03)' stroke-width='1'/%3E%3Ccircle cx='145' cy='115' r='3' fill='rgba(30,58,138,0.03)'/%3E%3C/g%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            pointer-events: none;
+            z-index: 0;
+            user-select: none;
+            opacity: 0.8;
+        }
+
+        .certificate::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 1.5px solid #1e3a8a;
+            pointer-events: none;
+        }
+
+        .certificate-inner {
+            position: relative;
+            z-index: 1;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .org-name {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: #1a1a1a;
+            margin-bottom: 5px;
+        }
+
+        .org-full-name {
+            font-size: 9px;
+            color: #666;
+            font-weight: 500;
+            letter-spacing: 1.2px;
+            margin-bottom: 28px;
+        }
+
+        .certificate-title {
+            font-family: 'Crimson Pro', serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 5px;
+            letter-spacing: -0.5px;
+        }
+
+        .certifies-text {
+            font-size: 11px;
+            color: #666;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .body {
+            text-align: center;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: -15px;
+            margin-bottom: 10px;
+        }
+
+        .recipient-name {
+            font-family: 'Crimson Pro', serif;
+            font-size: 58px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #1a1a1a;
+            min-width: 500px;
+            letter-spacing: -0.5px;
+        }
+
+        .completion-text {
+            font-size: 12px;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+
+        .course-name {
+            font-family: 'Crimson Pro', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 18px;
+            letter-spacing: -0.3px;
+        }
+
+        .course-description {
+            font-size: 9.5px;
+            color: #555;
+            max-width: 720px;
+            margin: 0 auto 16px;
+            line-height: 1.75;
+            font-weight: 400;
+        }
+
+        .partnership {
+            font-size: 8px;
+            color: #999;
+            margin-top: 10px;
+            font-style: italic;
+            line-height: 1.4;
+            max-width: 650px;
+        }
+
+        .footer {
+            margin-top: auto;
+            padding-top: 20px;
+        }
+
+        .signatures {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+
+        .signature-block {
+            text-align: center;
+        }
+
+        .signature-space {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 2px solid #1a1a1a;
+            margin-bottom: 8px;
+        }
+
+        .signature-script {
+            font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
+            font-size: 28px;
+            color: #1a1a1a;
+            font-weight: normal;
+            font-style: italic;
+        }
+
+        .signature-script.brandon {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 32px;
+            letter-spacing: 1px;
+            font-style: italic;
+        }
+
+        .signature-script.william {
+            font-family: 'Snell Roundhand', 'Apple Chancery', 'Lucida Handwriting', cursive;
+            font-size: 30px;
+            font-style: italic;
+            letter-spacing: 0.5px;
+            font-weight: 300;
+        }
+
+        .signature-name {
+            font-weight: 700;
+            font-size: 12px;
+            color: #1a1a1a;
+            margin-bottom: 3px;
+            letter-spacing: 0.2px;
+        }
+
+        .signature-title {
+            font-size: 9px;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .metadata {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-top: 18px;
+            padding-top: 12px;
+            border-top: 1px solid #ddd;
+        }
+
+        .cert-info {
+            flex: 1;
+        }
+
+        .cert-id {
+            font-size: 7.5px;
+            color: #999;
+            font-family: 'Courier New', monospace;
+            margin-bottom: 3px;
+            letter-spacing: 0.2px;
+        }
+
+        .verify-url {
+            font-size: 7.5px;
+            color: #999;
+            margin-bottom: 2px;
+        }
+
+        .right-badges {
+            display: flex;
+            align-items: flex-end;
+            gap: 12px;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .certificate {
+                box-shadow: none;
+                page-break-after: always;
+            }
+        }
+
+        @media screen and (max-width: 1200px) {
+            .certificate {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 11/8.5;
+                padding: 5%;
+            }
+        }
+
+        @page {
+            size: 11in 8.5in landscape;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="certificate">
+        <div class="certificate-inner">
+            <div class="header">
+                <div class="org-name">RUDI</div>
+                <div class="org-full-name">Institute for the Responsible Use of Digital Intelligence</div>
+                <div class="certificate-title">Certificate of Completion</div>
+                <div class="certifies-text">This Certifies That</div>
+            </div>
+
+            <div class="body">
+                <div class="recipient-name">Participant Name</div>
+                <div class="completion-text">has successfully completed</div>
+
+                <div class="course-name">Foundations in Responsible AI</div>
+
+                <div class="course-description">
+                    A comprehensive course covering governance frameworks for responsible AI use,
+                    evolution of intelligence, major AI ecosystems, traditional vs. generative AI paradigms,
+                    modalities of generative AI, large language model fundamentals, prompt design for non-technical users,
+                    and hands-on overview of generative AI tools.
+                </div>
+
+                <div class="partnership">
+                    Training provided by RUDI AI • TechCred-Eligible Credential
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="signatures">
+                    <div class="signature-block">
+                        <div class="signature-space">
+                            <div class="signature-script brandon">Brandon Z. Hoff</div>
+                        </div>
+                        <div class="signature-name">Brandon Z. Hoff</div>
+                        <div class="signature-title">Founder & Chief AI Officer, RUDI</div>
+                    </div>
+                </div>
+
+                <div class="metadata">
+                    <div class="cert-info">
+                        <div class="cert-id">TechCred-Eligible Professional Development</div>
+                        <div class="verify-url">RUDI AI • rudi-web.vercel.app</div>
+                    </div>
+
+                    <div class="right-badges">
+                        <!-- QR Code -->
+                        <div style="width: 75px; height: 75px; border: 2px solid #1e3a8a; padding: 4px; background: white; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
+                            <svg width="65" height="65" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Simple QR-style pattern -->
+                                <rect width="100" height="100" fill="white"/>
+                                <rect x="5" y="5" width="20" height="20" fill="#1e3a8a"/>
+                                <rect x="75" y="5" width="20" height="20" fill="#1e3a8a"/>
+                                <rect x="5" y="75" width="20" height="20" fill="#1e3a8a"/>
+                                <rect x="10" y="10" width="10" height="10" fill="white"/>
+                                <rect x="80" y="10" width="10" height="10" fill="white"/>
+                                <rect x="10" y="80" width="10" height="10" fill="white"/>
+                                <!-- Data pattern -->
+                                <rect x="35" y="15" width="5" height="5" fill="#1e3a8a"/>
+                                <rect x="45" y="15" width="5" height="5" fill="#1e3a8a"/>
+                                <rect x="55" y="15" width="5" height="5" fill="#1e3a8a"/>
+                                <rect x="40" y="25" width="5" height="5" fill="#1e3a8a"/>
+                                <rect x="50" y="25" width="5" height="5" fill="#1e3a8a"/>
+                                <rect x="35" y="35" width="5" height="5" fill="#1e3a8a"/>
+                                <rect x="50" y="35" width="5" height="5" fill="#1e3a8a"/>
+                                <rect x="65" y="35" width="5" height="5" fill="#1e3a8a"/>
+                                <rect x="40" y="45" width="5" height="5" fill="#1e3a8a"/>
+                                <rect x="55" y="45" width="5" height="5" fill="#1e3a8a"/>
+                                <rect x="70" y="45" width="5" height="5" fill="#1e3a8a"/>
+                                <rect x="35" y="55" width="5" height="5" fill="#1e3a8a"/>
+                                <rect x="45" y="55" width="5" height="5" fill="#1e3a8a"/>
+                                <rect x="60" y="55" width="5" height="5" fill="#1e3a8a"/>
+                                <rect x="75" y="55" width="5" height="5" fill="#1e3a8a"/>
+                                <rect x="40" y="65" width="5" height="5" fill="#1e3a8a"/>
+                                <rect x="55" y="65" width="5" height="5" fill="#1e3a8a"/>
+                                <rect x="70" y="65" width="5" height="5" fill="#1e3a8a"/>
+                                <rect x="50" y="75" width="5" height="5" fill="#1e3a8a"/>
+                                <rect x="65" y="75" width="5" height="5" fill="#1e3a8a"/>
+                                <text x="50" y="92" text-anchor="middle" font-family="Inter" font-size="6" fill="#666">VERIFY</text>
+                            </svg>
+                        </div>
+
+                        <!-- RUDI Seal -->
+                        <svg width="85" height="85" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="100" cy="100" r="95" fill="none" stroke="#1e3a8a" stroke-width="3"/>
+                            <text x="100" y="75" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="700" fill="#1e3a8a" letter-spacing="2">RUDI</text>
+                            <text x="100" y="92" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="8" font-weight="500" fill="#475569">EST. 2023</text>
+                            <line x1="45" y1="100" x2="155" y2="100" stroke="#1e3a8a" stroke-width="1.5"/>
+                            <text x="100" y="120" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#1e3a8a">VERIFIED</text>
+                            <text x="100" y="135" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#1e3a8a">CERTIFICATE</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
