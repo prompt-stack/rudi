@@ -659,8 +659,17 @@ footer {
         gap: 2rem !important;
     }
 
+    .responsive-3col {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+
     .responsive-4col {
         grid-template-columns: 1fr !important;
         gap: 2rem !important;
+    }
+
+    .container {
+        padding: 0 1rem;
     }
 }
