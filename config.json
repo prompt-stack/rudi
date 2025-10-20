@@ -1,0 +1,269 @@
+{
+  "site": {
+    "name": "RUDI AI",
+    "domain": "https://learnrudi.com",
+    "description": "Professional AI training with TechCred-eligible certificates. Foundation to advanced levels: AI Literacy, Applied AI, AI Assistants & Workflows.",
+    "author": "RUDI AI",
+    "email": "learnrudi@gmail.com"
+  },
+
+  "organization": {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "RUDI AI",
+    "alternateName": "Responsible Use of Digital Intelligence",
+    "description": "Professional AI certification and training provider specializing in responsible AI education and workforce development",
+    "url": "https://learnrudi.com",
+    "email": "learnrudi@gmail.com",
+    "foundingDate": "2023",
+    "areaServed": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "knowsAbout": [
+      "Artificial Intelligence Training",
+      "AI Certification",
+      "Workforce Development",
+      "AI Literacy",
+      "Responsible AI",
+      "AI Ethics",
+      "Corporate Training"
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "24",
+      "bestRating": "5"
+    }
+  },
+
+  "social": {
+    "twitter": "@RUDIAI",
+    "linkedin": "https://linkedin.com/company/rudi-ai",
+    "facebook": "https://facebook.com/rudiai"
+  },
+
+  "seo": {
+    "keywords": {
+      "global": [
+        "AI certification",
+        "responsible AI training",
+        "AI literacy",
+        "professional AI courses",
+        "Ohio TechCred",
+        "enterprise AI training",
+        "AI workforce development",
+        "AI readiness framework",
+        "AI education certification",
+        "corporate AI training"
+      ],
+      "homepage": [
+        "AI certification",
+        "responsible AI training",
+        "AI literacy",
+        "TechCred-eligible",
+        "professional AI courses"
+      ],
+      "business": [
+        "Business AI training",
+        "AI for business",
+        "corporate AI certification",
+        "TechCred business",
+        "AI leadership training",
+        "enterprise AI certification"
+      ],
+      "education": [
+        "AI for educators",
+        "AI in education",
+        "teacher AI training",
+        "TechCred education",
+        "AI literacy for teachers",
+        "education AI certification"
+      ],
+      "ohio": [
+        "Ohio TechCred",
+        "TechCred funding",
+        "Upskill Ohio",
+        "Ohio AI training",
+        "TechCred eligible courses",
+        "$2000 reimbursement",
+        "Ohio workforce development"
+      ],
+      "framework": [
+        "AI competency framework",
+        "AI assessment",
+        "30-point framework",
+        "AI skills matrix",
+        "AI literacy measurement",
+        "competency assessment",
+        "AI readiness pyramid"
+      ],
+      "research": [
+        "AI training research",
+        "MIT AI studies",
+        "AI implementation failure",
+        "AI training ROI",
+        "workforce AI readiness",
+        "enterprise AI adoption"
+      ]
+    }
+  },
+
+  "pages": {
+    "index": {
+      "title": "RUDI AI - Responsible AI Certificate & Program Training | TechCred Eligible",
+      "description": "Professional AI training with TechCred-eligible certificates. Foundation to advanced levels: AI Literacy, Applied AI, AI Assistants & Workflows. Training provider: RUDI AI. Trusted by Warren County ESC, Crowe LLP, University of Illinois Springfield.",
+      "h1": "Responsible AI Certificate & Program Training",
+      "keywords": "AI certification, responsible AI training, AI literacy, TechCred-eligible, professional AI courses",
+      "canonical": "https://learnrudi.com/",
+      "og_image": "https://learnrudi.com/images/Diverse Business Team in Office.png"
+    },
+    "certificates-business": {
+      "title": "AI Training & Certification for Business Professionals | RUDI AI",
+      "description": "Professional AI certification programs for business leaders and professionals. 12 stackable credentials across 3 levels. TechCred-eligible. Build AI competency in your organization.",
+      "h1": "AI Training & Certification for Business Professionals",
+      "keywords": "Business AI training, AI for business, corporate AI certification, TechCred business, AI leadership training",
+      "canonical": "https://learnrudi.com/certificates-business.html",
+      "og_image": "https://learnrudi.com/images/Diverse Business Team in Office.png"
+    },
+    "certificates-education": {
+      "title": "AI Training & Certification for Education Professionals | RUDI AI",
+      "description": "Specialized AI certification for educators and school administrators. 12 education-focused credentials across 3 levels. TechCred-eligible. Transform your classroom with AI literacy.",
+      "h1": "AI Training & Certification for Education Professionals",
+      "keywords": "AI for educators, AI in education, teacher AI training, TechCred education, AI literacy for teachers",
+      "canonical": "https://learnrudi.com/certificates-education.html",
+      "og_image": "https://learnrudi.com/images/Diverse Business Team in Office.png"
+    },
+    "contact": {
+      "title": "Contact RUDI | Get Started with AI Training | Schedule Consultation",
+      "description": "Contact RUDI to transform your workforce with AI. Schedule a consultation for enterprise AI training, TechCred eligibility assessment, and custom certification programs.",
+      "h1": "Get in Touch with RUDI",
+      "keywords": "Contact RUDI, AI training consultation, schedule AI training, TechCred consultation, enterprise AI training inquiry",
+      "canonical": "https://learnrudi.com/contact.html",
+      "og_image": "https://learnrudi.com/images/modern-workspace-collaboration.png"
+    },
+    "ohio": {
+      "title": "Ohio TechCred AI Training | Upskill Ohio Partner | RUDI AI",
+      "description": "Ohio's TechCred-eligible AI training provider. Get up to $2,000 per employee, up to $180,000 per organization per year. Partner with Upskill Ohio for workforce development.",
+      "h1": "Ohio's Trusted AI Partner",
+      "keywords": "Ohio TechCred, TechCred funding, Upskill Ohio, Ohio AI training, TechCred eligible courses",
+      "canonical": "https://learnrudi.com/ohio.html",
+      "og_image": "https://learnrudi.com/images/upskill-ohio-logo@2x.png"
+    },
+    "courses": {
+      "title": "AI Training Catalog | Courses & Certifications | RUDI AI",
+      "description": "Explore our comprehensive AI training catalog. From AI Literacy foundations to Advanced AI Assistants. Flexible delivery, stackable credentials, TechCred-eligible.",
+      "h1": "AI Training Catalog",
+      "keywords": "AI courses, AI training programs, flexible AI learning, stackable certifications, AI literacy course",
+      "canonical": "https://learnrudi.com/courses.html",
+      "og_image": "https://learnrudi.com/images/Diverse Business Team in Office.png"
+    },
+    "framework": {
+      "title": "30-Point AI Competency Framework | RUDI AI Assessment",
+      "description": "The 30-Point AI Readiness Framework. Measure AI competency across conceptual, operational, and governance domains. Industry-leading assessment methodology.",
+      "h1": "30-Point Framework & Competency Assessment",
+      "keywords": "AI competency framework, AI assessment, 30-point framework, AI skills matrix, AI literacy measurement",
+      "canonical": "https://learnrudi.com/framework.html",
+      "og_image": "https://learnrudi.com/images/Diverse Business Team in Office.png"
+    },
+    "research": {
+      "title": "AI Training Research & Insights | 92% Failure Analysis | RUDI AI",
+      "description": "Research-backed insights on AI training effectiveness. Analysis of 95% enterprise AI failure rate. Real data on what works for organizational AI adoption.",
+      "h1": "AI Research & Insights",
+      "keywords": "AI training research, MIT AI studies, AI implementation failure, AI training ROI, workforce AI readiness",
+      "canonical": "https://learnrudi.com/research.html",
+      "og_image": "https://learnrudi.com/images/Diverse Business Team in Office.png"
+    },
+    "resources": {
+      "title": "Free AI Resources | Templates & Guides | RUDI AI",
+      "description": "Free AI resources, templates, and job aids. ChatGPT prompts, AI reference guides, and training materials to support your AI journey.",
+      "h1": "Free AI Resources",
+      "keywords": "Free AI resources, AI training materials, prompt templates, ChatGPT templates, AI reference guides",
+      "canonical": "https://learnrudi.com/resources.html",
+      "og_image": "https://learnrudi.com/images/Diverse Business Team in Office.png"
+    },
+    "partners": {
+      "title": "RUDI AI Partners | Strategic Partnerships | Trusted Organizations",
+      "description": "Meet our strategic partners. RUDI AI partners with leading education, technology, and workforce development organizations to deliver exceptional AI training.",
+      "h1": "Our Strategic Partnerships",
+      "keywords": "RUDI AI partners, AI training partnerships, education partners, Upskill Ohio, workforce partners",
+      "canonical": "https://learnrudi.com/partners.html",
+      "og_image": "https://learnrudi.com/images/Diverse Business Team in Office.png"
+    },
+    "get-certificate": {
+      "title": "Claim Your AI Certificate | RUDI AI | Certificate of Completion",
+      "description": "Claim and verify your RUDI AI certificate of completion. Stackable credentials recognized by employers. Share your achievement across LinkedIn and professional networks.",
+      "h1": "Claim Your Certificate of Completion",
+      "keywords": "Claim certificate, certificate of completion, AI literacy certificate, verify certificate, RUDI AI credential",
+      "canonical": "https://learnrudi.com/get-certificate.html",
+      "og_image": "https://learnrudi.com/images/Diverse Business Team in Office.png"
+    }
+  },
+
+  "clients": [
+    {
+      "name": "Warren County ESC",
+      "type": "Education Partner",
+      "region": "Ohio"
+    },
+    {
+      "name": "Crowe LLP",
+      "type": "Enterprise Partner",
+      "region": "National"
+    },
+    {
+      "name": "Propel Education",
+      "type": "Education Partner",
+      "region": "National"
+    },
+    {
+      "name": "Mercantile Library",
+      "type": "Community Partner",
+      "region": "Ohio"
+    },
+    {
+      "name": "University of Illinois Springfield",
+      "type": "Academic Partner",
+      "region": "National"
+    },
+    {
+      "name": "AfroTech",
+      "type": "Community Partner",
+      "region": "National"
+    }
+  ],
+
+  "certifications": {
+    "levels": [
+      {
+        "level": 1,
+        "name": "AI Literacy",
+        "description": "Foundation level - Core concepts, basic applications, assessment & certification",
+        "duration": "8 hours",
+        "educationalLevel": "Beginner"
+      },
+      {
+        "level": 2,
+        "name": "Applied AI",
+        "description": "Intermediate level - Hands-on practice with real AI tools, workflow implementation",
+        "duration": "16 hours",
+        "educationalLevel": "Intermediate"
+      },
+      {
+        "level": 3,
+        "name": "AI Assistants, Agents & Workflows",
+        "description": "Advanced level - Build custom AI systems, automation workflows, organizational integration",
+        "duration": "24 hours",
+        "educationalLevel": "Advanced"
+      }
+    ]
+  },
+
+  "metadata": {
+    "lastUpdated": "2025-10-20",
+    "version": "1.0",
+    "charset": "UTF-8",
+    "language": "en-US",
+    "viewport": "width=device-width, initial-scale=1.0"
+  }
+}
