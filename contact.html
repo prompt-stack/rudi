@@ -244,14 +244,24 @@
             const form = this;
             const formData = new FormData(form);
 
-            // Submit to Formspree
+            // Convert FormData to JSON
+            const jsonData = {};
+            for (let [key, value] of formData.entries()) {
+                jsonData[key] = value;
+            }
+
+            console.log('Submitting form data:', jsonData);
+
+            // Submit to Formspree as JSON
             fetch('https://formspree.io/f/mwprjpge', {
                 method: 'POST',
-                body: formData,
                 headers: {
+                    'Content-Type': 'application/json',
                     'Accept': 'application/json'
-                }
+                },
+                body: JSON.stringify(jsonData)
             }).then(response => {
+                console.log('Response status:', response.status);
                 if (response.ok) {
                     // Show success message
                     document.getElementById('contactForm').style.display = 'none';
@@ -259,11 +269,12 @@
                     // Scroll to success message
                     document.getElementById('formSuccess').scrollIntoView({ behavior: 'smooth', block: 'center' });
                 } else {
+                    console.error('Response error:', response.statusText);
                     alert('There was an error submitting your form. Please try again.');
                 }
             }).catch(error => {
+                console.error('Fetch error:', error);
                 alert('There was an error submitting your form. Please try again.');
-                console.error('Error:', error);
             });
         });
     </script>
