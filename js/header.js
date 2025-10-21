@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <nav class="nav-header">
             <div class="container nav-container">
                 <div class="logo">
-                    <a href="index.html">
+                    <a href="/">
                         <h2 style="margin: 0; color: white; font-weight: 600;">RUDI</h2>
                     </a>
                 </div>
@@ -13,27 +13,29 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li class="nav-dropdown">
                         <span class="nav-dropdown-trigger">Certifications <i class="fas fa-chevron-down" style="font-size: 0.7em; margin-left: 4px;"></i></span>
                         <ul class="dropdown-menu">
-                            <li><a href="certificates-business.html">Business</a></li>
-                            <li><a href="certificates-education.html">Education</a></li>
+                            <li><a href="/certificates-business.html">Business</a></li>
+                            <li><a href="/certificates-education.html">Education</a></li>
                         </ul>
                     </li>
-                    <li><a href="framework.html">Framework</a></li>
-                    <li><a href="ohio.html">Ohio</a></li>
-                    <li><a href="research.html">Research</a></li>
-                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="/framework.html">Framework</a></li>
+                    <li><a href="/ohio.html">Ohio</a></li>
+                    <li><a href="/webinars/">Webinars</a></li>
+                    <li><a href="/research.html">Research</a></li>
+                    <li><a href="/resources.html">Resources</a></li>
                 </ul>
-                <a href="contact.html" class="nav-cta">Get Started</a>
+                <a href="/contact.html" class="nav-cta">Get Started</a>
                 <button class="mobile-menu-toggle"><i class="fas fa-bars"></i></button>
             </div>
             <div class="mobile-menu">
-                <a href="index.html">Home</a>
-                <a href="certificates-business.html">Business Certificates</a>
-                <a href="certificates-education.html">Education Certificates</a>
-                <a href="framework.html">Framework</a>
-                <a href="ohio.html">Ohio</a>
-                <a href="research.html">Research</a>
-                <a href="resources.html">Resources</a>
-                <a href="contact.html">Contact</a>
+                <a href="/">Home</a>
+                <a href="/certificates-business.html">Business Certificates</a>
+                <a href="/certificates-education.html">Education Certificates</a>
+                <a href="/framework.html">Framework</a>
+                <a href="/ohio.html">Ohio</a>
+                <a href="/webinars/">Webinars</a>
+                <a href="/research.html">Research</a>
+                <a href="/resources.html">Resources</a>
+                <a href="/contact.html">Contact</a>
             </div>
         </nav>
     `;
@@ -43,24 +45,61 @@ document.addEventListener('DOMContentLoaded', function() {
     if (headerContainer) {
         headerContainer.innerHTML = headerHTML;
 
-        // Get current page filename
-        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const currentPath = window.location.pathname;
 
-        // Add active class to current page link in main nav
-        const navLinks = document.querySelectorAll('.nav-links a');
-        navLinks.forEach(link => {
-            if(link.getAttribute('href') === currentPage) {
-                link.classList.add('active');
+        const normalizePath = (href) => {
+            if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:')) {
+                return null;
             }
-        });
 
-        // Add active class to current page link in mobile menu
-        const mobileLinks = document.querySelectorAll('.mobile-menu a');
-        mobileLinks.forEach(link => {
-            if(link.getAttribute('href') === currentPage) {
-                link.classList.add('active');
+            let path = href;
+
+            if (path.startsWith('http')) {
+                try {
+                    path = new URL(path).pathname;
+                } catch (e) {
+                    return null;
+                }
             }
-        });
+
+            if (!path.startsWith('/')) {
+                path = '/' + path.replace(/^\.\//, '');
+            }
+
+            return path;
+        };
+
+        const matchesCurrentPath = (targetPath) => {
+            if (!targetPath) return false;
+
+            if (targetPath === '/' || targetPath === '/index.html') {
+                return currentPath === '/' || currentPath === '/index.html';
+            }
+
+            if (targetPath.endsWith('/')) {
+                return currentPath === targetPath || currentPath.startsWith(targetPath);
+            }
+
+            if (targetPath.endsWith('/index.html')) {
+                const basePath = targetPath.replace(/index\.html$/, '');
+                return currentPath === targetPath || currentPath === basePath || currentPath.startsWith(basePath);
+            }
+
+            return currentPath === targetPath;
+        };
+
+        const highlightActiveLink = (selector) => {
+            const links = document.querySelectorAll(selector);
+            links.forEach(link => {
+                const linkPath = normalizePath(link.getAttribute('href'));
+                if (matchesCurrentPath(linkPath)) {
+                    link.classList.add('active');
+                }
+            });
+        };
+
+        highlightActiveLink('.nav-links a');
+        highlightActiveLink('.mobile-menu a');
 
         // Re-initialize mobile menu toggle
         const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');

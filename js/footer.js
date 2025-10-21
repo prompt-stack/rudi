@@ -11,20 +11,20 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                     <div class="footer-section">
                         <h4>Training &amp; Certifications</h4>
-                        <a href="courses.html">Course Catalog</a>
-                        <a href="certificates.html">View All Certificates</a>
-                        <a href="framework.html">30-Point Framework</a>
+                        <a href="/certificates-education.html">Education Certificates</a>
+                        <a href="/certificates-business.html">Business Certificates</a>
+                        <a href="/framework.html">30-Point Framework</a>
                     </div>
                     <div class="footer-section">
                         <h4>Resources</h4>
-                        <a href="research.html">Research</a>
-                        <a href="resources.html">Downloads</a>
-                        <a href="ohio.html">Ohio TechCred</a>
+                        <a href="/research.html">Research</a>
+                        <a href="/resources.html">Downloads</a>
+                        <a href="/ohio.html">Ohio TechCred</a>
                     </div>
                     <div class="footer-section">
                         <h4>Get Started</h4>
-                        <a href="contact.html">Contact Us</a>
-                        <a href="certificates.html">Enroll Now</a>
+                        <a href="/contact.html">Contact Us</a>
+                        <a href="/certificates.html">Enroll Now</a>
                     </div>
                 </div>
                 <div class="footer-bottom">
