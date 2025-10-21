@@ -54,7 +54,7 @@
                     </div>
                 </div>
 
-                <a href="#register" class="btn" style="background: white; color: var(--navy-900); font-size: 1.25rem; padding: 1rem 3rem; border-radius: 8px; font-weight: 600; text-decoration: none; display: inline-block; box-shadow: 0 8px 24px rgba(0,0,0,0.2); transition: all 0.3s ease;">
+                <a href="https://us06web.zoom.us/meeting/register/L5eEP6HRQGid6Raz9lyHLw" target="_blank" class="btn" style="background: white; color: var(--navy-900); font-size: 1.25rem; padding: 1rem 3rem; border-radius: 8px; font-weight: 600; text-decoration: none; display: inline-block; box-shadow: 0 8px 24px rgba(0,0,0,0.2); transition: all 0.3s ease;">
                     Register Now - It's Free
                 </a>
 
@@ -215,10 +215,10 @@
         </div>
     </section>
 
-    <!-- Registration Form -->
+    <!-- Registration Section -->
     <section id="register" class="section-padding" style="background: white;">
         <div class="container">
-            <div style="max-width: 700px; margin: 0 auto;">
+            <div style="max-width: 700px; margin: 0 auto; text-align: center;">
                 <div class="section-header">
                     <h2>Register for the Webinar</h2>
                     <p style="font-size: 1.125rem; color: var(--gray-600);">
@@ -226,83 +226,35 @@
                     </p>
                 </div>
 
-                <div class="card">
-                    <form id="webinarForm" action="https://formspree.io/f/manpzqqe" method="POST" style="display: flex; flex-direction: column; gap: 1.5rem;">
-                        <!-- Hidden field to identify this as webinar registration -->
-                        <input type="hidden" name="_subject" value="Webinar Registration - Educators">
-                        <input type="hidden" name="webinar" value="TechCred for Educators - Nov 5, 2025">
-
-                        <div>
-                            <label for="name" style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--navy-900);">Full Name *</label>
-                            <input type="text" id="name" name="name" required style="width: 100%; padding: 0.75rem; border: 2px solid var(--navy-100); border-radius: 6px; font-size: 1rem; font-family: inherit;">
-                        </div>
-
-                        <div>
-                            <label for="email" style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--navy-900);">Email Address *</label>
-                            <input type="email" id="email" name="email" required style="width: 100%; padding: 0.75rem; border: 2px solid var(--navy-100); border-radius: 6px; font-size: 1rem; font-family: inherit;">
-                        </div>
-
-                        <div>
-                            <label for="role" style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--navy-900);">Your Role *</label>
-                            <select id="role" name="role" required style="width: 100%; padding: 0.75rem; border: 2px solid var(--navy-100); border-radius: 6px; font-size: 1rem; font-family: inherit;">
-                                <option value="">Select your role</option>
-                                <option value="teacher">Classroom Teacher</option>
-                                <option value="special-ed">Special Education Teacher</option>
-                                <option value="admin">School Administrator</option>
-                                <option value="district-admin">District Administrator</option>
-                                <option value="esc">Educational Service Center Staff</option>
-                                <option value="specialist">Instructional Coach/Specialist</option>
-                                <option value="other">Other Educator</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label for="organization" style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--navy-900);">School/District/Organization *</label>
-                            <input type="text" id="organization" name="organization" required style="width: 100%; padding: 0.75rem; border: 2px solid var(--navy-100); border-radius: 6px; font-size: 1rem; font-family: inherit;">
-                        </div>
-
-                        <div>
-                            <label for="phone" style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--navy-900);">Phone Number (optional)</label>
-                            <input type="tel" id="phone" name="phone" style="width: 100%; padding: 0.75rem; border: 2px solid var(--navy-100); border-radius: 6px; font-size: 1rem; font-family: inherit;">
-                        </div>
-
-                        <div>
-                            <label for="questions" style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--navy-900);">Questions for the webinar? (optional)</label>
-                            <textarea id="questions" name="questions" rows="3" placeholder="What would you like to learn about AI and TechCred funding?" style="width: 100%; padding: 0.75rem; border: 2px solid var(--navy-100); border-radius: 6px; font-size: 1rem; font-family: inherit; resize: vertical;"></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.125rem; padding: 1rem;">
-                            <i class="fas fa-check-circle"></i> Reserve My Spot
-                        </button>
-
-                        <p style="text-align: center; font-size: 0.875rem; color: var(--gray-600); margin-top: 0.5rem;">
-                            You'll receive a confirmation email with Zoom link within 24 hours
+                <div class="card" style="padding: 3rem 2rem;">
+                    <div style="margin-bottom: 2rem;">
+                        <i class="fas fa-video" style="font-size: 3rem; color: var(--navy-700); margin-bottom: 1.5rem;"></i>
+                        <p style="font-size: 1.125rem; color: var(--gray-600); margin-bottom: 2rem;">
+                            Click the button below to register via Zoom. You'll receive instant confirmation and calendar invite.
                         </p>
-                    </form>
+                    </div>
 
-                    <div id="formSuccess" style="display: none; text-align: center; padding: 2rem;">
-                        <i class="fas fa-check-circle" style="font-size: 4rem; color: #10b981; margin-bottom: 1rem;"></i>
-                        <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--navy-900);">You're Registered!</h3>
-                        <p style="color: var(--gray-600); margin-bottom: 1.5rem;">
-                            Check your email for confirmation and the Zoom link for November 5, 2025 at 1:00 PM ET
+                    <a href="https://us06web.zoom.us/meeting/register/L5eEP6HRQGid6Raz9lyHLw" target="_blank" class="btn btn-primary" style="width: 100%; font-size: 1.25rem; padding: 1.25rem; margin-bottom: 1.5rem;">
+                        <i class="fas fa-external-link-alt"></i> Register on Zoom
+                    </a>
+
+                    <p style="font-size: 0.875rem; color: var(--gray-600);">
+                        After registering, you'll receive a confirmation email with your unique join link
+                    </p>
+
+                    <div style="background: var(--navy-50); padding: 2rem; border-radius: 8px; margin: 2.5rem 0 0 0;">
+                        <h4 style="font-size: 1rem; margin-bottom: 1rem; color: var(--navy-900);">While You're Here...</h4>
+                        <p style="color: var(--gray-600); margin-bottom: 1.5rem; font-size: 0.95rem;">
+                            Explore our TechCred-eligible AI certifications designed specifically for educators
                         </p>
-
-                        <div style="background: var(--navy-50); padding: 2rem; border-radius: 8px; margin: 2rem 0;">
-                            <h4 style="font-size: 1.125rem; margin-bottom: 1rem; color: var(--navy-900);">While You Wait...</h4>
-                            <p style="color: var(--gray-600); margin-bottom: 1.5rem;">
-                                Explore our TechCred-eligible AI certifications designed specifically for educators
-                            </p>
-                            <a href="/certificates-education.html" class="btn btn-primary" style="margin-bottom: 1rem;">
-                                View Education Certificates →
+                        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                            <a href="/certificates-education.html" class="btn btn-secondary">
+                                View Education Certificates
                             </a>
-                            <p style="font-size: 0.875rem; color: var(--gray-600); margin-top: 1rem;">
-                                Or learn more about <a href="/ohio.html" style="color: var(--navy-700); text-decoration: underline;">Ohio TechCred funding</a>
-                            </p>
+                            <a href="/ohio.html" class="btn btn-secondary">
+                                Learn About TechCred
+                            </a>
                         </div>
-
-                        <p style="color: var(--gray-600); font-size: 0.95rem;">
-                            Add to calendar: <a href="#" style="color: var(--navy-700); text-decoration: underline;">Google Calendar</a> | <a href="#" style="color: var(--navy-700); text-decoration: underline;">Outlook</a>
-                        </p>
                     </div>
                 </div>
             </div>
@@ -390,7 +342,7 @@
                 <p style="font-size: 1.125rem; color: var(--gray-600); margin-bottom: 2.5rem;">
                     Join us on November 5, 2025 and discover how to access fully-funded AI training for your school or district
                 </p>
-                <a href="#register" class="btn btn-primary" style="font-size: 1.25rem; padding: 1rem 2.5rem;">
+                <a href="https://us06web.zoom.us/meeting/register/L5eEP6HRQGid6Raz9lyHLw" target="_blank" class="btn btn-primary" style="font-size: 1.25rem; padding: 1rem 2.5rem;">
                     Register Now - It's Free
                 </a>
             </div>
@@ -423,40 +375,6 @@
     <script src="../js/header.js"></script>
     <script src="../js/footer.js"></script>
     <script>
-        // Form submission handling
-        const form = document.getElementById('webinarForm');
-
-        if (form) {
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-
-                const formData = new FormData(form);
-                const jsonData = {};
-                for (let [key, value] of formData.entries()) {
-                    jsonData[key] = value;
-                }
-
-                fetch('https://formspree.io/f/manpzqqe', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json'
-                    },
-                    body: JSON.stringify(jsonData)
-                }).then(response => {
-                    if (response.ok) {
-                        document.getElementById('webinarForm').style.display = 'none';
-                        document.getElementById('formSuccess').style.display = 'block';
-                        document.getElementById('formSuccess').scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    } else {
-                        alert('There was an error submitting your registration. Please try again or contact us directly.');
-                    }
-                }).catch(error => {
-                    alert('There was an error submitting your registration: ' + error.message);
-                });
-            });
-        }
-
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
