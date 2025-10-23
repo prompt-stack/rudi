@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUDI Survey Admin - Create Survey Links</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Clerk Authentication -->
+    <script
+        async
+        crossorigin="anonymous"
+        data-clerk-publishable-key="pk_test_ZXZvbHZpbmctYmx1ZWdpbGwtMC5jbGVyay5hY2NvdW50cy5kZXYk"
+        src="https://evolving-bluegill-0.clerk.accounts.dev/npm/@clerk/clerk-js@5/dist/clerk.browser.js"
+        type="text/javascript">
+    </script>
+    <style>
+        .admin-container {
+            min-height: 100vh;
+            background: #f8fafc;
+            padding: 2rem 0;
+        }
+
+        .admin-card {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            overflow: hidden;
+            border: 1px solid var(--navy-100);
+        }
+
+        .admin-header {
+            background: var(--navy-900);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 2px solid var(--teal);
+        }
+
+        .admin-header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.75rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        .admin-header p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+            font-weight: 300;
+        }
+
+        .admin-content {
+            padding: 3rem;
+        }
+
+        .form-section {
+            margin-bottom: 2rem;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 500;
+            color: var(--navy-900);
+            margin-bottom: 0.75rem;
+            font-size: 1rem;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 1px solid var(--navy-100);
+            border-radius: 6px;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            transition: border-color 0.2s;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--navy-800);
+            box-shadow: 0 0 0 2px rgba(15, 23, 42, 0.1);
+        }
+
+        .form-hint {
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--navy-600);
+        }
+
+        .generate-btn {
+            width: 100%;
+            background: var(--navy-900);
+            color: white;
+            padding: 1rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .generate-btn:hover {
+            background: var(--navy-800);
+        }
+
+        .result-section {
+            display: none;
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: var(--navy-50);
+            border-radius: 6px;
+            border: 1px solid var(--navy-100);
+        }
+
+        .result-section.show {
+            display: block;
+        }
+
+        .result-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            color: var(--navy-900);
+        }
+
+        .result-header i {
+            font-size: 1.25rem;
+            margin-right: 0.75rem;
+        }
+
+        .result-header h3 {
+            font-size: 1.25rem;
+            margin: 0;
+            color: var(--navy-900);
+            font-weight: 500;
+        }
+
+        .link-display {
+            background: white;
+            padding: 1rem;
+            border-radius: 6px;
+            border: 1px solid var(--navy-100);
+            margin-bottom: 1rem;
+        }
+
+        .link-url {
+            word-break: break-all;
+            color: var(--navy-800);
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 0.95rem;
+        }
+
+        .action-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .action-btn {
+            padding: 0.875rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .copy-btn {
+            background: var(--navy-900);
+            color: white;
+        }
+
+        .copy-btn:hover {
+            background: var(--navy-800);
+        }
+
+        .copy-btn.copied {
+            background: #10b981;
+        }
+
+        .open-btn {
+            background: var(--navy-700);
+            color: white;
+        }
+
+        .open-btn:hover {
+            background: var(--navy-600);
+        }
+
+        .qr-section {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--navy-100);
+        }
+
+        .qr-code {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .qr-code canvas {
+            max-width: 200px;
+            height: auto;
+        }
+
+        .survey-list {
+            margin-top: 3rem;
+            padding-top: 3rem;
+            border-top: 2px solid var(--navy-100);
+        }
+
+        .survey-list h2 {
+            font-size: 1.5rem;
+            color: var(--navy-900);
+            margin-bottom: 1.5rem;
+        }
+
+        .survey-item {
+            background: white;
+            padding: 1.25rem;
+            border-radius: 6px;
+            margin-bottom: 0.75rem;
+            border: 1px solid var(--navy-100);
+        }
+
+        .survey-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.75rem;
+        }
+
+        .survey-name {
+            font-weight: 500;
+            color: var(--navy-900);
+            font-size: 1rem;
+        }
+
+        .survey-date {
+            color: var(--navy-600);
+            font-size: 0.9rem;
+        }
+
+        .survey-link {
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 0.85rem;
+            color: var(--navy-700);
+            word-break: break-all;
+            display: block;
+            margin-bottom: 0.75rem;
+        }
+
+        .survey-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .survey-actions button {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .admin-content {
+                padding: 1.5rem;
+            }
+
+            .action-buttons {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-container">
+        <div class="admin-card">
+            <!-- Header -->
+            <div class="admin-header">
+                <h1><i class="fas fa-cog"></i> Survey Admin</h1>
+                <p>Create custom survey links for organizations</p>
+            </div>
+
+            <!-- Sign In Section (shown when not authenticated) -->
+            <div id="signInSection" class="admin-content" style="padding: 3rem; border-bottom: 2px solid var(--navy-100); display: none;">
+                <div style="max-width: 400px; margin: 0 auto; text-align: center;">
+                    <h3 style="color: var(--navy-900); margin-bottom: 1rem; font-weight: 500;">
+                        <i class="fas fa-lock"></i> Sign In Required
+                    </h3>
+                    <p style="color: var(--navy-600); margin-bottom: 2rem; font-size: 0.95rem;">
+                        Please sign in to create and manage survey links
+                    </p>
+                    <div id="clerk-signin-mount"></div>
+                </div>
+            </div>
+
+            <!-- Main Content (hidden until user identified) -->
+            <div id="mainContent" class="admin-content" style="display: none;">
+                <form id="createSurveyForm">
+                    <div class="form-section">
+                        <label class="form-label" for="orgName">
+                            Organization Name <span style="color: #ef4444;">*</span>
+                        </label>
+                        <input
+                            type="text"
+                            id="orgName"
+                            class="form-input"
+                            placeholder="e.g., Warren County ESC, Crowe LLP, etc."
+                            required
+                        >
+                        <p class="form-hint">This name will appear at the top of the survey</p>
+                    </div>
+
+                    <div class="form-section">
+                        <label class="form-label" for="contactEmail">
+                            Contact Email (optional)
+                        </label>
+                        <input
+                            type="email"
+                            id="contactEmail"
+                            class="form-input"
+                            placeholder="your.email@example.com"
+                        >
+                        <p class="form-hint">For tracking purposes (not shown to respondents)</p>
+                    </div>
+
+                    <button type="submit" class="generate-btn">
+                        <i class="fas fa-link"></i> Generate Survey Link
+                    </button>
+                </form>
+
+                <!-- Result Section -->
+                <div class="result-section" id="resultSection">
+                    <div class="result-header">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Survey Link Created!</h3>
+                    </div>
+
+                    <div class="link-display">
+                        <div class="link-url" id="surveyLink"></div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="action-btn copy-btn" id="copyBtn">
+                            <i class="fas fa-copy"></i> Copy Link
+                        </button>
+                        <button class="action-btn open-btn" id="openBtn">
+                            <i class="fas fa-external-link-alt"></i> Open Survey
+                        </button>
+                    </div>
+
+                    <div class="qr-section">
+                        <p style="color: var(--navy-700); font-weight: 600; text-align: center; margin-bottom: 0.5rem;">
+                            <i class="fas fa-qrcode"></i> QR Code (coming soon)
+                        </p>
+                        <p style="color: var(--navy-600); text-align: center; font-size: 0.9rem;">
+                            Print this QR code for easy access on mobile devices
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Survey List -->
+                <div class="survey-list" id="surveyList">
+                    <h2><i class="fas fa-list"></i> Recent Surveys</h2>
+                    <div id="surveyItems">
+                        <!-- Survey items will be populated here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Store surveys in localStorage
+        const STORAGE_KEY = 'rudi_surveys';
+        let clerkInstance = null;
+
+        // Wait for Clerk to load
+        window.addEventListener('load', async () => {
+            if (window.Clerk) {
+                await initializeClerk();
+            } else {
+                // Wait for Clerk script to load
+                const checkClerk = setInterval(async () => {
+                    if (window.Clerk) {
+                        clearInterval(checkClerk);
+                        await initializeClerk();
+                    }
+                }, 100);
+            }
+        });
+
+        // Initialize Clerk
+        async function initializeClerk() {
+            clerkInstance = window.Clerk;
+
+            await clerkInstance.load();
+
+            // Listen for auth state changes
+            clerkInstance.addListener(({ user }) => {
+                updateUIBasedOnAuth(user);
+            });
+
+            // Initial UI update
+            updateUIBasedOnAuth(clerkInstance.user);
+        }
+
+        // Update UI based on authentication state
+        function updateUIBasedOnAuth(user) {
+            const signInSection = document.getElementById('signInSection');
+            const mainContent = document.getElementById('mainContent');
+
+            if (user) {
+                // User is signed in
+                signInSection.style.display = 'none';
+                mainContent.style.display = 'block';
+                updateUserHeader(user);
+                renderSurveyList();
+            } else {
+                // User is not signed in
+                signInSection.style.display = 'block';
+                mainContent.style.display = 'none';
+
+                // Mount SignIn component
+                const signInDiv = document.getElementById('clerk-signin-mount');
+                if (signInDiv && !signInDiv.hasChildNodes()) {
+                    clerkInstance.mountSignIn(signInDiv, {
+                        afterSignInUrl: '/survey-admin.html',
+                        afterSignUpUrl: '/survey-admin.html',
+                        redirectUrl: '/survey-admin.html',
+                        appearance: {
+                            elements: {
+                                rootBox: 'w-full',
+                                card: 'shadow-none'
+                            }
+                        }
+                    });
+                }
+            }
+        }
+
+        // Get base URL
+        function getBaseUrl() {
+            const path = window.location.pathname;
+            const directory = path.substring(0, path.lastIndexOf('/'));
+            return window.location.origin + directory;
+        }
+
+        // Get current user email from Clerk
+        function getCurrentUserEmail() {
+            if (!clerkInstance || !clerkInstance.user) return null;
+            return clerkInstance.user.primaryEmailAddress?.emailAddress || null;
+        }
+
+        // Load saved surveys (filtered by current user)
+        function loadSurveys() {
+            const currentEmail = getCurrentUserEmail();
+            const allSurveys = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+
+            // Filter by creator if user is logged in
+            const surveys = currentEmail
+                ? allSurveys.filter(s => s.createdBy === currentEmail)
+                : allSurveys;
+
+            return surveys.sort((a, b) => new Date(b.created) - new Date(a.created));
+        }
+
+        // Save survey
+        function saveSurvey(survey) {
+            const allSurveys = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+            allSurveys.unshift(survey);
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(allSurveys));
+        }
+
+        // Generate survey link
+        function generateSurveyLink(orgName) {
+            const baseUrl = getBaseUrl();
+            const encodedName = encodeURIComponent(orgName);
+            const currentUserEmail = getCurrentUserEmail();
+            const encodedCreator = encodeURIComponent(currentUserEmail);
+            return `${baseUrl}/survey.html?company=${encodedName}&creator=${encodedCreator}`;
+        }
+
+        // Format date
+        function formatDate(date) {
+            return new Date(date).toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+        }
+
+        // Render survey list
+        function renderSurveyList() {
+            const surveys = loadSurveys();
+            const container = document.getElementById('surveyItems');
+
+            if (surveys.length === 0) {
+                container.innerHTML = `
+                    <p style="text-align: center; color: var(--navy-600); padding: 2rem;">
+                        No surveys created yet. Create your first survey above!
+                    </p>
+                `;
+                return;
+            }
+
+            container.innerHTML = surveys.map(survey => `
+                <div class="survey-item">
+                    <div class="survey-item-header">
+                        <div class="survey-name">${survey.orgName}</div>
+                        <div class="survey-date">${formatDate(survey.created)}</div>
+                    </div>
+                    ${survey.email ? `<p style="color: var(--navy-600); font-size: 0.9rem; margin-bottom: 0.5rem;">Contact: ${survey.email}</p>` : ''}
+                    <div class="survey-link">${survey.link}</div>
+                    <div class="survey-actions">
+                        <button onclick="copyLink('${survey.link}')" style="background: var(--teal); color: white;">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                        <button onclick="openLink('${survey.link}')" style="background: var(--navy-800); color: white;">
+                            <i class="fas fa-external-link-alt"></i> Open
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Copy link to clipboard
+        function copyLink(link) {
+            navigator.clipboard.writeText(link).then(() => {
+                // Show feedback
+                const btn = event.target.closest('button');
+                const originalHTML = btn.innerHTML;
+                btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                btn.style.background = '#10b981';
+                setTimeout(() => {
+                    btn.innerHTML = originalHTML;
+                    btn.style.background = '';
+                }, 2000);
+            });
+        }
+
+        // Open link in new tab
+        function openLink(link) {
+            window.open(link, '_blank');
+        }
+
+        // Update header to show Clerk user and UserButton
+        function updateUserHeader(user) {
+            const mainContent = document.getElementById('mainContent');
+            const existingHeader = mainContent.querySelector('.user-header');
+            if (existingHeader) existingHeader.remove();
+
+            const email = user.primaryEmailAddress?.emailAddress || 'Unknown';
+
+            const userHeader = document.createElement('div');
+            userHeader.className = 'user-header';
+            userHeader.style.cssText = 'background: var(--navy-50); padding: 1rem; border-radius: 6px; margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: center; border: 1px solid var(--navy-100);';
+            userHeader.innerHTML = `
+                <div style="color: var(--navy-900);">
+                    <i class="fas fa-user-circle"></i> Signed in as: <strong>${email}</strong>
+                </div>
+                <div id="clerk-user-button-mount"></div>
+            `;
+            mainContent.insertBefore(userHeader, mainContent.firstChild);
+
+            // Mount Clerk UserButton
+            const userButtonDiv = document.getElementById('clerk-user-button-mount');
+            if (userButtonDiv && clerkInstance) {
+                clerkInstance.mountUserButton(userButtonDiv, {
+                    afterSignOutUrl: '/survey-admin.html'
+                });
+            }
+        }
+
+        // Form submission
+        document.getElementById('createSurveyForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const orgName = document.getElementById('orgName').value.trim();
+            const email = document.getElementById('contactEmail').value.trim();
+            const currentUserEmail = getCurrentUserEmail();
+
+            if (!orgName) return;
+
+            // Generate link
+            const link = generateSurveyLink(orgName);
+
+            // Save survey with creator info
+            const survey = {
+                id: Date.now().toString(),
+                orgName: orgName,
+                email: email || null,
+                link: link,
+                created: new Date().toISOString(),
+                createdBy: currentUserEmail
+            };
+            saveSurvey(survey);
+
+            // Show result
+            document.getElementById('surveyLink').textContent = link;
+            document.getElementById('resultSection').classList.add('show');
+
+            // Update survey list
+            renderSurveyList();
+
+            // Setup buttons
+            document.getElementById('copyBtn').onclick = function() {
+                copyLink(link);
+                this.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                this.classList.add('copied');
+                setTimeout(() => {
+                    this.innerHTML = '<i class="fas fa-copy"></i> Copy Link';
+                    this.classList.remove('copied');
+                }, 2000);
+            };
+
+            document.getElementById('openBtn').onclick = function() {
+                openLink(link);
+            };
+
+            // Scroll to result
+            document.getElementById('resultSection').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+            // Clear form
+            document.getElementById('orgName').value = '';
+            document.getElementById('contactEmail').value = '';
+        });
+
+    </script>
+</body>
+</html>

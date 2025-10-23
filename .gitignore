@@ -12,6 +12,11 @@ npm-debug.log*
 .env*
 .secure/
 
+# Credentials
+credentials.json
+oauth-credentials.json
+token.json
+
 # Deployment
 .vercel
 

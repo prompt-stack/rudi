@@ -6,5 +6,8 @@
     "start": "echo 'This is a static site - no build required'"
   },
   "author": "RUDI",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "googleapis": "^164.1.0"
+  }
 }

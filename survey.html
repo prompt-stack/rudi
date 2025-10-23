@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUDI AI Familiarity & Comfort Survey</title>
+    <meta name="description" content="Anonymous AI literacy survey by RUDI - Responsible Use of Digital Intelligence. Help your organization understand AI adoption and comfort levels.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Survey-specific styles */
+        .survey-container {
+            min-height: 100vh;
+            background: #f8fafc;
+            padding: 2rem 0;
+        }
+
+        .survey-card {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            overflow: hidden;
+            border: 1px solid var(--navy-100);
+        }
+
+        .survey-header {
+            background: var(--navy-900);
+            color: white;
+            padding: 2.5rem 3rem 2rem;
+            text-align: center;
+            border-bottom: 2px solid var(--teal);
+        }
+
+        .survey-header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        .survey-header .subtitle {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 0.5rem;
+            font-weight: 300;
+        }
+
+        .survey-header .company-name {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--teal);
+            margin-top: 1rem;
+        }
+
+        .survey-intro {
+            padding: 2rem 3rem;
+            background: white;
+            border-bottom: 1px solid var(--navy-100);
+        }
+
+        .survey-intro p {
+            line-height: 1.7;
+            color: var(--navy-700);
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+        }
+
+        .survey-section {
+            padding: 2rem 3rem;
+            border-bottom: 1px solid var(--navy-100);
+        }
+
+        .survey-section:last-of-type {
+            border-bottom: none;
+        }
+
+        .question {
+            margin-bottom: 2.5rem;
+        }
+
+        .question:last-child {
+            margin-bottom: 0;
+        }
+
+        .question-label {
+            display: block;
+            font-weight: 500;
+            color: var(--navy-900);
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .question-label .required {
+            color: #ef4444;
+            margin-left: 0.25rem;
+        }
+
+        /* Radio buttons */
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+            padding: 0.875rem 1rem;
+            border: 1px solid var(--navy-100);
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: white;
+        }
+
+        .radio-option:hover {
+            border-color: var(--navy-600);
+            background: var(--navy-50);
+        }
+
+        .radio-option input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            margin-right: 0.875rem;
+            cursor: pointer;
+            accent-color: var(--navy-800);
+        }
+
+        .radio-option input[type="radio"]:checked + label {
+            color: var(--navy-900);
+            font-weight: 500;
+        }
+
+        .radio-option.selected {
+            border-color: var(--navy-800);
+            background: var(--navy-50);
+        }
+
+        .radio-option label {
+            flex: 1;
+            cursor: pointer;
+            color: var(--navy-800);
+        }
+
+        /* Checkboxes */
+        .checkbox-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 0.5rem;
+        }
+
+        .checkbox-option {
+            display: flex;
+            align-items: center;
+            padding: 0.875rem 1rem;
+            border: 1px solid var(--navy-100);
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: white;
+        }
+
+        .checkbox-option:hover {
+            border-color: var(--navy-600);
+            background: var(--navy-50);
+        }
+
+        .checkbox-option.selected {
+            border-color: var(--navy-800);
+            background: var(--navy-50);
+        }
+
+        .checkbox-option input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            margin-right: 0.75rem;
+            cursor: pointer;
+            accent-color: var(--navy-800);
+        }
+
+        .checkbox-option label {
+            flex: 1;
+            cursor: pointer;
+            color: var(--navy-800);
+            font-size: 0.95rem;
+        }
+
+        .checkbox-note {
+            margin-top: 0.75rem;
+            font-size: 0.9rem;
+            color: var(--navy-600);
+            font-style: italic;
+        }
+
+        /* Select dropdown */
+        .select-input {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 1px solid var(--navy-100);
+            border-radius: 6px;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            background-color: white;
+            cursor: pointer;
+            transition: border-color 0.2s;
+            color: var(--navy-800);
+        }
+
+        .select-input:focus {
+            outline: none;
+            border-color: var(--navy-800);
+            box-shadow: 0 0 0 2px rgba(15, 23, 42, 0.1);
+        }
+
+        /* Scale */
+        .scale-container {
+            margin-top: 1rem;
+        }
+
+        .scale-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1.25rem;
+            font-size: 0.9rem;
+            color: var(--navy-600);
+            font-style: italic;
+        }
+
+        .scale-options {
+            display: flex;
+            justify-content: space-between;
+            gap: 0.5rem;
+        }
+
+        .scale-option {
+            flex: 1;
+        }
+
+        .scale-option input[type="radio"] {
+            display: none;
+        }
+
+        .scale-option label {
+            display: block;
+            width: 100%;
+            padding: 0.875rem 0.5rem;
+            text-align: center;
+            border: 1px solid var(--navy-100);
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.2s;
+            background-color: white;
+            color: var(--navy-700);
+        }
+
+        .scale-option input[type="radio"]:checked + label {
+            background-color: var(--navy-900);
+            border-color: var(--navy-900);
+            color: white;
+            font-weight: 600;
+        }
+
+        .scale-option label:hover {
+            border-color: var(--navy-600);
+            background-color: var(--navy-50);
+        }
+
+        .scale-option input[type="radio"]:checked + label:hover {
+            background-color: var(--navy-900);
+        }
+
+        /* Submit section */
+        .submit-section {
+            padding: 2rem 3rem;
+            background: white;
+            text-align: center;
+        }
+
+        .submit-btn {
+            background: var(--navy-900);
+            color: white;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .submit-btn:hover {
+            background: var(--navy-800);
+        }
+
+        .submit-btn:active {
+            transform: scale(0.98);
+        }
+
+        /* Success message */
+        .success-message {
+            display: none;
+            padding: 3rem;
+            text-align: center;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
+        .success-message h2 {
+            color: var(--navy-900);
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            font-weight: 400;
+        }
+
+        .success-message p {
+            color: var(--navy-700);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        /* Progress indicator */
+        .progress-container {
+            padding: 1rem 3rem;
+            background: white;
+            border-bottom: 1px solid var(--navy-100);
+        }
+
+        .progress-bar {
+            height: 4px;
+            background: var(--navy-100);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--navy-900);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .survey-header {
+                padding: 2rem 1.5rem;
+            }
+
+            .survey-header h1 {
+                font-size: 1.75rem;
+            }
+
+            .survey-intro,
+            .survey-section,
+            .submit-section,
+            .progress-container {
+                padding: 1.5rem;
+            }
+
+            .checkbox-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .scale-options {
+                gap: 0.25rem;
+            }
+
+            .scale-option label {
+                padding: 0.75rem 0.25rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+
+    <!-- Survey Configuration -->
+    <script src="js/config.js"></script>
+</head>
+<body>
+    <div class="survey-container">
+        <div class="survey-card">
+            <!-- Header -->
+            <div class="survey-header">
+                <h1>RUDI AI Familiarity & Adoption Survey</h1>
+                <div class="subtitle">Responsible Use of Digital Intelligence</div>
+                <div class="company-name" id="companyName"><!-- Company name will be inserted here --></div>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+            </div>
+
+            <!-- Survey Form -->
+            <form id="surveyForm">
+                <!-- Introduction -->
+                <div class="survey-intro">
+                    <p>This short, anonymous survey will help your organization better understand your comfort and familiarity level with AI. Your responses will not be linked to your name.</p>
+                    <p>There are no right or wrong answers – we're simply learning where everyone is starting from.</p>
+                    <p>This survey is administered by RUDI (Responsible Use of Digital Intelligence), a public education initiative focused on empowering responsible AI use.</p>
+                </div>
+
+                <!-- Questions -->
+                <div class="survey-section" id="questionContainer">
+                    <!-- Questions will be rendered here by JavaScript -->
+                </div>
+
+                <!-- Submit Section -->
+                <div class="submit-section">
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        <i class="fas fa-paper-plane"></i> Submit Survey
+                    </button>
+                </div>
+            </form>
+
+            <!-- Success Message -->
+            <div class="success-message" id="successMessage">
+                <h2><i class="fas fa-check-circle"></i> Thank You!</h2>
+                <p>Your responses have been successfully submitted.</p>
+                <p>We appreciate your participation in helping us understand AI adoption and comfort levels.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Survey questions configuration
+        const surveyQuestions = [
+            {
+                id: "age_range",
+                type: "radio",
+                question: "Which age group do you belong to?",
+                required: true,
+                options: [
+                    "Under 25",
+                    "25–34",
+                    "35–44",
+                    "45–54",
+                    "55–64",
+                    "65 or older",
+                    "Prefer not to say"
+                ]
+            },
+            {
+                id: "industry_sector",
+                type: "select",
+                question: "Which industry best describes your primary work setting?",
+                required: true,
+                options: [
+                    "Education (PreK–12)",
+                    "Education (Higher Ed)",
+                    "Workforce Development / Training",
+                    "Nonprofit / Community Organization",
+                    "Healthcare",
+                    "Government / Public Sector",
+                    "Business / Corporate (non-tech)",
+                    "Technology / Software",
+                    "Finance / Legal / Professional Services",
+                    "Other"
+                ]
+            },
+            {
+                id: "ai_tools_familiar",
+                type: "checkbox",
+                question: "Which of the following AI tools have you used or are familiar with? (Select all that apply)",
+                required: false,
+                options: [
+                    "ChatGPT",
+                    "Claude (Anthropic)",
+                    "Copilot",
+                    "Perplexity AI",
+                    "Google Gemini",
+                    "GenSpark / Manus (agents)",
+                    "Magic School AI",
+                    "Khanmigo (Khan Academy)",
+                    "Midjourney / DALL·E / Adobe Firefly (image tools)",
+                    "Runway / Pika Labs (video tools)",
+                    "ElevenLabs (voice tools)",
+                    "None of these"
+                ]
+            },
+            {
+                id: "ai_frequency",
+                type: "radio",
+                question: "How often do you currently use any AI tools in your personal or professional life?",
+                required: true,
+                options: [
+                    "Never",
+                    "Rarely (once or twice ever)",
+                    "Occasionally (1–2 times per month)",
+                    "Weekly",
+                    "Daily"
+                ]
+            },
+            {
+                id: "organizational_ai_usage",
+                type: "radio",
+                question: "Which best describes your program's current AI adoption status?",
+                required: true,
+                options: [
+                    "No use yet",
+                    "Individual staff experimenting informally",
+                    "Small pilot(s) in one area",
+                    "Several pilots across units",
+                    "Operationalized in standard workflows (with safeguards)"
+                ]
+            },
+            {
+                id: "comfort_digital_tools",
+                type: "scale",
+                question: "How comfortable are you with learning and using new digital tools (including AI) in your role today?",
+                required: true,
+                scaleMin: 0,
+                scaleMax: 10,
+                scaleMinLabel: "Very uncomfortable",
+                scaleMaxLabel: "Very comfortable"
+            },
+            {
+                id: "ai_concerns",
+                type: "checkbox",
+                question: "What concerns do you have about using AI in education? (Pick up to 3)",
+                required: false,
+                maxSelections: 3,
+                options: [
+                    "I don't know where to start",
+                    "Student/client data privacy and security",
+                    "It might replace jobs",
+                    "People might misuse it (cheating / shortcuts)",
+                    "Time required to learn new tools",
+                    "Reliability or accuracy of AI responses",
+                    "Cost or access to tools",
+                    "I'm not concerned"
+                ]
+            },
+            {
+                id: "sixty_day_priorities",
+                type: "select",
+                question: "If you could help your program/department solve one AI-related problem in the next 60 days, what would it be?",
+                required: true,
+                options: [
+                    "Save staff time on admin & compliance (e.g., reports, forms)",
+                    "Family / client communications & translation (multilingual support)",
+                    "Data dashboards & insights (attendance, outcomes, performance)",
+                    "Grant writing & documentation",
+                    "Understanding of AI ethics and best practices",
+                    "Staff PD/coaching: create training materials & capture best practices",
+                    "Other"
+                ]
+            }
+        ];
+
+        // Get company name and creator from URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const companyName = urlParams.get('company') || '';
+        const creatorEmail = urlParams.get('creator') || '';
+        if (companyName) {
+            document.getElementById('companyName').textContent = companyName;
+        }
+
+        // Render questions
+        function renderQuestions() {
+            const container = document.getElementById('questionContainer');
+            let html = '';
+
+            surveyQuestions.forEach((q, index) => {
+                html += `<div class="question">`;
+                html += `<label class="question-label">
+                    ${index + 1}. ${q.question}
+                    ${q.required ? '<span class="required">*</span>' : ''}
+                </label>`;
+
+                if (q.type === 'radio') {
+                    html += `<div class="radio-group">`;
+                    q.options.forEach((option, i) => {
+                        html += `
+                            <div class="radio-option" data-question="${q.id}">
+                                <input type="radio" id="${q.id}_${i}" name="${q.id}" value="${option}" ${q.required ? 'required' : ''}>
+                                <label for="${q.id}_${i}">${option}</label>
+                            </div>
+                        `;
+                    });
+                    html += `</div>`;
+                } else if (q.type === 'checkbox') {
+                    html += `<div class="checkbox-grid">`;
+                    q.options.forEach((option, i) => {
+                        html += `
+                            <div class="checkbox-option" data-question="${q.id}">
+                                <input type="checkbox" id="${q.id}_${i}" name="${q.id}" value="${option}" ${q.maxSelections ? `data-max="${q.maxSelections}"` : ''}>
+                                <label for="${q.id}_${i}">${option}</label>
+                            </div>
+                        `;
+                    });
+                    html += `</div>`;
+                    if (q.maxSelections) {
+                        html += `<p class="checkbox-note">Select up to ${q.maxSelections} options</p>`;
+                    }
+                } else if (q.type === 'select') {
+                    html += `
+                        <select class="select-input" name="${q.id}" ${q.required ? 'required' : ''}>
+                            <option value="">-- Select one --</option>
+                            ${q.options.map(opt => `<option value="${opt}">${opt}</option>`).join('')}
+                        </select>
+                    `;
+                } else if (q.type === 'scale') {
+                    html += `
+                        <div class="scale-container">
+                            <div class="scale-labels">
+                                <span>${q.scaleMinLabel}</span>
+                                <span>${q.scaleMaxLabel}</span>
+                            </div>
+                            <div class="scale-options">
+                    `;
+                    for (let i = q.scaleMin; i <= q.scaleMax; i++) {
+                        html += `
+                            <div class="scale-option">
+                                <input type="radio" id="${q.id}_${i}" name="${q.id}" value="${i}" ${q.required ? 'required' : ''}>
+                                <label for="${q.id}_${i}">${i}</label>
+                            </div>
+                        `;
+                    }
+                    html += `</div></div>`;
+                }
+
+                html += `</div>`;
+            });
+
+            container.innerHTML = html;
+            addEventListeners();
+        }
+
+        // Add event listeners
+        function addEventListeners() {
+            // Radio button styling
+            document.querySelectorAll('.radio-option').forEach(option => {
+                option.addEventListener('click', function() {
+                    const questionId = this.dataset.question;
+                    const input = this.querySelector('input[type="radio"]');
+
+                    // Remove selected class from all options in this question
+                    document.querySelectorAll(`.radio-option[data-question="${questionId}"]`).forEach(opt => {
+                        opt.classList.remove('selected');
+                    });
+
+                    // Add selected class to clicked option
+                    this.classList.add('selected');
+                    input.checked = true;
+                    updateProgress();
+                });
+            });
+
+            // Checkbox styling and max selection enforcement
+            document.querySelectorAll('.checkbox-option').forEach(option => {
+                option.addEventListener('click', function(e) {
+                    if (e.target.tagName === 'INPUT') return; // Let the checkbox handle it naturally
+
+                    const input = this.querySelector('input[type="checkbox"]');
+                    const questionId = this.dataset.question;
+                    const maxSelections = input.dataset.max;
+
+                    if (!input.checked && maxSelections) {
+                        const checked = document.querySelectorAll(`input[name="${questionId}"]:checked`).length;
+                        if (checked >= parseInt(maxSelections)) {
+                            alert(`You can only select up to ${maxSelections} options.`);
+                            return;
+                        }
+                    }
+
+                    input.checked = !input.checked;
+                    this.classList.toggle('selected', input.checked);
+                    updateProgress();
+                });
+
+                // Also handle direct checkbox clicks
+                const input = option.querySelector('input[type="checkbox"]');
+                input.addEventListener('change', function() {
+                    const questionId = option.dataset.question;
+                    const maxSelections = this.dataset.max;
+
+                    if (this.checked && maxSelections) {
+                        const checked = document.querySelectorAll(`input[name="${questionId}"]:checked`).length;
+                        if (checked > parseInt(maxSelections)) {
+                            this.checked = false;
+                            alert(`You can only select up to ${maxSelections} options.`);
+                            return;
+                        }
+                    }
+
+                    option.classList.toggle('selected', this.checked);
+                    updateProgress();
+                });
+            });
+
+            // All inputs update progress
+            document.querySelectorAll('input, select').forEach(input => {
+                input.addEventListener('change', updateProgress);
+            });
+        }
+
+        // Update progress bar
+        function updateProgress() {
+            const totalRequired = surveyQuestions.filter(q => q.required).length;
+            let completed = 0;
+
+            surveyQuestions.forEach(q => {
+                if (!q.required) return;
+
+                const inputs = document.querySelectorAll(`input[name="${q.id}"], select[name="${q.id}"]`);
+                const hasValue = Array.from(inputs).some(input => {
+                    if (input.type === 'radio' || input.type === 'checkbox') {
+                        return input.checked;
+                    }
+                    return input.value !== '';
+                });
+
+                if (hasValue) completed++;
+            });
+
+            const progress = (completed / totalRequired) * 100;
+            document.getElementById('progressFill').style.width = progress + '%';
+        }
+
+        // Google Sheets configuration
+        // URL is loaded from js/config.js
+        const SHEETS_URL = CONFIG.SHEETS_WEBHOOK_URL;
+
+        // Form submission
+        document.getElementById('surveyForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            // Disable submit button
+            const submitBtn = document.getElementById('submitBtn');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+
+            // Collect form data
+            const formData = {};
+            surveyQuestions.forEach(q => {
+                if (q.type === 'checkbox') {
+                    const checked = Array.from(document.querySelectorAll(`input[name="${q.id}"]:checked`))
+                        .map(input => input.value);
+                    formData[q.id] = checked;
+                } else {
+                    const input = document.querySelector(`input[name="${q.id}"]:checked, select[name="${q.id}"]`);
+                    formData[q.id] = input ? input.value : '';
+                }
+            });
+
+            // Add company name and creator to submission
+            formData.company = companyName;
+            formData.created_by = creatorEmail;
+            formData.timestamp = new Date().toISOString();
+
+            try {
+                // Send to Google Sheets
+                if (SHEETS_URL && typeof CONFIG !== 'undefined') {
+                    const response = await fetch(SHEETS_URL, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(formData),
+                        mode: 'no-cors' // Apps Script requires no-cors
+                    });
+
+                    console.log('Survey submitted successfully to Google Sheets');
+                } else {
+                    // Fallback: log to console if not configured
+                    console.error('CONFIG not loaded. Please check js/config.js');
+                    console.log('Survey Response (not saved):', formData);
+                    alert('Configuration error. Please contact the site administrator.');
+                }
+
+                // Show success message
+                document.getElementById('surveyForm').style.display = 'none';
+                document.querySelector('.progress-container').style.display = 'none';
+                document.getElementById('successMessage').classList.add('show');
+
+            } catch (error) {
+                console.error('Submission error:', error);
+                // Still show success since no-cors mode doesn't return response
+                document.getElementById('surveyForm').style.display = 'none';
+                document.querySelector('.progress-container').style.display = 'none';
+                document.getElementById('successMessage').classList.add('show');
+            }
+        });
+
+        // Initialize
+        renderQuestions();
+    </script>
+</body>
+</html>

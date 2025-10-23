@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUDI Educator Webinar - LinkedIn/Facebook</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f4f4f4;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .social-post {
+            width: 1200px;
+            height: 627px;
+            background: white;
+            transform: scale(0.75);
+            transform-origin: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            position: relative;
+        }
+
+        /* Header */
+        .header {
+            padding: 45px 60px 35px;
+            border-bottom: 1px solid #e0e0e0;
+            display: grid;
+            grid-template-columns: 1fr 150px;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .header-content {
+            padding-top: 5px;
+        }
+
+        .logo {
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #161616;
+            margin-bottom: 20px;
+        }
+
+        .title {
+            font-size: 52px;
+            font-weight: 300;
+            line-height: 1.1;
+            color: #161616;
+            margin-bottom: 12px;
+            letter-spacing: -1.5px;
+        }
+
+        .title strong {
+            font-weight: 600;
+        }
+
+        .accent-line {
+            width: 70px;
+            height: 3px;
+            background: #0f62fe;
+            margin-bottom: 15px;
+        }
+
+        .subtitle {
+            font-size: 15px;
+            font-weight: 400;
+            color: #525252;
+            line-height: 1.5;
+        }
+
+        /* Presenter Image */
+        .presenter-section {
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            padding-top: 0;
+        }
+
+        .presenter-image {
+            width: 145px;
+            height: 145px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 50%;
+            display: block;
+        }
+
+        /* Content */
+        .content {
+            padding: 30px 60px;
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            gap: 45px;
+        }
+
+        .left-column {
+        }
+
+        .event-info {
+            display: flex;
+            gap: 35px;
+            margin-bottom: 25px;
+        }
+
+        .info-item {
+            padding: 0;
+        }
+
+        .info-label {
+            font-size: 10px;
+            font-weight: 500;
+            color: #8d8d8d;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .info-value {
+            font-size: 15px;
+            font-weight: 400;
+            color: #161616;
+            line-height: 1.4;
+        }
+
+        .join-us {
+            background: #f8f9fa;
+            border-left: 3px solid #0f62fe;
+            padding: 15px 18px;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .join-us-text {
+            font-size: 13px;
+            color: #161616;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+
+        .right-column {
+        }
+
+        /* Funding Box */
+        .funding {
+            background: #161616;
+            color: #ffffff;
+            padding: 28px 32px;
+            position: relative;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 25px;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .funding::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: #0f62fe;
+        }
+
+        .funding-left {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .funding-label {
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #c6c6c6;
+            margin-bottom: 8px;
+        }
+
+        .funding-amount {
+            font-size: 52px;
+            font-weight: 300;
+            line-height: 1;
+            letter-spacing: -2px;
+        }
+
+        .funding-text {
+            font-size: 13px;
+            color: #f4f4f4;
+            font-weight: 400;
+        }
+
+        /* CTA */
+        .cta {
+            border-top: 1px solid #e0e0e0;
+            padding-top: 20px;
+        }
+
+        .cta-label {
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #8d8d8d;
+            margin-bottom: 8px;
+        }
+
+        .cta-url {
+            font-size: 18px;
+            font-weight: 400;
+            color: #0f62fe;
+            font-family: 'IBM Plex Mono', monospace;
+            letter-spacing: -0.5px;
+        }
+
+        .instructions {
+            margin-top: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            font-size: 14px;
+            color: #525252;
+            line-height: 1.6;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .instructions strong {
+            color: #161616;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="social-post">
+            <!-- Header -->
+            <div class="header">
+                <div class="header-content">
+                    <div class="logo">RUDI</div>
+                    <h1 class="title">
+                        Quality AI Training<br>
+                        <strong>for Educators</strong>
+                    </h1>
+                    <div class="accent-line"></div>
+                    <p class="subtitle">
+                        Responsible Use of Digital Intelligence
+                    </p>
+                </div>
+
+                <!-- Presenter Image -->
+                <div class="presenter-section">
+                    <img src="image.png" alt="Presenter" class="presenter-image">
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="content">
+                <div class="left-column">
+                    <!-- Event Info -->
+                    <div class="event-info">
+                        <div class="info-item">
+                            <div class="info-label">Date</div>
+                            <div class="info-value">November 5, 2025</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Time</div>
+                            <div class="info-value">1:00–2:00 PM ET</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Format</div>
+                            <div class="info-value">Virtual Zoom</div>
+                        </div>
+                    </div>
+
+                    <!-- Join Us -->
+                    <div class="join-us">
+                        <div class="join-us-text">
+                            State-reimbursable responsible AI training specifically designed for educators and educational workloads. Join us for a virtual presentation.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right-column">
+                    <!-- Funding -->
+                    <div class="funding">
+                        <div class="funding-left">
+                            <div class="funding-label">Funding Available</div>
+                            <div class="funding-amount">$180,000</div>
+                        </div>
+                        <div class="funding-text">Per school or district annually</div>
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="cta">
+                        <div class="cta-label">Register</div>
+                        <div class="cta-url">learnrudi.com/webinars/educators</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Instructions -->
+        <div class="instructions">
+            <strong>How to Save for LinkedIn/Facebook:</strong><br>
+            1. Right-click on the image → "Save image as..."<br>
+            2. Or take a screenshot<br>
+            3. Upload to LinkedIn or Facebook (1200x627)
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUDI AI - LinkedIn Company Banner</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f4f4f4;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .banner-label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #161616;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .banner-dimensions {
+            font-size: 12px;
+            color: #8d8d8d;
+            margin-bottom: 20px;
+            font-family: 'IBM Plex Mono', monospace;
+        }
+
+        .banner {
+            width: 1584px;
+            height: 396px;
+            background: #ffffff;
+            transform: scale(0.6);
+            transform-origin: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 0 100px;
+        }
+
+        .left-section {
+            flex: 1;
+            padding-right: 80px;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            color: #161616;
+            margin-bottom: 30px;
+        }
+
+        .tagline {
+            font-size: 72px;
+            font-weight: 300;
+            line-height: 1.1;
+            color: #161616;
+            margin-bottom: 25px;
+            letter-spacing: -2px;
+        }
+
+        .tagline strong {
+            font-weight: 600;
+        }
+
+        .accent-line {
+            width: 120px;
+            height: 4px;
+            background: #0f62fe;
+            margin-bottom: 25px;
+        }
+
+        .description {
+            font-size: 20px;
+            font-weight: 400;
+            color: #525252;
+            line-height: 1.5;
+            max-width: 600px;
+        }
+
+        .right-section {
+            width: 380px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .stat-box {
+            background: #f8f9fa;
+            padding: 25px 30px;
+            border-left: 3px solid #0f62fe;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #8d8d8d;
+            margin-bottom: 8px;
+        }
+
+        .stat-value {
+            font-size: 18px;
+            font-weight: 500;
+            color: #161616;
+            line-height: 1.4;
+        }
+
+        .instructions {
+            margin-top: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            font-size: 14px;
+            color: #525252;
+            line-height: 1.6;
+            max-width: 800px;
+        }
+
+        .instructions strong {
+            color: #161616;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="banner-label">LinkedIn Company Page Banner</div>
+        <div class="banner-dimensions">1584 × 396px</div>
+
+        <div class="banner">
+            <div class="left-section">
+                <div class="logo">RUDI</div>
+                <h1 class="tagline">
+                    Responsible Use of<br>
+                    <strong>Digital Intelligence</strong>
+                </h1>
+                <div class="accent-line"></div>
+                <p class="description">
+                    High-quality AI training increasing workforce familiarity, comfort, and literacy with artificial intelligence.
+                </p>
+            </div>
+
+            <div class="right-section">
+                <div class="stat-box">
+                    <div class="stat-label">TechCred Eligible</div>
+                    <div class="stat-value">State-reimbursable AI training for Ohio organizations</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">Training Focus</div>
+                    <div class="stat-value">Educators, Business Professionals, Non-Profits, Leadership</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <strong>How to Upload to LinkedIn:</strong><br>
+            1. Go to your RUDI AI LinkedIn company page<br>
+            2. Click the camera icon on the banner area<br>
+            3. Upload this image (right-click → Save, or screenshot)<br>
+            4. Adjust positioning if needed<br>
+            5. Click "Save"<br><br>
+            <strong>Note:</strong> LinkedIn may crop the edges on mobile, so important content is centered.
+        </div>
+    </div>
+</body>
+</html>

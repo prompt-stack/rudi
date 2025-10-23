@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechCred & AI Training Information Session - RUDI</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f4f4f4;
+            padding: 30px 20px;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .flyer {
+            width: 8.5in;
+            height: 11in;
+            margin: 0 auto;
+            background: #ffffff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Header */
+        .header {
+            padding: 45px 50px 30px;
+            border-bottom: 1px solid #e0e0e0;
+            display: grid;
+            grid-template-columns: 1fr 180px;
+            gap: 35px;
+            align-items: start;
+        }
+
+        .header-content {
+            padding-top: 8px;
+        }
+
+        .logo {
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #161616;
+            margin-bottom: 25px;
+        }
+
+        .title {
+            font-size: 46px;
+            font-weight: 300;
+            line-height: 1.1;
+            color: #161616;
+            margin-bottom: 15px;
+            letter-spacing: -1.5px;
+        }
+
+        .title strong {
+            font-weight: 600;
+        }
+
+        .subtitle {
+            font-size: 15px;
+            font-weight: 400;
+            color: #525252;
+            line-height: 1.5;
+            max-width: 450px;
+            margin-bottom: 15px;
+        }
+
+        .accent-line {
+            width: 70px;
+            height: 3px;
+            background: #0f62fe;
+            margin-bottom: 20px;
+        }
+
+        /* Image Section */
+        .presenter-section {
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            padding-top: 0;
+        }
+
+        .presenter-image {
+            width: 170px;
+            height: 170px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 50%;
+            display: block;
+        }
+
+        /* Content */
+        .content {
+            padding: 25px 50px;
+        }
+
+        .section {
+            margin-bottom: 22px;
+        }
+
+        .section-label {
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #8d8d8d;
+            margin-bottom: 12px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-bottom: 22px;
+        }
+
+        .info-item {
+            padding: 0;
+        }
+
+        .info-label {
+            font-size: 10px;
+            font-weight: 500;
+            color: #8d8d8d;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .info-value {
+            font-size: 15px;
+            font-weight: 400;
+            color: #161616;
+            line-height: 1.4;
+        }
+
+        .join-us {
+            background: #f8f9fa;
+            border-left: 3px solid #0f62fe;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .join-us-text {
+            font-size: 12px;
+            color: #161616;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+
+        /* Topics */
+        .topics {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 14px 18px;
+            margin-bottom: 22px;
+        }
+
+        .topic {
+            padding: 0;
+            border-left: 2px solid #0f62fe;
+            padding-left: 12px;
+        }
+
+        .topic-title {
+            font-size: 12px;
+            font-weight: 500;
+            color: #161616;
+            margin-bottom: 4px;
+        }
+
+        .topic-text {
+            font-size: 10px;
+            color: #525252;
+            line-height: 1.4;
+        }
+
+        /* Funding Box */
+        .funding {
+            background: #161616;
+            color: #ffffff;
+            padding: 28px 40px;
+            margin: 0 0 22px;
+            position: relative;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .funding::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: #0f62fe;
+        }
+
+        .funding-left {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .funding-label {
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #c6c6c6;
+            margin-bottom: 8px;
+        }
+
+        .funding-amount {
+            font-size: 56px;
+            font-weight: 300;
+            line-height: 1;
+            letter-spacing: -2px;
+        }
+
+        .funding-text {
+            font-size: 13px;
+            color: #f4f4f4;
+            font-weight: 400;
+        }
+
+        /* CTA */
+        .cta {
+            border-top: 1px solid #e0e0e0;
+            padding-top: 18px;
+            padding-bottom: 0;
+        }
+
+        .cta-label {
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #8d8d8d;
+            margin-bottom: 8px;
+        }
+
+        .cta-url {
+            font-size: 20px;
+            font-weight: 400;
+            color: #0f62fe;
+            margin-bottom: 8px;
+            font-family: 'IBM Plex Mono', monospace;
+            letter-spacing: -0.5px;
+        }
+
+        .cta-contact {
+            font-size: 11px;
+            color: #525252;
+            margin-bottom: 0;
+        }
+
+        .cta-contact a {
+            color: #0f62fe;
+            text-decoration: none;
+            font-family: 'IBM Plex Mono', monospace;
+        }
+
+        .about-rudi {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #e0e0e0;
+            font-size: 9px;
+            color: #8d8d8d;
+            line-height: 1.5;
+        }
+
+        .about-rudi strong {
+            color: #161616;
+            font-weight: 500;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .flyer {
+                box-shadow: none;
+                width: 100%;
+                height: 100%;
+            }
+            .print-button {
+                display: none !important;
+            }
+        }
+
+        @page {
+            size: letter portrait;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="flyer">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-content">
+                <div class="logo">RUDI</div>
+
+                <h1 class="title">
+                    Quality AI Training<br>
+                    <strong>for Educators</strong>
+                </h1>
+
+                <div class="accent-line"></div>
+
+                <p class="subtitle">
+                    Responsible Use of Digital Intelligence. RUDI provides state-reimbursable responsible AI training specifically designed for educators and educational workloads.
+                </p>
+            </div>
+
+            <!-- Presenter Image -->
+            <div class="presenter-section">
+                <img src="image.png" alt="Presenter" class="presenter-image">
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <!-- Event Info -->
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="info-label">Date</div>
+                    <div class="info-value">November 5<br>2025</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Time</div>
+                    <div class="info-value">1:00–2:00 PM<br>Eastern Time</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Format</div>
+                    <div class="info-value">Virtual<br>Zoom Webinar</div>
+                </div>
+            </div>
+
+            <!-- Join Us -->
+            <div class="join-us">
+                <div class="join-us-text">
+                    Join us for a virtual presentation where we'll cover the following topics:
+                </div>
+            </div>
+
+            <!-- What You'll Learn -->
+            <div class="section">
+                <div class="section-label">What We'll Cover</div>
+                <div class="topics">
+                    <div class="topic">
+                        <div class="topic-title">TechCred Funding Overview</div>
+                        <div class="topic-text">How Ohio educators access up to $180K annually in fully reimbursable AI training</div>
+                    </div>
+                    <div class="topic">
+                        <div class="topic-title">Application Process</div>
+                        <div class="topic-text">Step-by-step guidance through the TechCred application and reimbursement process</div>
+                    </div>
+                    <div class="topic">
+                        <div class="topic-title">RUDI's Training Programs</div>
+                        <div class="topic-text">AI certificates designed specifically for educators, administrators, and support staff</div>
+                    </div>
+                    <div class="topic">
+                        <div class="topic-title">Real-World Applications</div>
+                        <div class="topic-text">How AI training applies to OTES evaluation, IEP workflows, and lesson planning</div>
+                    </div>
+                    <div class="topic">
+                        <div class="topic-title">Success Stories</div>
+                        <div class="topic-text">Examples from Ohio schools and districts already using RUDI's training programs</div>
+                    </div>
+                    <div class="topic">
+                        <div class="topic-title">Next Steps</div>
+                        <div class="topic-text">How to get started with TechCred for your school or district this funding cycle</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Funding -->
+        <div class="funding">
+            <div class="funding-left">
+                <div class="funding-label">Funding Available</div>
+                <div class="funding-amount">$180,000</div>
+            </div>
+            <div class="funding-text">Per school or district annually through Ohio TechCred</div>
+        </div>
+
+        <!-- CTA -->
+        <div class="content">
+            <div class="cta">
+                <div class="cta-label">Register</div>
+                <div class="cta-url">learnrudi.com/webinars/educators</div>
+                <div class="cta-contact">
+                    Questions? <a href="mailto:learnrudi@gmail.com">learnrudi@gmail.com</a>
+                </div>
+                <div class="about-rudi">
+                    <strong>About RUDI:</strong> RUDI (Responsible Use of Digital Intelligence) is dedicated to increasing workforce familiarity, comfort, and literacy with AI through high-quality, ethical training programs.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('load', function() {
+            const printBtn = document.createElement('button');
+            printBtn.className = 'print-button';
+            printBtn.textContent = 'Print / Save as PDF';
+            printBtn.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                padding: 12px 24px;
+                background: #0f62fe;
+                color: white;
+                border: none;
+                border-radius: 0;
+                cursor: pointer;
+                font-weight: 500;
+                font-size: 14px;
+                font-family: 'IBM Plex Sans', sans-serif;
+                letter-spacing: 0.5px;
+                z-index: 1000;
+                transition: background 0.2s;
+            `;
+            printBtn.onmouseover = () => printBtn.style.background = '#0353e9';
+            printBtn.onmouseout = () => printBtn.style.background = '#0f62fe';
+            printBtn.onclick = () => window.print();
+            document.body.appendChild(printBtn);
+        });
+    </script>
+</body>
+</html>

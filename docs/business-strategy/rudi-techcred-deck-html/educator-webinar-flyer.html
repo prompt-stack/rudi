@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechCred & AI Training Webinar for Educators - RUDI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #f5f5f5;
+            padding: 40px 20px;
+            line-height: 1.5;
+        }
+
+        .flyer-container {
+            width: 8.5in;
+            height: 11in;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Header Section */
+        .header {
+            padding: 50px 60px 30px;
+            background: white;
+        }
+
+        .brand {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
+
+        .presents {
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #374151;
+            margin-bottom: 40px;
+        }
+
+        .main-title {
+            font-size: 52px;
+            font-weight: 800;
+            line-height: 1.1;
+            color: #111827;
+            margin-bottom: 30px;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        .description {
+            font-size: 16px;
+            color: #4b5563;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            max-width: 550px;
+        }
+
+        /* Image Section */
+        .image-section {
+            position: relative;
+            padding: 0 60px;
+            margin-bottom: 40px;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 320px;
+            background: linear-gradient(135deg, #e0e7ff 0%, #dbeafe 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image-placeholder::before {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(30, 58, 138, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .presenter-icon {
+            font-size: 80px;
+            color: #1e3a8a;
+            opacity: 0.3;
+        }
+
+        /* Details Section */
+        .details-section {
+            padding: 0 60px 40px;
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .detail-item {
+            background: #f9fafb;
+            padding: 20px;
+            border-radius: 12px;
+            border: 2px solid #e5e7eb;
+        }
+
+        .detail-label {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #6b7280;
+            margin-bottom: 8px;
+        }
+
+        .detail-value {
+            font-size: 18px;
+            font-weight: 700;
+            color: #111827;
+        }
+
+        /* Funding Highlight */
+        .funding-box {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .funding-label {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 15px;
+        }
+
+        .funding-amount {
+            font-size: 56px;
+            font-weight: 900;
+            color: white;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+
+        .funding-text {
+            font-size: 16px;
+            font-weight: 500;
+            color: rgba(255,255,255,0.95);
+            line-height: 1.5;
+        }
+
+        /* Registration Section */
+        .registration {
+            text-align: center;
+            padding: 0 60px 40px;
+        }
+
+        .register-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 15px;
+        }
+
+        .register-url {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 30px;
+            word-break: break-all;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 0 60px 50px;
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: #1e3a8a;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Decorative Elements */
+        .accent-bar {
+            width: 80px;
+            height: 4px;
+            background: #1e3a8a;
+            margin-bottom: 25px;
+        }
+
+        .divider {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #e5e7eb, transparent);
+            margin: 30px 0;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .flyer-container {
+                width: 100%;
+                height: 100%;
+                box-shadow: none;
+                margin: 0;
+            }
+        }
+
+        @page {
+            size: letter portrait;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="flyer-container">
+        <!-- Header -->
+        <div class="header">
+            <div class="brand">RESPONSIBLE USE OF DIGITAL INTELLIGENCE (RUDI)</div>
+            <div class="presents">PRESENTS</div>
+
+            <h1 class="main-title">
+                TechCred & AI Training<br>
+                Webinar for Educators
+            </h1>
+
+            <div class="accent-bar"></div>
+
+            <div class="subtitle">
+                Learn to access up to $180K in state-funded AI training
+            </div>
+
+            <p class="description">
+                Join us for a comprehensive session on TechCred funding and workplace-ready AI tools. Discover practical solutions for student outcomes, classroom management, OTES evaluation prep, and IEP efficiency.
+            </p>
+        </div>
+
+        <!-- Image Section -->
+        <div class="image-section">
+            <div class="image-placeholder">
+                <div style="text-align: center;">
+                    <svg width="120" height="120" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity: 0.4;">
+                        <path d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z" fill="#1e3a8a"/>
+                        <path d="M12 14C6.47715 14 2 18.4772 2 24H22C22 18.4772 17.5228 14 12 14Z" fill="#1e3a8a"/>
+                    </svg>
+                    <div style="margin-top: 20px; font-size: 14px; color: #6b7280; font-weight: 500;">
+                        Professional educator presenting to engaged audience
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Details Grid -->
+        <div class="details-section">
+            <div class="detail-grid">
+                <div class="detail-item">
+                    <div class="detail-label">📅 Date</div>
+                    <div class="detail-value">November 5, 2025</div>
+                </div>
+
+                <div class="detail-item">
+                    <div class="detail-label">🕐 Time</div>
+                    <div class="detail-value">1:00–2:00 PM ET</div>
+                </div>
+
+                <div class="detail-item">
+                    <div class="detail-label">💻 Platform</div>
+                    <div class="detail-value">Virtual (Zoom)</div>
+                </div>
+
+                <div class="detail-item">
+                    <div class="detail-label">🎓 Audience</div>
+                    <div class="detail-value">K-12 Educators</div>
+                </div>
+            </div>
+
+            <!-- Funding Highlight -->
+            <div class="funding-box">
+                <div class="funding-label">Funding Available</div>
+                <div class="funding-amount">$180,000</div>
+                <div class="funding-text">
+                    Per school/district annually<br>
+                    Through Ohio's TechCred Program
+                </div>
+            </div>
+        </div>
+
+        <!-- Registration -->
+        <div class="registration">
+            <div class="register-title">Register Now</div>
+            <div class="register-url">learnrudi.com/webinars/educators</div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="divider"></div>
+            <div>
+                <a href="mailto:learnrudi@gmail.com">learnrudi@gmail.com</a> •
+                <a href="https://learnrudi.com">learnrudi.com</a>
+            </div>
+            <div style="margin-top: 15px; font-size: 12px;">
+                Trusted by Warren County ESC, Ohio Head Start, Propel Education, and University of Illinois Springfield
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Print button functionality
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
+                e.preventDefault();
+                window.print();
+            }
+        });
+
+        // Add print button
+        window.addEventListener('load', function() {
+            const printBtn = document.createElement('button');
+            printBtn.textContent = '🖨️ Print / Save as PDF';
+            printBtn.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                padding: 12px 24px;
+                background: #1e3a8a;
+                color: white;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                font-weight: 600;
+                font-size: 14px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                z-index: 1000;
+                font-family: 'Inter', sans-serif;
+            `;
+            printBtn.onclick = () => window.print();
+            document.body.appendChild(printBtn);
+        });
+    </script>
+</body>
+</html>

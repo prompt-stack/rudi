@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUDI Educator Webinar - Instagram Square</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f4f4f4;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 600px;
+        }
+
+        .social-post {
+            width: 1080px;
+            height: 1080px;
+            background: #ffffff;
+            transform: scale(0.5);
+            transform-origin: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            position: relative;
+        }
+
+        /* Header */
+        .header {
+            padding: 70px 80px 50px;
+            border-bottom: 1px solid #e0e0e0;
+            display: grid;
+            grid-template-columns: 1fr 200px;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .header-content {
+            padding-top: 10px;
+        }
+
+        .logo {
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #161616;
+            margin-bottom: 35px;
+        }
+
+        .title {
+            font-size: 68px;
+            font-weight: 300;
+            line-height: 1.1;
+            color: #161616;
+            margin-bottom: 20px;
+            letter-spacing: -2px;
+        }
+
+        .title strong {
+            font-weight: 600;
+        }
+
+        .accent-line {
+            width: 90px;
+            height: 4px;
+            background: #0f62fe;
+            margin-bottom: 25px;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            font-weight: 400;
+            color: #525252;
+            line-height: 1.5;
+        }
+
+        /* Presenter Image */
+        .presenter-section {
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            padding-top: 0;
+        }
+
+        .presenter-image {
+            width: 190px;
+            height: 190px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 50%;
+            display: block;
+        }
+
+        /* Content */
+        .content {
+            padding: 45px 80px;
+        }
+
+        .event-info {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .info-item {
+            padding: 0;
+        }
+
+        .info-label {
+            font-size: 13px;
+            font-weight: 500;
+            color: #8d8d8d;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .info-value {
+            font-size: 20px;
+            font-weight: 400;
+            color: #161616;
+            line-height: 1.4;
+        }
+
+        .join-us {
+            background: #f8f9fa;
+            border-left: 3px solid #0f62fe;
+            padding: 18px 22px;
+            margin-bottom: 35px;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .join-us-text {
+            font-size: 16px;
+            color: #161616;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+
+        /* Funding Box */
+        .funding {
+            background: #161616;
+            color: #ffffff;
+            padding: 40px 50px;
+            margin: 0 0 35px;
+            position: relative;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .funding::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: #0f62fe;
+        }
+
+        .funding-left {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .funding-label {
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #c6c6c6;
+            margin-bottom: 10px;
+        }
+
+        .funding-amount {
+            font-size: 68px;
+            font-weight: 300;
+            line-height: 1;
+            letter-spacing: -2px;
+        }
+
+        .funding-text {
+            font-size: 16px;
+            color: #f4f4f4;
+            font-weight: 400;
+        }
+
+        /* CTA */
+        .cta {
+            border-top: 1px solid #e0e0e0;
+            padding-top: 30px;
+        }
+
+        .cta-label {
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #8d8d8d;
+            margin-bottom: 12px;
+        }
+
+        .cta-url {
+            font-size: 28px;
+            font-weight: 400;
+            color: #0f62fe;
+            font-family: 'IBM Plex Mono', monospace;
+            letter-spacing: -0.5px;
+        }
+
+        .instructions {
+            margin-top: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            font-size: 14px;
+            color: #525252;
+            line-height: 1.6;
+        }
+
+        .instructions strong {
+            color: #161616;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="social-post">
+            <!-- Header -->
+            <div class="header">
+                <div class="header-content">
+                    <div class="logo">RUDI</div>
+                    <h1 class="title">
+                        Quality AI<br>
+                        Training<br>
+                        <strong>for Educators</strong>
+                    </h1>
+                    <div class="accent-line"></div>
+                    <p class="subtitle">
+                        Responsible Use of<br>
+                        Digital Intelligence
+                    </p>
+                </div>
+
+                <!-- Presenter Image -->
+                <div class="presenter-section">
+                    <img src="image.png" alt="Presenter" class="presenter-image">
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="content">
+                <!-- Event Info -->
+                <div class="event-info">
+                    <div class="info-item">
+                        <div class="info-label">Date</div>
+                        <div class="info-value">November 5<br>2025</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Time</div>
+                        <div class="info-value">1:00–2:00 PM<br>Eastern Time</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Format</div>
+                        <div class="info-value">Virtual<br>Zoom Webinar</div>
+                    </div>
+                </div>
+
+                <!-- Join Us -->
+                <div class="join-us">
+                    <div class="join-us-text">
+                        State-reimbursable responsible AI training. Join us for a virtual presentation.
+                    </div>
+                </div>
+
+                <!-- Funding -->
+                <div class="funding">
+                    <div class="funding-left">
+                        <div class="funding-label">Funding Available</div>
+                        <div class="funding-amount">$180,000</div>
+                    </div>
+                    <div class="funding-text">Per school or district annually through Ohio TechCred</div>
+                </div>
+
+                <!-- CTA -->
+                <div class="cta">
+                    <div class="cta-label">Register</div>
+                    <div class="cta-url">learnrudi.com/webinars/educators</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Instructions -->
+        <div class="instructions">
+            <strong>How to Save for Instagram:</strong><br>
+            1. Right-click on the image → "Save image as..."<br>
+            2. Or take a screenshot (Cmd+Shift+4 on Mac, Windows+Shift+S on PC)<br>
+            3. Upload to Instagram as a square post (1080x1080)
+        </div>
+    </div>
+</body>
+</html>

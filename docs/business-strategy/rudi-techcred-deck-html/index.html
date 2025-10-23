@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUDI Webinar Flyer Designs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 60px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .subtitle {
+            text-align: center;
+            color: rgba(255,255,255,0.9);
+            font-size: 20px;
+            margin-bottom: 60px;
+        }
+
+        .designs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .design-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .design-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+        }
+
+        .design-preview {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .design-preview::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .design-info {
+            padding: 30px;
+        }
+
+        .design-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 15px;
+        }
+
+        .design-description {
+            font-size: 14px;
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .design-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+        }
+
+        .feature-badge {
+            background: #f1f5f9;
+            color: #475569;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 14px 20px;
+            border-radius: 10px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        .btn-secondary:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .instructions {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .instructions h2 {
+            font-size: 28px;
+            color: #1e293b;
+            margin-bottom: 20px;
+        }
+
+        .instructions ol {
+            margin-left: 20px;
+            color: #475569;
+            line-height: 2;
+        }
+
+        .instructions li {
+            margin-bottom: 10px;
+        }
+
+        .instructions code {
+            background: #f1f5f9;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: 'Monaco', monospace;
+            font-size: 13px;
+            color: #667eea;
+        }
+
+        .tip-box {
+            background: #eff6ff;
+            border-left: 4px solid #3b82f6;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 8px;
+        }
+
+        .tip-box strong {
+            color: #1e40af;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 RUDI Webinar Flyer Designs</h1>
+        <p class="subtitle">Choose your preferred design and export as PDF</p>
+
+        <div class="designs-grid">
+            <!-- Design 1: Sleek IBM Style -->
+            <div class="design-card" style="grid-column: 1 / -1; max-width: 600px; margin: 0 auto;">
+                <div class="design-preview" style="background: linear-gradient(135deg, #ffffff 0%, #f4f4f4 100%);">
+                    ⚡
+                </div>
+                <div class="design-info">
+                    <div class="design-title">IBM-Style Design ⭐ RECOMMENDED</div>
+                    <p class="design-description">
+                        Sleek, minimal, sophisticated. IBM Plex typeface, lots of white space, clean typography. Premium professional aesthetic.
+                    </p>
+                    <div class="design-features">
+                        <span class="feature-badge">⚡ Ultra Minimal</span>
+                        <span class="feature-badge">💼 IBM Inspired</span>
+                        <span class="feature-badge">🎯 Sophisticated</span>
+                        <span class="feature-badge">✨ Premium</span>
+                    </div>
+                    <div class="button-group">
+                        <a href="educator-webinar-flyer-sleek.html" target="_blank" class="btn btn-primary">
+                            Open Design
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Design 2 -->
+            <div class="design-card">
+                <div class="design-preview">
+                    📄
+                </div>
+                <div class="design-info">
+                    <div class="design-title">Classic Design</div>
+                    <p class="design-description">
+                        Clean, professional layout with traditional structure. Perfect for formal communications and easy readability.
+                    </p>
+                    <div class="design-features">
+                        <span class="feature-badge">✨ Clean Layout</span>
+                        <span class="feature-badge">📊 Detail Grid</span>
+                        <span class="feature-badge">🎯 Professional</span>
+                    </div>
+                    <div class="button-group">
+                        <a href="educator-webinar-flyer.html" target="_blank" class="btn btn-primary">
+                            Open Design
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Design 3 -->
+            <div class="design-card">
+                <div class="design-preview">
+                    ✨
+                </div>
+                <div class="design-info">
+                    <div class="design-title">Modern Design</div>
+                    <p class="design-description">
+                        Bold, eye-catching design with gradient header and feature cards. Ideal for social media and digital promotion.
+                    </p>
+                    <div class="design-features">
+                        <span class="feature-badge">🎨 Gradient Hero</span>
+                        <span class="feature-badge">💫 Animated</span>
+                        <span class="feature-badge">🔥 Eye-catching</span>
+                    </div>
+                    <div class="button-group">
+                        <a href="educator-webinar-flyer-alt.html" target="_blank" class="btn btn-primary">
+                            Open Design
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Instructions -->
+        <div class="instructions">
+            <h2>📖 How to Use These Flyers</h2>
+
+            <ol>
+                <li>Click <strong>"Open Design"</strong> on your preferred flyer above</li>
+                <li>Click the <strong>"🖨️ Print / Save as PDF"</strong> button in the top right</li>
+                <li>In the print dialog:
+                    <ul style="margin-top: 10px; margin-left: 20px;">
+                        <li>Select <strong>"Save as PDF"</strong> as the destination</li>
+                        <li>Make sure <strong>"Background graphics"</strong> is enabled</li>
+                        <li>Set margins to <code>None</code> or <code>Minimum</code></li>
+                        <li>Click <strong>Save</strong></li>
+                    </ul>
+                </li>
+                <li>Share your PDF via email, social media, or print physically!</li>
+            </ol>
+
+            <div class="tip-box">
+                <strong>💡 Pro Tips:</strong>
+                <ul style="margin-top: 10px; margin-left: 20px; line-height: 1.8;">
+                    <li>For best results, use <strong>Chrome or Edge</strong> browser</li>
+                    <li>The flyers are sized for <strong>standard US Letter (8.5" × 11")</strong></li>
+                    <li>Both designs are fully responsive and print-optimized</li>
+                    <li>You can edit the HTML files directly to customize colors, text, or layout</li>
+                </ul>
+            </div>
+
+            <div style="margin-top: 40px; padding-top: 30px; border-top: 2px solid #e2e8f0; text-align: center; color: #64748b;">
+                <p><strong>Need help?</strong> Contact <a href="mailto:learnrudi@gmail.com" style="color: #667eea; text-decoration: none;">learnrudi@gmail.com</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

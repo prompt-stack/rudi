@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechCred & AI Training - RUDI</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f4f4f4;
+            padding: 40px 20px;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .flyer {
+            width: 8.5in;
+            height: 11in;
+            margin: 0 auto;
+            background: #ffffff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Header */
+        .header {
+            padding: 60px 70px 50px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .logo {
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #161616;
+            margin-bottom: 50px;
+        }
+
+        .title {
+            font-size: 64px;
+            font-weight: 300;
+            line-height: 1.15;
+            color: #161616;
+            margin-bottom: 25px;
+            letter-spacing: -1.5px;
+        }
+
+        .title strong {
+            font-weight: 600;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            font-weight: 400;
+            color: #525252;
+            line-height: 1.6;
+            max-width: 520px;
+        }
+
+        /* Content */
+        .content {
+            padding: 50px 70px;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section-label {
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #8d8d8d;
+            margin-bottom: 20px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .info-item {
+            padding: 0;
+        }
+
+        .info-label {
+            font-size: 12px;
+            font-weight: 500;
+            color: #8d8d8d;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .info-value {
+            font-size: 18px;
+            font-weight: 400;
+            color: #161616;
+            line-height: 1.4;
+        }
+
+        /* Topics */
+        .topics {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-bottom: 50px;
+        }
+
+        .topic {
+            padding: 0;
+            border-left: 2px solid #0f62fe;
+            padding-left: 16px;
+        }
+
+        .topic-title {
+            font-size: 15px;
+            font-weight: 500;
+            color: #161616;
+            margin-bottom: 6px;
+        }
+
+        .topic-text {
+            font-size: 13px;
+            color: #525252;
+            line-height: 1.5;
+        }
+
+        /* Funding Box */
+        .funding {
+            background: #161616;
+            color: #ffffff;
+            padding: 45px 50px;
+            margin: 0 -70px 50px;
+            position: relative;
+        }
+
+        .funding::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: #0f62fe;
+        }
+
+        .funding-label {
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #c6c6c6;
+            margin-bottom: 15px;
+        }
+
+        .funding-amount {
+            font-size: 72px;
+            font-weight: 300;
+            line-height: 1;
+            margin-bottom: 12px;
+            letter-spacing: -2px;
+        }
+
+        .funding-text {
+            font-size: 15px;
+            color: #f4f4f4;
+            font-weight: 400;
+        }
+
+        /* Partners */
+        .partners {
+            border-top: 1px solid #e0e0e0;
+            padding-top: 30px;
+            margin-bottom: 50px;
+        }
+
+        .partners-label {
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #8d8d8d;
+            margin-bottom: 18px;
+        }
+
+        .partners-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px 30px;
+            font-size: 13px;
+            color: #525252;
+            line-height: 1.6;
+        }
+
+        /* CTA */
+        .cta {
+            border-top: 1px solid #e0e0e0;
+            padding-top: 40px;
+        }
+
+        .cta-label {
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #8d8d8d;
+            margin-bottom: 15px;
+        }
+
+        .cta-url {
+            font-size: 26px;
+            font-weight: 400;
+            color: #0f62fe;
+            margin-bottom: 30px;
+            font-family: 'IBM Plex Mono', monospace;
+            letter-spacing: -0.5px;
+        }
+
+        .cta-contact {
+            font-size: 13px;
+            color: #525252;
+        }
+
+        .cta-contact a {
+            color: #0f62fe;
+            text-decoration: none;
+            font-family: 'IBM Plex Mono', monospace;
+        }
+
+        /* Accent Line */
+        .accent-line {
+            width: 80px;
+            height: 3px;
+            background: #0f62fe;
+            margin-bottom: 30px;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .flyer {
+                box-shadow: none;
+                width: 100%;
+                height: 100%;
+            }
+            .print-button {
+                display: none !important;
+            }
+        }
+
+        @page {
+            size: letter portrait;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="flyer">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">RUDI</div>
+
+            <h1 class="title">
+                TechCred & AI<br>
+                Training for<br>
+                <strong>Educators</strong>
+            </h1>
+
+            <div class="accent-line"></div>
+
+            <p class="subtitle">
+                Access up to $180K in state-funded AI training. Learn practical tools for student outcomes, classroom management, and administrative efficiency.
+            </p>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <!-- Event Info -->
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="info-label">Date</div>
+                    <div class="info-value">November 5<br>2025</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Time</div>
+                    <div class="info-value">1:00–2:00 PM<br>Eastern Time</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Format</div>
+                    <div class="info-value">Virtual<br>Zoom Meeting</div>
+                </div>
+            </div>
+
+            <!-- Topics -->
+            <div class="section">
+                <div class="section-label">What You'll Learn</div>
+                <div class="topics">
+                    <div class="topic">
+                        <div class="topic-title">TechCred Funding</div>
+                        <div class="topic-text">Navigate Ohio's program and secure funding for your district</div>
+                    </div>
+                    <div class="topic">
+                        <div class="topic-title">Student Outcomes</div>
+                        <div class="topic-text">AI tools for differentiation and personalized learning</div>
+                    </div>
+                    <div class="topic">
+                        <div class="topic-title">OTES Evaluation</div>
+                        <div class="topic-text">Streamline lesson planning and documentation</div>
+                    </div>
+                    <div class="topic">
+                        <div class="topic-title">IEP Efficiency</div>
+                        <div class="topic-text">Reduce writing time by 50% while maintaining quality</div>
+                    </div>
+                    <div class="topic">
+                        <div class="topic-title">Classroom Management</div>
+                        <div class="topic-text">Behavior tracking and parent communication tools</div>
+                    </div>
+                    <div class="topic">
+                        <div class="topic-title">Certification Pathway</div>
+                        <div class="topic-text">Explore RUDI's 3-level TechCred-eligible programs</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Funding -->
+        <div class="funding">
+            <div class="funding-label">Funding Available</div>
+            <div class="funding-amount">$180,000</div>
+            <div class="funding-text">Per school or district annually through Ohio TechCred</div>
+        </div>
+
+        <!-- Partners & CTA -->
+        <div class="content">
+            <!-- Partners -->
+            <div class="partners">
+                <div class="partners-label">Trusted By</div>
+                <div class="partners-list">
+                    <div>Warren County Educational Service Center</div>
+                    <div>Ohio Head Start</div>
+                    <div>Propel Education</div>
+                    <div>University of Illinois Springfield</div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="cta">
+                <div class="cta-label">Register</div>
+                <div class="cta-url">learnrudi.com/webinars/educators</div>
+                <div class="cta-contact">
+                    Questions? <a href="mailto:learnrudi@gmail.com">learnrudi@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('load', function() {
+            const printBtn = document.createElement('button');
+            printBtn.className = 'print-button';
+            printBtn.textContent = 'Print / Save as PDF';
+            printBtn.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                padding: 12px 24px;
+                background: #0f62fe;
+                color: white;
+                border: none;
+                border-radius: 0;
+                cursor: pointer;
+                font-weight: 500;
+                font-size: 14px;
+                font-family: 'IBM Plex Sans', sans-serif;
+                letter-spacing: 0.5px;
+                z-index: 1000;
+                transition: background 0.2s;
+            `;
+            printBtn.onmouseover = () => printBtn.style.background = '#0353e9';
+            printBtn.onmouseout = () => printBtn.style.background = '#0f62fe';
+            printBtn.onclick = () => window.print();
+            document.body.appendChild(printBtn);
+        });
+    </script>
+</body>
+</html>

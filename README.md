@@ -24,8 +24,14 @@ rudi-web/
 ├── ohio.html              # Ohio TechCred information
 ├── research.html
 ├── resources.html
+├── survey.html            # AI literacy survey (public)
+├── survey-admin.html      # Survey link generator (admin only)
+├── credentials.json       # Google service account (gitignored)
+├── scripts/               # Setup and utility scripts
+│   └── setup-sheet.js    # Google Sheets setup script
 ├── css/                   # Stylesheets
 ├── js/                    # JavaScript modules
+│   └── config.js         # Survey configuration
 ├── images/                # Site images
 ├── assets/                # Certificates and other assets
 ├── tools/                 # Development tools
@@ -38,6 +44,7 @@ rudi-web/
     ├── design/            # Design assets and specs
     ├── planning/          # Project planning docs
     ├── project-docs/      # Technical documentation
+    ├── survey-outline.txt # Survey questions
     └── setup/             # Setup guides
 ```
 
@@ -80,8 +87,33 @@ Or push to the connected GitHub repository for automatic deployment.
 - Ohio TechCred partnership information
 - Two certification paths: Business and Education
 - Certificate verification system
+- **AI Literacy Survey System** - Anonymous surveys with Google Sheets integration
 - Contact forms and inquiry handling
 - Responsive design
+
+## Survey System
+
+The RUDI Survey System allows you to create custom anonymous AI literacy surveys for organizations.
+
+### Quick Start
+
+1. **Create survey links**: Open `survey-admin.html` to generate custom survey links
+2. **View responses**: Check the [Google Sheet](https://docs.google.com/spreadsheets/d/1LC-kPwyQZG3w8TnA46wE6bXiajC9A0M3eb6dXZrhG-s) for real-time results
+3. **Share links**: Send custom survey URLs to organizations
+
+### Setup
+
+```bash
+# Install dependencies
+npm install
+
+# Configure Google Sheet
+node scripts/setup-sheet.js <SHEET_ID>
+
+# Update webhook URL in js/config.js
+```
+
+For detailed setup instructions, see [SURVEY-README.md](SURVEY-README.md) and [GOOGLE-SHEETS-SETUP.md](GOOGLE-SHEETS-SETUP.md).
 
 ## Documentation
 

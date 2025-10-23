@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechCred & AI Training - Social Media</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f4f4f4;
+            padding: 40px 20px;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .social-container {
+            text-align: center;
+        }
+
+        .format-selector {
+            margin-bottom: 30px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .format-selector h2 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #161616;
+        }
+
+        .format-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .format-btn {
+            padding: 10px 20px;
+            background: #0f62fe;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        .format-btn:hover {
+            background: #0353e9;
+        }
+
+        .format-btn.active {
+            background: #161616;
+        }
+
+        /* Instagram Format (1080 x 1350) */
+        .flyer {
+            width: 1080px;
+            height: 1350px;
+            margin: 0 auto;
+            background: #ffffff;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            position: relative;
+            overflow: hidden;
+            transform-origin: center;
+            transform: scale(0.55);
+        }
+
+        /* LinkedIn/Facebook Format (1200 x 627) */
+        .flyer.linkedin {
+            width: 1200px;
+            height: 627px;
+            transform: scale(0.7);
+        }
+
+        /* Header */
+        .header {
+            padding: 60px 80px 50px;
+        }
+
+        .logo {
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #161616;
+            margin-bottom: 40px;
+        }
+
+        .title {
+            font-size: 72px;
+            font-weight: 300;
+            line-height: 1.1;
+            color: #161616;
+            margin-bottom: 30px;
+            letter-spacing: -2px;
+        }
+
+        .title strong {
+            font-weight: 600;
+        }
+
+        .accent-line {
+            width: 100px;
+            height: 4px;
+            background: #0f62fe;
+            margin-bottom: 30px;
+        }
+
+        .subtitle {
+            font-size: 22px;
+            font-weight: 400;
+            color: #525252;
+            line-height: 1.5;
+        }
+
+        /* Image */
+        .presenter-section {
+            padding: 0 80px 50px;
+        }
+
+        .presenter-image {
+            width: 100%;
+            height: auto;
+            max-height: 450px;
+            object-fit: contain;
+            object-position: center;
+            display: block;
+        }
+
+        /* Info */
+        .info-section {
+            padding: 50px 80px;
+            background: #161616;
+            color: white;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            text-align: center;
+        }
+
+        .info-label {
+            font-size: 13px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #c6c6c6;
+            margin-bottom: 12px;
+        }
+
+        .info-value {
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 1.3;
+        }
+
+        /* CTA */
+        .cta-section {
+            padding: 50px 80px;
+            text-align: center;
+        }
+
+        .cta-url {
+            font-size: 32px;
+            font-weight: 500;
+            color: #0f62fe;
+            font-family: 'IBM Plex Mono', monospace;
+            margin-bottom: 20px;
+        }
+
+        .cta-text {
+            font-size: 16px;
+            color: #525252;
+        }
+
+        /* LinkedIn Layout */
+        .flyer.linkedin .header {
+            padding: 50px 60px 40px;
+        }
+
+        .flyer.linkedin .title {
+            font-size: 56px;
+        }
+
+        .flyer.linkedin .subtitle {
+            font-size: 18px;
+        }
+
+        .flyer.linkedin .presenter-section {
+            display: none;
+        }
+
+        .flyer.linkedin .info-section {
+            padding: 40px 60px;
+        }
+
+        .flyer.linkedin .info-value {
+            font-size: 20px;
+        }
+
+        .flyer.linkedin .cta-section {
+            padding: 40px 60px;
+        }
+
+        .flyer.linkedin .cta-url {
+            font-size: 28px;
+        }
+
+        /* Download Button */
+        .download-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 12px 24px;
+            background: #0f62fe;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 14px;
+            font-family: 'IBM Plex Sans', sans-serif;
+            z-index: 1000;
+            transition: background 0.2s;
+        }
+
+        .download-btn:hover {
+            background: #0353e9;
+        }
+
+        .instructions {
+            margin-top: 30px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 14px;
+            color: #525252;
+            line-height: 1.6;
+        }
+
+        .instructions strong {
+            color: #161616;
+        }
+    </style>
+</head>
+<body>
+    <div class="social-container">
+        <!-- Format Selector -->
+        <div class="format-selector">
+            <h2>Choose Format:</h2>
+            <div class="format-buttons">
+                <button class="format-btn active" onclick="switchFormat('instagram')">Instagram (1080x1350)</button>
+                <button class="format-btn" onclick="switchFormat('linkedin')">LinkedIn/Facebook (1200x627)</button>
+            </div>
+        </div>
+
+        <!-- Flyer -->
+        <div class="flyer" id="flyer">
+            <div class="header">
+                <div class="logo">RUDI</div>
+                <h1 class="title">
+                    TechCred & AI<br>
+                    Training<br>
+                    <strong>Information<br>Session</strong>
+                </h1>
+                <div class="accent-line"></div>
+                <p class="subtitle">
+                    Learn about TechCred funding<br>
+                    and AI training programs for<br>
+                    Ohio educators
+                </p>
+            </div>
+
+            <div class="presenter-section">
+                <img src="image.png" alt="Presenter" class="presenter-image">
+            </div>
+
+            <div class="info-section">
+                <div class="info-grid">
+                    <div>
+                        <div class="info-label">Date</div>
+                        <div class="info-value">November 5<br>2025</div>
+                    </div>
+                    <div>
+                        <div class="info-label">Time</div>
+                        <div class="info-value">1:00–2:00 PM<br>Eastern</div>
+                    </div>
+                    <div>
+                        <div class="info-label">Format</div>
+                        <div class="info-value">Virtual<br>Zoom</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <div class="cta-url">learnrudi.com/webinars/educators</div>
+                <div class="cta-text">Up to $180K funding available per district</div>
+            </div>
+        </div>
+
+        <!-- Instructions -->
+        <div class="instructions">
+            <strong>How to Save:</strong><br>
+            1. Choose your format above<br>
+            2. Right-click on the design → "Save image as..."<br>
+            3. Or take a screenshot (Cmd+Shift+4 on Mac, Windows+Shift+S on PC)<br>
+            4. Upload to your social platform!
+        </div>
+    </div>
+
+    <button class="download-btn" onclick="takeScreenshot()">📸 Screenshot Guide</button>
+
+    <script>
+        function switchFormat(format) {
+            const flyer = document.getElementById('flyer');
+            const buttons = document.querySelectorAll('.format-btn');
+
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            if (format === 'instagram') {
+                flyer.classList.remove('linkedin');
+                buttons[0].classList.add('active');
+            } else {
+                flyer.classList.add('linkedin');
+                buttons[1].classList.add('active');
+            }
+        }
+
+        function takeScreenshot() {
+            alert('To save for social media:\n\n' +
+                  'Mac: Press Cmd + Shift + 4, then drag to select the design\n' +
+                  'Windows: Press Windows + Shift + S, then select the design\n\n' +
+                  'Or right-click the design and "Save image as..."');
+        }
+    </script>
+</body>
+</html>
