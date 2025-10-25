@@ -30,6 +30,8 @@ body {
     --navy-50: #f8fafc;
     --accent: #334155;
     --accent-hover: #475569;
+    --hover-blue: #bfdbfe;  /* Light blue-gray for hover states */
+    --hover-blue-light: #dbeafe;  /* Even lighter variant */
     --teal: #14b8a6;
     --teal-light: #5eead4;
     --gray-900: #111827;
@@ -154,7 +156,7 @@ h3 {
 }
 
 .nav-dropdown-trigger:hover {
-    color: var(--teal-light);
+    color: var(--hover-blue);
 }
 
 .dropdown-menu {
@@ -207,7 +209,7 @@ h3 {
 
 .dropdown-menu a:hover {
     background: var(--navy-700);
-    color: var(--teal-light);
+    color: var(--hover-blue);
 }
 
 .nav-cta {
@@ -222,8 +224,8 @@ h3 {
 }
 
 .nav-cta:hover {
-    background: var(--teal);
-    color: white;
+    background: var(--hover-blue-light);
+    color: var(--navy-900);
 }
 
 .mobile-menu-toggle {
@@ -286,9 +288,11 @@ h3 {
 }
 
 .btn-primary:hover {
-    background: var(--teal);
-    border-color: var(--teal);
+    background: var(--navy-700);
+    border-color: var(--navy-700);
     color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(15, 23, 42, 0.2);
 }
 
 .btn-secondary {
@@ -298,9 +302,10 @@ h3 {
 }
 
 .btn-secondary:hover {
-    background: var(--teal);
-    color: white;
-    border-color: var(--teal);
+    background: var(--hover-blue-light);
+    color: var(--navy-900);
+    border-color: var(--navy-900);
+    transform: translateY(-2px);
 }
 
 /* Sections */
@@ -339,7 +344,8 @@ h3 {
 
 .card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(20, 184, 166, 0.15);
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+    border-color: var(--hover-blue);
 }
 
 .card-grid {

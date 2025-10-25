@@ -92,19 +92,23 @@
                 <span class="section-badge"><i class="fas fa-chart-line"></i> Framework & Assessment</span>
                 <h1>The RUDI AI Readiness Framework</h1>
                 <p style="max-width: 800px; margin: 0 auto; font-size: 1.25rem; color: var(--gray-600);">
-                    From Familiarity to Fluency: A comprehensive model for building AI competency across your organization
+                    A comprehensive model for building AI competency across your organization
+                </p>
+                <p style="max-width: 700px; margin: 1rem auto 0; font-size: 1.125rem; color: var(--navy-900); font-weight: 500;">
+                    Learn your organization's familiarity and comfort with generative AI.<br>
+                    <span style="color: var(--gray-600); font-weight: 400;">Employees are using AI. Do you know how?</span>
                 </p>
             </div>
 
             <!-- Request Assessment CTA -->
-            <div style="max-width: 700px; margin: 3rem auto 0; background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 12px 32px rgba(0,0,0,0.1); border: 2px solid var(--teal);">
+            <div id="request-assessment" style="max-width: 700px; margin: 3rem auto 0; background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 12px 32px rgba(0,0,0,0.1); border: 2px solid var(--navy-900);">
                 <div style="text-align: center; margin-bottom: 2rem;">
-                    <div style="display: inline-block; background: rgba(20, 184, 166, 0.1); color: var(--teal); padding: 0.5rem 1.25rem; border-radius: 50px; font-size: 0.9rem; font-weight: 600; margin-bottom: 1rem;">
+                    <div style="display: inline-block; background: rgba(15, 23, 42, 0.08); color: var(--navy-900); padding: 0.5rem 1.25rem; border-radius: 50px; font-size: 0.9rem; font-weight: 600; margin-bottom: 1rem;">
                         <i class="fas fa-clipboard-check"></i> FREE AI READINESS ASSESSMENT
                     </div>
-                    <h2 style="font-size: 1.75rem; color: var(--navy-900); margin-bottom: 0.75rem;">Request Your Custom Assessment</h2>
+                    <h2 style="font-size: 1.75rem; color: var(--navy-900); margin-bottom: 0.75rem;">Get Your AI Readiness Report Today</h2>
                     <p style="color: var(--gray-600); font-size: 1.05rem;">
-                        Get your AI readiness report • 9 questions • 5-7 minutes • Completely anonymous
+                        Instant delivery • Share with your team immediately • 9 questions • 5-7 minutes • Completely anonymous
                     </p>
                 </div>
 
@@ -157,12 +161,26 @@
                 </form>
 
                 <div id="successMessage" style="display: none; text-align: center; padding: 2rem;">
-                    <div style="color: var(--teal); font-size: 3rem; margin-bottom: 1rem;">
+                    <div style="color: var(--navy-900); font-size: 3rem; margin-bottom: 1rem;">
                         <i class="fas fa-check-circle"></i>
                     </div>
-                    <h3 style="color: var(--navy-900); margin-bottom: 0.75rem;">Request Received!</h3>
-                    <p style="color: var(--gray-600);">
-                        We'll send your custom assessment link to <strong id="submittedEmail"></strong> within 24 hours.
+                    <h3 style="color: var(--navy-900); margin-bottom: 0.75rem;">Your Assessment Link is Ready!</h3>
+                    <div style="background: var(--navy-50); padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0; border: 2px dashed var(--navy-900);">
+                        <p style="color: var(--navy-900); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.5px;">
+                            <i class="fas fa-link"></i> Your Survey Link
+                        </p>
+                        <div id="surveyLinkDisplay" style="background: white; padding: 1rem; border-radius: 6px; font-family: monospace; font-size: 0.9rem; color: var(--navy-900); word-break: break-all; margin-bottom: 1rem;">
+                            <!-- Link will be inserted here -->
+                        </div>
+                        <button onclick="navigator.clipboard.writeText(document.getElementById('surveyLinkDisplay').textContent)" style="background: var(--navy-900); color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 0.9rem;">
+                            <i class="fas fa-copy"></i> Copy Link
+                        </button>
+                    </div>
+                    <p style="color: var(--gray-600); margin-bottom: 0.5rem;">
+                        <strong>Save this link.</strong> Share it with your organization to begin the assessment.
+                    </p>
+                    <p style="color: var(--gray-600); font-size: 0.875rem;">
+                        Link sent to <strong id="submittedEmail"></strong>
                     </p>
                 </div>
             </div>
@@ -180,14 +198,22 @@
                     </p>
                 </div>
 
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 3rem;">
+                <style>
+                    @media (max-width: 768px) {
+                        .org-types-grid {
+                            grid-template-columns: 1fr !important;
+                            gap: 1.5rem !important;
+                        }
+                    }
+                </style>
+                <div class="org-types-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 3rem;">
                     <div class="card scroll-reveal" style="border-left: 4px solid var(--accent);">
                         <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: var(--navy-900);">The Tech-Savvy Organization</h3>
                         <p style="color: var(--gray-600); font-size: 1rem; line-height: 1.7;">
                             Highly fluent in technology, yet unable to figure out how to incorporate AI strategically. The tools are there, but adoption has plateaued.
                         </p>
                     </div>
-                    <div class="card scroll-reveal" style="border-left: 4px solid var(--teal);">
+                    <div class="card scroll-reveal" style="border-left: 4px solid var(--navy-900);">
                         <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: var(--navy-900);">The Starting-From-Scratch Organization</h3>
                         <p style="color: var(--gray-600); font-size: 1rem; line-height: 1.7;">
                             Little to no AI experience, unsure where to begin. Needs a clear roadmap but doesn't want to guess.
@@ -196,33 +222,45 @@
                 </div>
 
                 <div class="card scroll-reveal" style="background: linear-gradient(135deg, var(--navy-50) 0%, white 100%); padding: 2.5rem;">
-                    <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem; text-align: center; color: var(--navy-900);">The Key Overlap: Both Need a Data-Driven, People-Centered Approach</h3>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem; text-align: center; color: var(--navy-900);">What Both Organizations Need</h3>
+                    <p style="text-align: center; color: var(--gray-600); max-width: 700px; margin: 0 auto 2rem; font-size: 1.05rem;">
+                        Whether tech-savvy or starting fresh, success requires a <strong style="color: var(--navy-900);">data-driven, people-centered approach</strong>
+                    </p>
+                    <style>
+                        @media (max-width: 768px) {
+                            .needs-grid {
+                                grid-template-columns: 1fr !important;
+                            }
+                        }
+                    </style>
+                    <div class="needs-grid" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
                         <div style="text-align: center;">
-                            <div style="width: 60px; height: 60px; background: var(--accent); color: white; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1rem;">
-                                <i class="fas fa-route"></i>
+                            <div style="width: 60px; height: 60px; background: var(--navy-900); color: white; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1rem;">
+                                <i class="fas fa-tasks"></i>
                             </div>
-                            <h4 style="font-size: 1rem; margin-bottom: 0.5rem;">Workflows</h4>
-                            <p style="color: var(--gray-600); font-size: 0.9rem;">Embedding AI into daily tasks</p>
+                            <h4 style="font-size: 1.1rem; margin-bottom: 0.75rem; color: var(--navy-900);">Workflows</h4>
+                            <p style="color: var(--gray-600); font-size: 0.95rem; line-height: 1.6;">How people use AI in daily tasks—drafting, analyzing, automating</p>
                         </div>
                         <div style="text-align: center;">
-                            <div style="width: 60px; height: 60px; background: var(--teal); color: white; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1rem;">
-                                <i class="fas fa-database"></i>
+                            <div style="width: 60px; height: 60px; background: var(--navy-900); color: white; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1rem;">
+                                <i class="fas fa-shield-alt"></i>
                             </div>
-                            <h4 style="font-size: 1rem; margin-bottom: 0.5rem;">Data</h4>
-                            <p style="color: var(--gray-600); font-size: 0.9rem;">Understanding what's safe to use</p>
+                            <h4 style="font-size: 1.1rem; margin-bottom: 0.75rem; color: var(--navy-900);">Data</h4>
+                            <p style="color: var(--gray-600); font-size: 0.95rem; line-height: 1.6;">What data is safe to use—understanding boundaries and compliance</p>
                         </div>
                         <div style="text-align: center;">
-                            <div style="width: 60px; height: 60px; background: var(--navy-700); color: white; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1rem;">
+                            <div style="width: 60px; height: 60px; background: var(--navy-900); color: white; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1rem;">
                                 <i class="fas fa-users"></i>
                             </div>
-                            <h4 style="font-size: 1rem; margin-bottom: 0.5rem;">Culture</h4>
-                            <p style="color: var(--gray-600); font-size: 0.9rem;">Building confidence and adoption</p>
+                            <h4 style="font-size: 1.1rem; margin-bottom: 0.75rem; color: var(--navy-900);">Culture</h4>
+                            <p style="color: var(--gray-600); font-size: 0.95rem; line-height: 1.6;">Building confidence and adoption across the organization</p>
                         </div>
                     </div>
-                    <p style="text-align: center; font-size: 1.125rem; color: var(--navy-900); margin: 0;">
-                        <strong>We've learned the real ROI from generative AI comes from people's efficiency at the micro level</strong>—using AI tools to do their jobs better, whether that's drafting documents, analyzing data, or automating repetitive tasks.
-                    </p>
+                    <div style="background: white; padding: 2rem; border-radius: 8px; border-left: 4px solid var(--navy-900); margin-top: 2rem;">
+                        <p style="text-align: center; font-size: 1.125rem; color: var(--navy-900); margin: 0; line-height: 1.7;">
+                            <strong>From surveying hundreds of organizations—from educators to Fortune 500 companies—we've learned the real ROI comes from people's efficiency at the micro level:</strong> using AI to draft documents, analyze data, automate repetitive tasks, and build micro-tools within the organization.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -233,59 +271,70 @@
         <div class="container">
             <div class="section-header scroll-reveal">
                 <h2>Two Approaches to Strategic AI Adoption</h2>
-                <p class="text-secondary" style="font-size: 1.125rem;">You can focus on technology or culture. RUDI focuses on people.</p>
+                <p class="text-secondary" style="font-size: 1.125rem;">You can focus on technology or culture. RUDI integrates both—with a human-centered approach.</p>
             </div>
 
-            <div style="max-width: 1100px; margin: 0 auto;">
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-bottom: 3rem;">
-                    <div class="card scroll-reveal" style="border-left: 4px solid #10b981;">
-                        <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: #10b981;">Cultural Axis (People-Centric)</h3>
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <!-- Two Approaches Cards -->
+                <style>
+                    @media (max-width: 768px) {
+                        .two-approaches-grid {
+                            grid-template-columns: 1fr !important;
+                            gap: 1.5rem !important;
+                        }
+                    }
+                </style>
+                <div class="two-approaches-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-bottom: 3rem;">
+                    <div class="card scroll-reveal" style="border-left: 4px solid var(--navy-900);">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--navy-900);">Cultural Axis</h3>
+                        <p style="color: var(--gray-600); font-size: 1rem; margin-bottom: 1.5rem; font-weight: 500;">People-Centric Approach</p>
                         <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1rem;">
                             <li style="display: flex; align-items: start; gap: 0.75rem;">
-                                <i class="fas fa-check" style="color: #10b981; margin-top: 0.25rem; flex-shrink: 0;"></i>
-                                <span>Builds comfort by reducing fear and demystifying AI</span>
+                                <i class="fas fa-check" style="color: var(--navy-900); margin-top: 0.25rem; flex-shrink: 0;"></i>
+                                <span style="color: var(--gray-600); line-height: 1.6;">Reduces fear and demystifies AI</span>
                             </li>
                             <li style="display: flex; align-items: start; gap: 0.75rem;">
-                                <i class="fas fa-check" style="color: #10b981; margin-top: 0.25rem; flex-shrink: 0;"></i>
-                                <span>Builds familiarity by embedding generative tools into daily work</span>
+                                <i class="fas fa-check" style="color: var(--navy-900); margin-top: 0.25rem; flex-shrink: 0;"></i>
+                                <span style="color: var(--gray-600); line-height: 1.6;">Embeds tools into daily workflows</span>
                             </li>
                             <li style="display: flex; align-items: start; gap: 0.75rem;">
-                                <i class="fas fa-check" style="color: #10b981; margin-top: 0.25rem; flex-shrink: 0;"></i>
-                                <span>Builds literacy through structured learning and governance frameworks</span>
+                                <i class="fas fa-check" style="color: var(--navy-900); margin-top: 0.25rem; flex-shrink: 0;"></i>
+                                <span style="color: var(--gray-600); line-height: 1.6;">Builds literacy through learning</span>
                             </li>
                         </ul>
                         <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--navy-100);">
-                            <p style="font-size: 0.95rem; color: var(--gray-600); margin: 0;"><strong>Focus:</strong> How people learn, adopt, and use AI responsibly</p>
+                            <p style="font-size: 0.875rem; color: var(--gray-600); margin: 0;"><strong style="color: var(--navy-900);">Focus:</strong> How people learn and adopt AI responsibly</p>
                         </div>
                     </div>
 
-                    <div class="card scroll-reveal" style="border-left: 4px solid var(--navy-700);">
-                        <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--navy-700);">Technical Axis (System-Centric)</h3>
+                    <div class="card scroll-reveal" style="border-left: 4px solid var(--navy-900);">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--navy-900);">Technical Axis</h3>
+                        <p style="color: var(--gray-600); font-size: 1rem; margin-bottom: 1.5rem; font-weight: 500;">System-Centric Approach</p>
                         <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1rem;">
                             <li style="display: flex; align-items: start; gap: 0.75rem;">
-                                <i class="fas fa-check" style="color: var(--navy-700); margin-top: 0.25rem; flex-shrink: 0;"></i>
-                                <span>Aligns AI tools, data strategy, and infrastructure with organizational goals</span>
+                                <i class="fas fa-check" style="color: var(--navy-900); margin-top: 0.25rem; flex-shrink: 0;"></i>
+                                <span style="color: var(--gray-600); line-height: 1.6;">Aligns tools, data, infrastructure</span>
                             </li>
                             <li style="display: flex; align-items: start; gap: 0.75rem;">
-                                <i class="fas fa-check" style="color: var(--navy-700); margin-top: 0.25rem; flex-shrink: 0;"></i>
-                                <span>Ensures compliance, transparency, and ethical standards</span>
+                                <i class="fas fa-check" style="color: var(--navy-900); margin-top: 0.25rem; flex-shrink: 0;"></i>
+                                <span style="color: var(--gray-600); line-height: 1.6;">Ensures compliance & ethics</span>
                             </li>
                             <li style="display: flex; align-items: start; gap: 0.75rem;">
-                                <i class="fas fa-check" style="color: var(--navy-700); margin-top: 0.25rem; flex-shrink: 0;"></i>
-                                <span>Modernizes performance, metrics, model impact, and ROI of AI initiatives</span>
+                                <i class="fas fa-check" style="color: var(--navy-900); margin-top: 0.25rem; flex-shrink: 0;"></i>
+                                <span style="color: var(--gray-600); line-height: 1.6;">Modernizes metrics & ROI</span>
                             </li>
                         </ul>
                         <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--navy-100);">
-                            <p style="font-size: 0.95rem; color: var(--gray-600); margin: 0;"><strong>Focus:</strong> Infrastructure, compliance, and system-level optimization</p>
+                            <p style="font-size: 0.875rem; color: var(--gray-600); margin: 0;"><strong style="color: var(--navy-900);">Focus:</strong> Infrastructure and system optimization</p>
                         </div>
                     </div>
                 </div>
-
-                <div class="card scroll-reveal" style="background: linear-gradient(135deg, #10b981 0%, var(--teal) 100%); color: white; padding: 2.5rem; text-align: center;">
-                    <h3 style="font-size: 1.75rem; margin-bottom: 1rem; color: white;">RUDI Takes the People-Centered Approach</h3>
+                <!-- Integration explanation -->
+                <div class="card scroll-reveal" style="background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-700) 100%); color: white; padding: 3rem; text-align: center; margin-top: 3rem;">
+                    <h3 style="font-size: 1.75rem; margin-bottom: 1rem; color: white;">RUDI Integrates Both Approaches</h3>
                     <p style="font-size: 1.125rem; margin: 0; color: rgba(255,255,255,0.95);">
-                        We start with <strong>human-centered design</strong>: building comfort, familiarity, and literacy <em>before</em> diving into technical complexity.
-                        This ensures <strong>sustainable adoption</strong> that sticks.
+                        We address <strong>both the cultural and technical dimensions</strong> of AI adoption, but with a <strong>human-centered approach</strong>. We build comfort and literacy first, then layer in the governance and infrastructure.
+                        This ensures <strong>sustainable adoption</strong> that balances people, technology, and responsible practice.
                     </p>
                 </div>
             </div>
@@ -296,52 +345,108 @@
     <section class="section-padding bg-gray">
         <div class="container">
             <div class="section-header scroll-reveal">
-                <h2>The AI Readiness Pyramid</h2>
-                <p class="text-secondary" style="font-size: 1.125rem;">The psychological journey from "I'm afraid" to "I'm fluent"</p>
+                <h2>Learn Where Your Organization Falls on the Pyramid</h2>
+                <p class="text-secondary" style="font-size: 1.125rem;">The psychological journey from Fear to Fluency—this is what the assessment measures</p>
             </div>
 
-            <div style="max-width: 1000px; margin: 0 auto;">
-                <div class="responsive-2col" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
-                    <div>
-                        <div style="display: flex; flex-direction: column; gap: 2rem;">
-                            <div class="card scroll-reveal" style="border-left: 4px solid var(--accent);">
-                                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem;">
-                                    <div style="width: 40px; height: 40px; background: var(--accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.125rem; font-weight: 700;">1</div>
-                                    <h3 style="font-size: 1.25rem; margin: 0;">Familiarity</h3>
-                                </div>
-                                <p style="color: var(--gray-600); font-size: 1rem; margin: 0;">"I've seen it" — Basic exposure to AI exists</p>
-                            </div>
+            <div style="max-width: 100%; margin: 0 auto; text-align: center;">
+                <div class="scroll-reveal">
+                    <!-- RUDI AI Readiness Pyramid (Inline SVG) -->
+                    <svg viewBox="0 0 1300 720" role="img" aria-labelledby="pyramid-title pyramid-desc" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto; border-radius: 12px; background: white; box-shadow: 0 12px 32px rgba(0,0,0,0.1); padding: 1.5rem; margin: 0 auto;">
+                        <title id="pyramid-title">RUDI AI Readiness Pyramid</title>
+                        <desc id="pyramid-desc">Four stacked levels from Familiarity to Fluency with callouts describing each stage and an overview of conceptual, operational, and governance literacy.</desc>
 
-                            <div class="card scroll-reveal" style="border-left: 4px solid var(--accent);">
-                                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem;">
-                                    <div style="width: 40px; height: 40px; background: var(--accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.125rem; font-weight: 700;">2</div>
-                                    <h3 style="font-size: 1.25rem; margin: 0;">Comfort</h3>
-                                </div>
-                                <p style="color: var(--gray-600); font-size: 1rem; margin: 0;">"I'm not afraid of it" — Confidence to experiment without fear</p>
-                            </div>
+                        <style>
+                            .ink { fill: var(--navy-900, #0f172a); }
+                            .sub { fill: var(--gray-600, #475569); }
+                            .line { stroke: #e2e8f0; stroke-width: 2; }
+                            .accent { fill: var(--navy-700, #334155); }
+                            .bg { fill: #ffffff; }
+                            .stage { stroke: #1e293b; stroke-width: 2; }
+                            .stage--0 { fill: #e0f2fe; }
+                            .stage--1 { fill: #dbeafe; }
+                            .stage--2 { fill: #bfdbfe; }
+                            .stage--3 { fill: var(--navy-900, #0f172a); }
+                            .label { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-weight: 600; letter-spacing: 0.3px; }
+                            .meta { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-weight: 500; }
+                            .callout { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; }
+                            .callhead { font-weight: 600; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+                            .calltext { font-weight: 400; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; }
+                            .arrow { stroke: var(--navy-700, #334155); stroke-width: 2.5; }
 
-                            <div class="card scroll-reveal" style="border-left: 4px solid var(--accent);">
-                                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem;">
-                                    <div style="width: 40px; height: 40px; background: var(--accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.125rem; font-weight: 700;">3</div>
-                                    <h3 style="font-size: 1.25rem; margin: 0;">Literacy</h3>
-                                </div>
-                                <p style="color: var(--gray-600); font-size: 1rem; margin: 0;">"I understand what it does" — Can explain and use AI competently</p>
-                            </div>
+                            /* Mobile: hide callouts on small screens */
+                            @media (max-width: 768px) {
+                                .callout, .arrow { display: none; }
+                            }
+                        </style>
 
-                            <div class="card scroll-reveal" style="border-left: 4px solid var(--teal); background: linear-gradient(135deg, #fff 0%, var(--navy-50) 100%);">
-                                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem;">
-                                    <div style="width: 40px; height: 40px; background: var(--teal); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.125rem; font-weight: 700;">4</div>
-                                    <h3 style="font-size: 1.25rem; margin: 0;">Fluency</h3>
-                                </div>
-                                <p style="color: var(--gray-600); font-size: 1rem; margin: 0;"><strong>Conceptual + Operational + Governance literacy combined</strong> — Full competency across all dimensions</p>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div style="text-align: center;">
-                        <img src="images/3d-cube-framework.png" alt="RUDI AI Readiness Pyramid visualization" style="width: 100%; max-width: 400px; height: auto; border-radius: 12px; margin: 0 auto; box-shadow: 0 12px 32px rgba(0,0,0,0.1);">
-                        <p style="margin-top: 1.5rem; font-size: 0.95rem; color: var(--gray-600); font-style: italic;">
-                            Most organizations are stuck between Familiarity and Comfort. RUDI moves you to Fluency.
+                        <!-- PYRAMID LAYERS (shifted up to use full space) -->
+                        <!-- Level 1: Familiarity (bottom - widest) -->
+                        <polygon class="stage stage--0" points="100,650 800,650 720,520 180,520"/>
+                        <text class="label ink" font-size="28" x="220" y="590">1. FAMILIARITY <tspan class="meta sub" font-size="22">(Exposure)</tspan></text>
+                        <text class="sub" font-size="18" x="220" y="620">"I've seen it"</text>
+
+                        <!-- Level 2: Comfort -->
+                        <polygon class="stage stage--1" points="180,520 720,520 650,390 250,390"/>
+                        <text class="label ink" font-size="26" x="280" y="462">2. COMFORT <tspan class="meta sub" font-size="20">(Confidence)</tspan></text>
+                        <text class="sub" font-size="17" x="280" y="490">"I'm not afraid of it"</text>
+
+                        <!-- Level 3: Literacy -->
+                        <polygon class="stage stage--2" points="250,390 650,390 590,260 310,260"/>
+                        <text class="label ink" font-size="26" x="330" y="335">3. LITERACY</text>
+                        <text class="sub" font-size="17" x="330" y="360">"I understand what it does"</text>
+
+                        <!-- Level 4: Fluency (top - darkest, pointed) -->
+                        <polygon class="stage stage--3" points="310,260 590,260 450,80 450,80"/>
+                        <text class="label" font-size="20" x="395" y="188" fill="#ffffff">4. FLUENCY</text>
+
+                        <!-- RIGHT-SIDE CALLOUTS with Arrows -->
+                        <!-- Fluency callout -->
+                        <line class="arrow" x1="590" y1="170" x2="850" y2="170"/>
+                        <rect class="callout" x="850" y="110" rx="8" ry="8" width="400" height="130"/>
+                        <text class="ink callhead" font-size="20" x="870" y="135">Fluency (Deep Mastery)</text>
+                        <text class="sub calltext" font-size="15" x="870" y="160">Conceptual: Understanding how & why AI works</text>
+                        <text class="sub calltext" font-size="15" x="870" y="180">Operational: Creating with AI in real workflows</text>
+                        <text class="sub calltext" font-size="15" x="870" y="200">Governance: Responsible use, ethics & oversight</text>
+                        <text class="sub calltext" font-size="14" x="870" y="220" font-style="italic">(Like Bloom's taxonomy: from knowing → creating)</text>
+
+                        <!-- Literacy callout -->
+                        <line class="arrow" x1="650" y1="325" x2="850" y2="325"/>
+                        <rect class="callout" x="850" y="285" rx="8" ry="8" width="400" height="90"/>
+                        <text class="ink callhead" font-size="20" x="870" y="310">Literacy (Understanding Uses)</text>
+                        <text class="sub calltext" font-size="15" x="870" y="335">• I understand practical applications</text>
+                        <text class="sub calltext" font-size="15" x="870" y="355">• I can see how AI could be useful</text>
+
+                        <!-- Comfort callout -->
+                        <line class="arrow" x1="720" y1="455" x2="850" y2="455"/>
+                        <rect class="callout" x="850" y="415" rx="8" ry="8" width="400" height="85"/>
+                        <text class="ink callhead" font-size="20" x="870" y="440">Comfort (Confidence)</text>
+                        <text class="sub calltext" font-size="15" x="870" y="465">• Interact without anxiety</text>
+                        <text class="sub calltext" font-size="15" x="870" y="485">• AI becomes a tool, not a threat</text>
+
+                        <!-- Familiarity callout -->
+                        <line class="arrow" x1="800" y1="585" x2="850" y2="585"/>
+                        <rect class="callout" x="850" y="540" rx="8" ry="8" width="400" height="105"/>
+                        <text class="ink callhead" font-size="20" x="870" y="565">Familiarity (Overcoming Fear)</text>
+                        <text class="sub calltext" font-size="15" x="870" y="590">• Awareness that AI exists</text>
+                        <text class="sub calltext" font-size="15" x="870" y="610">• Curiosity & recognition</text>
+                        <text class="sub calltext" font-size="15" x="870" y="630">• Psychological barriers start to fade</text>
+
+                        <!-- Footer note -->
+                        <text x="50" y="690" class="sub" font-size="17" font-style="italic">Most organizations are stuck between Familiarity and Comfort — RUDI moves them toward Fluency.</text>
+                    </svg>
+
+                    <!-- Mid-Point CTA -->
+                    <div style="margin-top: 3.5rem; padding: 2rem; background: linear-gradient(135deg, var(--navy-50) 0%, white 100%); border-radius: 12px; border: 1px solid var(--navy-100); max-width: 600px; margin-left: auto; margin-right: auto;">
+                        <p style="font-size: 1.05rem; color: var(--navy-900); margin-bottom: 1.5rem; font-weight: 500;">
+                            Ready to see where you are on this pyramid?
+                        </p>
+                        <a href="#request-assessment" class="btn btn-primary" style="font-size: 1rem; padding: 0.875rem 2rem;">
+                            <i class="fas fa-chart-radar" style="margin-right: 0.5rem;"></i>Request Your Assessment
+                        </a>
+                        <p style="font-size: 0.875rem; color: var(--gray-600); margin-top: 1rem; margin-bottom: 0;">
+                            Get your personalized radar chart and discover exactly where to focus
                         </p>
                     </div>
                 </div>
@@ -360,7 +465,7 @@
             <div style="max-width: 1000px; margin: 0 auto;">
                 <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 4rem;">
                     <div style="display: flex; gap: 1rem;" class="scroll-reveal">
-                        <div style="flex-shrink: 0; width: 60px; height: 60px; background: rgba(20, 184, 166, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--teal); font-size: 1.5rem;">
+                        <div style="flex-shrink: 0; width: 60px; height: 60px; background: rgba(15, 23, 42, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--navy-900); font-size: 1.5rem;">
                             <i class="fas fa-brain"></i>
                         </div>
                         <div>
@@ -370,7 +475,7 @@
                     </div>
 
                     <div style="display: flex; gap: 1rem;" class="scroll-reveal">
-                        <div style="flex-shrink: 0; width: 60px; height: 60px; background: rgba(20, 184, 166, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--teal); font-size: 1.5rem;">
+                        <div style="flex-shrink: 0; width: 60px; height: 60px; background: rgba(15, 23, 42, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--navy-900); font-size: 1.5rem;">
                             <i class="fas fa-cogs"></i>
                         </div>
                         <div>
@@ -380,7 +485,7 @@
                     </div>
 
                     <div style="display: flex; gap: 1rem;" class="scroll-reveal">
-                        <div style="flex-shrink: 0; width: 60px; height: 60px; background: rgba(20, 184, 166, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--teal); font-size: 1.5rem;">
+                        <div style="flex-shrink: 0; width: 60px; height: 60px; background: rgba(15, 23, 42, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--navy-900); font-size: 1.5rem;">
                             <i class="fas fa-shield-alt"></i>
                         </div>
                         <div>
@@ -409,7 +514,7 @@
                         <div style="font-size: 2rem; color: var(--navy-200); font-weight: 200;">=</div>
 
                         <div style="text-align: center;">
-                            <div style="font-size: 3.5rem; font-weight: 200; color: var(--teal); line-height: 1;">15</div>
+                            <div style="font-size: 3.5rem; font-weight: 200; color: var(--navy-900); line-height: 1;">15</div>
                             <p style="font-size: 0.875rem; color: var(--gray-600); margin-top: 0.5rem; font-weight: 500;">COMPETENCY POINTS</p>
                         </div>
                     </div>
@@ -496,9 +601,9 @@
                         </div>
                     </div>
 
-                    <div class="card scroll-reveal" style="background: linear-gradient(135deg, #fff 0%, var(--navy-50) 100%); border-left: 4px solid var(--teal);">
+                    <div class="card scroll-reveal" style="background: linear-gradient(135deg, #fff 0%, var(--navy-50) 100%); border-left: 4px solid var(--navy-900);">
                         <div style="display: flex; align-items: center; gap: 1.5rem;">
-                            <div style="flex-shrink: 0; width: 60px; height: 60px; background: var(--teal); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; box-shadow: 0 4px 12px rgba(20,184,166,0.3);">
+                            <div style="flex-shrink: 0; width: 60px; height: 60px; background: var(--navy-900); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; box-shadow: 0 4px 12px rgba(20,184,166,0.3);">
                                 4
                             </div>
                             <div style="flex-grow: 1;">
@@ -515,9 +620,70 @@
 
                 <div class="card scroll-reveal" style="margin-top: 3rem; background: var(--navy-50); padding: 2rem;">
                     <p style="text-align: center; font-size: 1.05rem; color: var(--navy-900); margin: 0;">
-                        <i class="fas fa-lightbulb" style="color: var(--teal); margin-right: 0.5rem;"></i>
+                        <i class="fas fa-lightbulb" style="color: var(--navy-900); margin-right: 0.5rem;"></i>
                         <strong>Most professionals start at Pre-Beginner or Beginner.</strong>
                         RUDI training moves you systematically through each level across all three dimensions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How These Fit Together (Bridge Section) -->
+    <section class="section-padding" style="background: linear-gradient(135deg, var(--navy-50) 0%, white 100%); border-top: 1px solid var(--navy-100); border-bottom: 1px solid var(--navy-100);">
+        <div class="container">
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div class="scroll-reveal" style="text-align: center; margin-bottom: 3rem;">
+                    <h2 style="font-size: 2rem; margin-bottom: 1rem;">How These Frameworks Fit Together</h2>
+                    <p style="font-size: 1.1rem; color: var(--gray-600); max-width: 700px; margin: 0 auto;">
+                        Three complementary models working together to build AI fluency
+                    </p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                    <div class="card scroll-reveal" style="background: white; text-align: center; border-top: 4px solid var(--accent);">
+                        <div style="width: 56px; height: 56px; margin: 0 auto 1.5rem; background: var(--accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: var(--navy-900);">The Pyramid</h3>
+                        <p style="font-size: 0.95rem; color: var(--gray-600); line-height: 1.7; margin-bottom: 1rem;">
+                            <strong>Your journey</strong> — the emotional arc from fear to confidence
+                        </p>
+                        <p style="font-size: 0.875rem; color: var(--navy-700); font-style: italic;">
+                            "Where am I going?"
+                        </p>
+                    </div>
+
+                    <div class="card scroll-reveal" style="background: white; text-align: center; border-top: 4px solid var(--navy-900);">
+                        <div style="width: 56px; height: 56px; margin: 0 auto 1.5rem; background: var(--navy-900); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                            <i class="fas fa-table"></i>
+                        </div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: var(--navy-900);">The 3×5 Matrix</h3>
+                        <p style="font-size: 0.95rem; color: var(--gray-600); line-height: 1.7; margin-bottom: 1rem;">
+                            <strong>Your measurement</strong> — systematic assessment across 15 competency points
+                        </p>
+                        <p style="font-size: 0.875rem; color: var(--navy-700); font-style: italic;">
+                            "Where am I now?"
+                        </p>
+                    </div>
+
+                    <div class="card scroll-reveal" style="background: white; text-align: center; border-top: 4px solid var(--navy-700);">
+                        <div style="width: 56px; height: 56px; margin: 0 auto 1.5rem; background: var(--navy-700); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                            <i class="fas fa-cube"></i>
+                        </div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: var(--navy-900);">The 3D Model</h3>
+                        <p style="font-size: 0.95rem; color: var(--gray-600); line-height: 1.7; margin-bottom: 1rem;">
+                            <strong>Your practice</strong> — daily habits for responsible AI use
+                        </p>
+                        <p style="font-size: 0.875rem; color: var(--navy-700); font-style: italic;">
+                            "How do I use AI safely?"
+                        </p>
+                    </div>
+                </div>
+
+                <div class="scroll-reveal" style="margin-top: 3rem; padding: 2rem; background: white; border-radius: 12px; border-left: 4px solid var(--navy-900); box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+                    <p style="font-size: 1.05rem; color: var(--navy-900); line-height: 1.8; margin: 0;">
+                        <strong>Together, they form a complete system:</strong> The Pyramid shows your destination, the Matrix measures your progress, and the 3D Model guides your daily practice. RUDI's training and assessment tools help you move through all three.
                     </p>
                 </div>
             </div>
@@ -575,9 +741,9 @@
                     </div>
 
                     <!-- Levels of Scrutiny -->
-                    <div class="card scroll-reveal" style="border-top: 4px solid var(--teal);">
+                    <div class="card scroll-reveal" style="border-top: 4px solid var(--navy-900);">
                         <div style="text-align: center; margin-bottom: 1.5rem;">
-                            <div style="width: 60px; height: 60px; background: var(--teal); color: white; border-radius: 12px; display: inline-flex; align-items: center; justify-content: center; font-size: 1.75rem; margin-bottom: 1rem;">
+                            <div style="width: 60px; height: 60px; background: var(--navy-900); color: white; border-radius: 12px; display: inline-flex; align-items: center; justify-content: center; font-size: 1.75rem; margin-bottom: 1rem;">
                                 <i class="fas fa-layer-group"></i>
                             </div>
                             <h3 style="font-size: 1.25rem; margin: 0;">Levels of Scrutiny</h3>
@@ -586,21 +752,21 @@
                         <div style="display: flex; flex-direction: column; gap: 1.25rem;">
                             <div>
                                 <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
-                                    <div style="width: 28px; height: 28px; background: rgba(20, 184, 166, 0.2); color: var(--teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">1</div>
+                                    <div style="width: 28px; height: 28px; background: rgba(15, 23, 42, 0.2); color: var(--navy-900); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">1</div>
                                     <h4 style="font-size: 1rem; margin: 0;">Light Use</h4>
                                 </div>
                                 <p style="color: var(--gray-600); font-size: 0.875rem; margin: 0; padding-left: 2.125rem;">Spell check, brainstorming, quick facts<br><em>Minimal scrutiny</em></p>
                             </div>
                             <div>
                                 <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
-                                    <div style="width: 28px; height: 28px; background: rgba(20, 184, 166, 0.4); color: var(--teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">2</div>
+                                    <div style="width: 28px; height: 28px; background: rgba(15, 23, 42, 0.4); color: var(--navy-900); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">2</div>
                                     <h4 style="font-size: 1rem; margin: 0;">Medium Use</h4>
                                 </div>
                                 <p style="color: var(--gray-600); font-size: 0.875rem; margin: 0; padding-left: 2.125rem;">Interpretation, analysis, abstract problems<br><em>Apply 2-3 habits</em></p>
                             </div>
                             <div>
                                 <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
-                                    <div style="width: 28px; height: 28px; background: var(--teal); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">3</div>
+                                    <div style="width: 28px; height: 28px; background: var(--navy-900); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">3</div>
                                     <h4 style="font-size: 1rem; margin: 0;">High-Stakes Use</h4>
                                 </div>
                                 <p style="color: var(--gray-600); font-size: 0.875rem; margin: 0; padding-left: 2.125rem;">Legal, medical, financial decisions<br><em>Apply ALL 5 habits + verify with experts</em></p>
@@ -620,8 +786,8 @@
                         <div style="display: flex; flex-direction: column; gap: 1.25rem;">
                             <div>
                                 <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
-                                    <i class="fas fa-check" style="color: #10b981; font-size: 1rem;"></i>
-                                    <h4 style="font-size: 1rem; margin: 0; color: #10b981;">Public Data</h4>
+                                    <i class="fas fa-check" style="color: var(--navy-900); font-size: 1rem;"></i>
+                                    <h4 style="font-size: 1rem; margin: 0; color: var(--navy-900);">Public Data</h4>
                                 </div>
                                 <p style="color: var(--gray-600); font-size: 0.875rem; margin: 0; padding-left: 1.5rem;">Open-source info, articles, brainstorming</p>
                             </div>
@@ -652,7 +818,7 @@
 
                 <div class="card scroll-reveal" style="margin-top: 3rem; background: var(--navy-50); padding: 2rem; text-align: center;">
                     <p style="font-size: 1.05rem; color: var(--navy-900); margin: 0;">
-                        <i class="fas fa-shield-alt" style="color: var(--teal); margin-right: 0.5rem;"></i>
+                        <i class="fas fa-shield-alt" style="color: var(--navy-900); margin-right: 0.5rem;"></i>
                         <strong>This three-dimensional model ensures safe, effective AI use.</strong>
                         RUDI training builds these habits into your daily workflow.
                     </p>
@@ -760,223 +926,139 @@
     <!-- Assessment Platform -->
     <section class="section-padding" id="assessment" style="background: white; padding: 8rem 0;">
         <div class="container">
-            <div class="section-header scroll-reveal" style="text-align: center; margin-bottom: 4rem;">
-                <h2 style="font-size: 2.5rem; font-weight: 400; margin-bottom: 1rem;">How Assessment Works</h2>
-                <p class="text-secondary" style="font-size: 1rem; font-weight: 300;">
-                    Measure your AI readiness across all three dimensions with visual reporting
+            <div class="section-header scroll-reveal" style="text-align: center; margin-bottom: 3rem;">
+                <h2 style="font-size: 2.5rem; font-weight: 400; margin-bottom: 1rem;">Your AI Readiness — Visualized</h2>
+                <p class="text-secondary" style="font-size: 1.125rem; font-weight: 300; max-width: 700px; margin: 0 auto;">
+                    See your AI readiness instantly — discover where your team stands across all three dimensions with interactive visual reports
                 </p>
             </div>
 
-            <!-- Assessment Platform Visual -->
-            <div style="max-width: 800px; margin: 0 auto;">
-                <img src="images/skills-catalog-interface.png" alt="RUDI Skills Assessment Platform Interface" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);">
+            <!-- Lead with Radar Chart (Proof Point) -->
+            <div style="max-width: 1100px; margin: 0 auto 5rem;">
+                <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center;">
+                    <!-- Radar Chart First -->
+                    <div class="scroll-reveal">
+                        <div style="background: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.12);">
+                            <h4 class="mb-4" style="text-align: center; font-size: 1.2rem; color: var(--navy-900);">Your Readiness Snapshot</h4>
+                            <div style="position: relative; width: 100%; padding-bottom: 100%; background: white; border-radius: 8px;">
+                                <svg viewBox="0 0 400 400" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                                    <!-- Background circles -->
+                                    <circle cx="200" cy="200" r="150" fill="none" stroke="#e2e8f0" stroke-width="1"/>
+                                    <circle cx="200" cy="200" r="120" fill="none" stroke="#e2e8f0" stroke-width="1"/>
+                                    <circle cx="200" cy="200" r="90" fill="none" stroke="#e2e8f0" stroke-width="1"/>
+                                    <circle cx="200" cy="200" r="60" fill="none" stroke="#e2e8f0" stroke-width="1"/>
+                                    <circle cx="200" cy="200" r="30" fill="none" stroke="#e2e8f0" stroke-width="1"/>
+
+                                    <!-- Axis lines (3 domains) -->
+                                    <line x1="200" y1="200" x2="200" y2="50" stroke="#e2e8f0" stroke-width="1.5"/>
+                                    <line x1="200" y1="200" x2="330" y2="275" stroke="#e2e8f0" stroke-width="1.5"/>
+                                    <line x1="200" y1="200" x2="70" y2="275" stroke="#e2e8f0" stroke-width="1.5"/>
+
+                                    <!-- Pre-assessment triangle (gray, smaller) -->
+                                    <polygon points="200,110 280,240 120,240"
+                                             fill="#9ca3af" fill-opacity="0.2" stroke="#9ca3af" stroke-width="2"/>
+
+                                    <!-- Post-assessment triangle (navy, larger) -->
+                                    <polygon points="200,75 310,260 90,260"
+                                             fill="var(--navy-900)" fill-opacity="0.3" stroke="var(--navy-900)" stroke-width="2.5"/>
+
+                                    <!-- Center dot -->
+                                    <circle cx="200" cy="200" r="4" fill="#0f172a"/>
+
+                                    <!-- Domain Labels -->
+                                    <g>
+                                        <circle cx="200" cy="35" r="8" fill="var(--navy-900)"/>
+                                        <text x="200" y="25" text-anchor="middle" font-size="12" fill="#1e293b" font-weight="600">Conceptual</text>
+                                    </g>
+                                    <g>
+                                        <circle cx="345" cy="285" r="8" fill="var(--navy-900)"/>
+                                        <text x="345" y="305" text-anchor="middle" font-size="12" fill="#1e293b" font-weight="600">Operational</text>
+                                    </g>
+                                    <g>
+                                        <circle cx="55" cy="285" r="8" fill="var(--navy-900)"/>
+                                        <text x="55" y="305" text-anchor="middle" font-size="12" fill="#1e293b" font-weight="600">Governance</text>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--navy-100);">
+                                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
+                                    <span style="font-size: 0.85rem; color: var(--gray-600);"><span style="display: inline-block; width: 12px; height: 12px; background: #9ca3af; border-radius: 2px; margin-right: 0.5rem;"></span>Before Training</span>
+                                    <span style="font-size: 0.85rem; color: var(--gray-600);"><span style="display: inline-block; width: 12px; height: 12px; background: var(--navy-900); border-radius: 2px; margin-right: 0.5rem;"></span>After Training</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Value Props -->
+                    <div class="scroll-reveal">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--navy-900); font-weight: 500;">What You'll Discover</h3>
+                        <p style="font-size: 1rem; color: var(--gray-600); line-height: 1.8; margin-bottom: 2rem;">
+                            Your personalized readiness radar chart shows exactly where you stand — and where to focus next.
+                        </p>
+
+                        <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+                            <div style="display: flex; gap: 0.75rem; align-items: start;">
+                                <div style="flex-shrink: 0; width: 32px; height: 32px; background: var(--navy-900); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.9rem;">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <div>
+                                    <h4 style="font-size: 0.95rem; margin-bottom: 0.25rem; font-weight: 600;">Conceptual Literacy</h4>
+                                    <p style="color: var(--gray-600); font-size: 0.875rem; margin: 0;">Do you understand how AI works?</p>
+                                </div>
+                            </div>
+
+                            <div style="display: flex; gap: 0.75rem; align-items: start;">
+                                <div style="flex-shrink: 0; width: 32px; height: 32px; background: var(--navy-900); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.9rem;">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <div>
+                                    <h4 style="font-size: 0.95rem; margin-bottom: 0.25rem; font-weight: 600;">Operational Literacy</h4>
+                                    <p style="color: var(--gray-600); font-size: 0.875rem; margin: 0;">Can you use AI tools effectively in your work?</p>
+                                </div>
+                            </div>
+
+                            <div style="display: flex; gap: 0.75rem; align-items: start;">
+                                <div style="flex-shrink: 0; width: 32px; height: 32px; background: var(--navy-900); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.9rem;">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 style="font-size: 0.95rem; margin-bottom: 0.25rem; font-weight: 600;">Governance Literacy</h4>
+                                    <p style="color: var(--gray-600); font-size: 0.875rem; margin: 0;">Do you know what's safe and responsible?</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 2rem; padding: 1.5rem; background: var(--navy-50); border-radius: 8px; border-left: 4px solid var(--navy-900);">
+                            <p style="font-size: 0.95rem; color: var(--navy-900); margin: 0; font-style: italic;">
+                                <strong>Each dimension measured 0-4:</strong> From no awareness to expert fluency with personalized recommendations for growth.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div style="max-width: 1000px; margin: 0 auto;">
-                <div style="text-align: center; margin-bottom: 5rem;">
-                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--navy-900); font-weight: 500;">What We Measure</h3>
-                    <p style="font-size: 1rem; color: var(--gray-600); max-width: 600px; margin: 0 auto;">
-                        Your current proficiency level across each of the three critical dimensions
-                    </p>
-                </div>
-
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 4rem; margin-bottom: 2rem;">
-                    <div style="text-align: center;">
-                        <div style="width: 48px; height: 48px; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--navy-700);">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <h4 style="font-size: 1rem; margin-bottom: 0.5rem; color: var(--navy-900); font-weight: 600;">Conceptual</h4>
-                        <p style="font-size: 0.875rem; color: var(--gray-600); line-height: 1.5;">Do you understand how AI works?</p>
-                        <div style="margin-top: 1rem; font-size: 1.25rem; font-weight: 400; color: var(--teal);">Level 0-4</div>
-                    </div>
-
-                    <div style="text-align: center;">
-                        <div style="width: 48px; height: 48px; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--teal);">
-                            <i class="fas fa-cogs"></i>
-                        </div>
-                        <h4 style="font-size: 1rem; margin-bottom: 0.5rem; color: var(--navy-900); font-weight: 600;">Operational</h4>
-                        <p style="font-size: 0.875rem; color: var(--gray-600); line-height: 1.5;">Can you use AI tools effectively?</p>
-                        <div style="margin-top: 1rem; font-size: 1.25rem; font-weight: 400; color: var(--teal);">Level 0-4</div>
-                    </div>
-
-                    <div style="text-align: center;">
-                        <div style="width: 48px; height: 48px; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--accent);">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h4 style="font-size: 1rem; margin-bottom: 0.5rem; color: var(--navy-900); font-weight: 600;">Governance</h4>
-                        <p style="font-size: 0.875rem; color: var(--gray-600); line-height: 1.5;">Do you know what's safe to use?</p>
-                        <div style="margin-top: 1rem; font-size: 1.25rem; font-weight: 400; color: var(--teal);">Level 0-4</div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
     <!-- How Assessment Works -->
-    <section class="section-padding" style="background: var(--navy-50); padding: 6rem 0;">
-        <div class="container">
-            <div class="section-header scroll-reveal" style="text-align: center; margin-bottom: 4rem;">
-                <h2 style="font-size: 1.75rem; font-weight: 400; margin-bottom: 0.5rem;">Assessment Process</h2>
-            </div>
-
-            <div style="max-width: 1100px; margin: 0 auto;">
-                <div style="display: flex; justify-content: space-between; align-items: center; max-width: 900px; margin: 0 auto; position: relative;">
-                    <!-- Connection line -->
-                    <div style="position: absolute; top: 24px; left: 60px; right: 60px; height: 1px; background: var(--navy-200); z-index: 0;"></div>
-
-                    <div class="scroll-reveal" style="text-align: center; z-index: 1; position: relative;">
-                        <div style="width: 48px; height: 48px; background: white; border: 1px solid var(--navy-200); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.25rem; font-weight: 500; color: var(--navy-700);">1</div>
-                        <p style="font-size: 0.875rem; color: var(--navy-700); font-weight: 500;">Baseline</p>
-                    </div>
-
-                    <div style="color: var(--navy-300); font-size: 1.5rem;">→</div>
-
-                    <div class="scroll-reveal" style="text-align: center; z-index: 1; position: relative;">
-                        <div style="width: 48px; height: 48px; background: white; border: 1px solid var(--navy-200); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.25rem; font-weight: 500; color: var(--navy-700);">2</div>
-                        <p style="font-size: 0.875rem; color: var(--navy-700); font-weight: 500;">Train</p>
-                    </div>
-
-                    <div style="color: var(--navy-300); font-size: 1.5rem;">→</div>
-
-                    <div class="scroll-reveal" style="text-align: center; z-index: 1; position: relative;">
-                        <div style="width: 48px; height: 48px; background: white; border: 1px solid var(--navy-200); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.25rem; font-weight: 500; color: var(--navy-700);">3</div>
-                        <p style="font-size: 0.875rem; color: var(--navy-700); font-weight: 500;">Validate</p>
-                    </div>
-
-                    <div style="color: var(--navy-300); font-size: 1.5rem;">→</div>
-
-                    <div class="scroll-reveal" style="text-align: center; z-index: 1; position: relative;">
-                        <div style="width: 48px; height: 48px; background: var(--teal); border: 1px solid var(--teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.25rem; font-weight: 500; color: white;">✓</div>
-                        <p style="font-size: 0.875rem; color: var(--navy-700); font-weight: 500;">Track</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Visual Reporting -->
-    <section class="section-padding bg-gray">
-        <div class="container">
-            <div style="max-width: 1100px; margin: 0 auto;">
-                <div class="section-header scroll-reveal">
-                    <h2>Visual Competency Reports</h2>
-                    <p class="text-secondary" style="font-size: 1.125rem;">Track individual and team progress with detailed analytics</p>
-                </div>
-
-                <div class="card scroll-reveal" style="background: linear-gradient(135deg, var(--navy-50) 0%, white 100%);">
-                    <div class="responsive-2col" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
-                        <div>
-                            <h3 class="mb-6">Visual Competency Tracking</h3>
-                            <p style="font-size: 1.05rem; color: var(--gray-600); line-height: 1.8; margin-bottom: 2rem;">
-                                RUDI's assessment measures your proficiency across all three dimensions—Conceptual, Operational, and Governance—providing a complete picture of your AI readiness.
-                            </p>
-
-                            <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 2rem;">
-                                <div style="display: flex; gap: 1rem; align-items: start;">
-                                    <div style="flex-shrink: 0; width: 40px; height: 40px; background: var(--accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1rem; font-weight: 700;">
-                                        <i class="fas fa-chart-radar"></i>
-                                    </div>
-                                    <div>
-                                        <h4 style="font-size: 1rem; margin-bottom: 0.5rem;">Radar Chart Visualization</h4>
-                                        <p style="color: var(--gray-600); font-size: 0.9rem; margin: 0;">See your proficiency across all domains at a glance with interactive radar charts</p>
-                                    </div>
-                                </div>
-                                <div style="display: flex; gap: 1rem; align-items: start;">
-                                    <div style="flex-shrink: 0; width: 40px; height: 40px; background: var(--accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1rem; font-weight: 700;">
-                                        <i class="fas fa-arrows-alt-v"></i>
-                                    </div>
-                                    <div>
-                                        <h4 style="font-size: 1rem; margin-bottom: 0.5rem;">Before & After Comparison</h4>
-                                        <p style="color: var(--gray-600); font-size: 0.9rem; margin: 0;">Track your growth from baseline to post-training with side-by-side comparisons</p>
-                                    </div>
-                                </div>
-                                <div style="display: flex; gap: 1rem; align-items: start;">
-                                    <div style="flex-shrink: 0; width: 40px; height: 40px; background: var(--accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1rem; font-weight: 700;">
-                                        <i class="fas fa-bullseye"></i>
-                                    </div>
-                                    <div>
-                                        <h4 style="font-size: 1rem; margin-bottom: 0.5rem;">Personalized Recommendations</h4>
-                                        <p style="color: var(--gray-600); font-size: 0.9rem; margin: 0;">Get targeted suggestions for improving specific competencies based on your results</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <a href="#assessment" class="btn btn-primary">View Assessment Platform →</a>
-                        </div>
-
-                        <div>
-                            <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                                <h4 class="mb-4" style="text-align: center; font-size: 1.1rem;">Sample Competency Radar</h4>
-                                <div style="position: relative; width: 100%; padding-bottom: 100%; background: white; border-radius: 8px;">
-                                    <svg viewBox="0 0 400 400" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-                                        <!-- Background circles -->
-                                        <circle cx="200" cy="200" r="150" fill="none" stroke="#e2e8f0" stroke-width="1"/>
-                                        <circle cx="200" cy="200" r="120" fill="none" stroke="#e2e8f0" stroke-width="1"/>
-                                        <circle cx="200" cy="200" r="90" fill="none" stroke="#e2e8f0" stroke-width="1"/>
-                                        <circle cx="200" cy="200" r="60" fill="none" stroke="#e2e8f0" stroke-width="1"/>
-                                        <circle cx="200" cy="200" r="30" fill="none" stroke="#e2e8f0" stroke-width="1"/>
-
-                                        <!-- Axis lines (3 domains) -->
-                                        <line x1="200" y1="200" x2="200" y2="50" stroke="#e2e8f0" stroke-width="1.5"/>
-                                        <line x1="200" y1="200" x2="330" y2="275" stroke="#e2e8f0" stroke-width="1.5"/>
-                                        <line x1="200" y1="200" x2="70" y2="275" stroke="#e2e8f0" stroke-width="1.5"/>
-
-                                        <!-- Pre-assessment triangle (gray, smaller) -->
-                                        <polygon points="200,110 280,240 120,240"
-                                                 fill="#9ca3af" fill-opacity="0.2" stroke="#9ca3af" stroke-width="2"/>
-
-                                        <!-- Post-assessment triangle (teal, larger) -->
-                                        <polygon points="200,75 310,260 90,260"
-                                                 fill="var(--teal)" fill-opacity="0.3" stroke="var(--teal)" stroke-width="2.5"/>
-
-                                        <!-- Center dot -->
-                                        <circle cx="200" cy="200" r="4" fill="#0f172a"/>
-
-                                        <!-- Domain Labels -->
-                                        <g>
-                                            <circle cx="200" cy="35" r="8" fill="var(--teal)"/>
-                                            <text x="200" y="25" text-anchor="middle" font-size="12" fill="#1e293b" font-weight="600">Conceptual</text>
-                                        </g>
-                                        <g>
-                                            <circle cx="345" cy="285" r="8" fill="var(--teal)"/>
-                                            <text x="345" y="305" text-anchor="middle" font-size="12" fill="#1e293b" font-weight="600">Operational</text>
-                                        </g>
-                                        <g>
-                                            <circle cx="55" cy="285" r="8" fill="var(--teal)"/>
-                                            <text x="55" y="305" text-anchor="middle" font-size="12" fill="#1e293b" font-weight="600">Governance</text>
-                                        </g>
-                                    </svg>
-                                </div>
-                                <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--navy-100);">
-                                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
-                                        <span style="font-size: 0.85rem; color: var(--gray-600);">Pre-Assessment</span>
-                                        <div style="width: 16px; height: 16px; background: var(--gray-400); border-radius: 2px; opacity: 0.5;"></div>
-                                    </div>
-                                    <div style="display: flex; align-items: center; justify-content: space-between;">
-                                        <span style="font-size: 0.85rem; color: var(--gray-600);">Post-Assessment</span>
-                                        <div style="width: 16px; height: 16px; background: var(--teal); border-radius: 2px;"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
     <!-- CTA -->
-    <section class="section-padding" style="background: white;">
+    <section class="section-padding" style="background: linear-gradient(135deg, var(--navy-50) 0%, white 100%); border-top: 1px solid var(--navy-100);">
         <div class="container">
-            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-                <h2 class="mb-6">Ready to Move from Familiarity to Fluency?</h2>
-                <p style="font-size: 1.125rem; color: var(--gray-600); margin-bottom: 3rem;">
-                    Request your free AI readiness assessment to see exactly where you are and where to focus training
+            <div style="max-width: 850px; margin: 0 auto; text-align: center;">
+                <h2 class="mb-6" style="font-size: 2.5rem;">Ready to Move from Familiarity to Fluency?</h2>
+                <p style="font-size: 1.2rem; color: var(--navy-700); margin-bottom: 1rem; font-weight: 400;">
+                    See your AI readiness instantly — discover where your team stands and what to do next.
                 </p>
-                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="#" class="btn btn-primary" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Request Assessment</a>
-                    <a href="certificates.html" class="btn btn-secondary">View Certifications</a>
+                <p style="font-size: 1rem; color: var(--gray-600); margin-bottom: 3rem;">
+                    Your personalized radar chart is just one step away. Request your free assessment now.
+                </p>
+                <div style="display: flex; gap: 1.25rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="#request-assessment" class="btn btn-primary" style="font-size: 1.05rem; padding: 1rem 2.5rem;">
+                        <i class="fas fa-chart-line" style="margin-right: 0.5rem;"></i>Get My Assessment
+                    </a>
+                    <a href="certificates.html" class="btn btn-secondary" style="font-size: 1.05rem; padding: 1rem 2.5rem;">
+                        View Certification Pathways
+                    </a>
                 </div>
             </div>
         </div>
@@ -1041,12 +1123,12 @@
                 // Update success message with the survey link
                 const successDiv = document.getElementById('successMessage');
                 successDiv.innerHTML = `
-                    <div style="color: var(--teal); font-size: 3rem; margin-bottom: 1rem;">
+                    <div style="color: var(--navy-900); font-size: 3rem; margin-bottom: 1rem;">
                         <i class="fas fa-check-circle"></i>
                     </div>
                     <h3 style="color: var(--navy-900); margin-bottom: 1.5rem;">Your Survey Link is Ready!</h3>
 
-                    <div style="background: white; padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; border: 2px solid var(--teal);">
+                    <div style="background: white; padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; border: 2px solid var(--navy-900);">
                         <p style="color: var(--navy-700); font-weight: 600; margin-bottom: 0.75rem; font-size: 0.95rem;">
                             Share this link with your team:
                         </p>
@@ -1090,22 +1172,65 @@
             }
         });
 
-        // Copy link to clipboard
+        // Copy link to clipboard (with fallback for non-HTTPS)
         function copyLinkToClipboard() {
             const link = document.getElementById('generatedLink').textContent;
-            navigator.clipboard.writeText(link).then(() => {
-                const btn = event.target.closest('button');
-                const originalHTML = btn.innerHTML;
-                btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
-                btn.style.background = '#10b981';
-                setTimeout(() => {
-                    btn.innerHTML = originalHTML;
-                    btn.style.background = '';
-                }, 2000);
-            }).catch(err => {
-                console.error('Failed to copy:', err);
-                alert('Failed to copy. Please select and copy the link manually.');
-            });
+            const btn = event.target.closest('button');
+            const originalHTML = btn.innerHTML;
+
+            // Try modern clipboard API first (requires HTTPS)
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(link).then(() => {
+                    btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                    btn.style.background = 'var(--navy-900)';
+                    setTimeout(() => {
+                        btn.innerHTML = originalHTML;
+                        btn.style.background = '';
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Clipboard API failed:', err);
+                    fallbackCopy(link, btn, originalHTML);
+                });
+            } else {
+                // Fallback for localhost/HTTP
+                fallbackCopy(link, btn, originalHTML);
+            }
+        }
+
+        // Fallback copy method for localhost/HTTP
+        function fallbackCopy(text, btn, originalHTML) {
+            const textArea = document.createElement('textarea');
+            textArea.value = text;
+            textArea.style.position = 'fixed';
+            textArea.style.left = '-9999px';
+            document.body.appendChild(textArea);
+            textArea.select();
+
+            try {
+                const successful = document.execCommand('copy');
+                if (successful) {
+                    btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                    btn.style.background = 'var(--navy-900)';
+                    setTimeout(() => {
+                        btn.innerHTML = originalHTML;
+                        btn.style.background = '';
+                    }, 2000);
+                } else {
+                    throw new Error('Copy command failed');
+                }
+            } catch (err) {
+                console.error('Fallback copy failed:', err);
+                // Select the text so user can manually copy
+                const linkElement = document.getElementById('generatedLink');
+                const range = document.createRange();
+                range.selectNodeContents(linkElement);
+                const selection = window.getSelection();
+                selection.removeAllRanges();
+                selection.addRange(range);
+                alert('Copy failed. The link is now selected - press Cmd+C (Mac) or Ctrl+C (Windows) to copy.');
+            } finally {
+                document.body.removeChild(textArea);
+            }
         }
     </script>
 </body>
