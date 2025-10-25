@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Competency Framework &amp; Assessment | RUDI 30-Point Model</title>
-    <meta name="description" content="RUDI's comprehensive 30-point AI competency framework and assessment platform. Measure AI literacy across 3 domains, 5 proficiency levels, and 30 skills. Industry-standard model for organizational AI readiness assessment.">
+    <title>AI Readiness Framework &amp; Assessment | RUDI</title>
+    <meta name="description" content="RUDI's AI Readiness Framework: Move from Familiarity to Fluency through structured competency development. Measure AI literacy across 3 dimensions (Conceptual, Operational, Governance) and 5 proficiency levels with responsible use training.">
     <meta name="keywords" content="AI competency framework, AI assessment, 30-point framework, AI skills matrix, AI literacy measurement, competency assessment platform, AI proficiency levels, organizational AI readiness, AI skills assessment, enterprise AI framework, AI capability model, workforce AI assessment, AI maturity model, skills gap analysis, AI training framework">
     <meta name="author" content="RUDI - Regional Upskilling Digital Initiative">
     <meta name="robots" content="index, follow">
@@ -90,10 +90,261 @@
         <div class="container">
             <div class="section-header scroll-reveal">
                 <span class="section-badge"><i class="fas fa-chart-line"></i> Framework & Assessment</span>
-                <h1>30-Point Framework & Competency Assessment</h1>
+                <h1>The RUDI AI Readiness Framework</h1>
                 <p style="max-width: 800px; margin: 0 auto; font-size: 1.25rem; color: var(--gray-600);">
-                    Industry-standard competency model with precision measurement platform
+                    From Familiarity to Fluency: A comprehensive model for building AI competency across your organization
                 </p>
+            </div>
+
+            <!-- Request Assessment CTA -->
+            <div style="max-width: 700px; margin: 3rem auto 0; background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 12px 32px rgba(0,0,0,0.1); border: 2px solid var(--teal);">
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <div style="display: inline-block; background: rgba(20, 184, 166, 0.1); color: var(--teal); padding: 0.5rem 1.25rem; border-radius: 50px; font-size: 0.9rem; font-weight: 600; margin-bottom: 1rem;">
+                        <i class="fas fa-clipboard-check"></i> FREE AI READINESS ASSESSMENT
+                    </div>
+                    <h2 style="font-size: 1.75rem; color: var(--navy-900); margin-bottom: 0.75rem;">Request Your Custom Assessment</h2>
+                    <p style="color: var(--gray-600); font-size: 1.05rem;">
+                        Get your AI readiness report • 9 questions • 5-7 minutes • Completely anonymous
+                    </p>
+                </div>
+
+                <form id="assessmentRequestForm" style="display: flex; flex-direction: column; gap: 1.25rem;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div>
+                            <label style="display: block; font-weight: 500; color: var(--navy-900); margin-bottom: 0.5rem; font-size: 0.95rem;">
+                                Name <span style="color: #ef4444;">*</span>
+                            </label>
+                            <input type="text" name="name" required
+                                style="width: 100%; padding: 0.875rem; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 1rem; font-family: 'Inter', sans-serif;"
+                                placeholder="Your name">
+                        </div>
+                        <div>
+                            <label style="display: block; font-weight: 500; color: var(--navy-900); margin-bottom: 0.5rem; font-size: 0.95rem;">
+                                Email <span style="color: #ef4444;">*</span>
+                            </label>
+                            <input type="email" name="email" required
+                                style="width: 100%; padding: 0.875rem; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 1rem; font-family: 'Inter', sans-serif;"
+                                placeholder="your@email.com">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label style="display: block; font-weight: 500; color: var(--navy-900); margin-bottom: 0.5rem; font-size: 0.95rem;">
+                            Organization <span style="color: #ef4444;">*</span>
+                        </label>
+                        <input type="text" name="organization" required
+                            style="width: 100%; padding: 0.875rem; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 1rem; font-family: 'Inter', sans-serif;"
+                            placeholder="Your company or firm name">
+                    </div>
+
+                    <div>
+                        <label style="display: block; font-weight: 500; color: var(--navy-900); margin-bottom: 0.5rem; font-size: 0.95rem;">
+                            Role / Title <span style="color: #ef4444;">*</span>
+                        </label>
+                        <input type="text" name="role" required
+                            style="width: 100%; padding: 0.875rem; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 1rem; font-family: 'Inter', sans-serif;"
+                            placeholder="e.g., Managing Partner, Director, Manager">
+                    </div>
+
+                    <button type="submit"
+                        style="width: 100%; background: var(--navy-900); color: white; padding: 1.125rem; border: none; border-radius: 8px; font-size: 1.05rem; font-weight: 600; cursor: pointer; transition: all 0.2s; font-family: 'Inter', sans-serif; margin-top: 0.5rem;">
+                        <i class="fas fa-paper-plane"></i> Request My Assessment
+                    </button>
+
+                    <p style="text-align: center; font-size: 0.85rem; color: var(--gray-500); margin: 0;">
+                        <i class="fas fa-lock"></i> We'll send you a custom survey link within 24 hours
+                    </p>
+                </form>
+
+                <div id="successMessage" style="display: none; text-align: center; padding: 2rem;">
+                    <div style="color: var(--teal); font-size: 3rem; margin-bottom: 1rem;">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3 style="color: var(--navy-900); margin-bottom: 0.75rem;">Request Received!</h3>
+                    <p style="color: var(--gray-600);">
+                        We'll send your custom assessment link to <strong id="submittedEmail"></strong> within 24 hours.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Real Barrier to Strategic Adoption -->
+    <section class="section-padding">
+        <div class="container">
+            <div style="max-width: 1000px; margin: 0 auto;">
+                <div class="scroll-reveal" style="text-align: center; margin-bottom: 3rem;">
+                    <h2 style="font-size: 2.25rem; margin-bottom: 1.5rem; color: var(--navy-900);">The Real Barrier to Strategic Adoption Isn't the Technology</h2>
+                    <p style="font-size: 1.25rem; color: var(--gray-600); line-height: 1.8; max-width: 800px; margin: 0 auto;">
+                        It's <strong style="color: var(--navy-900);">how your people use the tools.</strong>
+                    </p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 3rem;">
+                    <div class="card scroll-reveal" style="border-left: 4px solid var(--accent);">
+                        <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: var(--navy-900);">The Tech-Savvy Organization</h3>
+                        <p style="color: var(--gray-600); font-size: 1rem; line-height: 1.7;">
+                            Highly fluent in technology, yet unable to figure out how to incorporate AI strategically. The tools are there, but adoption has plateaued.
+                        </p>
+                    </div>
+                    <div class="card scroll-reveal" style="border-left: 4px solid var(--teal);">
+                        <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: var(--navy-900);">The Starting-From-Scratch Organization</h3>
+                        <p style="color: var(--gray-600); font-size: 1rem; line-height: 1.7;">
+                            Little to no AI experience, unsure where to begin. Needs a clear roadmap but doesn't want to guess.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card scroll-reveal" style="background: linear-gradient(135deg, var(--navy-50) 0%, white 100%); padding: 2.5rem;">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem; text-align: center; color: var(--navy-900);">The Key Overlap: Both Need a Data-Driven, People-Centered Approach</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+                        <div style="text-align: center;">
+                            <div style="width: 60px; height: 60px; background: var(--accent); color: white; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1rem;">
+                                <i class="fas fa-route"></i>
+                            </div>
+                            <h4 style="font-size: 1rem; margin-bottom: 0.5rem;">Workflows</h4>
+                            <p style="color: var(--gray-600); font-size: 0.9rem;">Embedding AI into daily tasks</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="width: 60px; height: 60px; background: var(--teal); color: white; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1rem;">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h4 style="font-size: 1rem; margin-bottom: 0.5rem;">Data</h4>
+                            <p style="color: var(--gray-600); font-size: 0.9rem;">Understanding what's safe to use</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="width: 60px; height: 60px; background: var(--navy-700); color: white; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1rem;">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h4 style="font-size: 1rem; margin-bottom: 0.5rem;">Culture</h4>
+                            <p style="color: var(--gray-600); font-size: 0.9rem;">Building confidence and adoption</p>
+                        </div>
+                    </div>
+                    <p style="text-align: center; font-size: 1.125rem; color: var(--navy-900); margin: 0;">
+                        <strong>We've learned the real ROI from generative AI comes from people's efficiency at the micro level</strong>—using AI tools to do their jobs better, whether that's drafting documents, analyzing data, or automating repetitive tasks.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Two Axes of Responsibility -->
+    <section class="section-padding bg-gray">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2>Two Approaches to Strategic AI Adoption</h2>
+                <p class="text-secondary" style="font-size: 1.125rem;">You can focus on technology or culture. RUDI focuses on people.</p>
+            </div>
+
+            <div style="max-width: 1100px; margin: 0 auto;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-bottom: 3rem;">
+                    <div class="card scroll-reveal" style="border-left: 4px solid #10b981;">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: #10b981;">Cultural Axis (People-Centric)</h3>
+                        <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1rem;">
+                            <li style="display: flex; align-items: start; gap: 0.75rem;">
+                                <i class="fas fa-check" style="color: #10b981; margin-top: 0.25rem; flex-shrink: 0;"></i>
+                                <span>Builds comfort by reducing fear and demystifying AI</span>
+                            </li>
+                            <li style="display: flex; align-items: start; gap: 0.75rem;">
+                                <i class="fas fa-check" style="color: #10b981; margin-top: 0.25rem; flex-shrink: 0;"></i>
+                                <span>Builds familiarity by embedding generative tools into daily work</span>
+                            </li>
+                            <li style="display: flex; align-items: start; gap: 0.75rem;">
+                                <i class="fas fa-check" style="color: #10b981; margin-top: 0.25rem; flex-shrink: 0;"></i>
+                                <span>Builds literacy through structured learning and governance frameworks</span>
+                            </li>
+                        </ul>
+                        <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--navy-100);">
+                            <p style="font-size: 0.95rem; color: var(--gray-600); margin: 0;"><strong>Focus:</strong> How people learn, adopt, and use AI responsibly</p>
+                        </div>
+                    </div>
+
+                    <div class="card scroll-reveal" style="border-left: 4px solid var(--navy-700);">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--navy-700);">Technical Axis (System-Centric)</h3>
+                        <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1rem;">
+                            <li style="display: flex; align-items: start; gap: 0.75rem;">
+                                <i class="fas fa-check" style="color: var(--navy-700); margin-top: 0.25rem; flex-shrink: 0;"></i>
+                                <span>Aligns AI tools, data strategy, and infrastructure with organizational goals</span>
+                            </li>
+                            <li style="display: flex; align-items: start; gap: 0.75rem;">
+                                <i class="fas fa-check" style="color: var(--navy-700); margin-top: 0.25rem; flex-shrink: 0;"></i>
+                                <span>Ensures compliance, transparency, and ethical standards</span>
+                            </li>
+                            <li style="display: flex; align-items: start; gap: 0.75rem;">
+                                <i class="fas fa-check" style="color: var(--navy-700); margin-top: 0.25rem; flex-shrink: 0;"></i>
+                                <span>Modernizes performance, metrics, model impact, and ROI of AI initiatives</span>
+                            </li>
+                        </ul>
+                        <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--navy-100);">
+                            <p style="font-size: 0.95rem; color: var(--gray-600); margin: 0;"><strong>Focus:</strong> Infrastructure, compliance, and system-level optimization</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card scroll-reveal" style="background: linear-gradient(135deg, #10b981 0%, var(--teal) 100%); color: white; padding: 2.5rem; text-align: center;">
+                    <h3 style="font-size: 1.75rem; margin-bottom: 1rem; color: white;">RUDI Takes the People-Centered Approach</h3>
+                    <p style="font-size: 1.125rem; margin: 0; color: rgba(255,255,255,0.95);">
+                        We start with <strong>human-centered design</strong>: building comfort, familiarity, and literacy <em>before</em> diving into technical complexity.
+                        This ensures <strong>sustainable adoption</strong> that sticks.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The AI Readiness Pyramid -->
+    <section class="section-padding bg-gray">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2>The AI Readiness Pyramid</h2>
+                <p class="text-secondary" style="font-size: 1.125rem;">The psychological journey from "I'm afraid" to "I'm fluent"</p>
+            </div>
+
+            <div style="max-width: 1000px; margin: 0 auto;">
+                <div class="responsive-2col" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+                    <div>
+                        <div style="display: flex; flex-direction: column; gap: 2rem;">
+                            <div class="card scroll-reveal" style="border-left: 4px solid var(--accent);">
+                                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem;">
+                                    <div style="width: 40px; height: 40px; background: var(--accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.125rem; font-weight: 700;">1</div>
+                                    <h3 style="font-size: 1.25rem; margin: 0;">Familiarity</h3>
+                                </div>
+                                <p style="color: var(--gray-600); font-size: 1rem; margin: 0;">"I've seen it" — Basic exposure to AI exists</p>
+                            </div>
+
+                            <div class="card scroll-reveal" style="border-left: 4px solid var(--accent);">
+                                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem;">
+                                    <div style="width: 40px; height: 40px; background: var(--accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.125rem; font-weight: 700;">2</div>
+                                    <h3 style="font-size: 1.25rem; margin: 0;">Comfort</h3>
+                                </div>
+                                <p style="color: var(--gray-600); font-size: 1rem; margin: 0;">"I'm not afraid of it" — Confidence to experiment without fear</p>
+                            </div>
+
+                            <div class="card scroll-reveal" style="border-left: 4px solid var(--accent);">
+                                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem;">
+                                    <div style="width: 40px; height: 40px; background: var(--accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.125rem; font-weight: 700;">3</div>
+                                    <h3 style="font-size: 1.25rem; margin: 0;">Literacy</h3>
+                                </div>
+                                <p style="color: var(--gray-600); font-size: 1rem; margin: 0;">"I understand what it does" — Can explain and use AI competently</p>
+                            </div>
+
+                            <div class="card scroll-reveal" style="border-left: 4px solid var(--teal); background: linear-gradient(135deg, #fff 0%, var(--navy-50) 100%);">
+                                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem;">
+                                    <div style="width: 40px; height: 40px; background: var(--teal); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.125rem; font-weight: 700;">4</div>
+                                    <h3 style="font-size: 1.25rem; margin: 0;">Fluency</h3>
+                                </div>
+                                <p style="color: var(--gray-600); font-size: 1rem; margin: 0;"><strong>Conceptual + Operational + Governance literacy combined</strong> — Full competency across all dimensions</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center;">
+                        <img src="images/3d-cube-framework.png" alt="RUDI AI Readiness Pyramid visualization" style="width: 100%; max-width: 400px; height: auto; border-radius: 12px; margin: 0 auto; box-shadow: 0 12px 32px rgba(0,0,0,0.1);">
+                        <p style="margin-top: 1.5rem; font-size: 0.95rem; color: var(--gray-600); font-style: italic;">
+                            Most organizations are stuck between Familiarity and Comfort. RUDI moves you to Fluency.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -101,79 +352,72 @@
     <!-- Framework Overview -->
     <section class="section-padding">
         <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2>The AI Literacy Framework</h2>
+                <p class="text-secondary" style="font-size: 1.125rem;">Three dimensions of competency, five levels of proficiency</p>
+            </div>
+
             <div style="max-width: 1000px; margin: 0 auto;">
-                <div class="responsive-2col" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
-                    <div class="scroll-reveal">
-                        <h2 class="mb-6">Three-Dimensional Model</h2>
-                        <p style="font-size: 1.125rem; color: var(--gray-600); margin-bottom: 2rem;">
-                            Our framework measures AI literacy across three critical domains, with five proficiency levels in each.
-                        </p>
-
-                        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-                            <div style="display: flex; gap: 1rem;">
-                                <div style="flex-shrink: 0; width: 50px; height: 50px; background: rgba(20, 184, 166, 0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--teal); font-size: 1.25rem;">
-                                    <i class="fas fa-brain"></i>
-                                </div>
-                                <div>
-                                    <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Conceptual</h3>
-                                    <p style="color: var(--gray-600); font-size: 0.95rem;">Understanding AI at a high level</p>
-                                </div>
-                            </div>
-
-                            <div style="display: flex; gap: 1rem;">
-                                <div style="flex-shrink: 0; width: 50px; height: 50px; background: rgba(20, 184, 166, 0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--teal); font-size: 1.25rem;">
-                                    <i class="fas fa-cogs"></i>
-                                </div>
-                                <div>
-                                    <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Operational</h3>
-                                    <p style="color: var(--gray-600); font-size: 0.95rem;">Using AI tools in practice</p>
-                                </div>
-                            </div>
-
-                            <div style="display: flex; gap: 1rem;">
-                                <div style="flex-shrink: 0; width: 50px; height: 50px; background: rgba(20, 184, 166, 0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--teal); font-size: 1.25rem;">
-                                    <i class="fas fa-shield-alt"></i>
-                                </div>
-                                <div>
-                                    <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Governance</h3>
-                                    <p style="color: var(--gray-600); font-size: 0.95rem;">Oversight, ethics, and responsible use</p>
-                                </div>
-                            </div>
+                <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 4rem;">
+                    <div style="display: flex; gap: 1rem;" class="scroll-reveal">
+                        <div style="flex-shrink: 0; width: 60px; height: 60px; background: rgba(20, 184, 166, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--teal); font-size: 1.5rem;">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div>
+                            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Conceptual Understanding</h3>
+                            <p style="color: var(--gray-600); font-size: 1.05rem;">Understanding AI at a high level — how it works, why outputs vary, limitations, and societal impact</p>
                         </div>
                     </div>
 
-                    <div style="text-align: center;">
-                        <img src="images/3d-cube-framework.png" alt="Interactive 3D model representing our multi-dimensional competency framework" style="width: 100%; max-width: 400px; height: auto; border-radius: 12px; margin: 0 auto; box-shadow: 0 12px 32px rgba(0,0,0,0.1);">
+                    <div style="display: flex; gap: 1rem;" class="scroll-reveal">
+                        <div style="flex-shrink: 0; width: 60px; height: 60px; background: rgba(20, 184, 166, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--teal); font-size: 1.5rem;">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div>
+                            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Operational Skills</h3>
+                            <p style="color: var(--gray-600); font-size: 1.05rem;">Using AI tools in practice — writing effective prompts, building workflows, integrating AI into daily work</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 1rem;" class="scroll-reveal">
+                        <div style="flex-shrink: 0; width: 60px; height: 60px; background: rgba(20, 184, 166, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--teal); font-size: 1.5rem;">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div>
+                            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Governance & Ethics</h3>
+                            <p style="color: var(--gray-600); font-size: 1.05rem;">Oversight, ethics, and responsible use — understanding risks, applying policies, leading safe AI adoption</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div style="max-width: 900px; margin: 6rem auto 0;">
-                <div style="text-align: center; margin-bottom: 4rem;">
-                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--navy-900); font-weight: 400;">The Framework Formula</h3>
+                <div class="card scroll-reveal" style="background: linear-gradient(135deg, var(--navy-50) 0%, white 100%); padding: 3rem;">
+                    <h3 style="text-align: center; margin-bottom: 2.5rem; font-size: 1.5rem;">Three Dimensions × Five Levels = Complete Competency Map</h3>
+
+                    <div style="display: flex; justify-content: center; align-items: center; gap: 3rem; margin-bottom: 2rem;">
+                        <div style="text-align: center;">
+                            <div style="font-size: 3.5rem; font-weight: 200; color: var(--navy-900); line-height: 1;">3</div>
+                            <p style="font-size: 0.875rem; color: var(--gray-600); margin-top: 0.5rem; font-weight: 500;">DIMENSIONS</p>
+                        </div>
+
+                        <div style="font-size: 2rem; color: var(--navy-200); font-weight: 200;">×</div>
+
+                        <div style="text-align: center;">
+                            <div style="font-size: 3.5rem; font-weight: 200; color: var(--navy-900); line-height: 1;">5</div>
+                            <p style="font-size: 0.875rem; color: var(--gray-600); margin-top: 0.5rem; font-weight: 500;">PROFICIENCY LEVELS</p>
+                        </div>
+
+                        <div style="font-size: 2rem; color: var(--navy-200); font-weight: 200;">=</div>
+
+                        <div style="text-align: center;">
+                            <div style="font-size: 3.5rem; font-weight: 200; color: var(--teal); line-height: 1;">15</div>
+                            <p style="font-size: 0.875rem; color: var(--gray-600); margin-top: 0.5rem; font-weight: 500;">COMPETENCY POINTS</p>
+                        </div>
+                    </div>
+
+                    <p style="text-align: center; color: var(--gray-600); font-size: 1rem; margin: 0;">
+                        Your assessment maps your current proficiency across all 15 points, showing exactly where to focus training.
+                    </p>
                 </div>
-
-                <div style="display: flex; justify-content: center; align-items: center; gap: 4rem;">
-                    <div style="text-align: center;">
-                        <div style="font-size: 4rem; font-weight: 200; color: var(--navy-900); line-height: 1;">3</div>
-                        <p style="font-size: 0.875rem; color: var(--gray-600); margin-top: 0.5rem; font-weight: 500;">DOMAINS</p>
-                    </div>
-
-                    <div style="font-size: 2rem; color: var(--navy-200); font-weight: 200;">×</div>
-
-                    <div style="text-align: center;">
-                        <div style="font-size: 4rem; font-weight: 200; color: var(--navy-900); line-height: 1;">5</div>
-                        <p style="font-size: 0.875rem; color: var(--gray-600); margin-top: 0.5rem; font-weight: 500;">LEVELS</p>
-                    </div>
-
-                    <div style="font-size: 2rem; color: var(--navy-200); font-weight: 200;">=</div>
-
-                    <div style="text-align: center;">
-                        <div style="font-size: 4rem; font-weight: 200; color: var(--teal); line-height: 1;">30</div>
-                        <p style="font-size: 0.875rem; color: var(--gray-600); margin-top: 0.5rem; font-weight: 500;">COMPETENCIES</p>
-                    </div>
-                </div>
-            </div>
             </div>
         </div>
     </section>
@@ -183,31 +427,39 @@
         <div class="container">
             <div class="section-header scroll-reveal">
                 <h2>Five Proficiency Levels</h2>
-                <p class="text-secondary" style="font-size: 1.125rem;">From no exposure to advanced expertise</p>
+                <p class="text-secondary" style="font-size: 1.125rem;">Applied across each of the three dimensions</p>
             </div>
 
-            <div style="max-width: 800px; margin: 0 auto;">
+            <div style="max-width: 900px; margin: 0 auto;">
                 <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-                    <div class="card scroll-reveal">
+                    <div class="card scroll-reveal" style="border-left: 3px solid var(--gray-400);">
                         <div style="display: flex; align-items: center; gap: 1.5rem;">
-                            <div style="flex-shrink: 0; width: 60px; height: 60px; background: var(--navy-900); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700;">
+                            <div style="flex-shrink: 0; width: 60px; height: 60px; background: var(--gray-400); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700;">
                                 0
                             </div>
                             <div>
                                 <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">No Exposure</h3>
-                                <p class="text-secondary" style="font-size: 0.95rem; margin: 0;">No awareness of AI technologies or applications</p>
+                                <p class="text-secondary" style="font-size: 0.95rem; margin: 0;">
+                                    <strong>Conceptual:</strong> Never heard of generative AI •
+                                    <strong>Operational:</strong> Never opened an AI tool •
+                                    <strong>Governance:</strong> No awareness of AI risks
+                                </p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="card scroll-reveal">
+                    <div class="card scroll-reveal" style="border-left: 3px solid var(--navy-700);">
                         <div style="display: flex; align-items: center; gap: 1.5rem;">
-                            <div style="flex-shrink: 0; width: 60px; height: 60px; background: var(--navy-900); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700;">
+                            <div style="flex-shrink: 0; width: 60px; height: 60px; background: var(--navy-700); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700;">
                                 1
                             </div>
                             <div>
                                 <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Pre-Beginner</h3>
-                                <p class="text-secondary" style="font-size: 0.95rem; margin: 0;">Heard of AI but cannot explain it or use tools</p>
+                                <p class="text-secondary" style="font-size: 0.95rem; margin: 0;">
+                                    <strong>Conceptual:</strong> Heard "AI" or "ChatGPT" but can't explain •
+                                    <strong>Operational:</strong> Can open tools but unsure what to type •
+                                    <strong>Governance:</strong> Knows AI may be biased but not how
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -218,11 +470,12 @@
                                 2
                             </div>
                             <div style="flex-grow: 1;">
-                                <div style="display: flex; align-items: center; gap: 1rem;">
-                                    <h3 style="font-size: 1.1rem; margin: 0;">Beginner</h3>
-                                    <span style="background: linear-gradient(135deg, var(--accent), var(--teal)); color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">CERTIFICATE LEVEL 1</span>
-                                </div>
-                                <p class="text-secondary" style="font-size: 0.95rem; margin: 0.5rem 0 0;">Can describe AI and try basic prompts</p>
+                                <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Beginner</h3>
+                                <p class="text-secondary" style="font-size: 0.95rem; margin: 0;">
+                                    <strong>Conceptual:</strong> Can describe AI as "a tool that generates text/images" •
+                                    <strong>Operational:</strong> Can try basic prompts, recognize when output is off •
+                                    <strong>Governance:</strong> Can name risks like privacy, misinformation, bias
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -233,39 +486,187 @@
                                 3
                             </div>
                             <div style="flex-grow: 1;">
-                                <div style="display: flex; align-items: center; gap: 1rem;">
-                                    <h3 style="font-size: 1.1rem; margin: 0;">Intermediate</h3>
-                                    <span style="background: linear-gradient(135deg, var(--accent), var(--teal)); color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">CERTIFICATE LEVEL 2</span>
-                                </div>
-                                <p class="text-secondary" style="font-size: 0.95rem; margin: 0.5rem 0 0;">Uses AI for work tasks with guidance</p>
+                                <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Intermediate</h3>
+                                <p class="text-secondary" style="font-size: 0.95rem; margin: 0;">
+                                    <strong>Conceptual:</strong> Understands training data, bias, why outputs vary •
+                                    <strong>Operational:</strong> Uses AI for work tasks with cross-checking •
+                                    <strong>Governance:</strong> Knows policies, applies them correctly
+                                </p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="card scroll-reveal" style="background: linear-gradient(135deg, #fff 0%, var(--navy-50) 100%); border-left: 4px solid var(--accent);">
+                    <div class="card scroll-reveal" style="background: linear-gradient(135deg, #fff 0%, var(--navy-50) 100%); border-left: 4px solid var(--teal);">
                         <div style="display: flex; align-items: center; gap: 1.5rem;">
-                            <div style="flex-shrink: 0; width: 60px; height: 60px; background: var(--accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; box-shadow: 0 4px 12px rgba(5,150,105,0.3);">
+                            <div style="flex-shrink: 0; width: 60px; height: 60px; background: var(--teal); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; box-shadow: 0 4px 12px rgba(20,184,166,0.3);">
                                 4
                             </div>
                             <div style="flex-grow: 1;">
-                                <div style="display: flex; align-items: center; gap: 1rem;">
-                                    <h3 style="font-size: 1.1rem; margin: 0;">Advanced</h3>
-                                    <span style="background: linear-gradient(135deg, var(--accent), var(--teal)); color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">CERTIFICATE LEVEL 3</span>
-                                </div>
-                                <p class="text-secondary" style="font-size: 0.95rem; margin: 0.5rem 0 0;">Designs workflows, leads implementation, mentors others</p>
+                                <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Advanced</h3>
+                                <p class="text-secondary" style="font-size: 0.95rem; margin: 0;">
+                                    <strong>Conceptual:</strong> Can critically discuss AI's societal role, ethics, limitations •
+                                    <strong>Operational:</strong> Designs AI workflows, mentors peers •
+                                    <strong>Governance:</strong> Leads conversations on AI policy, ethics, adoption
+                                </p>
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <div class="card scroll-reveal" style="margin-top: 3rem; background: var(--navy-50); padding: 2rem;">
+                    <p style="text-align: center; font-size: 1.05rem; color: var(--navy-900); margin: 0;">
+                        <i class="fas fa-lightbulb" style="color: var(--teal); margin-right: 0.5rem;"></i>
+                        <strong>Most professionals start at Pre-Beginner or Beginner.</strong>
+                        RUDI training moves you systematically through each level across all three dimensions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Responsible Use Model -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2>The Responsible Use Model</h2>
+                <p class="text-secondary" style="font-size: 1.125rem;">How to use AI safely and effectively in practice</p>
+            </div>
+
+            <div style="max-width: 1100px; margin: 0 auto;">
+                <div class="card scroll-reveal" style="margin-bottom: 3rem; background: linear-gradient(135deg, var(--navy-50) 0%, white 100%); padding: 2.5rem;">
+                    <p style="font-size: 1.125rem; color: var(--gray-700); text-align: center; line-height: 1.8; margin: 0;">
+                        Beyond technical competency, RUDI teaches <strong>responsible AI use</strong> through a three-dimensional model that answers:
+                        <em>What data can I use? How carefully should I check outputs? What questions should I ask?</em>
+                    </p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem;">
+                    <!-- Habits -->
+                    <div class="card scroll-reveal" style="border-top: 4px solid var(--accent);">
+                        <div style="text-align: center; margin-bottom: 1.5rem;">
+                            <div style="width: 60px; height: 60px; background: var(--accent); color: white; border-radius: 12px; display: inline-flex; align-items: center; justify-content: center; font-size: 1.75rem; margin-bottom: 1rem;">
+                                <i class="fas fa-question-circle"></i>
+                            </div>
+                            <h3 style="font-size: 1.25rem; margin: 0;">Habits of Responsible Use</h3>
+                            <p style="color: var(--gray-600); font-size: 0.95rem; margin-top: 0.5rem;">The questions you ask</p>
+                        </div>
+                        <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.875rem;">
+                            <li style="display: flex; align-items: start; gap: 0.75rem;">
+                                <i class="fas fa-check-circle" style="color: var(--accent); margin-top: 0.25rem; flex-shrink: 0;"></i>
+                                <span><strong>Source Tracing</strong> — Where did this come from?</span>
+                            </li>
+                            <li style="display: flex; align-items: start; gap: 0.75rem;">
+                                <i class="fas fa-check-circle" style="color: var(--accent); margin-top: 0.25rem; flex-shrink: 0;"></i>
+                                <span><strong>Cross-Referencing</strong> — Does this hold up elsewhere?</span>
+                            </li>
+                            <li style="display: flex; align-items: start; gap: 0.75rem;">
+                                <i class="fas fa-check-circle" style="color: var(--accent); margin-top: 0.25rem; flex-shrink: 0;"></i>
+                                <span><strong>Perspective Testing</strong> — Whose voice is present/missing?</span>
+                            </li>
+                            <li style="display: flex; align-items: start; gap: 0.75rem;">
+                                <i class="fas fa-check-circle" style="color: var(--accent); margin-top: 0.25rem; flex-shrink: 0;"></i>
+                                <span><strong>Boundary Marking</strong> — What are the limits?</span>
+                            </li>
+                            <li style="display: flex; align-items: start; gap: 0.75rem;">
+                                <i class="fas fa-check-circle" style="color: var(--accent); margin-top: 0.25rem; flex-shrink: 0;"></i>
+                                <span><strong>Bias Awareness</strong> — What assumptions shape this?</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Levels of Scrutiny -->
+                    <div class="card scroll-reveal" style="border-top: 4px solid var(--teal);">
+                        <div style="text-align: center; margin-bottom: 1.5rem;">
+                            <div style="width: 60px; height: 60px; background: var(--teal); color: white; border-radius: 12px; display: inline-flex; align-items: center; justify-content: center; font-size: 1.75rem; margin-bottom: 1rem;">
+                                <i class="fas fa-layer-group"></i>
+                            </div>
+                            <h3 style="font-size: 1.25rem; margin: 0;">Levels of Scrutiny</h3>
+                            <p style="color: var(--gray-600); font-size: 0.95rem; margin-top: 0.5rem;">How carefully to check</p>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+                            <div>
+                                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                                    <div style="width: 28px; height: 28px; background: rgba(20, 184, 166, 0.2); color: var(--teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">1</div>
+                                    <h4 style="font-size: 1rem; margin: 0;">Light Use</h4>
+                                </div>
+                                <p style="color: var(--gray-600); font-size: 0.875rem; margin: 0; padding-left: 2.125rem;">Spell check, brainstorming, quick facts<br><em>Minimal scrutiny</em></p>
+                            </div>
+                            <div>
+                                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                                    <div style="width: 28px; height: 28px; background: rgba(20, 184, 166, 0.4); color: var(--teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">2</div>
+                                    <h4 style="font-size: 1rem; margin: 0;">Medium Use</h4>
+                                </div>
+                                <p style="color: var(--gray-600); font-size: 0.875rem; margin: 0; padding-left: 2.125rem;">Interpretation, analysis, abstract problems<br><em>Apply 2-3 habits</em></p>
+                            </div>
+                            <div>
+                                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                                    <div style="width: 28px; height: 28px; background: var(--teal); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">3</div>
+                                    <h4 style="font-size: 1rem; margin: 0;">High-Stakes Use</h4>
+                                </div>
+                                <p style="color: var(--gray-600); font-size: 0.875rem; margin: 0; padding-left: 2.125rem;">Legal, medical, financial decisions<br><em>Apply ALL 5 habits + verify with experts</em></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Data Types -->
+                    <div class="card scroll-reveal" style="border-top: 4px solid var(--navy-700);">
+                        <div style="text-align: center; margin-bottom: 1.5rem;">
+                            <div style="width: 60px; height: 60px; background: var(--navy-700); color: white; border-radius: 12px; display: inline-flex; align-items: center; justify-content: center; font-size: 1.75rem; margin-bottom: 1rem;">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h3 style="font-size: 1.25rem; margin: 0;">Data Types</h3>
+                            <p style="color: var(--gray-600); font-size: 0.95rem; margin-top: 0.5rem;">What you're allowed to use</p>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+                            <div>
+                                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                                    <i class="fas fa-check" style="color: #10b981; font-size: 1rem;"></i>
+                                    <h4 style="font-size: 1rem; margin: 0; color: #10b981;">Public Data</h4>
+                                </div>
+                                <p style="color: var(--gray-600); font-size: 0.875rem; margin: 0; padding-left: 1.5rem;">Open-source info, articles, brainstorming</p>
+                            </div>
+                            <div>
+                                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                                    <i class="fas fa-exclamation-triangle" style="color: #f59e0b; font-size: 1rem;"></i>
+                                    <h4 style="font-size: 1rem; margin: 0; color: #f59e0b;">Internal Data</h4>
+                                </div>
+                                <p style="color: var(--gray-600); font-size: 0.875rem; margin: 0; padding-left: 1.5rem;">Workflows, non-sensitive reports (check policy)</p>
+                            </div>
+                            <div>
+                                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                                    <i class="fas fa-exclamation-circle" style="color: #ef4444; font-size: 1rem;"></i>
+                                    <h4 style="font-size: 1rem; margin: 0; color: #ef4444;">Sensitive Data</h4>
+                                </div>
+                                <p style="color: var(--gray-600); font-size: 0.875rem; margin: 0; padding-left: 1.5rem;">PII, HR records (must anonymize first)</p>
+                            </div>
+                            <div>
+                                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                                    <i class="fas fa-ban" style="color: #dc2626; font-size: 1rem;"></i>
+                                    <h4 style="font-size: 1rem; margin: 0; color: #dc2626;">Prohibited Data</h4>
+                                </div>
+                                <p style="color: var(--gray-600); font-size: 0.875rem; margin: 0; padding-left: 1.5rem;">Protected records, trade secrets (never)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card scroll-reveal" style="margin-top: 3rem; background: var(--navy-50); padding: 2rem; text-align: center;">
+                    <p style="font-size: 1.05rem; color: var(--navy-900); margin: 0;">
+                        <i class="fas fa-shield-alt" style="color: var(--teal); margin-right: 0.5rem;"></i>
+                        <strong>This three-dimensional model ensures safe, effective AI use.</strong>
+                        RUDI training builds these habits into your daily workflow.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Domain Breakdown -->
-    <section class="section-padding">
+    <section class="section-padding bg-gray">
         <div class="container">
             <div class="section-header scroll-reveal">
-                <h2>Framework Domains</h2>
+                <h2>Domain Examples Across Proficiency Levels</h2>
+                <p class="text-secondary" style="font-size: 1.125rem;">What competency looks like at each stage</p>
             </div>
 
             <div style="max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 4rem;">
@@ -360,9 +761,9 @@
     <section class="section-padding" id="assessment" style="background: white; padding: 8rem 0;">
         <div class="container">
             <div class="section-header scroll-reveal" style="text-align: center; margin-bottom: 4rem;">
-                <h2 style="font-size: 2.5rem; font-weight: 400; margin-bottom: 1rem;">Assessment Platform</h2>
+                <h2 style="font-size: 2.5rem; font-weight: 400; margin-bottom: 1rem;">How Assessment Works</h2>
                 <p class="text-secondary" style="font-size: 1rem; font-weight: 300;">
-                    Track competency growth across all 30 framework points
+                    Measure your AI readiness across all three dimensions with visual reporting
                 </p>
             </div>
 
@@ -375,7 +776,7 @@
                 <div style="text-align: center; margin-bottom: 5rem;">
                     <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--navy-900); font-weight: 500;">What We Measure</h3>
                     <p style="font-size: 1rem; color: var(--gray-600); max-width: 600px; margin: 0 auto;">
-                        Complete evaluation across all 30 competency points
+                        Your current proficiency level across each of the three critical dimensions
                     </p>
                 </div>
 
@@ -385,8 +786,8 @@
                             <i class="fas fa-brain"></i>
                         </div>
                         <h4 style="font-size: 1rem; margin-bottom: 0.5rem; color: var(--navy-900); font-weight: 600;">Conceptual</h4>
-                        <p style="font-size: 0.875rem; color: var(--gray-600); line-height: 1.5;">AI fundamentals & theory</p>
-                        <div style="margin-top: 1rem; font-size: 1.75rem; font-weight: 300; color: var(--teal);">10</div>
+                        <p style="font-size: 0.875rem; color: var(--gray-600); line-height: 1.5;">Do you understand how AI works?</p>
+                        <div style="margin-top: 1rem; font-size: 1.25rem; font-weight: 400; color: var(--teal);">Level 0-4</div>
                     </div>
 
                     <div style="text-align: center;">
@@ -394,8 +795,8 @@
                             <i class="fas fa-cogs"></i>
                         </div>
                         <h4 style="font-size: 1rem; margin-bottom: 0.5rem; color: var(--navy-900); font-weight: 600;">Operational</h4>
-                        <p style="font-size: 0.875rem; color: var(--gray-600); line-height: 1.5;">Practical tool usage</p>
-                        <div style="margin-top: 1rem; font-size: 1.75rem; font-weight: 300; color: var(--teal);">10</div>
+                        <p style="font-size: 0.875rem; color: var(--gray-600); line-height: 1.5;">Can you use AI tools effectively?</p>
+                        <div style="margin-top: 1rem; font-size: 1.25rem; font-weight: 400; color: var(--teal);">Level 0-4</div>
                     </div>
 
                     <div style="text-align: center;">
@@ -403,8 +804,8 @@
                             <i class="fas fa-shield-alt"></i>
                         </div>
                         <h4 style="font-size: 1rem; margin-bottom: 0.5rem; color: var(--navy-900); font-weight: 600;">Governance</h4>
-                        <p style="font-size: 0.875rem; color: var(--gray-600); line-height: 1.5;">Ethics & compliance</p>
-                        <div style="margin-top: 1rem; font-size: 1.75rem; font-weight: 300; color: var(--teal);">10</div>
+                        <p style="font-size: 0.875rem; color: var(--gray-600); line-height: 1.5;">Do you know what's safe to use?</p>
+                        <div style="margin-top: 1rem; font-size: 1.25rem; font-weight: 400; color: var(--teal);">Level 0-4</div>
                     </div>
                 </div>
             </div>
@@ -467,7 +868,7 @@
                         <div>
                             <h3 class="mb-6">Visual Competency Tracking</h3>
                             <p style="font-size: 1.05rem; color: var(--gray-600); line-height: 1.8; margin-bottom: 2rem;">
-                                RUDI's assessment maps directly to the 30-point framework. Each competency is measured across all three domains, providing a comprehensive view of your AI literacy.
+                                RUDI's assessment measures your proficiency across all three dimensions—Conceptual, Operational, and Governance—providing a complete picture of your AI readiness.
                             </p>
 
                             <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 2rem;">
@@ -561,115 +962,6 @@
                     </div>
                 </div>
 
-                <div style="margin-top: 3rem;">
-                    <div class="responsive-2col" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem;">
-                        <div class="card scroll-reveal">
-                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                                <div style="width: 50px; height: 50px; background: var(--navy-50); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--navy-700); font-size: 1.25rem;">
-                                    <i class="fas fa-users"></i>
-                                </div>
-                                <h3 style="font-size: 1.1rem; margin: 0;">Individual Reports</h3>
-                            </div>
-                            <p style="font-size: 0.95rem; color: var(--gray-600); margin: 0;">Each learner receives a personalized assessment report showing their proficiency across all 30 competency points with specific growth recommendations.</p>
-                        </div>
-                        <div class="card scroll-reveal">
-                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                                <div style="width: 50px; height: 50px; background: var(--navy-50); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--navy-700); font-size: 1.25rem;">
-                                    <i class="fas fa-building"></i>
-                                </div>
-                                <h3 style="font-size: 1.1rem; margin: 0;">Team Dashboards</h3>
-                            </div>
-                            <p style="font-size: 0.95rem; color: var(--gray-600); margin: 0;">Organizations get aggregated team dashboards to track workforce AI literacy levels, identify skills gaps, and measure training ROI across departments.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- For Organizations -->
-    <section class="section-padding">
-        <div class="container">
-            <div class="section-header scroll-reveal">
-                <span class="section-badge"><i class="fas fa-building"></i> For Organizations</span>
-                <h2>Enterprise Assessment & Training</h2>
-                <p class="text-secondary" style="font-size: 1.125rem;">
-                    Comprehensive tools for measuring and developing AI literacy at scale
-                </p>
-            </div>
-
-            <div style="max-width: 1100px; margin: 0 auto;">
-                <div class="responsive-3col" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
-                    <div class="card scroll-reveal">
-                        <div class="feature-icon mb-4">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h3 class="mb-4">Workforce Analytics</h3>
-                        <p class="text-secondary">
-                            Dashboard view of team competencies, department comparisons, and organizational AI readiness scores
-                        </p>
-                    </div>
-
-                    <div class="card scroll-reveal">
-                        <div class="feature-icon mb-4">
-                            <i class="fas fa-file-export"></i>
-                        </div>
-                        <h3 class="mb-4">Export & Integration</h3>
-                        <p class="text-secondary">
-                            Export assessment data to CSV, integrate with your LMS, and generate custom reports for stakeholders
-                        </p>
-                    </div>
-
-                    <div class="card scroll-reveal">
-                        <div class="feature-icon mb-4">
-                            <i class="fas fa-dollar-sign"></i>
-                        </div>
-                        <h3 class="mb-4">ROI Tracking</h3>
-                        <p class="text-secondary">
-                            Measure training effectiveness, track competency improvement, and demonstrate program value
-                        </p>
-                    </div>
-                </div>
-
-                <div class="card scroll-reveal" style="margin-top: 3rem; background: var(--navy-50);">
-                    <h3 class="mb-6">Assessment Administration</h3>
-                    <div class="responsive-2col" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;">
-                        <div>
-                            <h4 class="mb-4" style="font-size: 1.1rem;">Flexible Delivery</h4>
-                            <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1rem;">
-                                <li style="display: flex; align-items: center; gap: 0.75rem;">
-                                    <i class="fas fa-check" style="color: var(--navy-700);"></i>
-                                    <span>Self-paced online assessments</span>
-                                </li>
-                                <li style="display: flex; align-items: center; gap: 0.75rem;">
-                                    <i class="fas fa-check" style="color: var(--navy-700);"></i>
-                                    <span>Scheduled group sessions</span>
-                                </li>
-                                <li style="display: flex; align-items: center; gap: 0.75rem;">
-                                    <i class="fas fa-check" style="color: var(--navy-700);"></i>
-                                    <span>On-site proctored options</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 class="mb-4" style="font-size: 1.1rem;">Management Features</h4>
-                            <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1rem;">
-                                <li style="display: flex; align-items: center; gap: 0.75rem;">
-                                    <i class="fas fa-check" style="color: var(--navy-700);"></i>
-                                    <span>Bulk enrollment tools</span>
-                                </li>
-                                <li style="display: flex; align-items: center; gap: 0.75rem;">
-                                    <i class="fas fa-check" style="color: var(--navy-700);"></i>
-                                    <span>Progress tracking & reminders</span>
-                                </li>
-                                <li style="display: flex; align-items: center; gap: 0.75rem;">
-                                    <i class="fas fa-check" style="color: var(--navy-700);"></i>
-                                    <span>Custom assessment schedules</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -678,13 +970,13 @@
     <section class="section-padding" style="background: white;">
         <div class="container">
             <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-                <h2 class="mb-6">Start Building These Competencies</h2>
+                <h2 class="mb-6">Ready to Move from Familiarity to Fluency?</h2>
                 <p style="font-size: 1.125rem; color: var(--gray-600); margin-bottom: 3rem;">
-                    Get certified across all three domains with RUDI's structured learning path
+                    Request your free AI readiness assessment to see exactly where you are and where to focus training
                 </p>
                 <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="certificates.html" class="btn btn-primary">View Certifications</a>
-                    <a href="contact.html" class="btn btn-secondary">Schedule a Call</a>
+                    <a href="#" class="btn btn-primary" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Request Assessment</a>
+                    <a href="certificates.html" class="btn btn-secondary">View Certifications</a>
                 </div>
             </div>
         </div>
@@ -695,5 +987,126 @@
     <script src="js/main.js"></script>
     <script src="js/header.js"></script>
     <script src="js/footer.js"></script>
+
+    <!-- Load config -->
+    <script src="js/config.js"></script>
+
+    <script>
+        // Generate survey link
+        function generateSurveyLink(orgName, creatorEmail) {
+            const baseUrl = window.location.origin + window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
+            const encodedName = encodeURIComponent(orgName);
+            const encodedCreator = encodeURIComponent(creatorEmail);
+            return `${baseUrl}/survey.html?company=${encodedName}&creator=${encodedCreator}`;
+        }
+
+        // Handle Assessment Request Form Submission
+        document.getElementById('assessmentRequestForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const form = e.target;
+            const submitBtn = form.querySelector('button[type="submit"]');
+
+            // Disable button and show loading
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Creating your survey link...';
+
+            // Generate survey link
+            const surveyLink = generateSurveyLink(form.organization.value, form.email.value);
+
+            const requestData = {
+                name: form.name.value,
+                email: form.email.value,
+                organization: form.organization.value,
+                role: form.role.value,
+                surveyLink: surveyLink,
+                timestamp: new Date().toISOString(),
+                type: 'assessment_request'
+            };
+
+            try {
+                // Send to Google Sheets
+                if (typeof CONFIG !== 'undefined' && CONFIG.SHEETS_WEBHOOK_URL) {
+                    await fetch(CONFIG.SHEETS_WEBHOOK_URL, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(requestData),
+                        mode: 'no-cors' // Apps Script requires no-cors
+                    });
+                    console.log('Assessment request saved to Google Sheets');
+                }
+
+                // Update success message with the survey link
+                const successDiv = document.getElementById('successMessage');
+                successDiv.innerHTML = `
+                    <div style="color: var(--teal); font-size: 3rem; margin-bottom: 1rem;">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3 style="color: var(--navy-900); margin-bottom: 1.5rem;">Your Survey Link is Ready!</h3>
+
+                    <div style="background: white; padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; border: 2px solid var(--teal);">
+                        <p style="color: var(--navy-700); font-weight: 600; margin-bottom: 0.75rem; font-size: 0.95rem;">
+                            Share this link with your team:
+                        </p>
+                        <div style="background: var(--navy-50); padding: 1rem; border-radius: 6px; margin-bottom: 1rem; border: 1px solid var(--navy-100);">
+                            <code id="generatedLink" style="word-break: break-all; color: var(--navy-800); font-size: 0.9rem;">${surveyLink}</code>
+                        </div>
+                        <button onclick="copyLinkToClipboard()" style="width: 100%; background: var(--navy-900); color: white; padding: 0.875rem; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; transition: all 0.2s;">
+                            <i class="fas fa-copy"></i> Copy Link
+                        </button>
+                    </div>
+
+                    <div style="text-align: left; background: var(--navy-50); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--navy-100);">
+                        <p style="color: var(--navy-900); font-weight: 600; margin-bottom: 0.75rem; font-size: 0.95rem;">
+                            <i class="fas fa-info-circle"></i> Next Steps:
+                        </p>
+                        <ol style="color: var(--navy-700); margin: 0; padding-left: 1.5rem; line-height: 1.8;">
+                            <li>Copy the link above</li>
+                            <li>Share it via email, Slack, or Teams with your team</li>
+                            <li>Survey responses will be collected anonymously</li>
+                            <li>You'll receive a summary report within 48 hours</li>
+                        </ol>
+                    </div>
+
+                    <p style="color: var(--gray-600); font-size: 0.9rem; margin-top: 1.5rem;">
+                        A confirmation has been sent to <strong>${requestData.email}</strong>
+                    </p>
+                `;
+
+                // Hide form, show success
+                form.style.display = 'none';
+                successDiv.style.display = 'block';
+
+                // Scroll to success message
+                successDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            } catch (error) {
+                console.error('Error submitting form:', error);
+                alert('There was an error creating your survey link. Please try again or contact us at hoff@learnrudi.com');
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Request My Assessment';
+            }
+        });
+
+        // Copy link to clipboard
+        function copyLinkToClipboard() {
+            const link = document.getElementById('generatedLink').textContent;
+            navigator.clipboard.writeText(link).then(() => {
+                const btn = event.target.closest('button');
+                const originalHTML = btn.innerHTML;
+                btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                btn.style.background = '#10b981';
+                setTimeout(() => {
+                    btn.innerHTML = originalHTML;
+                    btn.style.background = '';
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy:', err);
+                alert('Failed to copy. Please select and copy the link manually.');
+            });
+        }
+    </script>
 </body>
 </html>

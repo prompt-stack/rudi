@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About RUDI | Responsible Use of Digital Intelligence</title>
+    <meta name="description" content="RUDI helps organizations integrate AI responsibly through literacy-first training and governance frameworks. Proven results: 95% comfort, 60% literacy in 8 weeks, 524% ROI.">
+    <meta name="keywords" content="RUDI AI, responsible AI, AI literacy, AI training, organizational AI adoption, AI governance, Brandon Hoff">
+    <meta name="author" content="RUDI AI">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://learnrudi.com/about.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://learnrudi.com/about.html">
+    <meta property="og:title" content="About RUDI | Responsible Use of Digital Intelligence">
+    <meta property="og:description" content="We help organizations avoid the #1 mistake in AI adoption: buying tools without building literacy. Evidence-based framework with 524% ROI.">
+    <meta property="og:image" content="https://learnrudi.com/images/rudi-about.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About RUDI | AI Literacy & Governance">
+    <meta name="twitter:description" content="Literacy-first AI adoption with proven results. 95% comfort, 60% literacy in 8 weeks.">
+    <meta name="twitter:image" content="https://learnrudi.com/images/rudi-about.jpg">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        /* About Page Specific Styles - IBM-Inspired, Sleek, Professional */
+
+        .about-hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            padding: 140px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(135deg, transparent 0%, rgba(20, 184, 166, 0.05) 100%);
+            pointer-events: none;
+        }
+
+        .about-hero h1 {
+            font-size: 4rem;
+            font-weight: 300;
+            color: white;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .about-hero .subtitle {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 300;
+            max-width: 800px;
+            line-height: 1.6;
+        }
+
+        .section-spacer {
+            padding: 120px 0;
+        }
+
+        .section-spacer-sm {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: #0f172a;
+            margin-bottom: 3rem;
+            letter-spacing: -0.01em;
+        }
+
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: #475569;
+            font-weight: 300;
+            max-width: 700px;
+            margin: 0 auto 4rem;
+            line-height: 1.7;
+        }
+
+        .bg-light {
+            background: #f8fafc;
+        }
+
+        .bg-dark {
+            background: #0f172a;
+            color: white;
+        }
+
+        .bg-dark .section-title {
+            color: white;
+        }
+
+        .bg-dark .section-subtitle {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            padding: 60px 0;
+            border-top: 1px solid rgba(20, 184, 166, 0.2);
+            border-bottom: 1px solid rgba(20, 184, 166, 0.2);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 300;
+            color: #14b8a6;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            color: #475569;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 500;
+        }
+
+        /* Principle Cards */
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .principle-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 0;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .principle-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 0;
+            background: #14b8a6;
+            transition: height 0.3s ease;
+        }
+
+        .principle-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .principle-card:hover::before {
+            height: 100%;
+        }
+
+        .principle-title {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #0f172a;
+            margin-bottom: 1rem;
+        }
+
+        .principle-description {
+            color: #475569;
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        /* Content Block */
+        .content-block {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .content-block p {
+            font-size: 1.125rem;
+            line-height: 1.9;
+            color: #334155;
+            margin-bottom: 1.5rem;
+        }
+
+        .content-block strong {
+            color: #0f172a;
+            font-weight: 600;
+        }
+
+        /* Media Recognition */
+        .media-highlight {
+            background: white;
+            border: 1px solid #e2e8f0;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .media-highlight::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #14b8a6 0%, #5eead4 100%);
+        }
+
+        .media-highlight-text {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+        }
+
+        .media-highlight-source {
+            color: #14b8a6;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 0.9rem;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+            margin-top: 3rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, #14b8a6 0%, transparent 100%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -3.5rem;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            background: #14b8a6;
+            border: 3px solid #f8fafc;
+            border-radius: 50%;
+        }
+
+        .timeline-title {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-meta {
+            font-size: 0.9rem;
+            color: #64748b;
+            margin-bottom: 0.75rem;
+        }
+
+        .timeline-description {
+            color: #475569;
+            line-height: 1.7;
+        }
+
+        /* Founder Section */
+        .founder-section {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .founder-image {
+            width: 100%;
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+            border-radius: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 6rem;
+            font-weight: 300;
+        }
+
+        .founder-content h2 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+        }
+
+        .founder-title {
+            font-size: 1.1rem;
+            color: #14b8a6;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .founder-bio p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #334155;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Social Links */
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            color: #475569;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-link:hover {
+            color: #14b8a6;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            padding: 100px 0;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(20, 184, 166, 0.1) 0%, transparent 70%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        .cta-title {
+            font-size: 3rem;
+            font-weight: 300;
+            color: white;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-subtitle {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-primary {
+            padding: 1.25rem 3rem;
+            background: #14b8a6;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.05rem;
+            transition: all 0.3s;
+            border: 2px solid #14b8a6;
+        }
+
+        .btn-primary:hover {
+            background: #0f9a8a;
+            border-color: #0f9a8a;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(20, 184, 166, 0.3);
+        }
+
+        .btn-secondary {
+            padding: 1.25rem 3rem;
+            background: transparent;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.05rem;
+            border: 2px solid white;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #0f172a;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .about-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .section-spacer {
+                padding: 80px 0;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .founder-section {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+
+            .principles-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-title {
+                font-size: 2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="site-header"></div>
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>About RUDI</h1>
+            <p class="subtitle">We help organizations avoid the #1 mistake in AI adoption: buying tools without building literacy.</p>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section style="background: white;">
+        <div class="container">
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">Comfort Achieved</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">60%</div>
+                    <div class="stat-label">Literacy in 8 Weeks</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">524%</div>
+                    <div class="stat-label">Average ROI</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">80%+</div>
+                    <div class="stat-label">Adoption Rates</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="section-spacer">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">Our mission has never been more clear.</h2>
+            <p class="section-subtitle" style="text-align: center;">
+                We partner with forward-thinking leaders to transform AI adoption from risky tool purchases into strategic capability building.
+            </p>
+
+            <div class="content-block">
+                <p>
+                    Most organizations waste AI investment by buying tools without building literacy. The result? <strong>30-40% adoption, minimal impact, high risk.</strong>
+                </p>
+                <p>
+                    We help leaders set a new standard for AI effectiveness. We partner with organizations to build systematic literacy, establish governance frameworks, and transform AI from a productivity tool into a strategic advantage—without sacrificing the growth and well-being of the people driving that transformation.
+                </p>
+                <p>
+                    No organization should fail at AI adoption due to inadequate training. We challenge leaders to build capability that lasts, because <strong>the growth and sustainability of any business can never outpace the quality of its people systems.</strong>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guiding Principles -->
+    <section class="section-spacer bg-light">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">Our guiding principles are our north star.</h2>
+
+            <div class="principles-grid">
+                <div class="principle-card">
+                    <h3 class="principle-title">Data-Driven & Deeply Human</h3>
+                    <p class="principle-description">
+                        We're evidence-based and values-informed. Our approach is contextualized to your specific needs, with deep understanding of your culture, team dynamics, and leadership styles.
+                    </p>
+                </div>
+
+                <div class="principle-card">
+                    <h3 class="principle-title">Direct & Transparent</h3>
+                    <p class="principle-description">
+                        No beating around the bush. We tell you what you need to hear, not what you want to hear, because that's how real change happens.
+                    </p>
+                </div>
+
+                <div class="principle-card">
+                    <h3 class="principle-title">Systems-Minded</h3>
+                    <p class="principle-description">
+                        We think about the most efficient way to do things, freeing up time for complex issues that need slower pace and deeper attention.
+                    </p>
+                </div>
+
+                <div class="principle-card">
+                    <h3 class="principle-title">Literacy Over Tools</h3>
+                    <p class="principle-description">
+                        Most AI consultants sell you technology. We build your organization's capability to use AI wisely across any tool or platform.
+                    </p>
+                </div>
+
+                <div class="principle-card">
+                    <h3 class="principle-title">Governance as Foundation</h3>
+                    <p class="principle-description">
+                        We believe governance is the key to sustainable innovation. Without clear policies and ethical frameworks, AI adoption becomes a liability.
+                    </p>
+                </div>
+
+                <div class="principle-card">
+                    <h3 class="principle-title">Readiness Before Training</h3>
+                    <p class="principle-description">
+                        Our RUDI Readiness Pyramid recognizes that psychological comfort precedes technical competency. We reduce anxiety before building skills.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Makes Us Different -->
+    <section class="section-spacer">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">What makes us different</h2>
+
+            <div class="content-block">
+                <p>
+                    <strong>Other Consultants:</strong> "Here's an AI tool. Figure it out."<br>
+                    <strong>Result:</strong> 30-40% adoption, minimal impact, wasted investment.
+                </p>
+                <p style="margin-top: 2rem; padding-top: 2rem; border-top: 2px solid #e2e8f0;">
+                    <strong>RUDI Approach:</strong> "Let's assess your readiness, build literacy systematically, and establish governance for sustainable success."<br>
+                    <strong>Result:</strong> 80%+ adoption, 524% ROI, organizational capability that lasts.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Recognition -->
+    <section class="section-spacer bg-light">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">Recognition & Impact</h2>
+
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div class="media-highlight">
+                    <p class="media-highlight-text">Featured by NPR, GQ, and MSNBC for equity-centered technology adoption and responsible AI education.</p>
+                    <p class="media-highlight-source">National Media Recognition</p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div style="background: white; padding: 2rem; border: 1px solid #e2e8f0;">
+                        <h4 style="color: #14b8a6; margin-bottom: 0.5rem; font-weight: 500;">Soapbox Cincinnati</h4>
+                        <p style="font-weight: 600; margin-bottom: 0.5rem; color: #0f172a;">"The AI Sherpa Will See You Now"</p>
+                        <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 1rem;">May 27, 2025</p>
+                        <a href="https://www.soapboxmedia.com/innovationnews/the-ai-sherpa-will-see-you-now.aspx" target="_blank" style="color: #14b8a6; text-decoration: none; font-weight: 500;">
+                            Read Article <i class="fas fa-external-link-alt" style="font-size: 0.8em;"></i>
+                        </a>
+                    </div>
+
+                    <div style="background: white; padding: 2rem; border: 1px solid #e2e8f0;">
+                        <h4 style="color: #14b8a6; margin-bottom: 0.5rem; font-weight: 500;">Stacker / Creatie.ai</h4>
+                        <p style="font-weight: 600; margin-bottom: 0.5rem; color: #0f172a;">"AI was everywhere in 2024"</p>
+                        <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 1rem;">December 12, 2024</p>
+                        <a href="https://stacker.com/stories/society/ai-was-everywhere-2024-here-are-biggest-stories-year" target="_blank" style="color: #14b8a6; text-decoration: none; font-weight: 500;">
+                            Read Article <i class="fas fa-external-link-alt" style="font-size: 0.8em;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who We Partner With -->
+    <section class="section-spacer">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">Who we partner with</h2>
+            <p class="section-subtitle" style="text-align: center;">
+                We work with forward-thinking organizations committed to responsible AI adoption and organizational capability building.
+            </p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; max-width: 1100px; margin: 0 auto;">
+                <!-- Warren County ESC -->
+                <div style="background: white; border: 1px solid #e2e8f0; padding: 2.5rem; position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #14b8a6;"></div>
+                    <h4 style="font-size: 1.3rem; font-weight: 500; color: #0f172a; margin-bottom: 0.75rem;">Warren County ESC</h4>
+                    <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Education | Ohio</p>
+                    <p style="color: #475569; line-height: 1.7;">
+                        10-month professional development program for K-12 educators. Achieved 95% comfort and 60% literacy in 8 weeks with documented 524% ROI.
+                    </p>
+                </div>
+
+                <!-- Crowe LLP -->
+                <div style="background: white; border: 1px solid #e2e8f0; padding: 2.5rem; position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #14b8a6;"></div>
+                    <h4 style="font-size: 1.3rem; font-weight: 500; color: #0f172a; margin-bottom: 0.75rem;">Crowe LLP</h4>
+                    <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Enterprise | National</p>
+                    <p style="color: #475569; line-height: 1.7;">
+                        Human-centered AI workshops for professional services teams. Focus on practical integration and ethical AI use in client-facing work.
+                    </p>
+                </div>
+
+                <!-- Morehouse College -->
+                <div style="background: white; border: 1px solid #e2e8f0; padding: 2.5rem; position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #14b8a6;"></div>
+                    <h4 style="font-size: 1.3rem; font-weight: 500; color: #0f172a; margin-bottom: 0.75rem;">Morehouse College</h4>
+                    <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Academic | National</p>
+                    <p style="color: #475569; line-height: 1.7;">
+                        AI & data governance curriculum development for business programs. Faculty training and student proficiency assessment design.
+                    </p>
+                </div>
+
+                <!-- University of Illinois -->
+                <div style="background: white; border: 1px solid #e2e8f0; padding: 2.5rem; position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #14b8a6;"></div>
+                    <h4 style="font-size: 1.3rem; font-weight: 500; color: #0f172a; margin-bottom: 0.75rem;">University of Illinois–Springfield</h4>
+                    <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Academic | National</p>
+                    <p style="color: #475569; line-height: 1.7;">
+                        Graduate-level instruction on AI's impact on educational systems, politics, and policy. Course 601: "AI, Politics & Education."
+                    </p>
+                </div>
+
+                <!-- Mercantile Library -->
+                <div style="background: white; border: 1px solid #e2e8f0; padding: 2.5rem; position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #14b8a6;"></div>
+                    <h4 style="font-size: 1.3rem; font-weight: 500; color: #0f172a; margin-bottom: 0.75rem;">Mercantile Library</h4>
+                    <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Community | Ohio</p>
+                    <p style="color: #475569; line-height: 1.7;">
+                        3-part public education series (70-100 attendees/session): AI ethics, content recognition, economic impact with live Policy GPT Lab.
+                    </p>
+                </div>
+
+                <!-- Propel Education -->
+                <div style="background: white; border: 1px solid #e2e8f0; padding: 2.5rem; position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #14b8a6;"></div>
+                    <h4 style="font-size: 1.3rem; font-weight: 500; color: #0f172a; margin-bottom: 0.75rem;">Propel Education</h4>
+                    <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Education | National</p>
+                    <p style="color: #475569; line-height: 1.7;">
+                        AI literacy curriculum and instructional content for HBCU partnerships. Structured skill builders and training modules for faculty.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section class="section-spacer bg-dark">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">About the founder</h2>
+
+            <div class="founder-section">
+                <div class="founder-image">
+                    BH
+                </div>
+
+                <div class="founder-content">
+                    <h2>Brandon Z. Hoff</h2>
+                    <p class="founder-title">Chief AI Facilitator</p>
+
+                    <div class="founder-bio">
+                        <p>
+                            Brandon often describes himself as "not a computer scientist"—and that's exactly the point. His background is in economics, cooperative business models, and research at the intersection of technology and human systems.
+                        </p>
+                        <p>
+                            After founding and scaling Heritage Hill Cooperative to ~$3M in revenue, Brandon saw how technology could either extract value or create it. When ChatGPT launched in 2022, he recognized this wasn't just another tool—it was a fundamental shift in how we learn, work, and create.
+                        </p>
+                        <p>
+                            What started as TikTok tutorials (now 80,000+ followers) evolved into corporate workshops, university courses, and advisory work with legislators and Fortune 500 companies. He founded RUDI because he kept seeing the same pattern: organizations buying AI tools without building the literacy to use them effectively.
+                        </p>
+                        <p>
+                            Brandon comes from a family of educators, and that shapes everything RUDI does. "Technology is easy," he says. "Adoption is hard. That's what we solve."
+                        </p>
+
+                        <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2);">
+                            <h4 style="color: #14b8a6; font-size: 1.1rem; margin-bottom: 1rem;">Notable Achievements</h4>
+                            <ul style="color: rgba(255,255,255,0.8); line-height: 2; padding-left: 1.5rem;">
+                                <li>Built 14+ production AI applications serving healthcare, education, and enterprise</li>
+                                <li>Google Search AI Mode Priority User (exclusive early access program)</li>
+                                <li>Technical Advisor to Kentucky State Senator Gerald Neal</li>
+                                <li>Strategic Partner with Ohio Department Leadership via Warren County ESC</li>
+                                <li>Featured by NPR, GQ, and MSNBC for equity-centered technology adoption</li>
+                                <li>MBA (Finance & Entrepreneurship) - EDHEC Business School, France</li>
+                                <li>IBM AI Developer Certificate | DeepLearning.AI | MIT xPRO</li>
+                            </ul>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="https://linkedin.com/in/hoffbrandon" target="_blank" class="social-link" title="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://tiktok.com/@hoffdigital" target="_blank" class="social-link" title="TikTok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                            <a href="https://youtube.com/@hoffdigital" target="_blank" class="social-link" title="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://bzhoff.substack.com" target="_blank" class="social-link" title="Substack">
+                                <i class="fas fa-newspaper"></i>
+                            </a>
+                            <a href="https://github.com/prompt-stack" target="_blank" class="social-link" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://bzhoff.com" target="_blank" class="social-link" title="Portfolio">
+                                <i class="fas fa-globe"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Ready to transform your AI approach?</h2>
+            <p class="cta-subtitle">
+                At the heart of everything we do is a commitment to your values and practical, sustainable solutions. We believe great AI practices create environments where people can do their best work while driving meaningful business results.
+            </p>
+            <div class="cta-buttons">
+                <a href="/contact.html" class="btn-primary">
+                    Schedule a Discovery Call
+                </a>
+                <a href="/certificates.html" class="btn-secondary">
+                    Explore Our Programs
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div id="site-footer"></div>
+
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
