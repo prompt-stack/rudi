@@ -24,10 +24,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li><a href="/research.html">Research</a></li>
                     <li><a href="/resources.html">Resources</a></li>
                 </ul>
-                <a href="/contact.html" class="nav-cta">Get Started</a>
+                <a href="/framework.html" class="nav-cta">Free Assessment</a>
                 <button class="mobile-menu-toggle"><i class="fas fa-bars"></i></button>
             </div>
             <div class="mobile-menu">
+                <a href="/framework.html" class="mobile-cta-link">
+                    <i class="fas fa-bolt"></i> Free AI Assessment
+                </a>
                 <a href="/">Home</a>
                 <a href="/certificates-business.html">Business Certificates</a>
                 <a href="/certificates-education.html">Education Certificates</a>

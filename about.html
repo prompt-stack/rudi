@@ -294,28 +294,36 @@
         /* Founder Section */
         .founder-section {
             display: grid;
-            grid-template-columns: 1fr 2fr;
+            grid-template-columns: 1.2fr 1.8fr;
             gap: 4rem;
             align-items: start;
         }
 
         .founder-image {
             width: 100%;
-            aspect-ratio: 1;
+            aspect-ratio: 0.9;
             background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
             border-radius: 0;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: center;
             color: white;
             font-size: 6rem;
             font-weight: 300;
+            overflow: hidden;
+        }
+
+        .founder-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
         }
 
         .founder-content h2 {
             font-size: 2.5rem;
             font-weight: 300;
-            color: #0f172a;
+            color: white;
             margin-bottom: 0.5rem;
         }
 
@@ -331,7 +339,7 @@
         .founder-bio p {
             font-size: 1.05rem;
             line-height: 1.8;
-            color: #334155;
+            color: rgba(255, 255, 255, 0.85);
             margin-bottom: 1.5rem;
         }
 
@@ -497,51 +505,50 @@
     <section class="about-hero">
         <div class="container">
             <h1>About RUDI</h1>
-            <p class="subtitle">We help organizations avoid the #1 mistake in AI adoption: buying tools without building literacy.</p>
+            <p class="subtitle">Responsible Use of Digital Intelligence — helping people move from familiarity to fluency in AI.</p>
         </div>
     </section>
 
-    <!-- Stats Bar -->
-    <section style="background: white;">
-        <div class="container">
-            <div class="stats-bar">
-                <div class="stat-item">
-                    <div class="stat-number">95%</div>
-                    <div class="stat-label">Comfort Achieved</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">60%</div>
-                    <div class="stat-label">Literacy in 8 Weeks</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">524%</div>
-                    <div class="stat-label">Average ROI</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">80%+</div>
-                    <div class="stat-label">Adoption Rates</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mission Section -->
+    <!-- About RUDI Section -->
     <section class="section-spacer">
         <div class="container">
-            <h2 class="section-title" style="text-align: center;">Our mission has never been more clear.</h2>
-            <p class="section-subtitle" style="text-align: center;">
-                We partner with forward-thinking leaders to transform AI adoption from risky tool purchases into strategic capability building.
-            </p>
+            <h2 class="section-title" style="text-align: center;">What does "Responsible Use of Digital Intelligence" mean?</h2>
 
             <div class="content-block">
                 <p>
-                    Most organizations waste AI investment by buying tools without building literacy. The result? <strong>30-40% adoption, minimal impact, high risk.</strong>
+                    It means recognizing that intelligence—human or artificial—is not neutral. Every digital tool we create carries our values, our assumptions, and our patterns of behavior. Responsible use begins by examining that relationship: how we learn, how we decide, and how we let technology amplify or diminish our agency.
+                </p>
+
+                <h3 style="font-size: 1.5rem; font-weight: 500; color: #0f172a; margin-top: 3rem; margin-bottom: 1rem;">Why this matters now.</h3>
+                <p>
+                    In 2017, a breakthrough paper titled "Attention Is All You Need" introduced a new model of computation—the transformer—that allowed machines to understand and generate language with unprecedented fluency.
                 </p>
                 <p>
-                    We help leaders set a new standard for AI effectiveness. We partner with organizations to build systematic literacy, establish governance frameworks, and transform AI from a productivity tool into a strategic advantage—without sacrificing the growth and well-being of the people driving that transformation.
+                    For the first time in history, computers could communicate in ways that feel human. This wasn't just a technical leap; it was a cultural one. It changed the rules of engagement for language itself—the foundation of human cognition, learning, and collaboration.
+                </p>
+
+                <h3 style="font-size: 1.5rem; font-weight: 500; color: #0f172a; margin-top: 3rem; margin-bottom: 1rem;">Our Insight.</h3>
+                <p>
+                    We've learned that one of the biggest barriers to technological accessibility isn't hardware, bandwidth, or even training—it's <strong>relationship</strong>. The way people relate to digital intelligence—through fear, fascination, dependency, or avoidance—shapes their ability to participate in the next era of learning and work.
                 </p>
                 <p>
-                    No organization should fail at AI adoption due to inadequate training. We challenge leaders to build capability that lasts, because <strong>the growth and sustainability of any business can never outpace the quality of its people systems.</strong>
+                    So, RUDI was founded as a public education initiative to bridge that gap—to help people move from familiarity to fluency in their use of AI.
+                </p>
+
+                <h3 style="font-size: 1.5rem; font-weight: 500; color: #0f172a; margin-top: 3rem; margin-bottom: 1rem;">What Responsible Use Looks Like.</h3>
+                <p>
+                    Responsible use is not abstinence or blind adoption. It's discernment.
+                </p>
+                <ul style="color: #334155; line-height: 2; margin-left: 2rem; margin-bottom: 1.5rem; font-size: 1.125rem;">
+                    <li>It's knowing when to automate and when to attend.</li>
+                    <li>It's designing systems that serve people, not the other way around.</li>
+                    <li>It's building literacy, not dependency.</li>
+                    <li>And most of all, it's ensuring that the future of digital intelligence remains human-centered, equitable, and wise.</li>
+                </ul>
+
+                <h3 style="font-size: 1.5rem; font-weight: 500; color: #0f172a; margin-top: 3rem; margin-bottom: 1rem;">Our Work.</h3>
+                <p>
+                    RUDI helps organizations, educators, and communities build the skills, ethics, and governance structures needed to navigate this transformation responsibly. Through training, advisory, and public learning programs, we cultivate a new kind of literacy—one that understands both the power and the limits of generative intelligence.
                 </p>
             </div>
         </div>
@@ -598,20 +605,167 @@
         </div>
     </section>
 
-    <!-- What Makes Us Different -->
+    <!-- How We Work -->
     <section class="section-spacer">
         <div class="container">
-            <h2 class="section-title" style="text-align: center;">What makes us different</h2>
+            <h2 class="section-title" style="text-align: center;">How We Work</h2>
 
             <div class="content-block">
                 <p>
-                    <strong>Other Consultants:</strong> "Here's an AI tool. Figure it out."<br>
-                    <strong>Result:</strong> 30-40% adoption, minimal impact, wasted investment.
+                    We don't sell tools. We build capacity.
                 </p>
-                <p style="margin-top: 2rem; padding-top: 2rem; border-top: 2px solid #e2e8f0;">
-                    <strong>RUDI Approach:</strong> "Let's assess your readiness, build literacy systematically, and establish governance for sustainable success."<br>
-                    <strong>Result:</strong> 80%+ adoption, 524% ROI, organizational capability that lasts.
+                <p>
+                    Our approach begins with understanding your organization's relationship to technology—where fear, fascination, or avoidance might be limiting adoption. From there, we design learning experiences that meet people where they are, building fluency through systematic training, ethical frameworks, and governance structures that scale.
                 </p>
+                <p>
+                    The result isn't just higher adoption rates. It's lasting organizational capability—the ability to integrate new AI systems wisely, ethically, and effectively as they emerge.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who We Partner With -->
+    <section class="section-spacer">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">Who we partner with</h2>
+            <p class="section-subtitle" style="text-align: center;">
+                We work with forward-thinking organizations committed to responsible AI adoption and organizational capability building.
+            </p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; max-width: 1100px; margin: 0 auto;">
+                <!-- Warren County ESC -->
+                <div style="background: white; border: 1px solid #e2e8f0; padding: 2.5rem; position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #14b8a6;"></div>
+                    <h4 style="font-size: 1.3rem; font-weight: 500; color: #0f172a; margin-bottom: 0.75rem;">Warren County ESC</h4>
+                    <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Education | Ohio</p>
+                    <p style="color: #475569; line-height: 1.7;">
+                        10-month professional development program for K-12 educators. Achieved 95% comfort and 60% literacy in 8 weeks with documented 524% ROI.
+                    </p>
+                </div>
+
+                <!-- Crowe LLP -->
+                <div style="background: white; border: 1px solid #e2e8f0; padding: 2.5rem; position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #14b8a6;"></div>
+                    <h4 style="font-size: 1.3rem; font-weight: 500; color: #0f172a; margin-bottom: 0.75rem;">Crowe LLP</h4>
+                    <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Enterprise | National</p>
+                    <p style="color: #475569; line-height: 1.7;">
+                        Human-centered AI workshops for professional services teams. Focus on practical integration and ethical AI use in client-facing work.
+                    </p>
+                </div>
+
+                <!-- Ohio Head Start -->
+                <div style="background: white; border: 1px solid #e2e8f0; padding: 2.5rem; position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #14b8a6;"></div>
+                    <h4 style="font-size: 1.3rem; font-weight: 500; color: #0f172a; margin-bottom: 0.75rem;">Ohio Head Start</h4>
+                    <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Early Childhood | Ohio</p>
+                    <p style="color: #475569; line-height: 1.7;">
+                        AI readiness assessment and training for early childhood educators. Focus on administrative efficiency, grant writing, and responsible AI use in educational settings.
+                    </p>
+                </div>
+
+                <!-- AfroTech Conference -->
+                <div style="background: white; border: 1px solid #e2e8f0; padding: 2.5rem; position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #14b8a6;"></div>
+                    <h4 style="font-size: 1.3rem; font-weight: 500; color: #0f172a; margin-bottom: 0.75rem;">AfroTech Conference</h4>
+                    <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Tech Conference | National</p>
+                    <p style="color: #475569; line-height: 1.7;">
+                        Executive AI Bootcamp instructor for B2B and consumer tech leaders. Strategic overview of AI platforms, governance, and leadership considerations for tech executives.
+                    </p>
+                </div>
+
+                <!-- University of Illinois -->
+                <div style="background: white; border: 1px solid #e2e8f0; padding: 2.5rem; position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #14b8a6;"></div>
+                    <h4 style="font-size: 1.3rem; font-weight: 500; color: #0f172a; margin-bottom: 0.75rem;">University of Illinois–Springfield</h4>
+                    <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Academic | Illinois</p>
+                    <p style="color: #475569; line-height: 1.7;">
+                        Graduate-level instruction on AI's impact on educational systems, politics, and policy. Course 601: "AI, Politics & Education."
+                    </p>
+                </div>
+
+                <!-- Mercantile Library -->
+                <div style="background: white; border: 1px solid #e2e8f0; padding: 2.5rem; position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #14b8a6;"></div>
+                    <h4 style="font-size: 1.3rem; font-weight: 500; color: #0f172a; margin-bottom: 0.75rem;">Mercantile Library</h4>
+                    <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Community | Ohio</p>
+                    <p style="color: #475569; line-height: 1.7;">
+                        3-part public education series (70-100 attendees/session): AI ethics, content recognition, economic impact with live Policy GPT Lab.
+                    </p>
+                </div>
+
+                <!-- Propel Education -->
+                <div style="background: white; border: 1px solid #e2e8f0; padding: 2.5rem; position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #14b8a6;"></div>
+                    <h4 style="font-size: 1.3rem; font-weight: 500; color: #0f172a; margin-bottom: 0.75rem;">Propel Education</h4>
+                    <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Education | National</p>
+                    <p style="color: #475569; line-height: 1.7;">
+                        AI literacy curriculum and instructional content for HBCU partnerships. Structured skill builders and training modules for faculty.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section class="section-spacer bg-dark">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">About the founder</h2>
+
+            <div class="founder-section">
+                <div class="founder-image">
+                    <img src="images/brandonzhoff.png" alt="Brandon Z. Hoff - Founder & Chief AI Officer, RUDI">
+                </div>
+
+                <div class="founder-content">
+                    <h2>Brandon Z. Hoff</h2>
+                    <p class="founder-title">Founder & Chief AI Officer, RUDI</p>
+
+                    <div class="founder-bio">
+                        <p>
+                            Brandon Z. Hoff is the founder of RUDI – Responsible Use of Digital Intelligence, a generative AI researcher and educator whose work bridges technology, literacy, and social design.
+                        </p>
+                        <p>
+                            He began RUDI as a public education initiative to help organizations and communities move from familiarity to fluency in their use of AI—aligning ethics, systems thinking, and human development.
+                        </p>
+                        <p>
+                            Trained in finance and social entrepreneurship, Hoff's career spans predictive analytics, cooperative economics, and AI-driven product design. His work has been featured by NPR, GQ, and MSNBC, and his frameworks for responsible AI adoption are now used by educational service centers, public institutions, and private firms nationwide.
+                        </p>
+                        <p style="font-style: italic; color: #14b8a6; font-size: 1.15rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2);">
+                            At the center of his philosophy is a simple conviction: Digital intelligence should expand human capacity, not replace it.
+                        </p>
+
+                        <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2);">
+                            <h4 style="color: #14b8a6; font-size: 1.1rem; margin-bottom: 1rem;">Education & Credentials</h4>
+                            <ul style="color: rgba(255,255,255,0.8); line-height: 2; padding-left: 1.5rem;">
+                                <li>MBA (Finance & Social Entrepreneurship) - EDHEC University, France</li>
+                                <li>IBM AI Developer Certificate</li>
+                                <li>DeepLearning.AI Certification</li>
+                                <li>MIT xPRO</li>
+                            </ul>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="https://linkedin.com/in/hoffbrandon" target="_blank" class="social-link" title="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://tiktok.com/@hoffdigital" target="_blank" class="social-link" title="TikTok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                            <a href="https://youtube.com/@hoffdigital" target="_blank" class="social-link" title="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://bzhoff.substack.com" target="_blank" class="social-link" title="Substack">
+                                <i class="fas fa-newspaper"></i>
+                            </a>
+                            <a href="https://github.com/prompt-stack" target="_blank" class="social-link" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://bzhoff.com" target="_blank" class="social-link" title="Portfolio">
+                                <i class="fas fa-globe"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -650,158 +804,19 @@
         </div>
     </section>
 
-    <!-- Who We Partner With -->
-    <section class="section-spacer">
-        <div class="container">
-            <h2 class="section-title" style="text-align: center;">Who we partner with</h2>
-            <p class="section-subtitle" style="text-align: center;">
-                We work with forward-thinking organizations committed to responsible AI adoption and organizational capability building.
-            </p>
-
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; max-width: 1100px; margin: 0 auto;">
-                <!-- Warren County ESC -->
-                <div style="background: white; border: 1px solid #e2e8f0; padding: 2.5rem; position: relative; overflow: hidden;">
-                    <div style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #14b8a6;"></div>
-                    <h4 style="font-size: 1.3rem; font-weight: 500; color: #0f172a; margin-bottom: 0.75rem;">Warren County ESC</h4>
-                    <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Education | Ohio</p>
-                    <p style="color: #475569; line-height: 1.7;">
-                        10-month professional development program for K-12 educators. Achieved 95% comfort and 60% literacy in 8 weeks with documented 524% ROI.
-                    </p>
-                </div>
-
-                <!-- Crowe LLP -->
-                <div style="background: white; border: 1px solid #e2e8f0; padding: 2.5rem; position: relative; overflow: hidden;">
-                    <div style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #14b8a6;"></div>
-                    <h4 style="font-size: 1.3rem; font-weight: 500; color: #0f172a; margin-bottom: 0.75rem;">Crowe LLP</h4>
-                    <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Enterprise | National</p>
-                    <p style="color: #475569; line-height: 1.7;">
-                        Human-centered AI workshops for professional services teams. Focus on practical integration and ethical AI use in client-facing work.
-                    </p>
-                </div>
-
-                <!-- Morehouse College -->
-                <div style="background: white; border: 1px solid #e2e8f0; padding: 2.5rem; position: relative; overflow: hidden;">
-                    <div style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #14b8a6;"></div>
-                    <h4 style="font-size: 1.3rem; font-weight: 500; color: #0f172a; margin-bottom: 0.75rem;">Morehouse College</h4>
-                    <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Academic | National</p>
-                    <p style="color: #475569; line-height: 1.7;">
-                        AI & data governance curriculum development for business programs. Faculty training and student proficiency assessment design.
-                    </p>
-                </div>
-
-                <!-- University of Illinois -->
-                <div style="background: white; border: 1px solid #e2e8f0; padding: 2.5rem; position: relative; overflow: hidden;">
-                    <div style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #14b8a6;"></div>
-                    <h4 style="font-size: 1.3rem; font-weight: 500; color: #0f172a; margin-bottom: 0.75rem;">University of Illinois–Springfield</h4>
-                    <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Academic | National</p>
-                    <p style="color: #475569; line-height: 1.7;">
-                        Graduate-level instruction on AI's impact on educational systems, politics, and policy. Course 601: "AI, Politics & Education."
-                    </p>
-                </div>
-
-                <!-- Mercantile Library -->
-                <div style="background: white; border: 1px solid #e2e8f0; padding: 2.5rem; position: relative; overflow: hidden;">
-                    <div style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #14b8a6;"></div>
-                    <h4 style="font-size: 1.3rem; font-weight: 500; color: #0f172a; margin-bottom: 0.75rem;">Mercantile Library</h4>
-                    <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Community | Ohio</p>
-                    <p style="color: #475569; line-height: 1.7;">
-                        3-part public education series (70-100 attendees/session): AI ethics, content recognition, economic impact with live Policy GPT Lab.
-                    </p>
-                </div>
-
-                <!-- Propel Education -->
-                <div style="background: white; border: 1px solid #e2e8f0; padding: 2.5rem; position: relative; overflow: hidden;">
-                    <div style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #14b8a6;"></div>
-                    <h4 style="font-size: 1.3rem; font-weight: 500; color: #0f172a; margin-bottom: 0.75rem;">Propel Education</h4>
-                    <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Education | National</p>
-                    <p style="color: #475569; line-height: 1.7;">
-                        AI literacy curriculum and instructional content for HBCU partnerships. Structured skill builders and training modules for faculty.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Founder Section -->
-    <section class="section-spacer bg-dark">
-        <div class="container">
-            <h2 class="section-title" style="text-align: center;">About the founder</h2>
-
-            <div class="founder-section">
-                <div class="founder-image">
-                    BH
-                </div>
-
-                <div class="founder-content">
-                    <h2>Brandon Z. Hoff</h2>
-                    <p class="founder-title">Chief AI Facilitator</p>
-
-                    <div class="founder-bio">
-                        <p>
-                            Brandon often describes himself as "not a computer scientist"—and that's exactly the point. His background is in economics, cooperative business models, and research at the intersection of technology and human systems.
-                        </p>
-                        <p>
-                            After founding and scaling Heritage Hill Cooperative to ~$3M in revenue, Brandon saw how technology could either extract value or create it. When ChatGPT launched in 2022, he recognized this wasn't just another tool—it was a fundamental shift in how we learn, work, and create.
-                        </p>
-                        <p>
-                            What started as TikTok tutorials (now 80,000+ followers) evolved into corporate workshops, university courses, and advisory work with legislators and Fortune 500 companies. He founded RUDI because he kept seeing the same pattern: organizations buying AI tools without building the literacy to use them effectively.
-                        </p>
-                        <p>
-                            Brandon comes from a family of educators, and that shapes everything RUDI does. "Technology is easy," he says. "Adoption is hard. That's what we solve."
-                        </p>
-
-                        <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2);">
-                            <h4 style="color: #14b8a6; font-size: 1.1rem; margin-bottom: 1rem;">Notable Achievements</h4>
-                            <ul style="color: rgba(255,255,255,0.8); line-height: 2; padding-left: 1.5rem;">
-                                <li>Built 14+ production AI applications serving healthcare, education, and enterprise</li>
-                                <li>Google Search AI Mode Priority User (exclusive early access program)</li>
-                                <li>Technical Advisor to Kentucky State Senator Gerald Neal</li>
-                                <li>Strategic Partner with Ohio Department Leadership via Warren County ESC</li>
-                                <li>Featured by NPR, GQ, and MSNBC for equity-centered technology adoption</li>
-                                <li>MBA (Finance & Entrepreneurship) - EDHEC Business School, France</li>
-                                <li>IBM AI Developer Certificate | DeepLearning.AI | MIT xPRO</li>
-                            </ul>
-                        </div>
-
-                        <div class="social-links">
-                            <a href="https://linkedin.com/in/hoffbrandon" target="_blank" class="social-link" title="LinkedIn">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="https://tiktok.com/@hoffdigital" target="_blank" class="social-link" title="TikTok">
-                                <i class="fab fa-tiktok"></i>
-                            </a>
-                            <a href="https://youtube.com/@hoffdigital" target="_blank" class="social-link" title="YouTube">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                            <a href="https://bzhoff.substack.com" target="_blank" class="social-link" title="Substack">
-                                <i class="fas fa-newspaper"></i>
-                            </a>
-                            <a href="https://github.com/prompt-stack" target="_blank" class="social-link" title="GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://bzhoff.com" target="_blank" class="social-link" title="Portfolio">
-                                <i class="fas fa-globe"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <h2 class="cta-title">Ready to transform your AI approach?</h2>
+            <h2 class="cta-title">Ready to assess your organization's AI readiness?</h2>
             <p class="cta-subtitle">
-                At the heart of everything we do is a commitment to your values and practical, sustainable solutions. We believe great AI practices create environments where people can do their best work while driving meaningful business results.
+                Start by understanding where you are. Our AI Readiness Assessment helps you identify strengths, gaps, and opportunities for responsible AI adoption.
             </p>
             <div class="cta-buttons">
-                <a href="/contact.html" class="btn-primary">
-                    Schedule a Discovery Call
+                <a href="/framework.html" class="btn-primary">
+                    Take AI Readiness Assessment
                 </a>
-                <a href="/certificates.html" class="btn-secondary">
-                    Explore Our Programs
+                <a href="/contact.html" class="btn-secondary">
+                    Contact Us
                 </a>
             </div>
         </div>

@@ -159,6 +159,14 @@ h3 {
     color: var(--hover-blue);
 }
 
+.nav-dropdown .fa-chevron-down {
+    transition: transform 0.3s ease;
+}
+
+.nav-dropdown:hover .fa-chevron-down {
+    transform: rotate(180deg);
+}
+
 .dropdown-menu {
     display: none;
     position: absolute;
@@ -266,6 +274,32 @@ h3 {
 .mobile-menu a:hover {
     background: var(--navy-700);
     color: var(--teal-light);
+}
+
+.mobile-menu a.active {
+    background: var(--navy-700);
+    border-left: 4px solid var(--teal);
+    color: var(--teal-light);
+    font-weight: 600;
+}
+
+/* Mobile CTA styling */
+.mobile-cta-link {
+    background: var(--teal) !important;
+    color: white !important;
+    font-weight: 600 !important;
+    text-align: center;
+    border-left: none !important;
+    margin-bottom: 0.5rem;
+}
+
+.mobile-cta-link:hover {
+    background: var(--teal-light) !important;
+    color: var(--navy-900) !important;
+}
+
+.mobile-cta-link i {
+    margin-right: 0.5rem;
 }
 
 /* Buttons */
@@ -623,6 +657,17 @@ footer {
 @media (max-width: 1024px) {
     .footer-grid {
         grid-template-columns: 1fr 1fr;
+    }
+
+    /* Tablet navigation adjustments */
+    .nav-links {
+        gap: 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .nav-cta {
+        font-size: 0.875rem;
+        padding: 0.45rem 1.1rem;
     }
 }
 
