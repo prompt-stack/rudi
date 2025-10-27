@@ -1135,9 +1135,14 @@
                         <div style="background: var(--navy-50); padding: 1rem; border-radius: 6px; margin-bottom: 1rem; border: 1px solid var(--navy-100);">
                             <code id="generatedLink" style="word-break: break-all; color: var(--navy-800); font-size: 0.9rem;">${surveyLink}</code>
                         </div>
-                        <button onclick="copyLinkToClipboard()" style="width: 100%; background: var(--navy-900); color: white; padding: 0.875rem; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; transition: all 0.2s;">
-                            <i class="fas fa-copy"></i> Copy Link
-                        </button>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+                            <button onclick="copyLinkToClipboard()" style="background: var(--navy-900); color: white; padding: 0.875rem; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; transition: all 0.2s;">
+                                <i class="fas fa-copy"></i> Copy Link
+                            </button>
+                            <button onclick="window.open('${surveyLink}', '_blank')" style="background: var(--teal-600); color: white; padding: 0.875rem; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; transition: all 0.2s;">
+                                <i class="fas fa-external-link-alt"></i> Take Survey Now
+                            </button>
+                        </div>
                     </div>
 
                     <div style="text-align: left; background: var(--navy-50); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--navy-100);">
@@ -1145,8 +1150,8 @@
                             <i class="fas fa-info-circle"></i> Next Steps:
                         </p>
                         <ol style="color: var(--navy-700); margin: 0; padding-left: 1.5rem; line-height: 1.8;">
-                            <li>Copy the link above</li>
-                            <li>Share it via email, Slack, or Teams with your team</li>
+                            <li>Take the survey now or copy the link to share with your team</li>
+                            <li>Share via email, Slack, or Teams for team collaboration</li>
                             <li>Survey responses will be collected anonymously</li>
                             <li>You'll receive a summary report within 48 hours</li>
                         </ol>
