@@ -101,6 +101,20 @@
             </div>
 
             <!-- Request Assessment CTA -->
+            <style>
+                @media (max-width: 768px) {
+                    #request-assessment {
+                        padding: 1.5rem !important;
+                        margin: 2rem auto 0 !important;
+                    }
+                    #request-assessment h2 {
+                        font-size: 1.35rem !important;
+                    }
+                    #request-assessment p {
+                        font-size: 0.95rem !important;
+                    }
+                }
+            </style>
             <div id="request-assessment" style="max-width: 700px; margin: 3rem auto 0; background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 12px 32px rgba(0,0,0,0.1); border: 2px solid var(--navy-900);">
                 <div style="text-align: center; margin-bottom: 2rem;">
                     <div style="display: inline-block; background: rgba(15, 23, 42, 0.08); color: var(--navy-900); padding: 0.5rem 1.25rem; border-radius: 50px; font-size: 0.9rem; font-weight: 600; margin-bottom: 1rem;">
@@ -112,8 +126,15 @@
                     </p>
                 </div>
 
+                <style>
+                    @media (max-width: 768px) {
+                        .form-grid-2col {
+                            grid-template-columns: 1fr !important;
+                        }
+                    }
+                </style>
                 <form id="assessmentRequestForm" style="display: flex; flex-direction: column; gap: 1.25rem;">
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-grid-2col" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
                         <div>
                             <label style="display: block; font-weight: 500; color: var(--navy-900); margin-bottom: 0.5rem; font-size: 0.95rem;">
                                 Name <span style="color: #ef4444;">*</span>
@@ -495,10 +516,21 @@
                     </div>
                 </div>
 
+                <style>
+                    @media (max-width: 768px) {
+                        .competency-calc {
+                            flex-direction: column !important;
+                            gap: 1.5rem !important;
+                        }
+                        .competency-calc > div:not(:nth-child(2)):not(:nth-child(4)) {
+                            margin: 0 !important;
+                        }
+                    }
+                </style>
                 <div class="card scroll-reveal" style="background: linear-gradient(135deg, var(--navy-50) 0%, white 100%); padding: 3rem;">
                     <h3 style="text-align: center; margin-bottom: 2.5rem; font-size: 1.5rem;">Three Dimensions × Five Levels = Complete Competency Map</h3>
 
-                    <div style="display: flex; justify-content: center; align-items: center; gap: 3rem; margin-bottom: 2rem;">
+                    <div class="competency-calc" style="display: flex; justify-content: center; align-items: center; gap: 3rem; margin-bottom: 2rem;">
                         <div style="text-align: center;">
                             <div style="font-size: 3.5rem; font-weight: 200; color: var(--navy-900); line-height: 1;">3</div>
                             <p style="font-size: 0.875rem; color: var(--gray-600); margin-top: 0.5rem; font-weight: 500;">DIMENSIONS</p>
@@ -640,7 +672,14 @@
                     </p>
                 </div>
 
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                <style>
+                    @media (max-width: 768px) {
+                        .framework-fit-grid {
+                            grid-template-columns: 1fr !important;
+                        }
+                    }
+                </style>
+                <div class="framework-fit-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
                     <div class="card scroll-reveal" style="background: white; text-align: center; border-top: 4px solid var(--accent);">
                         <div style="width: 56px; height: 56px; margin: 0 auto 1.5rem; background: var(--accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
                             <i class="fas fa-mountain"></i>
@@ -934,8 +973,16 @@
             </div>
 
             <!-- Lead with Radar Chart (Proof Point) -->
+            <style>
+                @media (max-width: 768px) {
+                    .radar-grid-2col {
+                        grid-template-columns: 1fr !important;
+                        gap: 2rem !important;
+                    }
+                }
+            </style>
             <div style="max-width: 1100px; margin: 0 auto 5rem;">
-                <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center;">
+                <div class="radar-grid-2col" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center;">
                     <!-- Radar Chart First -->
                     <div class="scroll-reveal">
                         <div style="background: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.12);">
@@ -1135,7 +1182,7 @@
                         <div style="background: var(--navy-50); padding: 1rem; border-radius: 6px; margin-bottom: 1rem; border: 1px solid var(--navy-100);">
                             <code id="generatedLink" style="word-break: break-all; color: var(--navy-800); font-size: 0.9rem;">${surveyLink}</code>
                         </div>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+                        <div class="success-btn-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
                             <button onclick="copyLinkToClipboard()" style="background: var(--navy-900); color: white; padding: 0.875rem; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; transition: all 0.2s;">
                                 <i class="fas fa-copy"></i> Copy Link
                             </button>
@@ -1143,6 +1190,13 @@
                                 <i class="fas fa-external-link-alt"></i> Take Survey Now
                             </button>
                         </div>
+                        <style>
+                            @media (max-width: 480px) {
+                                .success-btn-grid {
+                                    grid-template-columns: 1fr !important;
+                                }
+                            }
+                        </style>
                     </div>
 
                     <div style="text-align: left; background: var(--navy-50); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--navy-100);">
